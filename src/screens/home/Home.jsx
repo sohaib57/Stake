@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../../components/home/footer/Footer'
+import Footer from '../../components/layout/footer/Footer'
 import Stake from '../../components/home/Stake'
 
 const Home = () => {

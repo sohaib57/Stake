@@ -27,6 +27,7 @@ import slider5 from '../../../assets/images/slider5.jfif';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdArrowBackIos } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
+import LayoutComp from '../../layout/LayoutComp';
 const CasinoHomeComp = () => {
   const settings = {
     nextArrow: <IoIosArrowForward color="white" />,
@@ -41,6 +42,7 @@ const CasinoHomeComp = () => {
     autoplaySpeed: 4000,
   };
   return (
+    <LayoutComp>
     <Stack py={'12'} px={'28'} w={'100%'} bgColor={'#1A2C38'}>
       <Stack className="slider">
         <Slider {...settings}>
@@ -143,6 +145,7 @@ const CasinoHomeComp = () => {
         </Stack>
       </Stack>
     </Stack>
+    </LayoutComp>
   );
 };
 
