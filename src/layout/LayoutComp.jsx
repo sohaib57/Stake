@@ -79,6 +79,7 @@ const LayoutComp = ({ children }) => {
             overflowX: 'hidden',
             overflowY: 'auto',
             height: '88vh',
+            borderRight: 'none'
           }}
         >
           <SubMenu
