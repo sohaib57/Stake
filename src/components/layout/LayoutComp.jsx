@@ -104,9 +104,11 @@ import {
                 }}
               >
                 <StarOutlined />
-                <button
+                <button 
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
+                    fontWeight: 700,
                   }}
                 >
                   Favourites
@@ -122,6 +124,8 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
+                   
                   }}
                 >
                   Recent
@@ -137,6 +141,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Challenges
@@ -153,6 +158,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Originals
@@ -168,6 +174,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Exclusives
@@ -183,6 +190,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Slots
@@ -198,6 +206,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Live Casino
@@ -213,6 +222,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Game Shows
@@ -228,6 +238,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   New Releases
@@ -243,6 +254,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Feature Buy-in
@@ -258,6 +270,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Table Games
@@ -273,6 +286,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Blackjack
@@ -288,6 +302,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Baccarat
@@ -303,6 +318,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Roulette
@@ -328,6 +344,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   My Bets
@@ -343,6 +360,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Live Events
@@ -358,6 +376,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Starting Soon
@@ -382,6 +401,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   ATP London, Great...
@@ -397,6 +417,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   ATP Halle,Germany...
@@ -412,6 +433,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   KBO League
@@ -427,6 +449,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   NHL
@@ -451,6 +474,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Tennis
@@ -466,6 +490,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Soccer
@@ -481,6 +506,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Baseball
@@ -496,6 +522,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Basketball
@@ -511,6 +538,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Table Tennis
@@ -535,6 +563,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Alpine Skiing
@@ -550,6 +579,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   American Football
@@ -565,6 +595,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Aussie Rules
@@ -580,6 +611,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Badminton
@@ -595,6 +627,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Baseball
@@ -610,6 +643,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Basketball
@@ -625,6 +659,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Beach Volley
@@ -640,6 +675,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Biathlon
@@ -655,6 +691,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Boxing
@@ -670,6 +707,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Counter-Strike
@@ -685,6 +723,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Cricket
@@ -700,6 +739,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Cross-Country
@@ -715,6 +755,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Cycling
@@ -730,6 +771,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Darts
@@ -745,6 +787,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Dota 2
@@ -760,6 +803,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Electronic Leagues
@@ -775,6 +819,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   FIFA
@@ -790,6 +835,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Formula 1
@@ -805,6 +851,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Futsal
@@ -820,6 +867,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Gaelic Hurling
@@ -835,6 +883,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Golf
@@ -850,6 +899,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Handball
@@ -865,6 +915,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Ice Hockey
@@ -880,6 +931,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Indy Racing
@@ -895,6 +947,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   League of Legends
@@ -910,6 +963,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   MMA
@@ -925,6 +979,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Motorcycle Racing
@@ -940,6 +995,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Pesapallo
@@ -955,6 +1011,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Politics & Entertain...
@@ -970,6 +1027,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Rainbow Six
@@ -985,6 +1043,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Rugby
@@ -1000,6 +1059,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Ski Jumping
@@ -1015,6 +1075,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   snooker
@@ -1030,6 +1091,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Soccer
@@ -1045,6 +1107,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stock Car Racing
@@ -1060,6 +1123,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Table Tennis
@@ -1075,6 +1139,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Tennis
@@ -1090,6 +1155,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Volleyball
@@ -1105,6 +1171,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Waterpolo
@@ -1147,6 +1214,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Favourites
@@ -1162,6 +1230,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Recent
@@ -1177,6 +1246,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Challenges
@@ -1193,6 +1263,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Originals
@@ -1208,6 +1279,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Exclusives
@@ -1223,6 +1295,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Slots
@@ -1238,6 +1311,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Live Casino
@@ -1253,6 +1327,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Game Shows
@@ -1268,6 +1343,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   New Releases
@@ -1283,6 +1359,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Feature Buy-in
@@ -1298,6 +1375,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Table Games
@@ -1313,6 +1391,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Blackjack
@@ -1328,6 +1407,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Baccarat
@@ -1343,6 +1423,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Roulette
@@ -1368,6 +1449,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Favourites
@@ -1383,6 +1465,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Recent
@@ -1398,6 +1481,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Challenges
@@ -1414,6 +1498,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Originals
@@ -1429,6 +1514,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Stake Exclusives
@@ -1444,6 +1530,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Slots
@@ -1459,6 +1546,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Live Casino
@@ -1474,6 +1562,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Game Shows
@@ -1489,6 +1578,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   New Releases
@@ -1504,6 +1594,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Feature Buy-in
@@ -1519,6 +1610,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Table Games
@@ -1534,6 +1626,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Blackjack
@@ -1549,6 +1642,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Baccarat
@@ -1564,6 +1658,7 @@ import {
                 <button
                   style={{
                     paddingLeft: 8,
+                    fontWeight: 700,
                   }}
                 >
                   Roulette
