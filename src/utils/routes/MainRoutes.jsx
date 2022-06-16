@@ -1,6 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Header from '../../components/header/Header'
 import Home from '../../components/home/Stake'
+
 
 const MainRoutes = () => {
     return (
@@ -8,6 +10,10 @@ const MainRoutes = () => {
             <Route path="/" element={<Home />}>
 
             </Route>
+            <Route path="/header" element={<Header />}>
+
+            </Route>
+           
 
         </Routes>
     )
