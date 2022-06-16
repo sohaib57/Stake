@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   color,
+  HStack,
   Image,
   Input,
   InputGroup,
@@ -27,6 +28,14 @@ import slider5 from '../../../assets/images/slider5.jfif';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdArrowBackIos } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { GiCherry } from 'react-icons/gi';
+import { MdOutlineCasino } from 'react-icons/md';
+import {
+  AiFillThunderbolt,
+  AiOutlineGift,
+  AiOutlineFire,
+} from 'react-icons/ai';
+import LayoutComp from '../../../layout/LayoutComp';
 const CasinoHomeComp = () => {
   const settings = {
     nextArrow: <IoIosArrowForward color="white" />,
@@ -41,6 +50,7 @@ const CasinoHomeComp = () => {
     autoplaySpeed: 4000,
   };
   return (
+    <LayoutComp>
     <Stack py={'12'} px={'28'} w={'100%'} bgColor={'#1A2C38'}>
       <Stack className="slider">
         <Slider {...settings}>
@@ -101,7 +111,12 @@ const CasinoHomeComp = () => {
           </Center>
         </Slider>
       </Stack>
-      <Stack pt={'12'} className="searchbar">
+      <Stack
+        px={{ base: '2', md: '8', lg: '12', xl: '24' }}
+        display={{ base: 'none', md: 'flex' }}
+        pt={'12'}
+        className="searchbar"
+      >
         <InputGroup
           borderColor={'gray'}
           _hover={{ borderColor: 'rgb(47,69,83)' }}
@@ -112,7 +127,7 @@ const CasinoHomeComp = () => {
             borderRadius={'full'}
             bgColor={'transparent'}
           >
-            <AiOutlineSearch color="#b1bad3" fontSize={'1.3rem'} />
+            <AiOutlineSearch color="#b1bad3" fontSize={'1.2rem'} />
           </InputLeftElement>
           <Input
             color={'white'}
@@ -121,28 +136,90 @@ const CasinoHomeComp = () => {
             borderRadius={'full'}
             placeholder="Search your game"
             size="md"
+            fontWeight={'500'}
+            fontSize={'sm'}
           />
         </InputGroup>
       </Stack>
-      <Stack  className="tabs">
-        <Stack w={'fit-content'} bgColor={'#0F212E'}>
-        <Tabs   p={'2'} variant="soft-rounded" colorScheme="green">
-          <TabList>
-            <Tab>Tab 1</Tab>
-            <Tab>Tab 2</Tab>
+      <Stack
+        px={{ base: '2', md: '8', lg: '12', xl: '24' }}
+        py={'8'}
+        className="tabs"
+      >
+        <Tabs variant="soft-rounded" colorScheme="green">
+          <TabList
+            overflowX={'auto'}
+            maxW={'fit-content'}
+            borderRadius={'full'}
+            bgColor={'#0F212E'}
+          >
+            <Stack direction={'row'} p={'2'}>
+              <Tab
+                color={'white'}
+                _selected={{ color: 'white', bg: '#2F4553' }}
+                w={'max-content'}
+                fontSize={{ base: 'sm', md: 'md' }}
+              >
+                <HStack spacing={'2'}>
+                  <GiCherry />
+                  <Text>Lobby</Text>
+                </HStack>
+              </Tab>
+              <Tab
+                w={'fit-content'}
+                color={'white'}
+                _selected={{ color: 'white', bg: '#2F4553' }}
+                // w={'max-content'}
+                fontSize={{ base: 'sm', md: 'md' }}
+              >
+                <HStack spacing={'2'}>
+                  <MdOutlineCasino />
+                  <Text>Live Casino</Text>
+                </HStack>
+              </Tab>
+              <Tab
+                color={'white'}
+                _selected={{ color: 'white', bg: '#2F4553' }}
+                w={'max-content'}
+                fontSize={{ base: 'sm', md: 'md' }}
+              >
+                <HStack spacing={'2'}>
+                  <AiFillThunderbolt />
+                  <Text> Featured Slots</Text>
+                </HStack>
+              </Tab>
+              <Tab
+                color={'white'}
+                _selected={{ color: 'white', bg: '#2F4553' }}
+                w={'max-content'}
+                fontSize={{ base: 'sm', md: 'md' }}
+              >
+                <HStack spacing={'2'}>
+                  <AiOutlineGift />
+                  <Text> Game Shows</Text>
+                </HStack>
+              </Tab>
+              <Tab
+                color={'white'}
+                _selected={{ color: 'white', bg: '#2F4553' }}
+                w={'max-content'}
+                fontSize={{ base: 'sm', md: 'md' }}
+              >
+                <HStack spacing={'2'}>
+                  <AiOutlineFire />
+                  <Text> Stake Originals</Text>
+                </HStack>
+              </Tab>
+            </Stack>
           </TabList>
           <TabPanels>
-            <TabPanel>
-              {/* <p>one!</p> */}
-            </TabPanel>
-            <TabPanel>
-              {/* <p>two!</p> */}
-            </TabPanel>
+            <TabPanel></TabPanel>
+            <TabPanel></TabPanel>
           </TabPanels>
         </Tabs>
-        </Stack>
       </Stack>
     </Stack>
+    </LayoutComp>
   );
 };
 

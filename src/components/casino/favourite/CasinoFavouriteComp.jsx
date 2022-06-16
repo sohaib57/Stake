@@ -3,10 +3,11 @@ import React from 'react'
 import { RiSearch2Line } from 'react-icons/ri'
 import Star from '../../../assets/images/star.png'
 import FavouriteLogo from '../../../assets/images/favouriteLogo.png'
+import LayoutComp from '../../../layout/LayoutComp'
 
 const CasinoFavouriteComp = () => {
     return (
-        <>
+        <LayoutComp>
             {/* Favourite Logo section */}
             <Stack position={'relative'} minH={'28'} justify={'center'} bgImage={FavouriteLogo} bgRepeat={'no-repeat'} bgPos={'right'} bgColor={'#213743'}>
                 <Heading position={'absolute'} left={'10'} textAlign={'center'} color={'white'}>Favourite</Heading>
@@ -94,7 +95,7 @@ const CasinoFavouriteComp = () => {
                                     borderRadius: 'full',
                                     m: '1'
                                 }}
-                            > Races 
+                            > Races
                             </Tab>
                         </TabList>
                         <TabPanels>
@@ -108,7 +109,7 @@ const CasinoFavouriteComp = () => {
                     </Tabs>
                 </Stack>
             </Stack>
-        </>
+        </LayoutComp>
     )
 }
 
