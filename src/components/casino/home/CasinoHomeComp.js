@@ -35,6 +35,7 @@ import {
   AiOutlineGift,
   AiOutlineFire,
 } from 'react-icons/ai';
+import LayoutComp from '../../layout/LayoutComp';
 const CasinoHomeComp = () => {
   const settings = {
     nextArrow: <IoIosArrowForward color="white" />,
@@ -49,8 +50,9 @@ const CasinoHomeComp = () => {
     autoplaySpeed: 4000,
   };
   return (
-    <Stack py={'12'} w={'100%'} bgColor={'#1A2C38'}>
-      <Stack px={{ base: '0', md: '8', lg: '12', xl: '24' }} className="slider">
+    <LayoutComp>
+    <Stack py={'12'} px={'28'} w={'100%'} bgColor={'#1A2C38'}>
+      <Stack className="slider">
         <Slider {...settings}>
           <Center h={'55vh'} w={'100%'} px={'2'}>
             <Box
@@ -167,7 +169,7 @@ const CasinoHomeComp = () => {
                 w={'fit-content'}
                 color={'white'}
                 _selected={{ color: 'white', bg: '#2F4553' }}
-                w={'max-content'}
+                // w={'max-content'}
                 fontSize={{ base: 'sm', md: 'md' }}
               >
                 <HStack spacing={'2'}>
@@ -217,6 +219,7 @@ const CasinoHomeComp = () => {
         </Tabs>
       </Stack>
     </Stack>
+    </LayoutComp>
   );
 };
 

@@ -35,6 +35,7 @@ const Footer = () => {
       px={{ base: '4', sm: '6', md: '8', lg: '16' }}
       w={'100%'}
       bgColor={'#071D2A'}
+      marginTop={'0 !important'}
     >
       <SimpleGrid
         pb={'6'}
