@@ -12,22 +12,22 @@ import {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { RiShareBoxFill } from 'react-icons/ri';
-import bitcoin from '../../../assets/images/bitcoin.svg';
-import bit from '../../../assets/images/bit.svg';
-import dogecoin from '../../../assets/images/dogecoin.svg';
-import ethereum from '../../../assets/images/ethereum.svg';
-import litecoin from '../../../assets/images/litecoin.svg';
-import eos from '../../../assets/images/eos.svg';
-import eighteen from '../../../assets/images/eighteen.svg';
-import ripple from '../../../assets/images/ripple.svg';
-import gumble from '../../../assets/images/gumble.svg';
-import tron from '../../../assets/images/tron.svg';
-import sponser1 from '../../../assets/images/sponser1.svg';
-import sponser2 from '../../../assets/images/sponser2.svg';
-import sponser3 from '../../../assets/images/sponser3.svg';
-import sponser4 from '../../../assets/images/sponser4.png';
-import sponser5 from '../../../assets/images/sponser5.png';
-import stake from '../../../assets/images/stake.png';
+import bitcoin from '../assets/images/bitcoin.svg';
+import bit from '../assets/images/bit.svg';
+import dogecoin from '../assets/images/dogecoin.svg';
+import ethereum from '../assets/images/ethereum.svg';
+import litecoin from '../assets/images/litecoin.svg';
+import eos from '../assets/images/eos.svg';
+import eighteen from '../assets/images/eighteen.svg';
+import ripple from '../assets/images/ripple.svg';
+import gumble from '../assets/images/gumble.svg';
+import tron from '../assets/images/tron.svg';
+import sponser1 from '../assets/images/sponser1.svg';
+import sponser2 from '../assets/images/sponser2.svg';
+import sponser3 from '../assets/images/sponser3.svg';
+import sponser4 from '../assets/images/sponser4.png';
+import sponser5 from '../assets/images/sponser5.png';
+import stake from '../assets/images/stake.png';
 const Footer = () => {
   return (
     <Stack
