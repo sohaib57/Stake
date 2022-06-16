@@ -36,6 +36,7 @@ import {
   AiOutlineFire,
 } from 'react-icons/ai';
 import LayoutComp from '../../layout/LayoutComp';
+import CardSlider from './CardSlider';
 const CasinoHomeComp = () => {
   const settings = {
     nextArrow: <IoIosArrowForward color="white" />,
@@ -51,10 +52,10 @@ const CasinoHomeComp = () => {
   };
   return (
     <LayoutComp>
-    <Stack py={'12'} px={'28'} w={'100%'} bgColor={'#1A2C38'}>
-      <Stack className="slider">
+    <Stack py={'12'}  w={'100%'} bgColor={'#1A2C38'}>
+      <Stack px={{base:'0',md:'8',lg:'12',xl:'24'}} className="slider">
         <Slider {...settings}>
-          <Center h={'55vh'} w={'100%'} px={'2'}>
+          <Center h={'45vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
@@ -65,7 +66,7 @@ const CasinoHomeComp = () => {
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'55vh'} w={'100%'} px={'2'}>
+          <Center h={'45vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
@@ -76,7 +77,7 @@ const CasinoHomeComp = () => {
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'55vh'} w={'100%'} px={'2'}>
+          <Center h={'45vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
@@ -87,7 +88,7 @@ const CasinoHomeComp = () => {
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'55vh'} w={'100%'} px={'2'}>
+          <Center h={'45vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
@@ -98,7 +99,7 @@ const CasinoHomeComp = () => {
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'55vh'} w={'100%'} px={'2'}>
+          <Center h={'45vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
@@ -166,10 +167,9 @@ const CasinoHomeComp = () => {
                 </HStack>
               </Tab>
               <Tab
-                w={'fit-content'}
+                w={'max-content'}
                 color={'white'}
                 _selected={{ color: 'white', bg: '#2F4553' }}
-                // w={'max-content'}
                 fontSize={{ base: 'sm', md: 'md' }}
               >
                 <HStack spacing={'2'}>
@@ -215,10 +215,14 @@ const CasinoHomeComp = () => {
           <TabPanels>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
+            <TabPanel></TabPanel>
+            <TabPanel></TabPanel>
+            <TabPanel></TabPanel>
           </TabPanels>
         </Tabs>
       </Stack>
     </Stack>
+    {/* <CardSlider/> */}
     </LayoutComp>
   );
 };
