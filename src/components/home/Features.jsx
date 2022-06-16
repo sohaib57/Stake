@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Center, Divider, Heading, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
 import { GiBasketballBall, GiCardAceClubs } from 'react-icons/gi'
-import welcomecasino from '../../assets/images/welcome-casino-en.jpg'
-import welcomesports from '../../assets/images/welcome-sports-en.jpg'
+import welcomecasino from '../../assets/images/casino.jpg'
+import welcomesports from '../../assets/images/sports.jpg'
 import darkdrake from '../../assets/images/drake-banner.png'
 import mastercard from '../../assets/images/mastercard-logo-mastercard-logo-png-vector-download-19.png'
 import epay from '../../assets/images/Apple_Pay-White-Dark-Background-Logo.wine.png'
@@ -10,7 +10,7 @@ import gpay from '../../assets/images/Google_Pay-Logo.wine-removebg-preview.png'
 import sampay from '../../assets/images/samsung-pay-logo-white.webp'
 const Features = () => {
     return (
-        <Stack width={'100%'}  >
+        <Stack width={'100%'} margin={'0px !important'}  >
             <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color='#b1bad3' >
                 <Stack direction={{ base: 'column', md: 'row' }} justifyContent={'space-between'} spacing={{ base: '6', lg: '0' }}  >
                     {/* left card */}
