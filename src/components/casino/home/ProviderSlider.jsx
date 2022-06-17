@@ -73,7 +73,7 @@ const ProviderSlider = () => {
       className="slider"
     >
       <Slider {...settings}>
-        <Center py={'3'} h={'90px'} w={'100%'} px={'1'}>
+        <Center py={'3'} h={'90px'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -85,7 +85,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -97,7 +97,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -109,7 +109,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -121,7 +121,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -133,7 +133,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -145,7 +145,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -157,7 +157,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -169,7 +169,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -181,7 +181,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -193,7 +193,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -205,7 +205,7 @@ const ProviderSlider = () => {
             className="arrow"
           ></Box>
         </Center>
-        <Center h={'90px'} py={'3'} w={'100%'} px={'1'}>
+        <Center h={'90px'} py={'3'} w={'100%'} px={{base:'1',md:'2'}}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
