@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Center, Heading, HStack, Image, Progress, Stack, Text } from '@chakra-ui/react'
+import {  Heading, HStack, Image, Progress, Stack, Text } from '@chakra-ui/react'
 import { BsStar } from 'react-icons/bs'
 import welcometeam from '../../assets/images/top.png'
 const Header = () => {

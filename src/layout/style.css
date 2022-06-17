@@ -23,7 +23,9 @@
   .menu-bar{
     background-color: #0f212e;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    border-right: none;
   }
   
   .site-layout .site-header-layout-background {
@@ -45,8 +47,10 @@
     color: white;
 }
 .ant-menu-sub.ant-menu-inline{
-    background-color: #1a2c38;
+    background-color: #0f212e;
     color: white;
+    font-size: 13px;
+    font-weight: 700;
 }
 .ant-divider-horizontal{
   border: 0.1px solid #2f4553;
