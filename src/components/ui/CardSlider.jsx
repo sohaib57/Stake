@@ -1,26 +1,27 @@
 import React from 'react';
 import Slider from 'react-slick';
+import './CardSlider.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import cardslider1 from '../../../assets/images/cardslider1.jfif';
-import cardslider2 from '../../../assets/images/cardslider2.jfif';
-import cardslider3 from '../../../assets/images/cardslider3.jfif';
-import cardslider4 from '../../../assets/images/cardslider4.jfif';
-import cardslider5 from '../../../assets/images/cardslider5.jfif';
-import cardslider6 from '../../../assets/images/cardslider6.jfif';
-import cardslider7 from '../../../assets/images/cardslider7.jfif';
+import cardslider1 from '../../assets/images/cardslider1.jfif';
+import cardslider2 from '../../assets/images/cardslider2.jfif';
+import cardslider3 from '../../assets/images/cardslider3.jfif';
+import cardslider4 from '../../assets/images/cardslider4.jfif';
+import cardslider5 from '../../assets/images/cardslider5.jfif';
+import cardslider6 from '../../assets/images/cardslider6.jfif';
+import cardslider7 from '../../assets/images/cardslider7.jfif';
 import { Box, Center, Stack } from '@chakra-ui/react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdArrowBackIos } from 'react-icons/md';
 const CardSlider = () => {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     nextArrow: <IoIosArrowForward color="white" />,
     prevArrow: <MdArrowBackIos color="white" />,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 6,
+    slidesToScroll: 6,
     initialSlide: 0,
       responsive: [
         {
@@ -44,6 +45,14 @@ const CardSlider = () => {
         {
           breakpoint: 425,
           settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 375,
+          settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false
@@ -53,14 +62,13 @@ const CardSlider = () => {
   };
   return (
     <Stack
-      pb={'10'}
+      // pb={'10'}
       marginTop={'0 !important'}
       bgColor={'#1A2C38'}
-      px={{ base: '0', md: '8', lg: '12', xl: '24' }}
       className="slider"
     >
       <Slider {...settings}>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center py={'3'}  h={'35vh'} w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -69,9 +77,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -80,9 +89,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -91,9 +101,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -102,9 +113,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -113,9 +125,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -124,9 +137,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -135,9 +149,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -146,9 +161,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -157,9 +173,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -168,9 +185,10 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
-        <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Center h={'35vh'} py={'3'}  w={'100%'} px={'1'}>
           <Box
             bgPos={'center'}
             bgRepeat={'no-repeat'}
@@ -179,6 +197,7 @@ const CardSlider = () => {
             borderRadius={'3xl'}
             w={'100%'}
             h={'full'}
+            className='arrow'
           ></Box>
         </Center>
       </Slider>
