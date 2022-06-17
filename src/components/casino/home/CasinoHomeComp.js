@@ -1,12 +1,9 @@
 import {
   Box,
   Center,
-  color,
   HStack,
-  Image,
   Input,
   InputGroup,
-  InputLeftAddon,
   InputLeftElement,
   Stack,
   Tab,
@@ -35,7 +32,7 @@ import {
   AiOutlineGift,
   AiOutlineFire,
 } from 'react-icons/ai';
-import LayoutComp from '../../layout/LayoutComp';
+import LayoutComp from '../../../layout/LayoutComp';
 import CardSlider from './CardSlider';
 const CasinoHomeComp = () => {
   const settings = {
@@ -222,7 +219,7 @@ const CasinoHomeComp = () => {
         </Tabs>
       </Stack>
     </Stack>
-    {/* <CardSlider/> */}
+    <CardSlider/>
     </LayoutComp>
   );
 };

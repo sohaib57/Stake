@@ -13,13 +13,13 @@ const CardSlider = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 6,
+        slidesToScroll: 6
       };
   return (
-    <Stack px={{base:'0',md:'8',lg:'12',xl:'24'}} className="slider">
+    <Stack marginTop={'0 !important'} bgColor={'#1A2C38'} px={{base:'0',md:'8',lg:'12',xl:'24'}} className="slider">
     <Slider {...settings}>
-      <Center h={'45vh'} w={'100%'} px={'2'}>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
         <Box
           bgPos={'center'}
           bgRepeat={'no-repeat'}
@@ -30,7 +30,7 @@ const CardSlider = () => {
           h={'full'}
         ></Box>
       </Center>
-      <Center h={'45vh'} w={'100%'} px={'2'}>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
         <Box
           bgPos={'center'}
           bgRepeat={'no-repeat'}
@@ -41,7 +41,7 @@ const CardSlider = () => {
           h={'full'}
         ></Box>
       </Center>
-      <Center h={'45vh'} w={'100%'} px={'2'}>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
         <Box
           bgPos={'center'}
           bgRepeat={'no-repeat'}
@@ -52,7 +52,7 @@ const CardSlider = () => {
           h={'full'}
         ></Box>
       </Center>
-      <Center h={'45vh'} w={'100%'} px={'2'}>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
         <Box
           bgPos={'center'}
           bgRepeat={'no-repeat'}
@@ -63,7 +63,40 @@ const CardSlider = () => {
           h={'full'}
         ></Box>
       </Center>
-      <Center h={'45vh'} w={'100%'} px={'2'}>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Box
+          bgPos={'center'}
+          bgRepeat={'no-repeat'}
+          bgSize={'cover'}
+          bgImage={slider5}
+          borderRadius={'3xl'}
+          w={'100%'}
+          h={'full'}
+        ></Box>
+      </Center>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Box
+          bgPos={'center'}
+          bgRepeat={'no-repeat'}
+          bgSize={'cover'}
+          bgImage={slider3}
+          borderRadius={'3xl'}
+          w={'100%'}
+          h={'full'}
+        ></Box>
+      </Center>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
+        <Box
+          bgPos={'center'}
+          bgRepeat={'no-repeat'}
+          bgSize={'cover'}
+          bgImage={slider4}
+          borderRadius={'3xl'}
+          w={'100%'}
+          h={'full'}
+        ></Box>
+      </Center>
+      <Center h={'30vh'} w={'100%'} px={'2'}>
         <Box
           bgPos={'center'}
           bgRepeat={'no-repeat'}
