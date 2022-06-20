@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Center, Divider, Heading, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { Button, Center, Divider, HStack, Image, Stack, Text } from '@chakra-ui/react'
 import { GiBasketballBall, GiCardAceClubs } from 'react-icons/gi'
 import welcomecasino from '../../assets/images/casino.jpg'
 import welcomesports from '../../assets/images/sports.jpg'
