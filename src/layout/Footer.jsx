@@ -41,8 +41,8 @@ const Footer = () => {
         pb={'6'}
         className="links"
         w={'full'}
-        minChildWidth="120px"
-        spacing="40px"
+        minChildWidth={'120px'}
+        spacing={'40px'}
       >
         <Stack className="sports">
           <Heading pb={'2'} fontSize={'md'} color={'white'}>
@@ -504,10 +504,10 @@ const Footer = () => {
             <Image h={'full'} w={'full'} src={stake} />
           </Link>
         </Stack>
-        <Text mt={'0 !important'} color={'#b1bad3'} fontSize={'md'}>
+        <Text textAlign={'center'} mt={'0 !important'} color={'#b1bad3'} fontSize={{sm:'sm',md:'md'}}>
           © 2022 Stake.com | All Rights Reserved.
         </Text>
-        <Text lineHeight={'1'} color={'#b1bad3'} fontSize={'md'}>
+        <Text textAlign={'center'} lineHeight={'1'} color={'#b1bad3'} fontSize={{sm:'sm',md:'md'}}>
           1 BTC = $20,404.00
         </Text>
       </Stack>

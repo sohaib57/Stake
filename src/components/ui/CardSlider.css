@@ -1,0 +1,9 @@
+.arrow {
+  position: relative;
+  top: 0;
+  transition: top ease 0.7s;
+}
+.arrow:hover {
+  top: -11px;
+  cursor: pointer;
+}

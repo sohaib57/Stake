@@ -12,8 +12,9 @@
   }
   
   .trigger:hover {
-    color: #1890ff;
+    color: white;
   }
+ 
   
   .logo {
     height: 32px;
@@ -27,7 +28,11 @@
     font-weight: 700;
     border-right: none;
   }
-  
+  .ant-layout-header{
+    background: #1a2c38;
+    height: 60px;
+    
+  }
   .site-layout .site-header-layout-background {
     background-color: #1a2c38;
   }
@@ -64,7 +69,25 @@
   border: none;
   color: #fff;
 } */
+.button-section button{
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+}
+.button-section button:hover{
+  color: white;
 
+}
+@media screen and (max-width: 80px) {
+  .sidebar-button {
+    display: none;
+  }
+}
+
+
+.select option{
+  color: black;
+}
 
 
 
