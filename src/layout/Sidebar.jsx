@@ -29,6 +29,7 @@ const Sidebar = () => {
         <div className="siderbar-header">
         <Stack direction={'row'} className='sidebar-button'>
             <Button
+            onClick={()=>nav('/casino/home')}
             _hover={{
               bgColor: 'transparent'
             }}
