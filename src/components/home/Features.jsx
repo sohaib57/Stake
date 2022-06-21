@@ -8,6 +8,7 @@ import mastercard from '../../assets/images/mastercard-logo-mastercard-logo-png-
 import epay from '../../assets/images/Apple_Pay-White-Dark-Background-Logo.wine.png'
 import gpay from '../../assets/images/Google_Pay-Logo.wine-removebg-preview.png'
 import sampay from '../../assets/images/samsung-pay-logo-white.webp'
+import '../ui/card slider/CardSlider.css'
 const Features = () => {
     return (
         <Stack width={'100%'} margin={'0px !important'}  >
@@ -15,11 +16,11 @@ const Features = () => {
                 <Stack direction={{ base: 'column', md: 'row' }} justifyContent={'space-between'} spacing={{ base: '6', lg: '0' }}  >
                     {/* left card */}
                     <Stack height={'full'} width={{ base: '100%', md: '48%' }}>
-                        <HStack>
+                        <HStack pb={'2'}>
                             <GiCardAceClubs fontSize={'1.5rem'} />
                             <Text fontSize={'lg'} lineHeight={'1.5'} fontWeight={'bold'} color={'white'} >Casino</Text>
                         </HStack>
-                        <Image src={welcomecasino} />
+                        <Image borderRadius={'md'} className='arrow' src={welcomecasino} />
                         <Text fontSize={'lg'} lineHeight={'1.5'} fontWeight={'bold'} color={'white'}  >
                             Leading Online Crypto Casino
                         </Text>
@@ -30,11 +31,11 @@ const Features = () => {
                     </Stack>
                     {/* right card */}
                     <Stack height={'full'} width={{ base: '100%', md: '48%' }} >
-                        <HStack>
+                        <HStack pb={'2'}>
                             <GiBasketballBall fontSize={'1.5rem'} />
                             <Text fontWeight={'bold'} fontSize={'lg'} lineHeight={'1.5'} color={'white'} >Sports</Text>
                         </HStack>
-                        <Image src={welcomesports} />
+                        <Image borderRadius={'md'} className='arrow' src={welcomesports} />
                         <Text fontSize={'lg'} lineHeight={'1.5'} fontWeight={'bold'} color={'white'}>
                             Best Crypto Sports Betting Online
                         </Text>

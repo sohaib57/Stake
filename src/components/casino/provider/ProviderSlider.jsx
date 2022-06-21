@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import '../../ui/CardSlider.css';
+import '../../ui//card slider/CardSlider';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import providerslider1 from '../../../assets/images/providerslider1.jfif';

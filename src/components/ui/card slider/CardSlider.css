@@ -1,9 +1,9 @@
 .arrow {
   position: relative;
   top: 0;
-  transition: top ease 0.7s;
+  transition: top ease 0.5s;
 }
 .arrow:hover {
-  top: -11px;
+  top: -8px;
   cursor: pointer;
 }

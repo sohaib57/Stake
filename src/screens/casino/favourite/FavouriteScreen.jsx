@@ -1,5 +1,5 @@
 import React from 'react'
-import CasinoFavouriteComp from '../../components/casino/favourite/CasinoFavouriteComp'
+import CasinoFavouriteComp from '../../../components/casino/favourite/CasinoFavouriteComp'
 
 const FavouriteScreen = () => {
     return (
