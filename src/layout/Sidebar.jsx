@@ -18,11 +18,7 @@ import { useNavigate } from 'react-router-dom';
 
 const { Sider } = Layout;
 
-const { Option } = Select;
 
-// const handleChange = value => {
-//   console.log(`selected ${value}`);
-// };
 const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
@@ -31,8 +27,11 @@ const Sidebar = () => {
       <Sider trigger={null} collapsible collapsed={collapsed}>
         {/* <div className="logo" /> */}
         <div className="siderbar-header">
-          {/* <HStack className='sidebar-button'>
+        <Stack direction={'row'} className='sidebar-button'>
             <Button
+            _hover={{
+              bgColor: 'transparent'
+            }}
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
@@ -41,6 +40,9 @@ const Sidebar = () => {
               Casino
             </Button>
             <Button
+            _hover={{
+              bgColor: 'transparent'
+            }}
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
@@ -48,7 +50,7 @@ const Sidebar = () => {
             >
               Sport
             </Button>
-          </HStack> */}
+          </Stack>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -56,6 +58,7 @@ const Sidebar = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+           
         </div>
 
         <Menu
@@ -339,6 +342,7 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
+             
             </Menu.Item>
             <Menu.Item
               key="3"
