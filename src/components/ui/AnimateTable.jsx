@@ -163,8 +163,8 @@ const AnimateTable = (params) => {
     // }
     const onGridReady = (params) => {
         // setGridApi(params)
-        // const columns = Object.keys(rowData[0]).map(key => ({ field: key }),)
-        params.api.setColumnDefs([{ field: "game" }])
+        const columns = Object.keys(rowData[0]).map(key => ({ field: key }),)
+        params.api.setColumnDefs(columns)
         StartInterval(params.api, params.columnApi);
     }
 
