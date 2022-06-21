@@ -30,6 +30,7 @@ import React from 'react';
 import { RiSearch2Line, RiSpyFill } from 'react-icons/ri';
 import FavouriteLogo from '../../../assets/images/favouriteLogo.png';
 import LayoutComp from '../../../layout/LayoutComp';
+import AnimateTable from '../../ui/AnimateTable';
 // import { Table } from 'antd';
 
 const CasinoFavouriteComp = () => {
@@ -220,7 +221,7 @@ const CasinoFavouriteComp = () => {
                                     </Table>
                                 </TableContainer>
                             </TabPanel>
-                            <TabPanel></TabPanel>
+                            <TabPanel><AnimateTable /></TabPanel>
                             <TabPanel></TabPanel>
                         </TabPanels>
                     </Tabs>
