@@ -124,6 +124,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Divider />
             <Menu.Item
+            onClick={() => nav('/casino/group/stake-originals')}
               key="4"
               style={{
                 paddingLeft: 20,
@@ -131,7 +132,7 @@ const Sidebar = () => {
             >
               <FieldTimeOutlined />
               <button
-                onClick={() => nav('/casino/group/stake-originals')}
+                
                 style={{
                   paddingLeft: 8,
                 }}
@@ -140,6 +141,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/stake-exclusives')}
               key="5"
               style={{
                 paddingLeft: 20,
@@ -155,6 +157,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/slots')}
               key="6"
               style={{
                 paddingLeft: 20,
@@ -170,6 +173,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/live-casino')}
               key="7"
               style={{
                 paddingLeft: 20,
@@ -185,6 +189,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/game-shows')}
               key="8"
               style={{
                 paddingLeft: 20,
@@ -200,6 +205,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/new-releases')}
               key="9"
               style={{
                 paddingLeft: 20,
@@ -215,6 +221,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/feature-buy-in')}
               key="10"
               style={{
                 paddingLeft: 20,
@@ -230,6 +237,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/table-games')}
               key="11"
               style={{
                 paddingLeft: 20,
@@ -245,6 +253,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/blackjack')}
               key="12"
               style={{
                 paddingLeft: 20,
@@ -260,6 +269,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/baccarat')}
               key="13"
               style={{
                 paddingLeft: 20,
@@ -275,6 +285,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={() => nav('/casino/group/roulette')}
               key="14"
               style={{
                 paddingLeft: 20,
