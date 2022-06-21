@@ -8,6 +8,7 @@ import { Image } from 'antd';
 import Stake from '../assets/images/stake.png';
 import 'antd/dist/antd.css';
 import './style.css';
+import MobileHeader from './MobileHeader';
 
 const { Header, Content } = Layout;
 
@@ -53,7 +54,7 @@ const LayoutComp = ({ children }) => {
           >
             {children}
             <Footer />
-            
+            <MobileHeader/>
           </Stack>
          
         </Content>
