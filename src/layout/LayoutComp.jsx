@@ -1,10 +1,9 @@
 import React from 'react';
-import {  Stack, Spacer } from '@chakra-ui/react';
+import { Stack, Spacer, Img } from '@chakra-ui/react';
 import { Button } from 'antd';
 import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import { Image } from 'antd';
 import Stake from '../assets/images/stake.png';
 import 'antd/dist/antd.css';
 import './style.css';
@@ -20,7 +19,7 @@ const LayoutComp = ({ children }) => {
       }}
     >
       <Sidebar />
-     
+
       <Layout className="site-layout">
         <Header
           className=".site-header-layout-background"
@@ -30,20 +29,20 @@ const LayoutComp = ({ children }) => {
         >
           <Stack direction={'row'} pr={10}>
             <Stack>
-              <div>
-                <Image src={Stake} alt="stake" width={130} />
-              </div>
+
+              <Img src={Stake} alt="stake" width={130} />
+
             </Stack>
             <Spacer />
-          
-            <div className="button-section">
-            <Button type="text">Sign In</Button>
 
-            <Button type="primary">Register</Button>
-          </div>
-            </Stack>
-          
-           
+            <div className="button-section">
+              <Button type="text">Sign In</Button>
+
+              <Button type="primary">Register</Button>
+            </div>
+          </Stack>
+
+
         </Header>
         <Content className="site-layout-background">
           <Stack
@@ -56,7 +55,7 @@ const LayoutComp = ({ children }) => {
             <Footer />
             <MobileHeader/>
           </Stack>
-         
+
         </Content>
       </Layout>
     </Layout>
