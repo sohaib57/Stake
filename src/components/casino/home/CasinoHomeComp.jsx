@@ -32,10 +32,15 @@ import { AiOutlineGift } from 'react-icons/ai';
 import { FaGg, FaChessQueen, FaFire } from 'react-icons/fa';
 import { ImFire } from 'react-icons/im';
 import LayoutComp from '../../../layout/LayoutComp';
-import CardSlider from '../../ui/CardSlider';
-import { Link } from 'react-router-dom';
-import ProviderSlider from './ProviderSlider';
+import CardSlider from '../../ui/card slider/CardSlider';
+import { Link, useNavigate } from 'react-router-dom';
+import ProviderSlider from '../provider/ProviderSlider';
+import LiveCasino from '../live casino/LiveCasino';
+import FeaturedSlots from '../features slots/FeaturedSlots';
+import GameShows from '../game shows/GameShows';
+import StakeOriginalsComp from '../Stake Originals/StakeOriginalsComp';
 const CasinoHomeComp = () => {
+  const nav = useNavigate();
   const settings = {
     nextArrow: <IoIosArrowForward color="white" />,
     prevArrow: <MdArrowBackIos color="white" />,
@@ -50,11 +55,9 @@ const CasinoHomeComp = () => {
   };
   return (
     <LayoutComp>
-      <Stack py={'12'} w={'100%'} bgColor={'#1A2C38'}>
-        <Stack
-          px={{ base: '0', md: '8', lg: '12', xl: '16' }}
-          className="slider"
-        >
+      <Stack py={'12'} px={{base:'4',md:'0'}} w={'100%'} bgColor={'#1A2C38'}>
+        {/* slider */}
+        <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
           <Slider {...settings}>
             <Center h={'45vh'} w={'100%'} px={'2'}>
               <Box
@@ -113,11 +116,12 @@ const CasinoHomeComp = () => {
             </Center>
           </Slider>
         </Stack>
+        {/* searchbar */}
         <Stack
+          className="searchbar"
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
           display={{ base: 'none', md: 'flex' }}
           pt={'12'}
-          className="searchbar"
         >
           <InputGroup
             borderColor={'gray'}
@@ -143,8 +147,10 @@ const CasinoHomeComp = () => {
             />
           </InputGroup>
         </Stack>
+        {/* tabs */}
         <Stack pt={'8'} className="tabs">
           <Tabs variant="soft-rounded" colorScheme="green">
+            {/* tab list */}
             <TabList
               marginInline={{ base: '2', md: '8', lg: '12', xl: '16' }}
               marginBottom={'3'}
@@ -155,6 +161,8 @@ const CasinoHomeComp = () => {
             >
               <Stack direction={'row'} p={'2'}>
                 <Tab
+                  className="lobby"
+                  onClick={() => nav('/casino/home')}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
@@ -166,6 +174,8 @@ const CasinoHomeComp = () => {
                   </HStack>
                 </Tab>
                 <Tab
+                  className="live-casino"
+                  onClick={() => nav('/casino/home/live-casino')}
                   w={'max-content'}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
@@ -177,6 +187,8 @@ const CasinoHomeComp = () => {
                   </HStack>
                 </Tab>
                 <Tab
+                  className="featured-slots"
+                  onClick={() => nav('/casino/home/featured-slots')}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
@@ -188,6 +200,8 @@ const CasinoHomeComp = () => {
                   </HStack>
                 </Tab>
                 <Tab
+                  className="game-shows"
+                  onClick={() => nav('/casino/home/game-shows')}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
@@ -199,6 +213,8 @@ const CasinoHomeComp = () => {
                   </HStack>
                 </Tab>
                 <Tab
+                  className="stake-originals"
+                  onClick={() => nav('/casino/home/stake-originals')}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
@@ -211,101 +227,86 @@ const CasinoHomeComp = () => {
                 </Tab>
               </Stack>
             </TabList>
+            {/* tab paanels */}
             <TabPanels>
-              <TabPanel>
+              <TabPanel className="lobby">
+                {/* stake originals */}
                 <Stack
-                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="stake-originals"
+                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                  <Link
-                    style={{ width: 'fit-content', paddingLeft: '5px' }}
-                    to={'/stakeoriginals'}
+                  <HStack
+                    w={'fit-content'}
+                    _hover={{ cursor: 'pointer' }}
+                    onClick={() => nav('/stakeoriginals')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
                   >
-                    <HStack
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <ImFire fontSize={'1.3rem'} />
-
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Stake Originals
-                      </Heading>
-                    </HStack>
-                  </Link>
+                    <ImFire fontSize={'1.3rem'} />
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Stake Originals
+                    </Heading>
+                  </HStack>
                   <CardSlider />
                 </Stack>
+                {/* slots */}
                 <Stack
-                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="slots"
+                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                  <Link
-                    style={{ width: 'fit-content', paddingLeft: '5px' }}
-                    to={'/stakeoriginals'}
+                  <HStack
+                    w={'fit-content'}
+                    _hover={{ cursor: 'pointer' }}
+                    onClick={() => nav('/slots')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
                   >
-                    <HStack
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <FaGg fontSize={'1.3rem'} />
+                    <FaGg fontSize={'1.3rem'} />
 
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Slots
-                      </Heading>
-                    </HStack>
-                  </Link>
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Slots
+                    </Heading>
+                  </HStack>
                   <CardSlider />
                 </Stack>
+                {/* providers */}
                 <Stack
-                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="provider"
+                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                  <Link
-                    style={{ width: 'fit-content', paddingLeft: '5px' }}
-                    to={'/provider'}
+                  <HStack
+                    w={'fit-content'}
+                    _hover={{ cursor: 'pointer' }}
+                    onClick={() => nav('/providers')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
                   >
-                    <HStack
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <FaChessQueen fontSize={'1.3rem'} />
+                    <FaChessQueen fontSize={'1.3rem'} />
 
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Providers
-                      </Heading>
-                    </HStack>
-                  </Link>
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Providers
+                    </Heading>
+                  </HStack>
                   <ProviderSlider />
                 </Stack>
+                {/* live casino */}
                 <Stack
-                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="live-casino"
+                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                  <Link
-                    style={{ width: 'fit-content', paddingLeft: '5px' }}
-                    to={'/livecasino'}
-                  >
                     <HStack
+                     w={'fit-content'}
+                     _hover={{ cursor: 'pointer' }}
+                     onClick={() => nav('/live-casino')}
                       color={'gray.400'}
                       pb={'3'}
                       spacing={'2'}
@@ -322,9 +323,9 @@ const CasinoHomeComp = () => {
                         Live Casino
                       </Heading>
                     </HStack>
-                  </Link>
                   <CardSlider />
                 </Stack>
+                {/* game shows */}
                 <Stack
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="gameshows"
@@ -354,6 +355,7 @@ const CasinoHomeComp = () => {
                   </Link>
                   <CardSlider />
                 </Stack>
+                {/* table games */}
                 <Stack
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="tablegames"
@@ -383,6 +385,7 @@ const CasinoHomeComp = () => {
                   </Link>
                   <CardSlider />
                 </Stack>
+                {/* new releases */}
                 <Stack
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="tablegames"
@@ -413,9 +416,33 @@ const CasinoHomeComp = () => {
                   <CardSlider />
                 </Stack>
               </TabPanel>
-              <TabPanel>
-                {' '}
+              <TabPanel className="live-casino">
+                <LiveCasino />
                 <Stack
+                  pt={'10'}
+                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
+                >
+                  <HStack
+                    onClick={() => nav('/casino/home/live-casino')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
+                  >
+                    <FaChessQueen fontSize={'1.3rem'} />
+
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Providers
+                    </Heading>
+                  </HStack>
+                  <ProviderSlider />
+                </Stack>
+              </TabPanel>
+              <TabPanel className="featured-slots">
+                <FeaturedSlots />
+                <Stack
+                  pt={'8'}
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="provider"
                 >
@@ -444,9 +471,10 @@ const CasinoHomeComp = () => {
                   <ProviderSlider />
                 </Stack>
               </TabPanel>
-              <TabPanel>
-                {' '}
+              <TabPanel className="game-shows">
+                <GameShows />
                 <Stack
+                  pt={'8'}
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="provider"
                 >
@@ -475,40 +503,10 @@ const CasinoHomeComp = () => {
                   <ProviderSlider />
                 </Stack>
               </TabPanel>
-              <TabPanel>
-                {' '}
+              <TabPanel className="stake-originals">
+                <StakeOriginalsComp />
                 <Stack
-                  px={{ base: '2', md: '8', lg: '12', xl: '16' }}
-                  className="provider"
-                >
-                  <Link
-                    style={{ width: 'fit-content', paddingLeft: '5px' }}
-                    to={'/provider'}
-                  >
-                    <HStack
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <FaChessQueen fontSize={'1.3rem'} />
-
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Providers
-                      </Heading>
-                    </HStack>
-                  </Link>
-                  <ProviderSlider />
-                </Stack>
-              </TabPanel>
-              <TabPanel>
-                {' '}
-                <Stack
+                  pt={'8'}
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                   className="provider"
                 >

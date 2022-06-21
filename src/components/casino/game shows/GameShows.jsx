@@ -1,17 +1,15 @@
 import React from 'react';
 import {
-  Box,
-  Center,
   Heading,
   HStack,
   SimpleGrid,
   Stack,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { FaFire } from 'react-icons/fa';
-import cardslider4 from '../../../assets/images/cardslider4.jfif';
+import { AiOutlineGift } from 'react-icons/ai';
+import cardslider7 from '../../../assets/images/cardslider7.jfif';
 import Card from '../../ui/card/Card';
-const StakeOriginalsComp = () => {
+const GameShows = () => {
   const nav = useNavigate();
   return (
     <Stack
@@ -24,10 +22,10 @@ const StakeOriginalsComp = () => {
         spacing={'2'}
         alignItems={'center'}
       >
-        <FaFire fontSize={'1.3rem'} />
+        <AiOutlineGift fontSize={'1.3rem'} />
         <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
           {' '}
-          Stake Originals
+          Game Shows
         </Heading>
       </HStack>
       <SimpleGrid
@@ -35,15 +33,16 @@ const StakeOriginalsComp = () => {
         minChildWidth={'130px'}
         spacingX={'2px'}
       >
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
-        <Card img={cardslider4} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
+        <Card img={cardslider7} />
       </SimpleGrid>
     </Stack>
   );
 };
-export default StakeOriginalsComp;
+
+export default GameShows;

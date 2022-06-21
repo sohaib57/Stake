@@ -11,10 +11,10 @@ import {
 import { Layout, Menu, Divider } from 'antd';
 import { HStack, Stack, Button } from '@chakra-ui/react';
 import { Select } from '@chakra-ui/react';
-import { GiCardAceHearts } from 'react-icons/gi'
+import { GiCardAceHearts } from 'react-icons/gi';
 import 'antd/dist/antd.css';
 import './style.css';
-
+import { useNavigate } from 'react-router-dom';
 
 const { Sider } = Layout;
 
@@ -24,6 +24,7 @@ const { Option } = Select;
 //   console.log(`selected ${value}`);
 // };
 const Sidebar = () => {
+  const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
@@ -130,6 +131,7 @@ const Sidebar = () => {
             >
               <FieldTimeOutlined />
               <button
+                onClick={() => nav('/casino/group/stake-originals')}
                 style={{
                   paddingLeft: 8,
                 }}
