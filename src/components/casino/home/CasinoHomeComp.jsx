@@ -34,11 +34,11 @@ import { ImFire } from 'react-icons/im';
 import LayoutComp from '../../../layout/LayoutComp';
 import CardSlider from '../../ui/card slider/CardSlider';
 import { Link, useNavigate } from 'react-router-dom';
-import ProviderSlider from '../provider/ProviderSlider';
-import LiveCasino from '../live casino/LiveCasino';
-import FeaturedSlots from '../features slots/FeaturedSlots';
-import GameShows from '../game shows/GameShows';
-import StakeOriginalsComp from '../Stake Originals/StakeOriginalsComp';
+import ProviderSlider from '../home/provider/ProviderSlider';
+import LiveCasino from '../home/live casino/LiveCasino';
+import FeaturedSlots from '../home/features slots/FeaturedSlots';
+import GameShows from '../home/game shows/GameShows';
+import StakeOriginalsComp from '../home/Stake Originals/StakeOriginalsComp';
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {

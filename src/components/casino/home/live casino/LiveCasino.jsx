@@ -9,8 +9,8 @@ import {
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdOutlineCasino } from 'react-icons/md';
-import cardslider3 from '../../../assets/images/cardslider3.jfif';
-import Card from '../../ui/card/Card';
+import cardslider3 from '../../../../assets/images/cardslider3.jfif';
+import Card from '../../../ui/card/Card';
 const LiveCasino = () => {
   const nav = useNavigate();
   return (

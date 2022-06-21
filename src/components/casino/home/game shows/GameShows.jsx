@@ -7,8 +7,8 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineGift } from 'react-icons/ai';
-import cardslider7 from '../../../assets/images/cardslider7.jfif';
-import Card from '../../ui/card/Card';
+import cardslider7 from '../../../../assets/images/cardslider7.jfif';
+import Card from '../../../ui/card/Card';
 const GameShows = () => {
   const nav = useNavigate();
   return (

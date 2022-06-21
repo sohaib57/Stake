@@ -16,7 +16,7 @@ import LayoutComp from '../../../layout/LayoutComp';
 import stakeoriginal from '../../../assets/images/stakeoriginal.png';
 import cardslider5 from '../../../assets/images/cardslider5.jfif';
 import { AiOutlineSearch } from 'react-icons/ai';
-import {GoSettings} from 'react-icons/go'
+import { GoSettings } from 'react-icons/go';
 import Card from '../../../components/ui/card/Card';
 const StakeOriginalsScreen = () => {
   return (
@@ -28,7 +28,7 @@ const StakeOriginalsScreen = () => {
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
-          py={'3'}
+          py={'2'}
         >
           <Center>
             <Text fontSize={'2xl'} fontWeight={'600'} color={'white'}>
@@ -76,8 +76,15 @@ const StakeOriginalsScreen = () => {
               />
             </InputGroup>
           </Stack>
+          {/* filters */}
           <Stack pb={'2'} justifyContent={'space-between'} direction={'row'}>
-            <Button color={'white'} _hover={{}} _focus={{}} bgColor={'#071824'}>
+            <Button
+              fontSize={'sm'}
+              color={'white'}
+              _hover={{}}
+              _focus={{}}
+              bgColor={'#071824'}
+            >
               View All Providers
             </Button>
             <Stack
@@ -88,10 +95,14 @@ const StakeOriginalsScreen = () => {
               alignItems={'center'}
             >
               <HStack spacing={'1.5'}>
-              <GoSettings fontSize={'1.1rem'} />
-              <Text fontSize={'md'}>SortBy</Text>
+                <GoSettings fontSize={'1rem'} />
+                <Text fontSize={'sm'} fontWeight={'500'}>
+                  SortBy
+                </Text>
               </HStack>
               <Select
+                fontSize={'sm'}
+                fontWeight={'500'}
                 _hover={{ bg: '#071824' }}
                 _focusVisible={{}}
                 bg={'#0F212E'}

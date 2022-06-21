@@ -1,15 +1,17 @@
 import React from 'react';
 import {
+  Box,
+  Center,
   Heading,
   HStack,
   SimpleGrid,
   Stack,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { FaGg } from 'react-icons/fa';
-import cardslider5 from '../../../assets/images/cardslider5.jfif';
-import Card from '../../ui/card/Card';
-const FeaturedSlots = () => {
+import { FaFire } from 'react-icons/fa';
+import cardslider4 from '../../../../assets/images/cardslider4.jfif';
+import Card from '../../../ui/card/Card';
+const StakeOriginalsComp = () => {
   const nav = useNavigate();
   return (
     <Stack
@@ -22,10 +24,10 @@ const FeaturedSlots = () => {
         spacing={'2'}
         alignItems={'center'}
       >
-        <FaGg fontSize={'1.3rem'} />
+        <FaFire fontSize={'1.3rem'} />
         <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
           {' '}
-          Featured Slots
+          Stake Originals
         </Heading>
       </HStack>
       <SimpleGrid
@@ -33,16 +35,15 @@ const FeaturedSlots = () => {
         minChildWidth={'130px'}
         spacingX={'2px'}
       >
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
-        <Card img={cardslider5} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
+        <Card img={cardslider4} />
       </SimpleGrid>
     </Stack>
   );
 };
-
-export default FeaturedSlots;
+export default StakeOriginalsComp;
