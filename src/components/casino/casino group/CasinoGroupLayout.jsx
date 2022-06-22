@@ -20,6 +20,7 @@ import { GoSettings } from 'react-icons/go';
 import Card from '../../ui/card/Card';
 import ProviderSlider from '../home/provider/ProviderSlider';
 import { useNavigate } from 'react-router-dom';
+import CasinoStats from '../home/stats/CasinoStats';
 const CasinoGroupLayout = ({ heading, headerImg, game }) => {
   const nav = useNavigate();
   return (
@@ -103,7 +104,7 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               <Select
                 fontSize={'sm'}
                 fontWeight={'500'}
-                _hover={{ bg: '#071824' }}
+                _hover={{ bg: '#071824' , cursor:'pointer' }}
                 _focusVisible={{}}
                 bg={'#0F212E'}
                 variant="filled"
@@ -134,7 +135,7 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               <Select
                 fontSize={'sm'}
                 fontWeight={'500'}
-                _hover={{ bg: '#071824' }}
+                _hover={{ bg: '#071824' , cursor:'pointer' }}
                 _focusVisible={{}}
                 bg={'#0F212E'}
                 variant="filled"
@@ -161,7 +162,8 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
             <Card img={game} />
             <Card img={game} />
           </SimpleGrid>
-          <Stack py={'12'} px={{ base: '2', md: '8', lg: '12', xl: '14' }}>
+          {/* provider */}
+          <Stack pt={'12'} px={{ base: '2', md: '8', lg: '12', xl: '14' }}>
             <HStack
               w={'fit-content'}
               _hover={{ cursor: 'pointer' }}
@@ -179,6 +181,10 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               </Heading>
             </HStack>
             <ProviderSlider />
+          </Stack>
+          {/* stats */}
+          <Stack pb={'12'} px={{ base: '2', md: '8', lg: '12', xl: '14' }}>
+            <CasinoStats />
           </Stack>
         </Stack>
       </Stack>

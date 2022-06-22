@@ -3,16 +3,25 @@ import {
   Center,
   Heading,
   HStack,
+  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
   Stack,
   Tab,
+  Table,
+  TableContainer,
   TabList,
   TabPanel,
   TabPanels,
   Tabs,
+  Tbody,
   Text,
+  Th,
+  Thead,
+  Tooltip,
+  Tr,
+  Select,
 } from '@chakra-ui/react';
 import React from 'react';
 import Slider from 'react-slick';
@@ -39,6 +48,7 @@ import LiveCasino from '../home/live casino/LiveCasino';
 import FeaturedSlots from '../home/features slots/FeaturedSlots';
 import GameShows from '../home/game shows/GameShows';
 import StakeOriginalsComp from '../home/Stake Originals/StakeOriginalsComp';
+import CasinoStats from './stats/CasinoStats';
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {
@@ -55,7 +65,12 @@ const CasinoHomeComp = () => {
   };
   return (
     <LayoutComp>
-      <Stack py={'12'} px={{base:'4',md:'0'}} w={'100%'} bgColor={'#1A2C38'}>
+      <Stack
+        py={'12'}
+        px={{ base: '4', md: '0' }}
+        w={'100%'}
+        bgColor={'#1A2C38'}
+      >
         {/* slider */}
         <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
           <Slider {...settings}>
@@ -303,26 +318,22 @@ const CasinoHomeComp = () => {
                   className="live-casino"
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                    <HStack
-                     w={'fit-content'}
-                     _hover={{ cursor: 'pointer' }}
-                     onClick={() => nav('/live-casino')}
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <MdOutlineCasino fontSize={'1.3rem'} />
+                  <HStack
+                    w={'fit-content'}
+                    _hover={{ cursor: 'pointer' }}
+                    onClick={() => nav('/live-casino')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
+                  >
+                    <MdOutlineCasino fontSize={'1.3rem'} />
 
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Live Casino
-                      </Heading>
-                    </HStack>
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Live Casino
+                    </Heading>
+                  </HStack>
                   <CardSlider />
                 </Stack>
                 {/* game shows */}
@@ -537,6 +548,10 @@ const CasinoHomeComp = () => {
               </TabPanel>
             </TabPanels>
           </Tabs>
+        </Stack>
+        {/* stats */}
+        <Stack px={{ base: '8', lg: '12', xl: '16' }}>
+          <CasinoStats />
         </Stack>
       </Stack>
     </LayoutComp>
