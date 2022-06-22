@@ -3,25 +3,16 @@ import {
   Center,
   Heading,
   HStack,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
   Stack,
   Tab,
-  Table,
-  TableContainer,
   TabList,
   TabPanel,
   TabPanels,
   Tabs,
-  Tbody,
   Text,
-  Th,
-  Thead,
-  Tooltip,
-  Tr,
-  Select,
 } from '@chakra-ui/react';
 import React from 'react';
 import Slider from 'react-slick';
@@ -40,7 +31,6 @@ import { MdOutlineCasino } from 'react-icons/md';
 import { AiOutlineGift } from 'react-icons/ai';
 import { FaGg, FaChessQueen, FaFire } from 'react-icons/fa';
 import { ImFire } from 'react-icons/im';
-import LayoutComp from '../../../layout/LayoutComp';
 import CardSlider from '../../ui/card slider/CardSlider';
 import { Link, useNavigate } from 'react-router-dom';
 import ProviderSlider from '../home/provider/ProviderSlider';
@@ -64,7 +54,6 @@ const CasinoHomeComp = () => {
     autoplaySpeed: 4000,
   };
   return (
-    <LayoutComp>
       <Stack
         py={'12'}
         px={{ base: '4', md: '0' }}
@@ -181,7 +170,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <GiCherry />
@@ -194,7 +183,7 @@ const CasinoHomeComp = () => {
                   w={'max-content'}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <MdOutlineCasino />
@@ -207,7 +196,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <FaGg />
@@ -220,7 +209,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <AiOutlineGift />
@@ -233,7 +222,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <ImFire />
@@ -554,7 +543,6 @@ const CasinoHomeComp = () => {
           <CasinoStats />
         </Stack>
       </Stack>
-    </LayoutComp>
   );
 };
 
