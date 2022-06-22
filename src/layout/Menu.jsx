@@ -43,7 +43,11 @@ import {
   SiFifa,
   SiWattpad,
 } from 'react-icons/si';
-import { BsList, BsBookmarkStarFill , BsEmojiHeartEyesFill,} from 'react-icons/bs';
+import {
+  BsList,
+  BsBookmarkStarFill,
+  BsEmojiHeartEyesFill,
+} from 'react-icons/bs';
 import { AiOutlineStar, AiFillPlayCircle } from 'react-icons/ai';
 import { ImFire } from 'react-icons/im';
 import {
@@ -58,7 +62,7 @@ import {
   FaFootballBall,
   FaVolleyballBall,
   FaGift,
-  FaHeadSideMask
+  FaHeadSideMask,
 } from 'react-icons/fa';
 import { BiRocket, BiFootball, BiCycling, BiTimer } from 'react-icons/bi';
 import {

@@ -12,12 +12,12 @@ import { Layout, Menu, Divider } from 'antd';
 import { HStack, Stack, Button } from '@chakra-ui/react';
 import { Select } from '@chakra-ui/react';
 import { GiCardAceHearts } from 'react-icons/gi';
+import { AiTwotoneHeart } from 'react-icons/ai';
 import 'antd/dist/antd.css';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 const { Sider } = Layout;
-
 
 const Sidebar = () => {
   const nav = useNavigate();
@@ -25,32 +25,7 @@ const Sidebar = () => {
   return (
     <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        {/* <div className="logo" /> */}
         <div className="siderbar-header">
-        <Stack direction={'row'} className='sidebar-button'>
-            <Button
-            _hover={{
-              bgColor: 'transparent'
-            }}
-              bgColor={'transparent'}
-              color={'white'}
-              leftIcon={<StarOutlined />}
-              fontSize={'sm'}
-            >
-              Casino
-            </Button>
-            <Button
-            _hover={{
-              bgColor: 'transparent'
-            }}
-              bgColor={'transparent'}
-              color={'white'}
-              leftIcon={<StarOutlined />}
-              fontSize={'sm'}
-            >
-              Sport
-            </Button>
-          </Stack>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -58,7 +33,34 @@ const Sidebar = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
-           
+        </div>
+        <div className="sidebar-button">
+          <Stack direction={'column'} alignItems={'start'}>
+            <Button
+              _hover={{
+                bgColor: 'transparent',
+              }}
+              bgColor={'transparent'}
+              color={'white'}
+              leftIcon={<StarOutlined />}
+              fontSize={'xs'}
+              pl={'20px'}
+            >
+              Casino
+            </Button>
+            <Button
+            pl={'20px'}
+              _hover={{
+                bgColor: 'transparent',
+              }}
+              bgColor={'transparent'}
+              color={'white'}
+              leftIcon={<StarOutlined />}
+              fontSize={'xs'}
+            >
+              Sport
+            </Button>
+          </Stack>
         </div>
 
         <Menu
@@ -331,7 +333,6 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
-             
             </Menu.Item>
             <Menu.Item
               key="3"

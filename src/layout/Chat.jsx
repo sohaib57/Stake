@@ -19,7 +19,7 @@ import {
 import { BsChatDotsFill } from 'react-icons/bs';
 import { AiOutlineStar } from 'react-icons/ai';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { RiFilePaper2Fill } from 'react-icons/ri'
+import { RiFilePaper2Fill } from 'react-icons/ri';
 import { useDisclosure } from '@chakra-ui/react';
 
 const Chat = () => {
@@ -175,7 +175,9 @@ const Chat = () => {
                     160
                   </Text>
                   <RiFilePaper2Fill color="#b1bad3" />
-                  <Button bgColor={'#1fff20'} size={'sm'}>Send</Button>
+                  <Button bgColor={'#1fff20'} size={'sm'}>
+                    Send
+                  </Button>
                 </HStack>
               </Stack>
             </Stack>
