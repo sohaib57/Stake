@@ -31,10 +31,12 @@
   .ant-layout-header{
     background: #1a2c38;
     height: 60px;
+    border-bottom: 1px solid #0f212e;
     
   }
   .site-layout .site-header-layout-background {
     background-color: #1a2c38;
+   
   }
   .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
     background-color: #1a2c38;
@@ -78,16 +80,30 @@
   color: white;
 
 }
-@media screen and (max-width: 80px) {
-  .sidebar-button {
-    display: none;
-  }
+.siderbar-header{
+  border-bottom: 1px solid #1a2c38 ;
+  box-shadow: #0f212e;
+}
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after{
+  border-right: none;
+}
+.ant-menu-item-selected{
+color : white;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  border-radius: 50px;
+  background-color: #071824;
+}
+.ant-menu-item:active, .ant-menu-submenu-title:active{
+  border-radius: 50px;
+  background-color: #071824;
+}
+.ant-menu-submenu-popup > .ant-menu{
+  background-color: #0f212e;
+  color: white;
 }
 
 
-.select option{
-  color: black;
-}
 
 
 

@@ -12,6 +12,7 @@ import { Layout, Menu, Divider } from 'antd';
 import { HStack, Stack, Button } from '@chakra-ui/react';
 import { Select } from '@chakra-ui/react';
 import { GiCardAceHearts } from 'react-icons/gi';
+import { AiTwotoneHeart } from 'react-icons/ai';
 import 'antd/dist/antd.css';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
@@ -24,9 +25,17 @@ const Sidebar = () => {
   return (
     <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        {/* <div className="logo" /> */}
         <div className="siderbar-header">
-          <Stack direction={'row'} className="sidebar-button">
+          {React.createElement(
+            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+            {
+              className: 'trigger',
+              onClick: () => setCollapsed(!collapsed),
+            }
+          )}
+        </div>
+        <div className="sidebar-button">
+          <Stack direction={'column'} alignItems={'start'}>
             <Button
               onClick={() => nav('/casino/home')}
               _hover={{
@@ -35,30 +44,25 @@ const Sidebar = () => {
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
-              fontSize={'sm'}
+              fontSize={'xs'}
+              pl={'20px'}
             >
               Casino
             </Button>
             <Button
               onClick={() => nav('/sports/home')}
+            pl={'20px'}
               _hover={{
                 bgColor: 'transparent',
               }}
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
-              fontSize={'sm'}
+              fontSize={'xs'}
             >
               Sport
             </Button>
           </Stack>
-          {React.createElement(
-            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-            {
-              className: 'trigger',
-              onClick: () => setCollapsed(!collapsed),
-            }
-          )}
         </div>
 
         <Menu
