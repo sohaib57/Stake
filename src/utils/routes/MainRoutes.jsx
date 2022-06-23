@@ -1,19 +1,106 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { CasinoHome } from '../../screens/casino/CasinoHome';
+import CasinoHome from '../../screens/casino/home/CasinoHome';
 import Challenges from '../../screens/casino/challenges/Challenges';
-import FavouriteScreen from '../../screens/casino/FavouriteScreen';
-import StakeOriginalsScreen from '../../screens/casino/StakeOriginalsScreen';
 import Home from '../../screens/home/Home';
+import LiveCasino from '../../components/casino/home/live casino/LiveCasino';
+import FavouriteScreen from '../../screens/casino/favourite/FavouriteScreen';
+import FeaturedSlots from '../../components/casino/home/features slots/FeaturedSlots';
+import GameShows from '../../components/casino/home/game shows/GameShows';
+import StakeOriginalsComp from '../../components/casino/home/Stake Originals/StakeOriginalsComp';
+import NoMatchScreen from '../../screens/NoMatchScreen';
+import StakeOriginalsScreen from '../../screens/casino/home/StakeOriginalsScreen';
+import StakeExclusives from '../../screens/casino/casino group/StakeExclusives';
+import Slots from '../../screens/casino/casino group/Slots';
+import LiveCasinoScreen from '../../screens/casino/casino group/LiveCasinoScreen';
+import GameShowsScreen from '../../screens/casino/casino group/GameShowsScreen';
+import NewReleasesScreen from '../../screens/casino/casino group/NewReleasesScreen';
+import FeatureByIn from '../../screens/casino/casino group/FeatureByIn';
+import TableGamesScreen from '../../screens/casino/casino group/TableGamesScreen';
+import BlackJack from '../../screens/casino/casino group/BlackJack';
+import Baccarat from '../../screens/casino/casino group/Baccarat';
+import Roulette from '../../screens/casino/casino group/Roulette';
+import AllClaimed from '../../components/casino/challenges/allclaimed/AllClaimed';
+import MyClaimed from '../../components/casino/challenges/myclaimed/MyClaimed';
+import Active from '../../components/casino/challenges/active/Active';
+import ViewAll from '../../screens/ViewAll'
+
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/casinohome" element={<CasinoHome />} />
       <Route path="/casino" element={<CasinoHome />} />
-      <Route path="/casino/challenges" element={<Challenges />} />
+
+      {/* Casino challenges  screens starts here */}
+
+      <Route path="/casino/challenges/*" element={<Challenges />} >
+        <Route path="all-claimed" element={<AllClaimed />} />
+        <Route path="my-claimed" element={<MyClaimed />} />
+      </Route>
+
+      {/* Casino challenges screens ends here */}
+
       <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
       <Route path="/casinofavourite" element={<FavouriteScreen />} />
+      {/* casino home  */}
+      <Route path="/casino/home/*" element={<CasinoHome />}>
+        <Route path="live-casino" element={<LiveCasino />} />
+        <Route path="featured-slots" element={<FeaturedSlots />} />
+        <Route path="game-shows" element={<GameShows />} />
+        <Route path="stake-originals" element={<StakeOriginalsComp />} />
+      </Route>
+      {/* casino group */}
+      <Route
+        path="/casino/group/stake-originals"
+        element={<StakeOriginalsScreen />}
+      />
+      <Route
+        path="/casino/group/stake-exclusives"
+        element={<StakeExclusives />}
+      />
+      <Route
+        path="/casino/group/slots"
+        element={<Slots />}
+      />
+      <Route
+        path="/casino/group/live-casino"
+        element={<LiveCasinoScreen />}
+      />
+      <Route
+        path="/casino/group/game-shows"
+        element={<GameShowsScreen />}
+      />
+      <Route
+        path="/casino/group/new-releases"
+        element={<NewReleasesScreen />}
+      />
+      <Route
+        path="/casino/group/feature-buy-in"
+        element={<FeatureByIn />}
+      />
+      <Route
+        path="/casino/group/table-games"
+        element={<TableGamesScreen />}
+      />
+      <Route
+        path="/casino/group/blackjack"
+        element={<BlackJack />}
+      />
+      <Route
+        path="/casino/group/baccarat"
+        element={<Baccarat />}
+      />
+      <Route
+        path="/casino/group/roulette"
+        element={<Roulette />}
+      />
+
+      <Route path="/casino-favourite" element={<FavouriteScreen />} />
+
+      <Route path='/promotions' element={<ViewAll />} />
+
+      <Route path="*" element={<NoMatchScreen />} />
     </Routes>
   );
 };

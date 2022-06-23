@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import SubMenu from 'antd/lib/menu/SubMenu';
+import { useNavigate } from 'react-router-dom';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  HStack, Stack, Button,
+  Select,
+  Text
+} from '@chakra-ui/react'
+import { RiContactsBook2Fill } from 'react-icons/ri'
+import { GiDigitalTrace } from 'react-icons/gi'
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -9,29 +24,39 @@ import {
   FieldTimeOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Divider } from 'antd';
-import { HStack, Stack, Button } from '@chakra-ui/react';
-import { Select } from '@chakra-ui/react';
-import { GiCardAceHearts } from 'react-icons/gi'
+import SubMenu from 'antd/lib/menu/SubMenu';
 import 'antd/dist/antd.css';
 import './style.css';
-
+import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
+import Race24Hour from '../components/promotions/Race24Hour';
 
 const { Sider } = Layout;
 
-const { Option } = Select;
-
-// const handleChange = value => {
-//   console.log(`selected ${value}`);
-// };
 const Sidebar = () => {
+  const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: isRevocationModalOpen,
+    onOpen: onOpenRevocationModal,
+    onClose: onCloseRevocationModal,
+  } = useDisclosure();
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside')
+  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside')
+
+  const btnRef = React.useRef(null)
+
+
   return (
     <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         {/* <div className="logo" /> */}
         <div className="siderbar-header">
-          {/* <HStack className='sidebar-button'>
+          <Stack direction={'row'} className='sidebar-button'>
             <Button
+              _hover={{
+                bgColor: 'transparent'
+              }}
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
@@ -40,6 +65,9 @@ const Sidebar = () => {
               Casino
             </Button>
             <Button
+              _hover={{
+                bgColor: 'transparent'
+              }}
               bgColor={'transparent'}
               color={'white'}
               leftIcon={<StarOutlined />}
@@ -47,7 +75,7 @@ const Sidebar = () => {
             >
               Sport
             </Button>
-          </HStack> */}
+          </Stack>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -55,6 +83,7 @@ const Sidebar = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+
         </div>
 
         <Menu
@@ -117,12 +146,14 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/casino/challenges')}
               >
                 Challenges
               </button>
             </Menu.Item>
             <Divider />
             <Menu.Item
+              onClick={() => nav('/casino/group/stake-originals')}
               key="4"
               style={{
                 paddingLeft: 20,
@@ -130,6 +161,7 @@ const Sidebar = () => {
             >
               <FieldTimeOutlined />
               <button
+
                 style={{
                   paddingLeft: 8,
                 }}
@@ -138,6 +170,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/stake-exclusives')}
               key="5"
               style={{
                 paddingLeft: 20,
@@ -153,6 +186,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/slots')}
               key="6"
               style={{
                 paddingLeft: 20,
@@ -168,6 +202,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/live-casino')}
               key="7"
               style={{
                 paddingLeft: 20,
@@ -183,6 +218,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/game-shows')}
               key="8"
               style={{
                 paddingLeft: 20,
@@ -198,6 +234,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/new-releases')}
               key="9"
               style={{
                 paddingLeft: 20,
@@ -213,6 +250,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/feature-buy-in')}
               key="10"
               style={{
                 paddingLeft: 20,
@@ -228,6 +266,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/table-games')}
               key="11"
               style={{
                 paddingLeft: 20,
@@ -243,6 +282,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/blackjack')}
               key="12"
               style={{
                 paddingLeft: 20,
@@ -258,6 +298,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/baccarat')}
               key="13"
               style={{
                 paddingLeft: 20,
@@ -273,6 +314,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/casino/group/roulette')}
               key="14"
               style={{
                 paddingLeft: 20,
@@ -326,6 +368,7 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
+
             </Menu.Item>
             <Menu.Item
               key="3"
@@ -1135,10 +1178,45 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+
+                onClick={onOpen}
+
               >
                 $50k Weekly Giveaway
+
               </button>
             </Menu.Item>
+
+            {/* WeeklyGiveAway */}
+            <Modal
+              onClose={onClose}
+              finalFocusRef={btnRef}
+              isOpen={isOpen}
+              scrollBehavior={scrollBehavior}
+              size={'lg'}
+
+            >
+              <ModalOverlay />
+              <ModalContent bg={'#1A2C38'} >
+                <ModalHeader>
+                  <Stack direction={'row'} alignItems={'center'} >
+                    <RiContactsBook2Fill color={'#B1BAD3'} />
+                    <Text color={'white'} >  VIP </Text>
+                  </Stack>
+                </ModalHeader>
+                <ModalCloseButton bg={'white'} color={'black'} />
+                <ModalBody  >
+                  <WeeklyGiveAwayModal />
+                </ModalBody>
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
+                  <Text color={'white'}  >
+                    Learn more about being a Stake VIP
+                  </Text>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
+
             <Menu.Item
               key="2"
               style={{
@@ -1150,10 +1228,42 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={onOpenRevocationModal}
               >
                 $100k Race - 24 Hours
               </button>
             </Menu.Item>
+
+
+            {/* Race-Hour */}
+            <Modal
+              onClose={onCloseRevocationModal}
+              finalFocusRef={btnRef}
+              isOpen={isRevocationModalOpen}
+              scrollBehavior={scrollBehavior2}
+              size={'lg'}
+
+            >
+              <ModalOverlay />
+              <ModalContent bg={'#1A2C38'} >
+                <ModalHeader>
+                  <Stack direction={'row'} alignItems={'center'} >
+                    <GiDigitalTrace color={'#B1BAD3'} />
+                    <Text color={'white'} >  Race </Text>
+                  </Stack>
+                </ModalHeader>
+                <ModalCloseButton bg={'white'} color={'black'} />
+                <ModalBody  >
+                  <Race24Hour />
+                </ModalBody>
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
+                  <Text color={'white'}  >
+                    Learn more about being a Stake VIP
+                  </Text>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
             <Menu.Item
               key="3"
               style={{
@@ -1165,6 +1275,7 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/promotions')}
               >
                 View All
               </button>

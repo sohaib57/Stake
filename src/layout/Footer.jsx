@@ -437,8 +437,7 @@ const Footer = () => {
         className="crypto"
         w={'full'}
         minChildWidth="110px"
-        spacingX="48px"
-        spacingY={'40px'}
+        spacing={'40px'}
       >
         <Stack width={'32'}>
           <Image h={'full'} w={'full'} src={bitcoin} />
@@ -478,8 +477,7 @@ const Footer = () => {
         className="crypto"
         w={'full'}
         minChildWidth="110px"
-        spacingX="48px"
-        spacingY={'40px'}
+        spacing={'40px'}
       >
         <Stack width={'32'}>
           <Image h={'full'} w={'full'} src={sponser3} />

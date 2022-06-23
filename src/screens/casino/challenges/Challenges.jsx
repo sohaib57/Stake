@@ -2,13 +2,14 @@ import React from 'react'
 import { Stack } from '@chakra-ui/react'
 import ChallengesHeader from '../../../components/casino/challenges/ChallengesHeader'
 import ChallengesBody from '../../../components/casino/challenges/ChallengesBody'
+import LayoutComp from '../../../layout/LayoutComp'
 
 const Challenges = () => {
     return (
-        <Stack>
+        <LayoutComp>
             <ChallengesHeader />
             <ChallengesBody />
-        </Stack>
+        </LayoutComp>
     )
 }
 

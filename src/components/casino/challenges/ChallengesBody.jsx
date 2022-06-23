@@ -1,29 +1,49 @@
+import { useNavigate } from 'react-router-dom'
 import { Stack, Tabs, TabList, TabPanels, TabPanel, Text, Image, HStack, Tab, VStack, Select, SimpleGrid, Progress, Button } from '@chakra-ui/react'
 import { GoSettings } from 'react-icons/go'
-import dice from '../../../assets/images/dice.png'
-import Card from './ui/Card'
+import Active from './active/Active'
+import AllClaimed from './allclaimed/AllClaimed'
+import MyClaimed from './myclaimed/MyClaimed'
 
 
 const ChallengesBody = () => {
+  const navigate = useNavigate()
+
+  const activeHandler = () => {
+
+    navigate('/casino/challenges')
+
+  }
+
+  const allClaimHandler = () => {
+    navigate('/casino/challenges/all-claimed');
+  }
+
+  const myClaimHandler = () => {
+    navigate('/casino/challenges/my-claimed');
+  }
+
+
+
   return (
     <Stack width={'100%'} margin={'0px !important'} bg={'#1A2C38'} >
-      <Stack margin={'0px !important'} justifyContent={'space-between'} alignItems={'baseline'} px={{ base: '2', lg: '10' }} pt={'5'}  >
+      <Stack margin={'0px !important'} justifyContent={'space-between'} alignItems={'baseline'} px={{ base: '2', lg: '6' }} pt={'5'}  >
 
         <Tabs width={'100%'} variant="soft-rounded" colorScheme="green">
 
           <Stack direction={{ base: 'column', lg: 'row' }} justifyContent={'space-between'}>
             <TabList
               overflowX={'auto'}
-              maxW={'fit-content'}
               borderRadius={'full'}
               bgColor={'#0F212E'}
-              p={'2'}
+              p={'1'}
             >
               <Tab
                 color={'white'}
                 _selected={{ color: 'white', bg: '#2F4553' }}
                 w={'max-content'}
                 fontSize={{ base: 'sm', md: 'md' }}
+                onClick={activeHandler}
               >
                 <Text>
                   Active
@@ -34,6 +54,7 @@ const ChallengesBody = () => {
                 color={'white'}
                 _selected={{ color: 'white', bg: '#2F4553' }}
                 fontSize={{ base: 'sm', md: 'md' }}
+                onClick={allClaimHandler}
               >
                 <Text>
                   All Claimed
@@ -45,6 +66,7 @@ const ChallengesBody = () => {
                 _selected={{ color: 'white', bg: '#2F4553' }}
                 w={'max-content'}
                 fontSize={{ base: 'sm', md: 'md' }}
+                onClick={myClaimHandler}
               >
                 <Text>
                   My Claimed
@@ -73,71 +95,15 @@ const ChallengesBody = () => {
 
           <TabPanels>
             <TabPanel>
-              <SimpleGrid columns={{ base: '1', sm: '2', md: '3', lg: '6' }} spacingX='10px' spacingY={'30px'}  >
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-              </SimpleGrid>
-
-              <VStack spacing={'4'} paddingTop={'4'}  >
-
-                <Text color={'#b1bad3'} >Displaying 24 /43</Text>
-                <Progress width={'180px'} height={'2px'} color={'white'} value={80} />
-                <Button bg={'#2f4553'} color={'#d5dceb'} _hover={{ bg: '#3D5564', color: '#FFFFFF' }} >
-                  Load More
-                </Button>
-
-
-
-              </VStack>
+              <Active />
             </TabPanel>
             <TabPanel>
-              <SimpleGrid columns={{ base: '1', sm: '2', md: '3', lg: '6' }} spacingX='10px' spacingY={'30px'}  >
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-              </SimpleGrid>
-              <VStack spacing={'4'} paddingTop={'4'}  >
-
-                <Text color={'#b1bad3'} >Displaying 24 /43</Text>
-                <Progress width={'180px'} height={'2px'} color={'white'} value={80} />
-                <Button bg={'#2f4553'} color={'#d5dceb'} _hover={{ bg: '#3D5564', color: '#FFFFFF' }} >
-                  Load More
-                </Button>
-
-
-
-              </VStack>
+              <AllClaimed />
             </TabPanel>
             <TabPanel>
-              <VStack  pb={'100px'}>
-                <Image src={dice} height={'100px'} width={'100px'} />
 
-                <Text color={'#D9DCDE'} >
-                  We are unable to find any challenges
-                </Text>
-                <Text color={'#8E99AF'} >
-                  They may not be available to your region
-                </Text>
-              </VStack>
+              <MyClaimed />
+
             </TabPanel>
 
           </TabPanels>
