@@ -8,13 +8,14 @@ import giveAway from '../../../assets/images/giveAway.jpg'
 import conquer from '../../../assets/images/conquerTheCasino.jpg'
 import outLaws from '../../../assets/images/outLaws.jpg'
 import stakeEddie from '../../../assets/images/stakeVsEddie.jpg'
-import jurassic from '../../../assets/images/jurassicParty.jpg'
-import levelUp from '../../../assets/images/levelUp.jpg'
+import jurassic from '../../../assets/images/jurassicParty.png'
+import levelUp from '../../../assets/images/levelUp.png'
 import Multiplier from '../../../assets/images/MultiplierRace.jpg'
 import casino from '../../../assets/images/casinoChallenge.jpg'
 import evolution from '../../../assets/images/Evolution.jpg'
 import pragmatic from '../../../assets/images/Pragmatic.jpg'
 import grassSeason from '../../../assets/images/grassSeason.jpg'
+import PromotionBlogCard from '../../ui/PromotionBlogCard'
 
 
 
