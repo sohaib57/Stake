@@ -29,6 +29,16 @@ import AlexaGrasso from '../../screens/sponsorships/AlexaGrasso';
 import BoxingInJapan from '../../screens/sponsorships/BoxingInJapan';
 import BrazilRugbyLeague from '../../screens/sponsorships/BrazilRugbyLeague';
 import FittipaldiBrothers from '../../screens/sponsorships/FittipaldiBrothers';
+import Blog from '../../screens/blog/Blog';
+import SportsHomeScreen from '../../screens/sports/home/SportsHomeScreen';
+import MyBets from '../../components/sports/home/MyBets';
+import Favourites from '../../components/sports/home/Favourites';
+import LiveEvents from '../../components/sports/home/LiveEvents';
+import StartingSoon from '../../components/sports/home/StartingSoon';
+import MyBetsScreen from '../../screens/sports/MyBetsScreen';
+import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
+import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
+import Mlb from '../../screens/sports/popular/Mlb';
 
 const MainRoutes = () => {
   return (
@@ -77,6 +87,42 @@ const MainRoutes = () => {
       <Route path="/inoue" element={<BoxingInJapan />} />
       <Route path="/brazil-rugby-league" element={<BrazilRugbyLeague />} />
       <Route path="/fittipaldi-brothers" element={<FittipaldiBrothers />} />
+      <Route
+        path="/casino/group/feature-buy-in"
+        element={<FeatureByIn />}
+      />
+      <Route
+        path="/casino/group/table-games"
+        element={<TableGamesScreen />}
+      />
+      <Route
+        path="/casino/group/blackjack"
+        element={<BlackJack />}
+      />
+      <Route
+        path="/casino/group/baccarat"
+        element={<Baccarat />}
+      />
+      <Route
+        path="/casino/group/roulette"
+        element={<Roulette />}
+      />
+     
+      <Route path="/casino-favourite" element={<FavouriteScreen />}/>
+      {/* sports home */}
+      <Route path="/sports/home/*" element={<SportsHomeScreen />}>
+      <Route path="my-bets" element={<MyBets />}/>
+      <Route path="favourites" element={<Favourites />}/>
+      <Route path="live-events" element={<LiveEvents />}/>
+      <Route path="starting-soon" element={<StartingSoon />}/>
+      </Route>
+      <Route path="/sports/my-bets" element={<MyBetsScreen />}/>
+      <Route path="/sports/live-events" element={<LiveEventsScreen />}/>
+      <Route path="/sports/upcoming" element={<StartingSoonScreen />}/>
+      {/* popular sports screens */}
+      <Route path="/sports/baseball/usa/mlb" element={<Mlb />}/>
+      <Route path="*" element={<NoMatchScreen />} />
+      <Route path='/blog' element={<Blog />} />
     </Routes>
   );
 };
