@@ -1,0 +1,28 @@
+.arrow {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  transition: .5s ease;
+  /* backface-visibility: hidden; */
+}
+
+.arrow:hover {
+  top: -8px;
+  cursor: pointer;
+}
+
+.gridarrow {
+  position: relative;
+  right: 0;
+
+}
+
+.navigator {
+  transition: right ease 0.5s;
+  transition: .5s ease;
+}
+
+.gridarrow:hover .navigator {
+  right: -5px;
+  cursor: pointer;
+}

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 import CasinoHomeComp from '../../../components/casino/home/CasinoHomeComp'
+import LayoutComp from '../../../layout/LayoutComp'
 
 
 const CasinoHome = () => {
   return (
-    <>
-      <CasinoHomeComp />
-    </>
+    <LayoutComp>
+    <CasinoHomeComp/>
+    </LayoutComp>
   )
 }
 

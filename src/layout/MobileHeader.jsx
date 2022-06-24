@@ -27,6 +27,7 @@ const MobileHeader = () => {
       <Chat />
 
       <Bets />
+      
       <VStack justifyContent={'center'}>
         <GiBasketballBall color="white" size={20} />
         <Text

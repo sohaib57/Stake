@@ -24,6 +24,8 @@ import AllClaimed from '../../components/casino/challenges/allclaimed/AllClaimed
 import MyClaimed from '../../components/casino/challenges/myclaimed/MyClaimed';
 import Active from '../../components/casino/challenges/active/Active';
 import ViewAll from '../../screens/ViewAll'
+import Blog from '../../screens/blog/Blog';
+import SportsHomeScreen from '../../screens/sports/home/SportsHomeScreen';
 
 const MainRoutes = () => {
   return (
@@ -95,12 +97,19 @@ const MainRoutes = () => {
         path="/casino/group/roulette"
         element={<Roulette />}
       />
+      {/* sports home */}
+      <Route path="/casino-favourite" element={<FavouriteScreen />}>
 
       <Route path="/casino-favourite" element={<FavouriteScreen />} />
 
-      <Route path='/promotions' element={<ViewAll />} />
 
+      </Route>
+
+      <Route path='/promotions' element={<ViewAll />} />
+      {/* casino favourite */}
+      <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="*" element={<NoMatchScreen />} />
+      <Route path='/blog' element={<Blog />} />
     </Routes>
   );
 };

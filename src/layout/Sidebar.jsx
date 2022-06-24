@@ -25,6 +25,8 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu, Divider } from 'antd';
 import SubMenu from 'antd/lib/menu/SubMenu';
+import { GiCardAceHearts } from 'react-icons/gi';
+import { AiTwotoneHeart } from 'react-icons/ai';
 import 'antd/dist/antd.css';
 import './style.css';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
@@ -50,32 +52,7 @@ const Sidebar = () => {
   return (
     <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        {/* <div className="logo" /> */}
         <div className="siderbar-header">
-          <Stack direction={'row'} className='sidebar-button'>
-            <Button
-              _hover={{
-                bgColor: 'transparent'
-              }}
-              bgColor={'transparent'}
-              color={'white'}
-              leftIcon={<StarOutlined />}
-              fontSize={'sm'}
-            >
-              Casino
-            </Button>
-            <Button
-              _hover={{
-                bgColor: 'transparent'
-              }}
-              bgColor={'transparent'}
-              color={'white'}
-              leftIcon={<StarOutlined />}
-              fontSize={'sm'}
-            >
-              Sport
-            </Button>
-          </Stack>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -83,7 +60,6 @@ const Sidebar = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
-
         </div>
 
         <Menu
@@ -161,7 +137,6 @@ const Sidebar = () => {
             >
               <FieldTimeOutlined />
               <button
-
                 style={{
                   paddingLeft: 8,
                 }}
@@ -368,7 +343,6 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
-
             </Menu.Item>
             <Menu.Item
               key="3"

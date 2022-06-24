@@ -31,7 +31,6 @@ import { MdOutlineCasino } from 'react-icons/md';
 import { AiOutlineGift } from 'react-icons/ai';
 import { FaGg, FaChessQueen, FaFire } from 'react-icons/fa';
 import { ImFire } from 'react-icons/im';
-import LayoutComp from '../../../layout/LayoutComp';
 import CardSlider from '../../ui/card slider/CardSlider';
 import { Link, useNavigate } from 'react-router-dom';
 import ProviderSlider from '../home/provider/ProviderSlider';
@@ -39,6 +38,7 @@ import LiveCasino from '../home/live casino/LiveCasino';
 import FeaturedSlots from '../home/features slots/FeaturedSlots';
 import GameShows from '../home/game shows/GameShows';
 import StakeOriginalsComp from '../home/Stake Originals/StakeOriginalsComp';
+import CasinoStats from './stats/CasinoStats';
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {
@@ -54,8 +54,12 @@ const CasinoHomeComp = () => {
     autoplaySpeed: 4000,
   };
   return (
-    <LayoutComp>
-      <Stack py={'12'} px={{base:'4',md:'0'}} w={'100%'} bgColor={'#1A2C38'}>
+      <Stack
+        py={'12'}
+        px={{ base: '4', md: '0' }}
+        w={'100%'}
+        bgColor={'#1A2C38'}
+      >
         {/* slider */}
         <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
           <Slider {...settings}>
@@ -166,7 +170,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <GiCherry />
@@ -179,7 +183,7 @@ const CasinoHomeComp = () => {
                   w={'max-content'}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <MdOutlineCasino />
@@ -192,7 +196,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <FaGg />
@@ -205,7 +209,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <AiOutlineGift />
@@ -218,7 +222,7 @@ const CasinoHomeComp = () => {
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
-                  fontSize={{ base: 'sm', md: 'md' }}
+                  fontSize={'sm'}
                 >
                   <HStack spacing={'2'}>
                     <ImFire />
@@ -303,26 +307,22 @@ const CasinoHomeComp = () => {
                   className="live-casino"
                   px={{ base: '2', md: '8', lg: '12', xl: '16' }}
                 >
-                    <HStack
-                     w={'fit-content'}
-                     _hover={{ cursor: 'pointer' }}
-                     onClick={() => nav('/live-casino')}
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <MdOutlineCasino fontSize={'1.3rem'} />
+                  <HStack
+                    w={'fit-content'}
+                    _hover={{ cursor: 'pointer' }}
+                    onClick={() => nav('/live-casino')}
+                    color={'gray.400'}
+                    pb={'3'}
+                    spacing={'2'}
+                    alignItems={'center'}
+                  >
+                    <MdOutlineCasino fontSize={'1.3rem'} />
 
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Live Casino
-                      </Heading>
-                    </HStack>
+                    <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                      {' '}
+                      Live Casino
+                    </Heading>
+                  </HStack>
                   <CardSlider />
                 </Stack>
                 {/* game shows */}
@@ -538,8 +538,11 @@ const CasinoHomeComp = () => {
             </TabPanels>
           </Tabs>
         </Stack>
+        {/* stats */}
+        <Stack px={{ base: '8', lg: '12', xl: '16' }}>
+          <CasinoStats />
+        </Stack>
       </Stack>
-    </LayoutComp>
   );
 };
 
