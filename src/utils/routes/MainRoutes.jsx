@@ -20,6 +20,7 @@ import BlackJack from '../../screens/casino/casino group/BlackJack';
 import Baccarat from '../../screens/casino/casino group/Baccarat';
 import Roulette from '../../screens/casino/casino group/Roulette';
 import Blog from '../../screens/blog/Blog';
+import SportsHomeScreen from '../../screens/sports/home/SportsHomeScreen';
 
 const MainRoutes = () => {
   return (
@@ -77,8 +78,12 @@ const MainRoutes = () => {
         path="/casino/group/roulette"
         element={<Roulette />}
       />
+      {/* sports home */}
+      <Route path="/casino-favourite" element={<FavouriteScreen />}>
 
-      <Route path="/casino-favourite" element={<FavouriteScreen />} />
+      </Route>
+      {/* casino favourite */}
+      <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="*" element={<NoMatchScreen />} />
       <Route path='/blog' element={<Blog />} />
     </Routes>
