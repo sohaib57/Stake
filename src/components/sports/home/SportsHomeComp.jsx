@@ -243,7 +243,7 @@ const SportsHomeComp = () => {
                   <HStack
                     w={'fit-content'}
                     _hover={{ cursor: 'pointer' }}
-                    onClick={() => nav('/stakeoriginals')}
+                    // onClick={() => nav('/stakeoriginals')}
                     color={'gray.400'}
                     pb={'3'}
                     spacing={'2'}

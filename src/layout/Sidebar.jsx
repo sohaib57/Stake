@@ -494,7 +494,8 @@ const Sidebar = () => {
             </p>
 
             <Menu.Item
-              key="20"
+              onClick={() => nav('/sports/soccer')}
+              key="9"
               style={{
                 paddingLeft: 20,
                 paddingBottom: 0,
@@ -520,7 +521,8 @@ const Sidebar = () => {
               All Sports
             </p>
             <Menu.Item
-              key="21"
+              onClick={() => nav('/sports/alpine-skiing')}
+              key="13"
               style={{
                 paddingLeft: 20,
               }}
@@ -535,7 +537,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="22"
+            onClick={() => nav('/sports/american-football')}
+              key="14"
               style={{
                 paddingLeft: 20,
               }}
@@ -550,7 +553,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="23"
+            onClick={() => nav('/sports/aussie-rules')}
+              key="15"
               style={{
                 paddingLeft: 20,
               }}
@@ -565,7 +569,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="24"
+            onClick={() => nav('/sports/badminton')}
+              key="16"
               style={{
                 paddingLeft: 20,
               }}
@@ -580,7 +585,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="25"
+            onClick={() => nav('/sports/baseball')}
+              key="17"
               style={{
                 paddingLeft: 20,
               }}
@@ -595,7 +601,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="26"
+            onClick={() => nav('/sports/basketball')}
+              key="18"
               style={{
                 paddingLeft: 20,
               }}
@@ -610,7 +617,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="27"
+            onClick={() => nav('/sports/biathlon')}
+              key="19"
               style={{
                 paddingLeft: 20,
               }}
@@ -625,7 +633,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="28"
+            onClick={() => nav('/sports/bowls')}
+              key="20"
               style={{
                 paddingLeft: 20,
               }}
@@ -640,7 +649,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="29"
+            onClick={() => nav('/sports/boxing')}
+              key="21"
               style={{
                 paddingLeft: 20,
               }}
@@ -655,7 +665,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="30"
+            onClick={() => nav('/sports/counter-strike')}
+              key="22"
               style={{
                 paddingLeft: 20,
               }}
@@ -670,7 +681,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="31"
+             onClick={() => nav('/sports/cricket')}
+              key="23"
               style={{
                 paddingLeft: 20,
               }}
@@ -685,7 +697,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="32"
+            onClick={() => nav('/sports/cross-country')}
+              key="24"
               style={{
                 paddingLeft: 20,
               }}
@@ -700,7 +713,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="33"
+            onClick={() => nav('/sports/cycling')}
+              key="25"
               style={{
                 paddingLeft: 20,
               }}
