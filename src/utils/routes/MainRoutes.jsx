@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { CasinoHome } from '../../screens/casino/home/CasinoHome';
+import CasinoHome from '../../screens/casino/home/CasinoHome';
+import Challenges from '../../screens/casino/challenges/Challenges';
 import Home from '../../screens/home/Home';
 import LiveCasino from '../../components/casino/home/live casino/LiveCasino';
 import FavouriteScreen from '../../screens/casino/favourite/FavouriteScreen';
@@ -19,6 +20,10 @@ import TableGamesScreen from '../../screens/casino/casino group/TableGamesScreen
 import BlackJack from '../../screens/casino/casino group/BlackJack';
 import Baccarat from '../../screens/casino/casino group/Baccarat';
 import Roulette from '../../screens/casino/casino group/Roulette';
+import AllClaimed from '../../components/casino/challenges/allclaimed/AllClaimed';
+import MyClaimed from '../../components/casino/challenges/myclaimed/MyClaimed';
+import Active from '../../components/casino/challenges/active/Active';
+import ViewAll from '../../screens/ViewAll'
 import Drake from '../../screens/sponsorships/Drake';
 import WatfordFC from '../../screens/sponsorships/WatfordFC';
 import KunAguero from '../../screens/sponsorships/KunAguero';
@@ -59,6 +64,20 @@ const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/casinohome" element={<CasinoHome />} />
+      <Route path="/casino" element={<CasinoHome />} />
+
+      {/* Casino challenges  screens starts here */}
+
+      <Route path="/casino/challenges/*" element={<Challenges />} >
+        <Route path="all-claimed" element={<AllClaimed />} />
+        <Route path="my-claimed" element={<MyClaimed />} />
+      </Route>
+
+      {/* Casino challenges screens ends here */}
+
+      <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
+      <Route path="/casinofavourite" element={<FavouriteScreen />} />
       {/* casino home  */}
       <Route path="/casino/home/*" element={<CasinoHome />}>
         <Route path="live-casino" element={<LiveCasino />} />
@@ -126,6 +145,16 @@ const MainRoutes = () => {
       <Route path="/casino-favourite" element={<FavouriteScreen />}/>
       <Route path="/recent" element={<Recent />}/>
       {/* sports home */}
+      <Route path="/casino-favourite" element={<FavouriteScreen />}>
+
+      <Route path="/casino-favourite" element={<FavouriteScreen />} />
+
+
+      </Route>
+
+      <Route path='/promotions' element={<ViewAll />} />
+      {/* casino favourite */}
+      <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="/sports/home/*" element={<SportsHomeScreen />}>
       <Route path="my-bets" element={<MyBets />}/>
       <Route path="favourites" element={<Favourites />}/>

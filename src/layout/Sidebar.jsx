@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import SubMenu from 'antd/lib/menu/SubMenu';
+import { useNavigate } from 'react-router-dom';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  HStack, Stack, Button,
+  Select,
+  Text
+} from '@chakra-ui/react'
+import { RiContactsBook2Fill } from 'react-icons/ri'
+import { GiDigitalTrace } from 'react-icons/gi'
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -8,13 +23,17 @@ import {
   StarOutlined,
   FieldTimeOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Divider, Badge } from 'antd';
-import { Stack } from '@chakra-ui/react';
-import Icon from '@ant-design/icons';
-import { Select } from '@chakra-ui/react';
+import SubMenu from 'antd/lib/menu/SubMenu';
+import { GiCardAceHearts } from 'react-icons/gi';
+import { AiTwotoneHeart } from 'react-icons/ai';
 import 'antd/dist/antd.css';
 import './style.css';
-import { useNavigate } from 'react-router-dom';
+import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
+import Race24Hour from '../components/promotions/Race24Hour';
+import { Layout, Menu, Divider,Badge } from 'antd';
+import Icon from '@ant-design/icons';
+import 'antd/dist/antd.css';
+import './style.css';
 import { IoIosRocket, IoIosBaseball } from 'react-icons/io';
 import { IoFootballOutline, IoNewspaperOutline } from 'react-icons/io5';
 import {
@@ -67,7 +86,6 @@ import {
 } from 'react-icons/ri';
 import {
   GiBasketballBall,
-  GiCardAceHearts,
   GiBackwardTime,
   GiTargetShot,
   GiCardJackClubs,
@@ -104,7 +122,22 @@ const options = [
 const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
+<<<<<<< HEAD
   const [selectedOption, setSelectedOption] = useState(null);
+=======
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: isRevocationModalOpen,
+    onOpen: onOpenRevocationModal,
+    onClose: onCloseRevocationModal,
+  } = useDisclosure();
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside')
+  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside')
+
+  const btnRef = React.useRef(null)
+
+
+>>>>>>> bf8d68bd2742e74965f640005cddbd9468b6dda8
   const [show, setShow] = useState(true);
   return (
     <Stack
@@ -121,6 +154,7 @@ const Sidebar = () => {
             }
           )}
         </div>
+<<<<<<< HEAD
         <div className="sidebar-button">
           <Menu
             onClick={() => nav('/casino/home')}
@@ -147,6 +181,8 @@ const Sidebar = () => {
             ]}
           />
         </div>
+=======
+>>>>>>> bf8d68bd2742e74965f640005cddbd9468b6dda8
         <Menu
           mode="inline"
           className="menu-bar"
@@ -210,6 +246,7 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/casino/challenges')}
               >
                 Challenges
               </button>
@@ -1175,10 +1212,45 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+
+                onClick={onOpen}
+
               >
                 $50k Weekly Giveaway
+
               </button>
             </Menu.Item>
+
+            {/* WeeklyGiveAway */}
+            <Modal
+              onClose={onClose}
+              finalFocusRef={btnRef}
+              isOpen={isOpen}
+              scrollBehavior={scrollBehavior}
+              size={'lg'}
+
+            >
+              <ModalOverlay />
+              <ModalContent bg={'#1A2C38'} >
+                <ModalHeader>
+                  <Stack direction={'row'} alignItems={'center'} >
+                    <RiContactsBook2Fill color={'#B1BAD3'} />
+                    <Text color={'white'} >  VIP </Text>
+                  </Stack>
+                </ModalHeader>
+                <ModalCloseButton bg={'white'} color={'black'} />
+                <ModalBody  >
+                  <WeeklyGiveAwayModal />
+                </ModalBody>
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
+                  <Text color={'white'}  >
+                    Learn more about being a Stake VIP
+                  </Text>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
+
             <Menu.Item
               key="61"
               style={{
@@ -1190,10 +1262,42 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={onOpenRevocationModal}
               >
                 $100k Race - 24 Hours
               </button>
             </Menu.Item>
+
+
+            {/* Race-Hour */}
+            <Modal
+              onClose={onCloseRevocationModal}
+              finalFocusRef={btnRef}
+              isOpen={isRevocationModalOpen}
+              scrollBehavior={scrollBehavior2}
+              size={'lg'}
+
+            >
+              <ModalOverlay />
+              <ModalContent bg={'#1A2C38'} >
+                <ModalHeader>
+                  <Stack direction={'row'} alignItems={'center'} >
+                    <GiDigitalTrace color={'#B1BAD3'} />
+                    <Text color={'white'} >  Race </Text>
+                  </Stack>
+                </ModalHeader>
+                <ModalCloseButton bg={'white'} color={'black'} />
+                <ModalBody  >
+                  <Race24Hour />
+                </ModalBody>
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
+                  <Text color={'white'}  >
+                    Learn more about being a Stake VIP
+                  </Text>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
             <Menu.Item
               key="62"
               style={{
@@ -1205,6 +1309,7 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/promotions')}
               >
                 View All
               </button>
