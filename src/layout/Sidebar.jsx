@@ -459,6 +459,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={()=>nav('/sports/soccer')}
               key="9"
               style={{
                 paddingLeft: 20,
