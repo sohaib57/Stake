@@ -1,9 +1,10 @@
 import React from 'react'
-import { Stack, Text } from '@chakra-ui/react'
+import { Stack, Text, Center, Image } from '@chakra-ui/react'
+import favourite from '../../../assets/images/favouriteLogo.png'
 
 const ViewAllHeader = () => {
     return (
-        <Stack width={'100%'} bg={'#213743'} justifyContent={'space-between'} direction={'row'} px={'8'} py={'2'} >
+        <Stack margin={'0px !important'} width={'100%'} bg={'#213743'} justifyContent={'space-between'} direction={'row'} px={'8'}  >
 
             <Center >
                 <Text fontSize={'3xl'} fontWeight={'600'} color={'white'}>
@@ -12,8 +13,8 @@ const ViewAllHeader = () => {
 
             </Center>
 
-            <Stack >
-                <Image height={'110px'} width={'140px'} src={challenges} />
+            <Stack margin={'0px !important'} >
+                <Image src={favourite} />
 
             </Stack>
 
