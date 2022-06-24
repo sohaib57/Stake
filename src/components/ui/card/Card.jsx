@@ -4,7 +4,14 @@ import { FaPlay } from 'react-icons/fa';
 import '../card slider/CardSlider.css';
 const Card = ({ img }) => {
   return (
-    <Center position={'relative'} className="container" py={'3'} px={'2'} h={'32vh'} w={'100%'}>
+    <Center
+      position={'relative'}
+      className="container"
+      py={'3'}
+      px={'2'}
+      h={'32vh'}
+      w={'100%'}
+    >
       <Box
         bgPos={'center'}
         bgRepeat={'no-repeat'}
@@ -16,7 +23,7 @@ const Card = ({ img }) => {
         className="arrow"
       ></Box>
       <Stack className="middle">
-        <FaPlay fontSize={'2rem'} color='white' className="button" />
+        <FaPlay fontSize={'2rem'} color="white" className="button" />
       </Stack>
     </Center>
   );

@@ -3,7 +3,6 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Heading,
   HStack,
   Tab,
   TabList,
@@ -15,13 +14,14 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { FaGripHorizontal } from 'react-icons/fa';
-import { HiFire } from 'react-icons/hi';
 import { IoChevronBack } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import SportsDetailCard from '../../../components/sports/home/SportsDetailCard';
+import SportsStats from '../../../components/sports/home/SportsStats';
 import LayoutComp from '../../../layout/LayoutComp';
 
 const Mlb = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   return (
     <LayoutComp>
       <Stack
@@ -89,94 +89,85 @@ const Mlb = () => {
             </Breadcrumb>
           </Stack>
         </Stack>
-        <Stack pt={'8'} className="tabs">
-          <Tabs variant="soft-rounded" colorScheme="green">
-            {/* tab list */}
+        <Tabs variant="soft-rounded">
+          <Stack
+            direction={'row'}
+            pt={'6'}
+            align={'center'}
+            justify={'space-between'}
+          >
             <TabList
-              marginInline={{ base: '2', md: '8', lg: '12', xl: '16' }}
-              marginBottom={'3'}
               overflowX={'auto'}
-              maxW={'fit-content'}
+              w={'fit-content'}
               borderRadius={'full'}
               bgColor={'#0F212E'}
             >
               <Stack direction={'row'} p={'2'}>
                 <Tab
-                  className="lobby"
-                  onClick={() => nav('/sports/home')}
                   color={'white'}
                   _selected={{ color: 'white', bg: '#2F4553' }}
                   w={'max-content'}
                   fontSize={'sm'}
                 >
-                  <HStack spacing={'2'}>
-                    {/* <FaBaseballBall color="#b1bad3" /> */}
-                    <Text>Lobby</Text>
-                  </HStack>
+                  <Text>Live & Upcoming</Text>
                 </Tab>
-
+                <Tab
+                  w={'fit-content'}
+                  color={'white'}
+                  _selected={{ color: 'white', bg: '#2F4553' }}
+                  // w={'max-content'}
+                  fontSize={'sm'}
+                >
+                  <Text>Outrights</Text>
+                </Tab>
+                <Tab
+                  color={'white'}
+                  _selected={{ color: 'white', bg: '#2F4553' }}
+                  w={'max-content'}
+                  fontSize={'sm'}
+                >
+                  <Text>All Baseball</Text>
+                </Tab>
               </Stack>
             </TabList>
-            {/* tab panels */}
-            <TabPanels>
-              <TabPanel paddingX={'0 !important'} className="lobby">
-                <Stack px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
-                  {/* popular events */}
-                  <Stack
-                    py={'4'}
-                    justifyContent={'space-between'}
-                    direction={'row'}
-                  >
-                    <HStack
-                      w={'fit-content'}
-                      _hover={{ cursor: 'pointer' }}
-                      onClick={() => nav('/stakeoriginals')}
-                      color={'gray.400'}
-                      pb={'3'}
-                      spacing={'2'}
-                      alignItems={'center'}
-                    >
-                      <HiFire fontSize={'1.4rem'} />
-                      <Heading
-                        fontWeight={'500'}
-                        color={'white'}
-                        fontSize={'lg'}
-                      >
-                        {' '}
-                        Popular Events
-                      </Heading>
-                    </HStack>
-                    <Stack
-                      maxWidth={'fit-content'}
-                      direction={'row'}
-                      spacing={'6'}
-                      color="white"
-                      alignItems={'center'}
-                    >
-                      <FaGripHorizontal color="#B1BAD3" fontSize={'1rem'} />
-                      <Select
-                        fontSize={'sm'}
-                        fontWeight={'500'}
-                        _hover={{ bg: '#071824', cursor: 'pointer' }}
-                        _focusVisible={{}}
-                        bg={'#0F212E'}
-                        variant="filled"
-                      >
-                        <option style={{ color: 'black' }}>Winner</option>
-                        <option style={{ color: 'black' }}>Total</option>
-                        <option style={{ color: 'black' }}>Handicap</option>
-                      </Select>
-                    </Stack>
-                  </Stack>
-  
-                </Stack>
-              </TabPanel>
-              <TabPanel paddingX={'0 !important'} className="my-bets">
-               
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-        </Stack>
+            {/* Table rows listing */}
+            <Stack
+              maxWidth={'fit-content'}
+              direction={'row'}
+              spacing={{ base: '2', md: '4', lg: '6' }}
+              color="white"
+              alignItems={'center'}
+            >
+              <FaGripHorizontal color="#B1BAD3" fontSize={'1rem'} />
+              <Select
+                fontSize={'sm'}
+                fontWeight={'500'}
+                _hover={{ bg: '#071824', cursor: 'pointer' }}
+                _focusVisible={{}}
+                bg={'#0F212E'}
+                variant="filled"
+                //   placeholder="Popular"
+              >
+                <option style={{ color: 'black' }}>Winner</option>
+                <option style={{ color: 'black' }}>Total</option>
+                <option style={{ color: 'black' }}>Handicap</option>
+              </Select>
+            </Stack>
+          </Stack>
+          <TabPanels>
+            {/* live & upcoming */}
+            <TabPanel padding={'0'} py={'4'}><SportsDetailCard/></TabPanel>
+            {/* outrights */}
+            <TabPanel>
+              <SportsDetailCard />
+            </TabPanel>
+            {/* All Badseball */}
+            <TabPanel>
+              <SportsDetailCard />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+        <SportsStats/>
       </Stack>
     </LayoutComp>
   );

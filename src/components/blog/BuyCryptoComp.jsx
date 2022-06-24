@@ -1,4 +1,4 @@
-import { Button, ChakraProvider, Heading, Img, Link, ListItem, OrderedList, Stack, Text, VStack } from '@chakra-ui/react'
+import { Button, ChakraProvider, Heading, Img, Link, ListItem, OrderedList, Stack, Tag, Text, UnorderedList, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { FaFacebookF, FaTwitter } from 'react-icons/fa'
 import LayoutComp from '../../layout/LayoutComp'
@@ -106,7 +106,35 @@ const BuyCryptoComp = () => {
                             on the Stake platform thanks to our partnership with Moonpay, the largest provider
                             of different currencies. You can further explore this option by following this
                             link: <Link textDecoration={'underline'} color={'white'} isExternal _hover={{ color: 'white', textDecoration: 'underline' }} >https://stake.com/blog/how-to-buy-crypto-on-stake</Link>
+                            <br />
+                            <br />
+                            <Heading fontSize={'lg'} color={'white'}>Step 3: Selecting a payment method</Heading>
+                            Firstly, you will need to take into consideration the accepted payment methods for
+                            each section of the marketplace. There are various implications of different
+                            payment methods related to security, price and time taken for the transaction.
+                            Below is a list of payment options available to the players:
+                            <UnorderedList>
+                                <ListItem>Bank Transfers</ListItem>
+                                <ListItem>Credit/Debit Card</ListItem>
+                                <ListItem>Paypal/Other Online Platforms</ListItem>
+                                <ListItem>Gift Cards</ListItem>
+                            </UnorderedList>
+                            <br />
+                            <br />
+                            Congratulations, now you have all the instruments to buy and invest in the various
+                            cryptocurrencies. If you are using a web wallet or a third-party service, make sure
+                            that you transfer to your Stake wallet. You will be able to hold onto, trade and
+                            use cryptocurrency on Stake according to your preference.
+                            <br />
+                            <br />
+                            This guide should help cryptocurrency buyers across the world, though some
+                            countries have their own unusual ways of purchasing cryptocurrencies. Here at
+                            Stake we strive to keep our players updated and informed.
                         </Text>
+                        <Stack direction={'row'} pt={'2'}>
+                            <Tag color={'white'} size={'md'} borderRadius={'full'} bgColor={'#0f212e'} _hover={{ bgColor: '#071824' }}>Crypto</Tag>
+                            <Tag color={'white'} size={'md'} borderRadius={'full'} bgColor={'#0f212e'} _hover={{ bgColor: '#071824' }}>How to Guides</Tag>
+                        </Stack>
                     </Stack>
                 </VStack>
             </LayoutComp>
