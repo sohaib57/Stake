@@ -19,6 +19,7 @@ import TableGamesScreen from '../../screens/casino/casino group/TableGamesScreen
 import BlackJack from '../../screens/casino/casino group/BlackJack';
 import Baccarat from '../../screens/casino/casino group/Baccarat';
 import Roulette from '../../screens/casino/casino group/Roulette';
+import Blog from '../../screens/blog/Blog';
 import SportsHomeScreen from '../../screens/sports/home/SportsHomeScreen';
 import MyBets from '../../components/sports/home/MyBets';
 import Favourites from '../../components/sports/home/Favourites';
@@ -57,7 +58,7 @@ const MainRoutes = () => {
         path="/casino/group/live-casino"
         element={<LiveCasinoScreen />}
       />
-       <Route
+      <Route
         path="/casino/group/game-shows"
         element={<GameShowsScreen />}
       />
@@ -65,11 +66,11 @@ const MainRoutes = () => {
         path="/casino/group/new-releases"
         element={<NewReleasesScreen />}
       />
-       <Route
+      <Route
         path="/casino/group/feature-buy-in"
         element={<FeatureByIn />}
       />
-       <Route
+      <Route
         path="/casino/group/table-games"
         element={<TableGamesScreen />}
       />
@@ -77,7 +78,7 @@ const MainRoutes = () => {
         path="/casino/group/blackjack"
         element={<BlackJack />}
       />
-       <Route
+      <Route
         path="/casino/group/baccarat"
         element={<Baccarat />}
       />
@@ -100,6 +101,7 @@ const MainRoutes = () => {
       {/* popular sports screens */}
       <Route path="/sports/baseball/usa/mlb" element={<Mlb />}/>
       <Route path="*" element={<NoMatchScreen />} />
+      <Route path='/blog' element={<Blog />} />
     </Routes>
   );
 };
