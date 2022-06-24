@@ -115,26 +115,6 @@ const CasinoStats = () => {
             <TabPanels>
               {/* My Bets */}
               <TabPanel padding={'0'} py={'4'}>
-                <TableContainer>
-                  <Table variant="unstyled" color={'#b1bad3'}>
-                    <Thead>
-                      <Tr>
-                        <Th>Game</Th>
-                        <Th>Time</Th>
-                        <Th isNumeric>Bet Amount</Th>
-                        <Th>Multiplier</Th>
-                        <Th>Payout</Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      <Tr></Tr>
-                      <Tr></Tr>
-                      <Tr></Tr>
-                      <Tr></Tr>
-                      <Tr></Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
               </TabPanel>
               {/* All Bets */}
               <TabPanel>
