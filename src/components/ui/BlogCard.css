@@ -13,16 +13,18 @@
 
 .gridarrow {
   position: relative;
+  transition: all 0.3s;
   right: 0;
 
 }
+.gridarrow:hover 
+{
+  cursor: pointer;
+  background-color: #2F4553;
 
-.navigator {
-  transition: right ease 0.5s;
-  transition: .5s ease;
 }
 
 .gridarrow:hover .navigator {
-  right: -5px;
-  cursor: pointer;
+  transform: translate(5px);
+  transition: all 0.2s;
 }
