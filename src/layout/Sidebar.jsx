@@ -8,8 +8,8 @@ import {
   StarOutlined,
   FieldTimeOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Divider,Badge } from 'antd';
-import {  Stack } from '@chakra-ui/react';
+import { Layout, Menu, Divider, Badge } from 'antd';
+import { Stack } from '@chakra-ui/react';
 import Icon from '@ant-design/icons';
 import { Select } from '@chakra-ui/react';
 import 'antd/dist/antd.css';
@@ -91,12 +91,20 @@ import {
   GiSoccerBall,
   GiWaterPolo,
 } from 'react-icons/gi';
+// import Select from 'react-select';
 
 const { Sider } = Layout;
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+];
 
 const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [show, setShow] = useState(true);
   return (
     <Stack
@@ -120,18 +128,19 @@ const Sidebar = () => {
             mode="inline"
             items={[
               {
-                key: '1',
+                key: '75',
                 icon: <GiCardAceHearts />,
                 label: 'Casino',
               },
             ]}
           />
           <Menu
+            onClick={() => nav('/sports/home')}
             className="menu-bar"
             mode="inline"
             items={[
               {
-                key: '2',
+                key: '76',
                 icon: <GiBasketballBall />,
                 label: 'Sports',
               },
@@ -149,15 +158,17 @@ const Sidebar = () => {
           }}
         >
           <SubMenu
+         
             key="sub1"
             title={
-              <span>
+              <span  className='animation'>
                 <Icon component={GiCardAceHearts} />
                 <span>Casino</span>
               </span>
             }
           >
             <Menu.Item
+              onClick={() => nav('/casino-favourite')}
               key="1"
               style={{
                 paddingLeft: 20,
@@ -173,6 +184,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              onClick={() => nav('/recent')}
               key="2"
               style={{
                 paddingLeft: 20,
@@ -383,15 +395,15 @@ const Sidebar = () => {
           <SubMenu
             key="sub2"
             title={
-              <span>
+              <span className='animation'>
                 <Icon component={GiBasketballBall} />
                 <span>Sports</span>
               </span>
             }
           >
             <Menu.Item
-              onClick={()=>nav('/sports/my-bets')}
-              key="1"
+              onClick={() => nav('/sports/my-bets')}
+              key="15"
               style={{
                 paddingLeft: 20,
               }}
@@ -406,8 +418,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-             onClick={()=>nav('/sports/live-events')}
-              key="2"
+              onClick={() => nav('/sports/live-events')}
+              key="17"
               style={{
                 paddingLeft: 20,
               }}
@@ -420,16 +432,19 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
-              <Badge  style={{
-               backgroundColor: '#1f8bff',
-               color: '#080808',
-               boxShadow: 'none',
-               marginLeft:6,
-              }} count={show ? 16 : 0} />
+              <Badge
+                style={{
+                  backgroundColor: '#1f8bff',
+                  color: '#080808',
+                  boxShadow: 'none',
+                  marginLeft: 6,
+                }}
+                count={show ? 16 : 0}
+              />
             </Menu.Item>
             <Menu.Item
-            onClick={()=>nav('/sports/upcoming')}
-              key="3"
+              onClick={() => nav('/sports/upcoming')}
+              key="18"
               style={{
                 paddingLeft: 20,
               }}
@@ -453,8 +468,8 @@ const Sidebar = () => {
               Popular
             </p>
             <Menu.Item
-            onClick={()=>nav('/sports/baseball/usa/mlb')}
-              key="4"
+              onClick={() => nav('/sports/baseball/usa/mlb')}
+              key="19"
               style={{
                 paddingLeft: 20,
               }}
@@ -479,7 +494,7 @@ const Sidebar = () => {
             </p>
 
             <Menu.Item
-              key="9"
+              key="20"
               style={{
                 paddingLeft: 20,
                 paddingBottom: 0,
@@ -505,7 +520,7 @@ const Sidebar = () => {
               All Sports
             </p>
             <Menu.Item
-              key="13"
+              key="21"
               style={{
                 paddingLeft: 20,
               }}
@@ -520,7 +535,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="14"
+              key="22"
               style={{
                 paddingLeft: 20,
               }}
@@ -535,7 +550,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="15"
+              key="23"
               style={{
                 paddingLeft: 20,
               }}
@@ -550,7 +565,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="16"
+              key="24"
               style={{
                 paddingLeft: 20,
               }}
@@ -565,7 +580,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="17"
+              key="25"
               style={{
                 paddingLeft: 20,
               }}
@@ -580,7 +595,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="18"
+              key="26"
               style={{
                 paddingLeft: 20,
               }}
@@ -595,7 +610,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="19"
+              key="27"
               style={{
                 paddingLeft: 20,
               }}
@@ -610,7 +625,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="20"
+              key="28"
               style={{
                 paddingLeft: 20,
               }}
@@ -625,7 +640,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="21"
+              key="29"
               style={{
                 paddingLeft: 20,
               }}
@@ -640,7 +655,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="22"
+              key="30"
               style={{
                 paddingLeft: 20,
               }}
@@ -655,7 +670,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="23"
+              key="31"
               style={{
                 paddingLeft: 20,
               }}
@@ -670,7 +685,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="24"
+              key="32"
               style={{
                 paddingLeft: 20,
               }}
@@ -685,7 +700,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="25"
+              key="33"
               style={{
                 paddingLeft: 20,
               }}
@@ -700,7 +715,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="26"
+              key="34"
               style={{
                 paddingLeft: 20,
               }}
@@ -715,7 +730,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="27"
+              key="35"
               style={{
                 paddingLeft: 20,
               }}
@@ -730,7 +745,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="28"
+              key="36"
               style={{
                 paddingLeft: 20,
               }}
@@ -745,7 +760,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="29"
+              key="37"
               style={{
                 paddingLeft: 20,
               }}
@@ -760,7 +775,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="30"
+              key="38"
               style={{
                 paddingLeft: 20,
               }}
@@ -775,7 +790,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="30"
+              key="39"
               style={{
                 paddingLeft: 20,
               }}
@@ -790,7 +805,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="31"
+              key="40"
               style={{
                 paddingLeft: 20,
               }}
@@ -805,7 +820,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="32"
+              key="41"
               style={{
                 paddingLeft: 20,
               }}
@@ -820,7 +835,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="33"
+              key="42"
               style={{
                 paddingLeft: 20,
               }}
@@ -835,7 +850,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="34"
+              key="43"
               style={{
                 paddingLeft: 20,
               }}
@@ -850,7 +865,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="35"
+              key="44"
               style={{
                 paddingLeft: 20,
               }}
@@ -865,7 +880,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="36"
+              key="45"
               style={{
                 paddingLeft: 20,
               }}
@@ -880,7 +895,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="37"
+              key="46"
               style={{
                 paddingLeft: 20,
               }}
@@ -895,7 +910,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="38"
+              key="47"
               style={{
                 paddingLeft: 20,
               }}
@@ -910,7 +925,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="39"
+              key="48"
               style={{
                 paddingLeft: 20,
               }}
@@ -925,7 +940,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="40"
+              key="49"
               style={{
                 paddingLeft: 20,
               }}
@@ -940,7 +955,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="41"
+              key="50"
               style={{
                 paddingLeft: 20,
               }}
@@ -955,7 +970,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="42"
+              key="51"
               style={{
                 paddingLeft: 20,
               }}
@@ -970,7 +985,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="43"
+              key="52"
               style={{
                 paddingLeft: 20,
               }}
@@ -985,7 +1000,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="44"
+              key="53"
               style={{
                 paddingLeft: 20,
               }}
@@ -1000,7 +1015,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="45"
+              key="54"
               style={{
                 paddingLeft: 20,
               }}
@@ -1015,7 +1030,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="46"
+              key="55"
               style={{
                 paddingLeft: 20,
               }}
@@ -1030,7 +1045,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="47"
+              key="56"
               style={{
                 paddingLeft: 20,
               }}
@@ -1045,7 +1060,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="48"
+              key="57"
               style={{
                 paddingLeft: 20,
               }}
@@ -1060,7 +1075,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="49"
+              key="58"
               style={{
                 paddingLeft: 20,
               }}
@@ -1075,7 +1090,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="50"
+              key="59"
               style={{
                 paddingLeft: 20,
               }}
@@ -1129,14 +1144,14 @@ const Sidebar = () => {
           <SubMenu
             key="sub3"
             title={
-              <span>
+              <span className='animation'>
                 <Icon component={AiOutlineGift} />
                 <span>Promotions</span>
               </span>
             }
           >
             <Menu.Item
-              key="1"
+              key="60"
               style={{
                 paddingLeft: 20,
               }}
@@ -1151,7 +1166,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="2"
+              key="61"
               style={{
                 paddingLeft: 20,
               }}
@@ -1166,7 +1181,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="3"
+              key="62"
               style={{
                 paddingLeft: 20,
               }}
@@ -1185,14 +1200,14 @@ const Sidebar = () => {
           <SubMenu
             key="sub4"
             title={
-              <span>
+              <span className='animation'>
                 <Icon component={FaHandshake} />
                 <span>Sponsorships</span>
               </span>
             }
           >
             <Menu.Item
-              key="1"
+              key="64"
               style={{
                 paddingLeft: 20,
               }}
@@ -1208,7 +1223,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="2"
+              key="65"
               style={{
                 paddingLeft: 20,
               }}
@@ -1224,7 +1239,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="3"
+              key="66"
               style={{
                 paddingLeft: 20,
               }}
@@ -1241,7 +1256,7 @@ const Sidebar = () => {
             </Menu.Item>
 
             <Menu.Item
-              key="4"
+              key="67"
               style={{
                 paddingLeft: 20,
               }}
@@ -1257,7 +1272,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="5"
+              key="68"
               style={{
                 paddingLeft: 20,
               }}
@@ -1273,7 +1288,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="6"
+              key="69"
               style={{
                 paddingLeft: 20,
               }}
@@ -1289,7 +1304,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="7"
+              key="70"
               style={{
                 paddingLeft: 20,
               }}
@@ -1305,7 +1320,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="8"
+              key="71"
               style={{
                 paddingLeft: 20,
               }}
@@ -1321,7 +1336,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="9"
+              key="72"
               style={{
                 paddingLeft: 20,
               }}
@@ -1337,7 +1352,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="10"
+              key="73"
               style={{
                 paddingLeft: 20,
               }}
@@ -1359,7 +1374,7 @@ const Sidebar = () => {
             mode="inline"
             items={[
               {
-                key: '1',
+                key: '73',
                 icon: <IoNewspaperOutline />,
                 label: 'Blog',
               },
@@ -1370,7 +1385,7 @@ const Sidebar = () => {
             mode="inline"
             items={[
               {
-                key: '2',
+                key: '74',
                 icon: <FaHeadset />,
                 label: 'Live Support',
               },
@@ -1408,7 +1423,13 @@ const Sidebar = () => {
                 Indonesi
               </option>
             </Select>
-          </Stack>
+            {/* <Select
+              defaultValue={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+              className="select"
+            />*/}
+          </Stack> 
         </Menu>
       </Sider>
     </Stack>

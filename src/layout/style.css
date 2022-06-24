@@ -115,6 +115,14 @@ color : white;
 .ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child){
   margin-bottom: 0px;
 }
+.animation{
+  position: relative;
+  right: 0;
+}
+.animation:hover{
+  right: -5px;
+  cursor: pointer;
+}
 
 
 

@@ -39,6 +39,7 @@ import MyBetsScreen from '../../screens/sports/MyBetsScreen';
 import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
 import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
 import Mlb from '../../screens/sports/popular/Mlb';
+import Recent from '../../screens/casino/recent/Recent';
 
 const MainRoutes = () => {
   return (
@@ -109,6 +110,7 @@ const MainRoutes = () => {
       />
      
       <Route path="/casino-favourite" element={<FavouriteScreen />}/>
+      <Route path="/recent" element={<Recent />}/>
       {/* sports home */}
       <Route path="/sports/home/*" element={<SportsHomeScreen />}>
       <Route path="my-bets" element={<MyBets />}/>
