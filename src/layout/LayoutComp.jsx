@@ -1,8 +1,15 @@
 import React from 'react';
-import { Stack, Img, Select, HStack, Button, Text } from '@chakra-ui/react';
+import {
+  Stack,
+  Img,
+  Select,
+  HStack,
+  Button,
+  Text,
+} from '@chakra-ui/react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
 import { SiGooglechat } from 'react-icons/si';
 import { Layout } from 'antd';
 import Footer from './Footer';
@@ -37,6 +44,39 @@ const LayoutComp = ({ children }) => {
             </Stack>
 
             <Stack>
+              {/* <InputGroup size="sm" alignItems={'center'}>
+                <Select
+                  borderLeftRadius={'5px'}
+                  borderRightRadius={'none'}
+                  bgColor={'#0f212e'}
+                  border={'none'}
+                  color={'white'}
+                  _focusVisible={{
+                    boxShadow: 'none',
+                  }}
+                >
+                  <option value="option1">0.00000000</option>
+                  <option value="option2">0.00000001</option>
+                  <option value="option3">0.00000002</option>
+                </Select>
+                <InputRightAddon
+                  fontSize={'sm'}
+                  border={'none'}
+                  borderRightRadius={'5px'}
+                  borderLeftRadius={'none'}
+                  bgColor={'#007bff'}
+                  _hover={{
+                    bgColor: '#007bff',
+                  }}
+                  _active={{
+                    bgColor: '#007bff',
+                  }}
+                  color={'white'}
+                  cursor={'pointer'}
+                >
+                  Wallet
+                </InputRightAddon>
+              </InputGroup> */}
               <HStack spacing={0}>
                 <Select
                   borderLeftRadius={'5px'}
@@ -44,10 +84,19 @@ const LayoutComp = ({ children }) => {
                   bgColor={'#0f212e'}
                   border={'none'}
                   color={'white'}
+                  _focusVisible={{
+                    boxShadow: 'none',
+                  }}
                 >
-                  <option value="option1">0.00000000</option>
-                  <option value="option2">0.00000001</option>
-                  <option value="option3">0.00000002</option>
+                  <option value="option1" className="select">
+                    0.00000000
+                  </option>
+                  <option value="option2" className="select">
+                    0.00000001
+                  </option>
+                  <option value="option3" className="select">
+                    0.00000002
+                  </option>
                 </Select>
                 <Button
                   fontSize={'sm'}
