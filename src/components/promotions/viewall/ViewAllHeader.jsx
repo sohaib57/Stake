@@ -7,8 +7,8 @@ const ViewAllHeader = () => {
         <Stack margin={'0px !important'} width={'100%'} bg={'#213743'} justifyContent={'space-between'} direction={'row'} px={'8'}  >
 
             <Center >
-                <Text fontSize={'3xl'} fontWeight={'600'} color={'white'}>
-                    Challenges
+                <Text fontSize={'x-large'} fontWeight={'600'} color={'white'}>
+                   Promotions
                 </Text>
 
             </Center>

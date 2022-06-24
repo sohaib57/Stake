@@ -1,11 +1,11 @@
 import React from 'react'
 import { Stack, Img, Text, SimpleGrid , Heading } from '@chakra-ui/react'
-import slider3 from '../../assets/images/slider3.jfif'
+import './BlogCard.css'
 
 const PromotionBlogCard = ({ text, heading , fontSize , img }) => {
     return (
         <Stack margin={'0px !important'} >
-            <Img src={img} />
+            <Img src={img} className='arrow' />
             <Text color={'#A2ACC4'} >
                 {text}
             </Text>
