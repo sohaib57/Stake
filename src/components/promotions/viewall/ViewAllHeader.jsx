@@ -10,15 +10,12 @@ const ViewAllHeader = () => {
                 <Text fontSize={'x-large'} fontWeight={'600'} color={'white'}>
                    Promotions
                 </Text>
-
             </Center>
 
             <Stack margin={'0px !important'} >
                 <Image src={favourite} />
 
             </Stack>
-
-
         </Stack>
 
     )
