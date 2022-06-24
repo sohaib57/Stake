@@ -1,9 +1,9 @@
 import React from "react";
 import SportsLayoutComp from "../../../components/sports/sports layout/SportsLayoutComp";
-const Soccer = () => {
+const AlpineSkiing = () => {
   return (
-    <SportsLayoutComp name={'Soccer'}/>
+    <SportsLayoutComp name={'Alpine Skiing'}/>
   );
 };
 
-export default Soccer;
+export default AlpineSkiing;

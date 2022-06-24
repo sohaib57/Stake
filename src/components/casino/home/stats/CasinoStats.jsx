@@ -35,6 +35,7 @@ const CasinoStats = () => {
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
                     w={'max-content'}
+                    minW={'fit-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
                     <HStack spacing={'2'}>
@@ -45,7 +46,7 @@ const CasinoStats = () => {
                     w={'fit-content'}
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
-                    // w={'max-content'}
+                    minW={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
                     <HStack spacing={'2'}>
@@ -56,6 +57,7 @@ const CasinoStats = () => {
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
                     w={'max-content'}
+                    minW={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
                     <HStack spacing={'2'}>
@@ -66,6 +68,7 @@ const CasinoStats = () => {
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
                     w={'max-content'}
+                    minW={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
                     <HStack spacing={'2'}>

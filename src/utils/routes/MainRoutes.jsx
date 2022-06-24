@@ -40,6 +40,19 @@ import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
 import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
 import Mlb from '../../screens/sports/popular/Mlb';
 import Soccer from '../../screens/sports/top sports/Soccer.jsx';
+import AlpineSkiing from '../../screens/sports/All Sports/AlpineSkiing';
+import AmericanFootball from '../../screens/sports/All Sports/AmericanFootball';
+import AussieRules from '../../screens/sports/All Sports/AussieRules';
+import Badminton from '../../screens/sports/All Sports/Badminton';
+import BaseBall from '../../screens/sports/All Sports/BaseBall';
+import Basketball from '../../screens/sports/All Sports/Basketball';
+import Biathlon from '../../screens/sports/All Sports/Biathlon';
+import Bowls from '../../screens/sports/All Sports/Bowls';
+import Boxing from '../../screens/sports/All Sports/Boxing';
+import CounterStrike from '../../screens/sports/All Sports/CounterStrike';
+import Cricket from '../../screens/sports/All Sports/Cricket';
+import CrossCountry from '../../screens/sports/All Sports/CrossCountry';
+import Cycling from '../../screens/sports/All Sports/Cycling';
 
 const MainRoutes = () => {
   return (
@@ -122,8 +135,21 @@ const MainRoutes = () => {
       <Route path="/sports/upcoming" element={<StartingSoonScreen />}/>
       {/* popular sports screens */}
       <Route path="/sports/baseball/usa/mlb" element={<Mlb />}/>
-      {/* top sports */}
+      {/* all sports */}
       <Route path='/sports/soccer' element={<Soccer/>}/>
+      <Route path='/sports/alpine-skiing' element={<AlpineSkiing/>}/>
+      <Route path='/sports/american-football' element={<AmericanFootball/>}/>
+      <Route path='/sports/aussie-rules' element={<AussieRules/>}/>
+      <Route path='/sports/badminton' element={<Badminton/>}/>
+      <Route path='/sports/baseball' element={<BaseBall/>}/>
+      <Route path='/sports/basketball' element={<Basketball/>}/>
+      <Route path='/sports/biathlon' element={<Biathlon/>}/>
+      <Route path='/sports/bowls' element={<Bowls/>}/>
+      <Route path='/sports/boxing' element={<Boxing/>}/>
+      <Route path='/sports/counter-strike' element={<CounterStrike/>}/>
+      <Route path='/sports/cricket' element={<Cricket/>}/>
+      <Route path='/sports/cross-country' element={<CrossCountry/>}/>
+      <Route path='/sports/cycling' element={<Cycling/>}/>
       {/* no match screen */}
       <Route path="*" element={<NoMatchScreen />} />
       <Route path='/blog' element={<Blog />} />
