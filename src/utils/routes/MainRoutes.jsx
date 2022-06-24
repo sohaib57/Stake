@@ -19,6 +19,16 @@ import TableGamesScreen from '../../screens/casino/casino group/TableGamesScreen
 import BlackJack from '../../screens/casino/casino group/BlackJack';
 import Baccarat from '../../screens/casino/casino group/Baccarat';
 import Roulette from '../../screens/casino/casino group/Roulette';
+import Drake from '../../screens/sponsorships/Drake';
+import WatfordFC from '../../screens/sponsorships/WatfordFC';
+import KunAguero from '../../screens/sponsorships/KunAguero';
+import UFC from '../../screens/sponsorships/UFC';
+import IsraelAdesanya from '../../screens/sponsorships/IsraelAdesanya';
+import JoseAldo from '../../screens/sponsorships/JoseAldo';
+import AlexaGrasso from '../../screens/sponsorships/AlexaGrasso';
+import BoxingInJapan from '../../screens/sponsorships/BoxingInJapan';
+import BrazilRugbyLeague from '../../screens/sponsorships/BrazilRugbyLeague';
+import FittipaldiBrothers from '../../screens/sponsorships/FittipaldiBrothers';
 
 const MainRoutes = () => {
   return (
@@ -40,45 +50,33 @@ const MainRoutes = () => {
         path="/casino/group/stake-exclusives"
         element={<StakeExclusives />}
       />
-      <Route
-        path="/casino/group/slots"
-        element={<Slots />}
-      />
-      <Route
-        path="/casino/group/live-casino"
-        element={<LiveCasinoScreen />}
-      />
-       <Route
-        path="/casino/group/game-shows"
-        element={<GameShowsScreen />}
-      />
+      <Route path="/casino/group/slots" element={<Slots />} />
+      <Route path="/casino/group/live-casino" element={<LiveCasinoScreen />} />
+      <Route path="/casino/group/game-shows" element={<GameShowsScreen />} />
       <Route
         path="/casino/group/new-releases"
         element={<NewReleasesScreen />}
       />
-       <Route
-        path="/casino/group/feature-buy-in"
-        element={<FeatureByIn />}
-      />
-       <Route
-        path="/casino/group/table-games"
-        element={<TableGamesScreen />}
-      />
-      <Route
-        path="/casino/group/blackjack"
-        element={<BlackJack />}
-      />
-       <Route
-        path="/casino/group/baccarat"
-        element={<Baccarat />}
-      />
-      <Route
-        path="/casino/group/roulette"
-        element={<Roulette />}
-      />
+      <Route path="/casino/group/feature-buy-in" element={<FeatureByIn />} />
+      <Route path="/casino/group/table-games" element={<TableGamesScreen />} />
+      <Route path="/casino/group/blackjack" element={<BlackJack />} />
+      <Route path="/casino/group/baccarat" element={<Baccarat />} />
+      <Route path="/casino/group/roulette" element={<Roulette />} />
 
       <Route path="/casino-favourite" element={<FavouriteScreen />} />
       <Route path="*" element={<NoMatchScreen />} />
+
+      {/* {sponsorship} */}
+      <Route path="/drake" element={<Drake />} />
+      <Route path="/watford" element={<WatfordFC />} />
+      <Route path="/kun-aguero" element={<KunAguero />} />
+      <Route path="/ufc" element={<UFC />} />
+      <Route path="/adesanya" element={<IsraelAdesanya />} />
+      <Route path="/jose-aldo" element={<JoseAldo />} />
+      <Route path="/alexa-grasso" element={<AlexaGrasso />} />
+      <Route path="/inoue" element={<BoxingInJapan />} />
+      <Route path="/brazil-rugby-league" element={<BrazilRugbyLeague />} />
+      <Route path="/fittipaldi-brothers" element={<FittipaldiBrothers />} />
     </Routes>
   );
 };
