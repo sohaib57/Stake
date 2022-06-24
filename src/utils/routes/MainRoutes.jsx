@@ -29,6 +29,7 @@ import MyBetsScreen from '../../screens/sports/MyBetsScreen';
 import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
 import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
 import Mlb from '../../screens/sports/popular/Mlb';
+import BuyCrypto from '../../screens/blog/BuyCrypto';
 
 const MainRoutes = () => {
   return (
@@ -102,6 +103,7 @@ const MainRoutes = () => {
       <Route path="/sports/baseball/usa/mlb" element={<Mlb />}/>
       <Route path="*" element={<NoMatchScreen />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path='/blog/how-to-buy-crypto' element={<BuyCrypto />} />
     </Routes>
   );
 };

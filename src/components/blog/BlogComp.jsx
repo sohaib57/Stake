@@ -60,22 +60,22 @@ const BlogComp = () => {
                     {/* Category Cards */}
                     <Grid templateColumns={'repeat(3, 1fr)'} h={'auto'} gap={'4'} py={'7'} px={'9'}>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard1} name={'Crypto'} />
                         </GridItem>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard2} name={'How to Guides'} />
                         </GridItem>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard3} name={'Stake News'} />
                         </GridItem>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard4} name={'Sports'} />
                         </GridItem>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard5} name={'Casino'}/>
                         </GridItem>
                         <GridItem>
-                            <BlogCard img={BCard1}/>
+                            <BlogCard img={BCard6} name={'Other'} />
                         </GridItem>
                     </Grid>
                 </Stack>
