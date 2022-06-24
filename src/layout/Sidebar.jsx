@@ -317,6 +317,7 @@ const Sidebar = () => {
             }
           >
             <Menu.Item
+              onClick={()=>nav('/sports/my-bets')}
               key="1"
               style={{
                 paddingLeft: 20,
@@ -332,6 +333,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+             onClick={()=>nav('/sports/live-events')}
               key="2"
               style={{
                 paddingLeft: 20,
@@ -347,6 +349,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+            onClick={()=>nav('/sports/upcoming')}
               key="3"
               style={{
                 paddingLeft: 20,
@@ -371,6 +374,7 @@ const Sidebar = () => {
               Popular
             </p>
             <Menu.Item
+            onClick={()=>nav('/sports/baseball/usa/mlb')}
               key="4"
               style={{
                 paddingLeft: 20,
@@ -382,7 +386,7 @@ const Sidebar = () => {
                   paddingLeft: 8,
                 }}
               >
-                ATP London, Great...
+               MLA
               </button>
             </Menu.Item>
             <Menu.Item

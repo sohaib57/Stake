@@ -20,6 +20,14 @@ import BlackJack from '../../screens/casino/casino group/BlackJack';
 import Baccarat from '../../screens/casino/casino group/Baccarat';
 import Roulette from '../../screens/casino/casino group/Roulette';
 import SportsHomeScreen from '../../screens/sports/home/SportsHomeScreen';
+import MyBets from '../../components/sports/home/MyBets';
+import Favourites from '../../components/sports/home/Favourites';
+import LiveEvents from '../../components/sports/home/LiveEvents';
+import StartingSoon from '../../components/sports/home/StartingSoon';
+import MyBetsScreen from '../../screens/sports/MyBetsScreen';
+import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
+import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
+import Mlb from '../../screens/sports/popular/Mlb';
 
 const MainRoutes = () => {
   return (
@@ -77,12 +85,20 @@ const MainRoutes = () => {
         path="/casino/group/roulette"
         element={<Roulette />}
       />
+     
+      <Route path="/casino-favourite" element={<FavouriteScreen />}/>
       {/* sports home */}
-      <Route path="/casino-favourite" element={<FavouriteScreen />}>
-
+      <Route path="/sports/home/*" element={<SportsHomeScreen />}>
+      <Route path="my-bets" element={<MyBets />}/>
+      <Route path="favourites" element={<Favourites />}/>
+      <Route path="live-events" element={<LiveEvents />}/>
+      <Route path="starting-soon" element={<StartingSoon />}/>
       </Route>
-      {/* casino favourite */}
-      <Route path="/sports/home" element={<SportsHomeScreen />} />
+      <Route path="/sports/my-bets" element={<MyBetsScreen />}/>
+      <Route path="/sports/live-events" element={<LiveEventsScreen />}/>
+      <Route path="/sports/upcoming" element={<StartingSoonScreen />}/>
+      {/* popular sports screens */}
+      <Route path="/sports/baseball/usa/mlb" element={<Mlb />}/>
       <Route path="*" element={<NoMatchScreen />} />
     </Routes>
   );

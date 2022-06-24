@@ -19,6 +19,7 @@ const LayoutComp = ({ children }) => {
     <Layout
       style={{
         height: '100vh',
+        overflow: 'hidden',
       }}
     >
       <Sidebar />
