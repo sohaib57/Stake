@@ -122,9 +122,7 @@ const options = [
 const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
-<<<<<<< HEAD
   const [selectedOption, setSelectedOption] = useState(null);
-=======
   const { isOpen, onOpen, onClose } = useDisclosure()
   const {
     isOpen: isRevocationModalOpen,
@@ -137,7 +135,6 @@ const Sidebar = () => {
   const btnRef = React.useRef(null)
 
 
->>>>>>> bf8d68bd2742e74965f640005cddbd9468b6dda8
   const [show, setShow] = useState(true);
   return (
     <Stack
@@ -154,7 +151,6 @@ const Sidebar = () => {
             }
           )}
         </div>
-<<<<<<< HEAD
         <div className="sidebar-button">
           <Menu
             onClick={() => nav('/casino/home')}
@@ -181,8 +177,6 @@ const Sidebar = () => {
             ]}
           />
         </div>
-=======
->>>>>>> bf8d68bd2742e74965f640005cddbd9468b6dda8
         <Menu
           mode="inline"
           className="menu-bar"
