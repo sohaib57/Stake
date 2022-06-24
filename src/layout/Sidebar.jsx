@@ -23,7 +23,6 @@ import {
   StarOutlined,
   FieldTimeOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Divider } from 'antd';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { GiCardAceHearts } from 'react-icons/gi';
 import { AiTwotoneHeart } from 'react-icons/ai';
@@ -31,6 +30,85 @@ import 'antd/dist/antd.css';
 import './style.css';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 import Race24Hour from '../components/promotions/Race24Hour';
+import { Layout, Menu, Divider,Badge } from 'antd';
+import Icon from '@ant-design/icons';
+import 'antd/dist/antd.css';
+import './style.css';
+import { IoIosRocket, IoIosBaseball } from 'react-icons/io';
+import { IoFootballOutline, IoNewspaperOutline } from 'react-icons/io5';
+import {
+  MdOutlineCasino,
+  MdTimer,
+  MdSportsCricket,
+  MdSportsBasketball,
+  MdSportsHandball,
+  MdLegendToggle,
+} from 'react-icons/md';
+import { AiOutlineGift } from 'react-icons/ai';
+import {
+  SiCounterstrike,
+  SiGeneralelectric,
+  SiFifa,
+  SiWattpad,
+} from 'react-icons/si';
+import {
+  BsList,
+  BsBookmarkStarFill,
+  BsEmojiHeartEyesFill,
+} from 'react-icons/bs';
+import { AiOutlineStar, AiFillPlayCircle } from 'react-icons/ai';
+import { ImFire } from 'react-icons/im';
+import {
+  FaGg,
+  FaFire,
+  FaBaseballBall,
+  FaSkiing,
+  FaBasketballBall,
+  FaSkiingNordic,
+  FaBowlingBall,
+  FaMotorcycle,
+  FaFootballBall,
+  FaCarSide,
+  FaVolleyballBall,
+  FaGift,
+  FaHandshake,
+  FaHeadSideMask,
+  FaHeadset,
+} from 'react-icons/fa';
+import { BiRocket, BiFootball, BiCycling, BiTimer } from 'react-icons/bi';
+import {
+  RiNewspaperLine,
+  RiBoxingFill,
+  RiHonorOfKingsFill,
+  RiBoxingLine,
+  RiRainbowLine,
+  RiCoupon5Line,
+} from 'react-icons/ri';
+import {
+  GiBasketballBall,
+  GiBackwardTime,
+  GiTargetShot,
+  GiCardJackClubs,
+  GiBurningDot,
+  GiPingPongBat,
+  GiHockey,
+  GiAmericanFootballHelmet,
+  GiAmericanFootballBall,
+  GiSnitchQuidditchBall,
+  GiSupersonicArrow,
+  GiDart,
+  GiSpades,
+  GiAbstract060,
+  GiAbstract093,
+  GiTrophy,
+  GiGolfTee,
+  GiBaseballBat,
+  GiExpander,
+  GiSkier,
+  GiBallPyramid,
+  GiSoccerBall,
+  GiWaterPolo,
+} from 'react-icons/gi';
 
 const { Sider } = Layout;
 
@@ -49,8 +127,12 @@ const Sidebar = () => {
   const btnRef = React.useRef(null)
 
 
+  const [show, setShow] = useState(true);
   return (
-    <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
+    <Stack
+      display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
+      className="sider-body"
+    >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="siderbar-header">
           {React.createElement(
@@ -61,7 +143,6 @@ const Sidebar = () => {
             }
           )}
         </div>
-
         <Menu
           mode="inline"
           className="menu-bar"
@@ -76,7 +157,7 @@ const Sidebar = () => {
             key="sub1"
             title={
               <span>
-                <StarOutlined />
+                <Icon component={GiCardAceHearts} />
                 <span>Casino</span>
               </span>
             }
@@ -87,7 +168,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <StarOutlined />
+              <Icon component={AiOutlineStar} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -102,7 +183,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiBackwardTime} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -117,7 +198,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiTargetShot} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -135,7 +216,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={ImFire} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -151,7 +232,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaGg} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -167,7 +248,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={BsBookmarkStarFill} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -183,7 +264,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={MdOutlineCasino} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -199,7 +280,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={AiOutlineGift} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -215,7 +296,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={IoIosRocket} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -231,7 +312,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={BiRocket} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -247,7 +328,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaFire} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -263,7 +344,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSpades} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -279,7 +360,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiCardAceHearts} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -295,7 +376,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiBurningDot} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -309,18 +390,19 @@ const Sidebar = () => {
             key="sub2"
             title={
               <span>
-                <StarOutlined />
+                <Icon component={GiBasketballBall} />
                 <span>Sports</span>
               </span>
             }
           >
             <Menu.Item
+              onClick={()=>nav('/sports/my-bets')}
               key="1"
               style={{
                 paddingLeft: 20,
               }}
             >
-              <StarOutlined />
+              <Icon component={RiNewspaperLine} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -330,12 +412,13 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+             onClick={()=>nav('/sports/live-events')}
               key="2"
               style={{
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={AiFillPlayCircle} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -343,14 +426,21 @@ const Sidebar = () => {
               >
                 Live Events
               </button>
+              <Badge  style={{
+               backgroundColor: '#1f8bff',
+               color: '#080808',
+               boxShadow: 'none',
+               marginLeft:6,
+              }} count={show ? 16 : 0} />
             </Menu.Item>
             <Menu.Item
+            onClick={()=>nav('/sports/upcoming')}
               key="3"
               style={{
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={MdTimer} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -369,63 +459,19 @@ const Sidebar = () => {
               Popular
             </p>
             <Menu.Item
+            onClick={()=>nav('/sports/baseball/usa/mlb')}
               key="4"
               style={{
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={IoIosBaseball} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
               >
-                ATP London, Great...
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="5"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                ATP Halle,Germany...
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="6"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                KBO League
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="7"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                NHL
+                MLB
               </button>
             </Menu.Item>
             <Divider />
@@ -437,28 +483,15 @@ const Sidebar = () => {
             >
               Top Sports
             </p>
-            <Menu.Item
-              key="8"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                Tennis
-              </button>
-            </Menu.Item>
+
             <Menu.Item
               key="9"
               style={{
                 paddingLeft: 20,
+                paddingBottom: 0,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSoccerBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -467,51 +500,7 @@ const Sidebar = () => {
                 Soccer
               </button>
             </Menu.Item>
-            <Menu.Item
-              key="10"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                Baseball
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="11"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                Basketball
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="12"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                Table Tennis
-              </button>
-            </Menu.Item>
+
             <Divider />
             <p
               style={{
@@ -527,7 +516,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaSkiing} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -542,7 +531,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiAmericanFootballHelmet} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -557,7 +546,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiAmericanFootballBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -572,7 +561,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSnitchQuidditchBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -587,7 +576,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={IoIosBaseball} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -602,7 +591,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaBasketballBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -617,22 +606,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
-              <button
-                style={{
-                  paddingLeft: 8,
-                }}
-              >
-                Beach Volley
-              </button>
-            </Menu.Item>
-            <Menu.Item
-              key="20"
-              style={{
-                paddingLeft: 20,
-              }}
-            >
-              <FieldTimeOutlined />
+              <Icon component={FaSkiingNordic} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -642,12 +616,27 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="20"
+              style={{
+                paddingLeft: 20,
+              }}
+            >
+              <Icon component={FaBowlingBall} />
+              <button
+                style={{
+                  paddingLeft: 8,
+                }}
+              >
+                Bowls
+              </button>
+            </Menu.Item>
+            <Menu.Item
               key="21"
               style={{
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaBowlingBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -662,7 +651,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={SiCounterstrike} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -677,7 +666,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={MdSportsCricket} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -692,7 +681,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSupersonicArrow} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -707,7 +696,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={BiCycling} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -722,7 +711,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiDart} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -737,7 +726,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiAbstract060} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -752,7 +741,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={SiGeneralelectric} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -767,7 +756,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={SiFifa} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -782,7 +771,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiTrophy} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -797,7 +786,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={IoFootballOutline} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -812,7 +801,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiHockey} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -827,7 +816,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiGolfTee} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -842,7 +831,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={MdSportsHandball} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -857,7 +846,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiHockey} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -872,7 +861,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiAbstract093} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -887,7 +876,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={MdLegendToggle} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -902,7 +891,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={RiBoxingLine} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -917,7 +906,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaMotorcycle} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -932,7 +921,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiBaseballBat} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -947,7 +936,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiExpander} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -962,7 +951,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={RiRainbowLine} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -977,7 +966,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaFootballBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -992,7 +981,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSkier} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1007,7 +996,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiBallPyramid} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1022,7 +1011,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiSoccerBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1037,7 +1026,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaCarSide} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1052,7 +1041,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiPingPongBat} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1067,7 +1056,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaBaseballBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1082,7 +1071,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaVolleyballBall} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1097,7 +1086,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={GiWaterPolo} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1117,17 +1106,28 @@ const Sidebar = () => {
                 pl={2}
                 color={'white'}
                 bg={'transparent'}
-                className="select"
                 _focusVisible={{
                   boxShadow: 'none',
                 }}
               >
-                <option value="option1">Decimal</option>
-                <option value="option2">Fractional</option>
-                <option value="option3">American</option>
-                <option value="option3">Hong Kong</option>
-                <option value="option3">Indonesian</option>
-                <option value="option3">Malaysian</option>
+                <option value="option1" className="select">
+                  Decimal
+                </option>
+                <option value="option2" className="select">
+                  Fractional
+                </option>
+                <option value="option3" className="select">
+                  American
+                </option>
+                <option value="option3" className="select">
+                  Hong Kong
+                </option>
+                <option value="option3" className="select">
+                  Indonesian
+                </option>
+                <option value="option3" className="select">
+                  Malaysian
+                </option>
               </Select>
             </Stack>
             <Divider />
@@ -1136,7 +1136,7 @@ const Sidebar = () => {
             key="sub3"
             title={
               <span>
-                <StarOutlined />
+                <Icon component={AiOutlineGift} />
                 <span>Promotions</span>
               </span>
             }
@@ -1147,7 +1147,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <StarOutlined />
+              <Icon component={RiCoupon5Line} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1197,7 +1197,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={BiTimer} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1244,7 +1244,7 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaGift} />
               <button
                 style={{
                   paddingLeft: 8,
@@ -1260,7 +1260,7 @@ const Sidebar = () => {
             key="sub4"
             title={
               <span>
-                <StarOutlined />
+                <Icon component={FaHandshake} />
                 <span>Sponsorships</span>
               </span>
             }
@@ -1271,11 +1271,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <StarOutlined />
+              <Icon component={BsEmojiHeartEyesFill} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/drake')}
               >
                 Drake
               </button>
@@ -1286,11 +1287,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/watford')}
               >
                 Watford FC
               </button>
@@ -1301,11 +1303,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/kun-aguero')}
               >
                 Kun Agüero
               </button>
@@ -1317,11 +1320,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/ufc')}
               >
                 UFC
               </button>
@@ -1332,11 +1336,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/adesanya')}
               >
                 Israel Adesanya
               </button>
@@ -1347,11 +1352,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/jose-aldo')}
               >
                 José Aldo
               </button>
@@ -1362,11 +1368,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/alexa-grasso')}
               >
                 Alexa Grasso
               </button>
@@ -1377,11 +1384,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/inoue')}
               >
                 Boxing in Japan
               </button>
@@ -1392,11 +1400,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/brazil-rugby-league')}
               >
                 Brazil Rugby League
               </button>
@@ -1407,11 +1416,12 @@ const Sidebar = () => {
                 paddingLeft: 20,
               }}
             >
-              <FieldTimeOutlined />
+              <Icon component={FaHeadSideMask} />
               <button
                 style={{
                   paddingLeft: 8,
                 }}
+                onClick={() => nav('/fittipaldi-brothers')}
               >
                 Fittipaldi Brothers
               </button>
@@ -1421,16 +1431,21 @@ const Sidebar = () => {
           <Menu
             className="menu-bar"
             mode="inline"
-            defaultSelectedKeys={['1']}
             items={[
               {
                 key: '1',
-                icon: <UserOutlined />,
+                icon: <IoNewspaperOutline />,
                 label: 'Blog',
               },
+            ]}
+          />
+          <Menu
+            className="menu-bar"
+            mode="inline"
+            items={[
               {
                 key: '2',
-                icon: <VideoCameraOutlined />,
+                icon: <FaHeadset />,
                 label: 'Live Support',
               },
             ]}
@@ -1444,17 +1459,28 @@ const Sidebar = () => {
               pl={2}
               color={'white'}
               bg={'transparent'}
-              className="select"
               _focusVisible={{
                 boxShadow: 'none',
               }}
             >
-              <option value="option1">English</option>
-              <option value="option2">Deutsch</option>
-              <option value="option3">Español</option>
-              <option value="option3">Français</option>
-              <option value="option3">हिन्दी</option>
-              <option value="option3">Indonesi</option>
+              <option value="option1" className="select">
+                English
+              </option>
+              <option value="option2" className="select">
+                Deutsch
+              </option>
+              <option value="option3" className="select">
+                Español
+              </option>
+              <option value="option3" className="select">
+                Français
+              </option>
+              <option value="option3" className="select">
+                हिन्दी
+              </option>
+              <option value="option3" className="select">
+                Indonesi
+              </option>
             </Select>
           </Stack>
         </Menu>

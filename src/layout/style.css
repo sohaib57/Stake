@@ -61,7 +61,7 @@
 }
 .ant-divider-horizontal{
   border: 0.1px solid #2f4553;
-  margin: 24px 20px;
+  margin: 5px 20px 20px 20px;
   width: initial;
   min-width: initial;
  
@@ -101,6 +101,19 @@ color : white;
 .ant-menu-submenu-popup > .ant-menu{
   background-color: #0f212e;
   color: white;
+}
+.select{
+  color: black;
+}
+.sider-body{
+  font-family: sans-serif;
+}
+.ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child){
+  margin-bottom: 0px;
 }
 
 
