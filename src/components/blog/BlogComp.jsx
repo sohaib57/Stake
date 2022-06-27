@@ -11,6 +11,7 @@ import BCard5 from '../../assets/images/Bcard5.png'
 import BCard6 from '../../assets/images/Bcard6.png'
 import '../ui/BlogCard.css'
 import { IoIosArrowForward } from 'react-icons/io'
+import BlogCard from '../ui/BlogCard'
 
 
 
@@ -59,58 +60,22 @@ const BlogComp = () => {
                     {/* Category Cards */}
                     <Grid templateColumns={'repeat(3, 1fr)'} h={'auto'} gap={'4'} py={'7'} px={'9'}>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard1} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard1} name={'Crypto'} />
                         </GridItem>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard2} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard2} name={'How to Guides'} />
                         </GridItem>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard3} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard3} name={'Stake News'} />
                         </GridItem>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard4} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard4} name={'Sports'} />
                         </GridItem>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard5} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard5} name={'Casino'}/>
                         </GridItem>
                         <GridItem>
-                            <Stack  direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
-                                <Img src={BCard6} boxSize={'24'} borderLeftRadius={'md'} />
-                                <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
-                                    <Text color={'white'}>HEllo</Text>
-                                    <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
-                                </Stack>
-                            </Stack>
+                            <BlogCard img={BCard6} name={'Other'} />
                         </GridItem>
                     </Grid>
                 </Stack>

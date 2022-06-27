@@ -44,6 +44,7 @@ import MyBetsScreen from '../../screens/sports/MyBetsScreen';
 import LiveEventsScreen from '../../screens/sports/LiveEventsScreen';
 import StartingSoonScreen from '../../screens/sports/StartingSoonScreen';
 import Mlb from '../../screens/sports/popular/Mlb';
+import BuyCrypto from '../../screens/blog/BuyCrypto';
 import Recent from '../../screens/casino/recent/Recent';
 import Soccer from '../../screens/sports/top sports/Soccer.jsx';
 import AlpineSkiing from '../../screens/sports/All Sports/AlpineSkiing';
@@ -184,6 +185,7 @@ const MainRoutes = () => {
       {/* no match screen */}
       <Route path="*" element={<NoMatchScreen />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path='/blog/how-to-buy-crypto' element={<BuyCrypto />} />
     </Routes>
   );
 };
