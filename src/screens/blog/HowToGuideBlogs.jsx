@@ -32,11 +32,11 @@ const HowToGuideBlogs = () => {
           bgColor={'#213743'}
           justifyContent={'space-between'}
           direction={'row'}
-          px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+          px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'2'}
         >
-          <Center>
-            <Text fontSize={'2xl'} fontWeight={'600'} color={'white'}>
+          <Center minW={'fit-content'}>
+            <Text  fontSize={{base:'md'}} fontWeight={'600'} color={'white'}>
               How to Guides
             </Text>
           </Center>
@@ -46,7 +46,7 @@ const HowToGuideBlogs = () => {
         </Stack>
         {/* blogs */}
         <SimpleGrid
-          px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+          px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'6'}
           columns={{ base: 1, md: 2, lg: 3 }}
           spacingX="20px"

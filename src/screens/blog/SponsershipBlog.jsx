@@ -17,9 +17,9 @@ const SponsershipBLOG = () => {
   const nav = useNavigate();
   return (
     <LayoutComp>
-      <VStack bgColor={'#1A2C38'} py={'4'}>
-        <Stack w={'50%'}>
-          <Heading color={'white'}>
+      <VStack bgColor={'#1A2C38'} p={'4'}>
+        <Stack w={{base:'100%',md:'50%'}}>
+          <Heading color={'white'} fontSize={{base:'md',md:'lg',lg:'4xl'}}>
             Stake.com to sponsor middleweight championship unification fight
             between Ryota Murata and Gennady Golovkin
           </Heading>
@@ -119,7 +119,7 @@ const SponsershipBLOG = () => {
               size={'sm'}
               borderRadius={'full'}
               bgColor={'#0f212e'}
-              onClick={() => nav('/blog/category/sports')}
+              onClick={() => nav('/promotions/category/sports')}
             >
              Sports
             </Tag>

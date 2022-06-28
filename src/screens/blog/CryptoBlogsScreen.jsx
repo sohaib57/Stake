@@ -28,7 +28,7 @@ const CryptoBlogsScreen = () => {
           bgColor={'#213743'}
           justifyContent={'space-between'}
           direction={'row'}
-          px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+          px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'2'}
         >
           <Center>
@@ -42,7 +42,7 @@ const CryptoBlogsScreen = () => {
         </Stack>
         {/* blogs */}
         <SimpleGrid
-          px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+          px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'6'}
           columns={{ base: 1, md: 2, lg: 3 }}
           spacingX="20px"

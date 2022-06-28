@@ -7,7 +7,7 @@ import cryptoblogs3 from '../../assets/images/cryptoblogs3.jpg';
 const PopularArticles = () => {
   return (
     <Stack
-      px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+      px={{ base: '4', md: '8', lg: '12', xl: '14' }}
       py={'6'}
       mt={'0 !important'}
       bg={'#213743'}

@@ -96,6 +96,8 @@ import OtherBlogs from '../../screens/blog/OtherBlogs';
 import StakeRaces from '../../screens/viewall/StakeRaces'
 import Casino from '../../screens/viewall/category/Casino'
 import Sports from '../../screens/viewall/category/Sports'
+import UfcPartnershipBlog from '../../screens/blog/UfcPartnershipBlog';
+import MlbBlog from '../../screens/blog/MlbBlog';
 
 const MainRoutes = () => {
   return (
@@ -196,10 +198,9 @@ const MainRoutes = () => {
       {/* Promotions */}
 
       <Route path="/promotions" element={<ViewAll />} />
-      <Route path='/promotions' element={<ViewAll />} />
       <Route path='promotions/promotion/stake-races' element={<StakeRaces />} />
       <Route path='promotions/category/casino' element={<Casino />} />
-      <Route path='promotions/category/sports' element={<Sports />} />
+      <Route path='/promotions/category/sports' element={<Sports />} />
 
        {/* sports home */}
        
@@ -281,6 +282,8 @@ const MainRoutes = () => {
       <Route path="/blog/category/stake-news" element={<StakeNewsBlogs />} />
       <Route path="/blog/stakecom-sponsors" element={<SponsershipBLOG />} />
       <Route path="/blog/category/other" element={<OtherBlogs />} />
+      <Route path="/blog/ufc-stake-partnership" element={<UfcPartnershipBlog />} />
+      <Route path="/blog/mlb-2022-weekly-preview-week-14" element={<MlbBlog />} />
       {/* no match screen */}
       <Route path="*" element={<NoMatchScreen />} />
     </Routes>

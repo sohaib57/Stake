@@ -49,7 +49,7 @@ const OtherBlogs = () => {
             text={
               'Las Vegas – UFC®, the world’s premier mixed martial arts organization, today announced a new partnership with Stake.com, the world’s largest cryptocurrency casino and sportsbookUnder the terms of the agreement, Stake.com...'
             }
-            link={'/blog/stakecom-sponsors'}
+            link={'/blog/ufc-stake-partnership'}
             img={otherblogs1}
           />
           <BlogsCategoryCard
@@ -57,7 +57,7 @@ const OtherBlogs = () => {
             text={
                 'Did you know that Stake gives away over $5000 every single week on our forum, and all you need to do is simply play some of our games, or place some bets! These giveaways aren...'
             }
-            link={'/blog/stakecom-sponsors'}
+            link={'/blog/ufc-stake-partnership'}
             img={otherblogs2}
           />
 

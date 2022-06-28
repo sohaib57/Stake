@@ -23,9 +23,9 @@ const BuyCryptoComp = () => {
   return (
     <>
       <LayoutComp>
-        <VStack bgColor={'#1A2C38'} py={'4'}>
-          <Stack w={'50%'}>
-            <Heading color={'white'}>How to Buy Crypto</Heading>
+        <Stack px={'4'} alignItems={'center'} bgColor={'#1A2C38'} py={'4'}>
+          <Stack w={{base:'100%',md:'50%'}}>
+            <Heading color={'white'} pb={{base:'4',md:'2'}}>How to Buy Crypto</Heading>
             {/* Publish Date and Social */}
             <Stack
               direction={'row'}
@@ -224,7 +224,7 @@ const BuyCryptoComp = () => {
               updated and informed.
             </Text>
             {/* tags */}
-            <Stack direction={'row'} pt={'2'}>
+          <Stack direction={'row'} pt={'2'}>
               <Tag
                 p={'2'}
                 color={'white'}
@@ -243,13 +243,13 @@ const BuyCryptoComp = () => {
                 size={'sm'}
                 borderRadius={'full'}
                 bgColor={'#0f212e'}
-                onClick={() => nav('/blog/category/crypto')}
+                onClick={() => nav('/blog/category/how-to-guides')}
               >
                 How to Guides
               </Tag>
             </Stack>
           </Stack>
-        </VStack>
+        </Stack>
       </LayoutComp>
     </>
   );

@@ -11,7 +11,7 @@ import {
 import React from 'react';
 import LayoutComp from '../../layout/LayoutComp';
 import BHeader from '../../assets/images/BHeader.png';
-import Tournament from '../../assets/images/tournament.png';
+import mlbblog from '../../assets/images/mlbblog.png';
 import BCard1 from '../../assets/images/Bcard1.png';
 import BCard2 from '../../assets/images/Bcard2.png';
 import BCard3 from '../../assets/images/Bcard3.png';
@@ -59,59 +59,71 @@ const BlogComp = () => {
               Blog
             </Heading>
           </Stack>
-          <Stack direction={'row'} py={'9'} pl={'9'}>
-            {/* Tournament Image */}
+          <Stack
+            _hover={{ cursor: 'pointer' }}
+            onClick={() => nav('/blog/mlb-2022-weekly-preview-week-14')}
+            direction={{ base: 'column', lg: 'row' }}
+            py={'9'}
+            px={{ base: '4', md: '6', lg: '8' }}
+          >
+            {/* mlb Image */}
             <Stack flex={'3'} className={'arrow'}>
-              <Img borderRadius={'md'} src={Tournament} />
+              <Img borderRadius={'md'} src={mlbblog} />
             </Stack>
             <Spacer flex={'0'} />
-            {/* Tournament Info Text */}
+            {/* mlb Info Text */}
             <Stack flex={'2'} color={'#909cb2'}>
-              <Heading size={'md'} color={'#FFF'} lineHeight={'2rem'}>
-                Tennis Tips and Predictions: <br />
-                Wimbledon 2022 Tournament Preview
+              <Heading
+                size={{ base: 'sm', md: 'md', lg: 'lg' }}
+                fontWeight={'500'}
+                color={'#FFF'}
+                lineHeight={'2rem'}
+              >
+                MLB 2022 Weekly Preview - Week 14
               </Heading>
-              <Text fontSize={'md'}>
-                Wimbledon is back and Tennis Fans are going to have a
-                bittersweet taste in their mouth for this year’s tournament.
+              <Text fontSize={{ base: 'sm', md: 'md' }}>
+                Major League Baseball is starting to heat up week in and week
+                out. There is clear excitement from fans across the globe with
+                most teams competing at an absurdly high level.
               </Text>
             </Stack>
           </Stack>
           {/* Category Cards */}
-          <Grid
-            templateColumns={'repeat(3, 1fr)'}
-            h={'auto'}
-            gap={'6'}
-            py={'7'}
-            px={{ base: '2', md: '8', lg: '12', xl: '14' }}
+          <SimpleGrid
+            px={{ base: '4', md: '8', lg: '12', xl: '14' }}
+            pt={'4'}
+            pb={'8'}
+            columns={{ base: 1, md: 2, lg: 3 }}
+            spacingX="20px"
+            spacingY={'40px'}
           >
-            <GridItem onClick={() => nav('/blog/category/crypto')}>
+            <Stack onClick={() => nav('/blog/category/crypto')}>
               <BlogCard img={BCard1} name={'Crypto'} />
-            </GridItem>
-            <GridItem onClick={() => nav('/blog/category/how-to-guides')}>
+            </Stack>
+            <Stack onClick={() => nav('/blog/category/how-to-guides')}>
               <BlogCard img={BCard2} name={'How to Guides'} />
-            </GridItem>
-            <GridItem onClick={() => nav('/blog/category/stake-news')}>
+            </Stack>
+            <Stack onClick={() => nav('/blog/category/stake-news')}>
               <BlogCard img={BCard3} name={'Stake News'} />
-            </GridItem>
-            <GridItem onClick={() => nav('/blog/category/crypto')}>
+            </Stack>
+            <Stack onClick={() => nav('/blog/category/crypto')}>
               <BlogCard img={BCard4} name={'Sports'} />
-            </GridItem>
-            <GridItem onClick={() => nav('/blog/category/crypto')}>
+            </Stack>
+            <Stack onClick={() => nav('/blog/category/crypto')}>
               <BlogCard img={BCard5} name={'Casino'} />
-            </GridItem>
-            <GridItem onClick={() => nav('/blog/category/other')}>
+            </Stack>
+            <Stack onClick={() => nav('/blog/category/other')}>
               <BlogCard img={BCard6} name={'Other'} />
-            </GridItem>
-          </Grid>
+            </Stack>
+          </SimpleGrid>
           {/* blogs */}
           <SimpleGrid
-             px={{ base: '2', md: '8', lg: '12', xl: '14' }}
-             pt={'4'}
-             pb={'8'}
-             columns={{ base: 1, md: 2, lg: 3 }}
-             spacingX="20px"
-             spacingY={'40px'}
+            px={{ base: '4', md: '8', lg: '12', xl: '14' }}
+            pt={'4'}
+            pb={'8'}
+            columns={{ base: 1, md: 2, lg: 3 }}
+            spacingX="20px"
+            spacingY={'40px'}
           >
             <BlogsCategoryCard
               heading={'How to Buy Crypto'}
