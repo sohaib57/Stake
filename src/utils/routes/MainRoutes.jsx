@@ -23,7 +23,7 @@ import Roulette from '../../screens/casino/casino group/Roulette';
 import AllClaimed from '../../components/casino/challenges/allclaimed/AllClaimed';
 import MyClaimed from '../../components/casino/challenges/myclaimed/MyClaimed';
 import Active from '../../components/casino/challenges/active/Active';
-import ViewAll from '../../screens/ViewAll';
+import ViewAll from '../../screens/viewall/ViewAll'
 import Drake from '../../screens/sponsorships/Drake';
 import WatfordFC from '../../screens/sponsorships/WatfordFC';
 import KunAguero from '../../screens/sponsorships/KunAguero';
@@ -93,6 +93,9 @@ import HowtoUseVault from '../../screens/blog/HowtoUseVault';
 import StakeNewsBlogs from '../../screens/blog/StakeNewsBlogs';
 import SponsershipBLOG from '../../screens/blog/SponsershipBlog';
 import OtherBlogs from '../../screens/blog/OtherBlogs';
+import StakeRaces from '../../screens/viewall/StakeRaces'
+import Casino from '../../screens/viewall/category/Casino'
+import Sports from '../../screens/viewall/category/Sports'
 
 const MainRoutes = () => {
   return (
@@ -164,12 +167,42 @@ const MainRoutes = () => {
       <Route path="/casino-favourite" element={<FavouriteScreen />} />
       <Route path="/recent" element={<Recent />} />
       {/* sports home */}
-      <Route path="/casino-favourite" element={<FavouriteScreen />}>
         <Route path="/casino-favourite" element={<FavouriteScreen />} />
-      </Route>
+      <Route
+        path="/casino/group/feature-buy-in"
+        element={<FeatureByIn />}
+      />
+      <Route
+        path="/casino/group/table-games"
+        element={<TableGamesScreen />}
+      />
+      <Route
+        path="/casino/group/blackjack"
+        element={<BlackJack />}
+      />
+      <Route
+        path="/casino/group/baccarat"
+        element={<Baccarat />}
+      />
+      <Route
+        path="/casino/group/roulette"
+        element={<Roulette />}
+      />
+
+      <Route path="/casino-favourite" element={<FavouriteScreen />} />
+      <Route path="/recent" element={<Recent />} /> 
+      <Route path="/casino-favourite" element={<FavouriteScreen />}/>
+
+      {/* Promotions */}
 
       <Route path="/promotions" element={<ViewAll />} />
-      {/* casino favourite */}
+      <Route path='/promotions' element={<ViewAll />} />
+      <Route path='promotions/promotion/stake-races' element={<StakeRaces />} />
+      <Route path='promotions/category/casino' element={<Casino />} />
+      <Route path='promotions/category/sports' element={<Sports />} />
+
+       {/* sports home */}
+       
       <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="/sports/home/*" element={<SportsHomeScreen />}>
         <Route path="my-bets" element={<MyBets />} />
@@ -222,6 +255,20 @@ const MainRoutes = () => {
       <Route path="/sports/tennis" element={<Tennis />} />
       <Route path="/sports/vollyball" element={<Vollyball />} />
       <Route path="/sports/waterpolo" element={<Waterpolo />} />
+      <Route path='/sports/soccer' element={<Soccer />} />
+      <Route path='/sports/alpine-skiing' element={<AlpineSkiing />} />
+      <Route path='/sports/american-football' element={<AmericanFootball />} />
+      <Route path='/sports/aussie-rules' element={<AussieRules />} />
+      <Route path='/sports/badminton' element={<Badminton />} />
+      <Route path='/sports/baseball' element={<BaseBall />} />
+      <Route path='/sports/basketball' element={<Basketball />} />
+      <Route path='/sports/biathlon' element={<Biathlon />} />
+      <Route path='/sports/bowls' element={<Bowls />} />
+      <Route path='/sports/boxing' element={<Boxing />} />
+      <Route path='/sports/counter-strike' element={<CounterStrike />} />
+      <Route path='/sports/cricket' element={<Cricket />} />
+      <Route path='/sports/cross-country' element={<CrossCountry />} />
+      <Route path='/sports/cycling' element={<Cycling />} />
       {/* provider */}
       <Route path="/casino/collection/provider" element={<Providers />} />
       <Route path="/casino/group/no-limit-city" element={<ProviderGameScreen />} />
