@@ -12,7 +12,8 @@ const MobileHeader = () => {
     <Stack
       width={'100%'}
       bgColor={'#071d2a'}
-      height={'20%'}
+      // height={'20%'}
+      py={'4'}
       display={{ base: 'inherit', md: 'none', lg: 'none' }}
       position={'fixed'}
       bottom={'0'}

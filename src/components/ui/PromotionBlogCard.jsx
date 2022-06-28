@@ -5,7 +5,7 @@ import './BlogCard.css'
 const PromotionBlogCard = ({ text, heading , fontSize , img }) => {
     return (
         <Stack margin={'0px !important'} >
-            <Img src={img} className='arrow' />
+            <Img borderRadius={'md'} src={img} className='arrow' />
             <Text color={'#A2ACC4'} >
                 {text}
             </Text>
