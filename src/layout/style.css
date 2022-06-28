@@ -133,7 +133,7 @@
 .animation {
   position: relative;
   right: 0;
-  transition: .2s;
+  transition: .3s;
 }
 .animation:hover {
   right: -5px;

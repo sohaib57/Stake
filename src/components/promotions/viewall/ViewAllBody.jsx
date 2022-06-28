@@ -1,6 +1,7 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { IoIosArrowForward } from 'react-icons/io'
-import { Stack, Img, Text, SimpleGrid, Heading , Center , Button } from '@chakra-ui/react'
+import { Stack, Img, Text, SimpleGrid, Heading, Center, Button } from '@chakra-ui/react'
 import Bcard4 from '../../../assets/images/Bcard4.png'
 import Bcard5 from '../../../assets/images/Bcard5.png'
 import daily from '../../../assets/images/dailyRaces.jpg'
@@ -19,18 +20,22 @@ import PromotionBlogCard from '../../ui/PromotionBlogCard'
 
 
 const ViewAllBody = () => {
+
+    const nav = useNavigate();
+
+
     return (
         <Stack p={{ base: '4', lg: '10' }} spacing={'4'} bg={'#1A2C38'} margin={'0px !important'} >
 
             <Stack direction={'row'} justifyContent={'space-between'} spacing={'6'}  >
-                <Stack flex={'1'} direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
+                <Stack flex={'1'} direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'} onClick={() => nav('category/casino')} >
                     <Img src={Bcard5} boxSize={'24'} borderLeftRadius={'md'} />
                     <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
                         <Text color={'white'}>Casino</Text>
                         <IoIosArrowForward size={'1.5rem'} className={'navigator'} />
                     </Stack>
                 </Stack>
-                <Stack flex={'1'} direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'}>
+                <Stack flex={'1'} direction={'row'} borderRadius={'md'} bgColor={'#213743'} h={'24'} align={'center'} onClick={() => nav('category/sports')}  >
                     <Img src={Bcard4} boxSize={'24'} borderLeftRadius={'md'} />
                     <Stack direction={'row'} justify={'space-between'} w={'full'} align={'center'} pr={'4'} color={'#B1BAD3'} fontWeight={'bold'}>
                         <Text color={'white'}>Sports</Text>
@@ -45,7 +50,7 @@ const ViewAllBody = () => {
                 </Heading>
 
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing='20px'>
-                    <PromotionBlogCard fontSize={'lg'} heading={'Stakes Daily Races '} text={'Ends at 5:00 AM 12/31/2022'} img={daily} />
+                    <PromotionBlogCard link={'/promotions/promotion/stake-races'} fontSize={'lg'} heading={'Stakes Daily Races '} text={'Ends at 5:00 AM 12/31/2022'} img={daily} />
                     <PromotionBlogCard fontSize={'lg'} heading={'Stakes Daily Races '} text={'Ends at 5:00 AM 12/31/2022'} img={giveAway} />
                     <PromotionBlogCard fontSize={'lg'} heading={'Stakes Daily Races '} text={'Ends at 5:00 AM 12/31/2022'} img={conquer} />
                     <PromotionBlogCard fontSize={'lg'} heading={'Stakes Daily Races '} text={'Ends at 5:00 AM 12/31/2022'} img={outLaws} />
