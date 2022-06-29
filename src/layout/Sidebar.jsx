@@ -9,12 +9,14 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  HStack, Stack, Button,
+  HStack,
+  Stack,
+  Button,
   Select,
-  Text
-} from '@chakra-ui/react'
-import { RiContactsBook2Fill } from 'react-icons/ri'
-import { GiDigitalTrace } from 'react-icons/gi'
+  Text,
+} from '@chakra-ui/react';
+import { RiContactsBook2Fill } from 'react-icons/ri';
+import { GiDigitalTrace } from 'react-icons/gi';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -123,17 +125,16 @@ const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isRevocationModalOpen,
     onOpen: onOpenRevocationModal,
     onClose: onCloseRevocationModal,
   } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = React.useState('inside')
-  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside')
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside');
 
-  const btnRef = React.useRef(null)
-
+  const btnRef = React.useRef(null);
 
   const [show, setShow] = useState(true);
   return (
@@ -141,7 +142,7 @@ const Sidebar = () => {
       display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
       className="sider-body"
       style={{
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins',
       }}
     >
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -191,11 +192,9 @@ const Sidebar = () => {
           }}
         >
           <SubMenu
-
             key="sub1"
             title={
-              <span className='animation'>
-                <Icon component={GiCardAceHearts} />
+              <span className="animation">
                 <span>Casino</span>
               </span>
             }
@@ -429,8 +428,7 @@ const Sidebar = () => {
           <SubMenu
             key="sub2"
             title={
-              <span className='animation'>
-                <Icon component={GiBasketballBall} />
+              <span className="animation">
                 <span>Sports</span>
               </span>
             }
@@ -1218,8 +1216,7 @@ const Sidebar = () => {
           <SubMenu
             key="sub3"
             title={
-              <span className='animation'>
-                <Icon component={AiOutlineGift} />
+              <span className="animation">
                 <span>Promotions</span>
               </span>
             }
@@ -1235,12 +1232,9 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
-
                 onClick={onOpen}
-
               >
                 $50k Weekly Giveaway
-
               </button>
             </Menu.Item>
 
@@ -1251,28 +1245,26 @@ const Sidebar = () => {
               isOpen={isOpen}
               scrollBehavior={scrollBehavior}
               size={'lg'}
-
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'} >
+              <ModalContent bg={'#1A2C38'}>
                 <ModalHeader>
-                  <Stack direction={'row'} alignItems={'center'} >
+                  <Stack direction={'row'} alignItems={'center'}>
                     <RiContactsBook2Fill color={'#B1BAD3'} />
-                    <Text color={'white'} >  VIP </Text>
+                    <Text color={'white'}> VIP </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody  >
+                <ModalBody>
                   <WeeklyGiveAwayModal />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
-                  <Text color={'white'}  >
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                  <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>
                 </ModalFooter>
               </ModalContent>
             </Modal>
-
 
             <Menu.Item
               key="61"
@@ -1291,7 +1283,6 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
 
-
             {/* Race-Hour */}
             <Modal
               onClose={onCloseRevocationModal}
@@ -1299,22 +1290,21 @@ const Sidebar = () => {
               isOpen={isRevocationModalOpen}
               scrollBehavior={scrollBehavior2}
               size={'lg'}
-
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'} >
+              <ModalContent bg={'#1A2C38'}>
                 <ModalHeader>
-                  <Stack direction={'row'} alignItems={'center'} >
+                  <Stack direction={'row'} alignItems={'center'}>
                     <GiDigitalTrace color={'#B1BAD3'} />
-                    <Text color={'white'} >  Race </Text>
+                    <Text color={'white'}> Race </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody  >
+                <ModalBody>
                   <Race24Hour />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
-                  <Text color={'white'}  >
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                  <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>
                 </ModalFooter>
@@ -1342,8 +1332,7 @@ const Sidebar = () => {
           <SubMenu
             key="sub4"
             title={
-              <span className='animation'>
-                <Icon component={FaHandshake} />
+              <span className="animation">
                 <span>Sponsorships</span>
               </span>
             }
@@ -1518,7 +1507,7 @@ const Sidebar = () => {
             items={[
               {
                 key: '73',
-                icon: <IoNewspaperOutline />,
+
                 label: 'Blog',
               },
             ]}
@@ -1529,7 +1518,6 @@ const Sidebar = () => {
             items={[
               {
                 key: '74',
-                icon: <FaHeadset />,
                 label: 'Live Support',
               },
             ]}
