@@ -158,7 +158,7 @@ const Features = () => {
           </Center>
 
           <Center py={{ base: '6', lg: '0' }}>
-            <Button size={'lg'} bg={'#3D5564'} color={'white'}>
+            <Button _hover={{}} size={'lg'} bg={'#3D5564'} color={'white'}>
               Buy Crypto
             </Button>
           </Center>

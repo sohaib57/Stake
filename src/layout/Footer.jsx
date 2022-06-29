@@ -31,7 +31,8 @@ import stake from '../assets/images/stake.png';
 const Footer = () => {
   return (
     <Stack
-      py={'12'}
+      pt={'12'}
+      pb={{base:'20',md:'12'}}
       px={{ base: '4', sm: '6', md: '8', lg: '16' }}
       w={'100%'}
       bgColor={'#071D2A'}

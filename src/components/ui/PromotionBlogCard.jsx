@@ -6,8 +6,8 @@ import './BlogCard.css'
 const PromotionBlogCard = ({ text, heading, img, link, description }) => {
     const nav = useNavigate();
     return (
-        <Stack margin={'0px !important'} onClick={() => nav(link)} >
-            <Img src={img} className='arrow' />
+        <Stack margin={'0px !important'} onClick={() => nav(link)}>
+            <Img borderRadius={'md'} src={img} className='arrow' />
             <Text color={'#A2ACC4'} >
                 {text}
             </Text>

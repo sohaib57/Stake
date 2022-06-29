@@ -9,8 +9,8 @@ const Header = () => {
                 {/* Left div */}
                 <Stack width={{ base: '100%', lg: '50%' }}   >
                     <Stack width={{ base: '100%', lg: '70%' }} px={'10'} py={'16'} >
-                        <Heading color={'white'} fontSize='2xl' lineHeight={'1.5'} fontWeight={'700'} >
-                            Welcome back, SohaibAshraf
+                        <Heading color={'white'} fontSize='lg' pb={'2'} lineHeight={'1.5'} fontWeight={'700'} >
+                            Welcome back, sufyan5788
                         </Heading>
                         <Stack>
                             <HStack justifyContent={'space-between'} color={'#fff'} lineHeight={'1.5'} fontWeight={'600'} >

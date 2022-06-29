@@ -1,6 +1,7 @@
 import {
   Button,
   Center,
+  Heading,
   HStack,
   Image,
   Input,
@@ -18,7 +19,12 @@ import cardslider5 from '../../../assets/images/cardslider5.jfif';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { GoSettings } from 'react-icons/go';
 import Card from '../../../components/ui/card/Card';
+import ProviderSlider from '../../../components/casino/home/provider/ProviderSlider';
+import { FaChessQueen } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import CasinoStats from '../../../components/casino/home/stats/CasinoStats';
 const StakeOriginalsScreen = () => {
+  const nav = useNavigate();
   return (
     <LayoutComp>
       <Stack>
@@ -41,6 +47,7 @@ const StakeOriginalsScreen = () => {
         </Stack>
         {/* body */}
         <Stack
+          pb={'6'}
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
           marginTop={'0 !important'}
           bgColor={'#1A2C38'}
@@ -125,6 +132,28 @@ const StakeOriginalsScreen = () => {
             <Card img={cardslider5} />
             <Card img={cardslider5} />
           </SimpleGrid>
+          {/* provider */}
+          <Stack py={'12'}>
+            <HStack
+              w={'fit-content'}
+              _hover={{ cursor: 'pointer' }}
+              onClick={() => nav('/providers')}
+              color={'gray.400'}
+              pb={'3'}
+              spacing={'2'}
+              alignItems={'center'}
+            >
+              <FaChessQueen fontSize={'1.3rem'} />
+
+              <Heading fontWeight={'500'} color={'white'} fontSize={'lg'}>
+                {' '}
+                Providers
+              </Heading>
+            </HStack>
+            <ProviderSlider />
+          </Stack>
+          {/* stats */}
+          <CasinoStats />
         </Stack>
       </Stack>
     </LayoutComp>
