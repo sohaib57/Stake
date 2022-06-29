@@ -62,7 +62,7 @@ const CardSlider = () => {
     ],
   };
   return (
-    <Stack marginTop={'0 !important'} bgColor={'#1A2C38'} className="slider">
+    <Stack marginTop={'0 !important'} bgColor={'inherit'} className="slider">
       <Slider {...settings}>
         <Card img={cardslider1} />
         <Card img={cardslider2} />
