@@ -3,7 +3,12 @@ import React from 'react';
 import SportsStats from '../../components/sports/home/SportsStats';
 import StartingSoon from '../../components/sports/home/StartingSoon';
 import LayoutComp from '../../layout/LayoutComp';
+import useDocumentTitle from '../../utils/useDocumentTitle';
+
 const StartingSoonScreen = () => {
+
+  useDocumentTitle('Bet Upcoming Sports,Events & TimeTable')
+
   return (
     <LayoutComp>
       <Stack

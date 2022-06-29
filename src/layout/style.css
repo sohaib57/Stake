@@ -34,6 +34,7 @@
 }
 .site-layout .site-header-layout-background {
   background-color: #1a2c38;
+  box-shadow: #0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px;
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #1a2c38;
@@ -77,8 +78,8 @@
   color: white;
   font-weight: 700;
   font-size: 13px;
-}.siderbar-header
-.button-section button:hover {
+}
+.siderbar-header .button-section button:hover {
   color: white;
 }
 .siderbar-header {
@@ -133,7 +134,7 @@
 .animation {
   position: relative;
   right: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .animation:hover {
   right: -5px;

@@ -30,7 +30,7 @@ import 'antd/dist/antd.css';
 import './style.css';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 import Race24Hour from '../components/promotions/Race24Hour';
-import { Layout, Menu, Divider,Badge } from 'antd';
+import { Layout, Menu, Divider, Badge } from 'antd';
 import Icon from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import './style.css';
@@ -140,6 +140,9 @@ const Sidebar = () => {
     <Stack
       display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
       className="sider-body"
+      style={{
+        fontFamily: 'Poppins'
+      }}
     >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="siderbar-header">
@@ -188,10 +191,10 @@ const Sidebar = () => {
           }}
         >
           <SubMenu
-         
+
             key="sub1"
             title={
-              <span  className='animation'>
+              <span className='animation'>
                 <Icon component={GiCardAceHearts} />
                 <span>Casino</span>
               </span>
@@ -568,7 +571,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/american-football')}
+              onClick={() => nav('/sports/american-football')}
               key="14"
               style={{
                 paddingLeft: 20,
@@ -584,7 +587,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/aussie-rules')}
+              onClick={() => nav('/sports/aussie-rules')}
               key="15"
               style={{
                 paddingLeft: 20,
@@ -600,7 +603,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/badminton')}
+              onClick={() => nav('/sports/badminton')}
               key="16"
               style={{
                 paddingLeft: 20,
@@ -616,7 +619,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/baseball')}
+              onClick={() => nav('/sports/baseball')}
               key="17"
               style={{
                 paddingLeft: 20,
@@ -632,7 +635,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/basketball')}
+              onClick={() => nav('/sports/basketball')}
               key="18"
               style={{
                 paddingLeft: 20,
@@ -648,7 +651,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/biathlon')}
+              onClick={() => nav('/sports/biathlon')}
               key="19"
               style={{
                 paddingLeft: 20,
@@ -664,7 +667,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/bowls')}
+              onClick={() => nav('/sports/bowls')}
               key="20"
               style={{
                 paddingLeft: 20,
@@ -680,7 +683,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/boxing')}
+              onClick={() => nav('/sports/boxing')}
               key="21"
               style={{
                 paddingLeft: 20,
@@ -696,7 +699,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/counter-strike')}
+              onClick={() => nav('/sports/counter-strike')}
               key="22"
               style={{
                 paddingLeft: 20,
@@ -712,7 +715,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-             onClick={() => nav('/sports/cricket')}
+              onClick={() => nav('/sports/cricket')}
               key="23"
               style={{
                 paddingLeft: 20,
@@ -728,7 +731,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/cross-country')}
+              onClick={() => nav('/sports/cross-country')}
               key="24"
               style={{
                 paddingLeft: 20,
@@ -744,7 +747,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/cycling')}
+              onClick={() => nav('/sports/cycling')}
               key="25"
               style={{
                 paddingLeft: 20,
@@ -760,7 +763,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/darts')}
+              onClick={() => nav('/sports/darts')}
               key="34"
               style={{
                 paddingLeft: 20,
@@ -776,7 +779,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/dota-2')}
+              onClick={() => nav('/sports/dota-2')}
               key="35"
               style={{
                 paddingLeft: 20,
@@ -792,7 +795,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/electronic-leagues')}
+              onClick={() => nav('/sports/electronic-leagues')}
               key="36"
               style={{
                 paddingLeft: 20,
@@ -808,7 +811,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/fifa')}
+              onClick={() => nav('/sports/fifa')}
               key="37"
               style={{
                 paddingLeft: 20,
@@ -824,7 +827,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/formula-1')}
+              onClick={() => nav('/sports/formula-1')}
               key="38"
               style={{
                 paddingLeft: 20,
@@ -840,7 +843,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/futsal')}
+              onClick={() => nav('/sports/futsal')}
               key="39"
               style={{
                 paddingLeft: 20,
@@ -856,7 +859,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/gaelic-hurling')}
+              onClick={() => nav('/sports/gaelic-hurling')}
               key="40"
               style={{
                 paddingLeft: 20,
@@ -872,7 +875,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/golf')}
+              onClick={() => nav('/sports/golf')}
               key="41"
               style={{
                 paddingLeft: 20,
@@ -888,7 +891,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/handball')}
+              onClick={() => nav('/sports/handball')}
               key="42"
               style={{
                 paddingLeft: 20,
@@ -904,7 +907,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/ice-hockey')}
+              onClick={() => nav('/sports/ice-hockey')}
               key="43"
               style={{
                 paddingLeft: 20,
@@ -920,7 +923,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/indy-racing')}
+              onClick={() => nav('/sports/indy-racing')}
               key="44"
               style={{
                 paddingLeft: 20,
@@ -936,7 +939,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-             onClick={() => nav('/sports/league-of-legends')}
+              onClick={() => nav('/sports/league-of-legends')}
               key="45"
               style={{
                 paddingLeft: 20,
@@ -952,7 +955,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/mma')}
+              onClick={() => nav('/sports/mma')}
               key="46"
               style={{
                 paddingLeft: 20,
@@ -968,7 +971,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/motorcycle-racing')}
+              onClick={() => nav('/sports/motorcycle-racing')}
               key="47"
               style={{
                 paddingLeft: 20,
@@ -984,7 +987,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/pesapallo')}
+              onClick={() => nav('/sports/pesapallo')}
               key="48"
               style={{
                 paddingLeft: 20,
@@ -1000,7 +1003,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/politics-entertainment')}
+              onClick={() => nav('/sports/politics-entertainment')}
               key="49"
               style={{
                 paddingLeft: 20,
@@ -1016,7 +1019,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/rainbow-six')}
+              onClick={() => nav('/sports/rainbow-six')}
               key="50"
               style={{
                 paddingLeft: 20,
@@ -1032,7 +1035,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/rugby')}
+              onClick={() => nav('/sports/rugby')}
               key="51"
               style={{
                 paddingLeft: 20,
@@ -1048,7 +1051,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-             onClick={() => nav('/sports/ski-jumping')}
+              onClick={() => nav('/sports/ski-jumping')}
               key="52"
               style={{
                 paddingLeft: 20,
@@ -1064,7 +1067,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/snooker')}
+              onClick={() => nav('/sports/snooker')}
               key="53"
               style={{
                 paddingLeft: 20,
@@ -1080,7 +1083,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/soccer')}
+              onClick={() => nav('/sports/soccer')}
               key="54"
               style={{
                 paddingLeft: 20,
@@ -1096,7 +1099,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/stock-car-racing')}
+              onClick={() => nav('/sports/stock-car-racing')}
               key="55"
               style={{
                 paddingLeft: 20,
@@ -1112,7 +1115,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/table-tennis')}
+              onClick={() => nav('/sports/table-tennis')}
               key="56"
               style={{
                 paddingLeft: 20,
@@ -1128,7 +1131,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/tennis')}
+              onClick={() => nav('/sports/tennis')}
               key="57"
               style={{
                 paddingLeft: 20,
@@ -1144,7 +1147,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-            onClick={() => nav('/sports/volleyball')}
+              onClick={() => nav('/sports/volleyball')}
               key="58"
               style={{
                 paddingLeft: 20,
@@ -1160,7 +1163,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-             onClick={() => nav('/sports/waterpolo')}
+              onClick={() => nav('/sports/waterpolo')}
               key="59"
               style={{
                 paddingLeft: 20,
@@ -1509,7 +1512,7 @@ const Sidebar = () => {
             <Divider />
           </SubMenu>
           <Menu
-          onClick={()=>nav('/blog')}
+            onClick={() => nav('/blog')}
             className="menu-bar"
             mode="inline"
             items={[
@@ -1569,7 +1572,7 @@ const Sidebar = () => {
               options={options}
               className="select"
             />*/}
-          </Stack> 
+          </Stack>
         </Menu>
       </Sider>
     </Stack>

@@ -497,7 +497,7 @@ const Footer = () => {
         </Stack>
       </SimpleGrid>
       <Stack alignItems={'center'} className={'copyright'}>
-        <Stack w={'44'}>
+        <Stack w={'20'}>
           <Link to={'/'}>
             {' '}
             <Image h={'full'} w={'full'} src={stake} />

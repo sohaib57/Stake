@@ -1,6 +1,0 @@
-{
-    "editor.suggest.shareSuggestSelections": false,
-    "editor.suggest.showEnumMembers": true,
-    "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "workbench.editor.highlightModifiedTabs": true
-}
