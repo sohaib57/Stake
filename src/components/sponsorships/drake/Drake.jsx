@@ -18,6 +18,7 @@ import Card1 from '../../../assets/images/pick-roulette.jpg';
 import Card2 from '../../../assets/images/pick-nba.jpg';
 import { GoPrimitiveDot } from 'react-icons/go';
 import '../../ui/card slider/CardSlider.css';
+import stakeDrake from '../../../assets/images/stakeDrake.jpg'
 
 const DrakeComp = () => {
   return (
@@ -25,15 +26,17 @@ const DrakeComp = () => {
       <Stack width={'100%'}>
         {/* {banner-section} */}
         <Stack bgColor={'#071d2a'} py={'5rem'} alignItems={'center'}>
-          <HStack>
-            <Img src={Stake} alt="stake" width={150} />
+          {/* <HStack>
+            <Img src={Stake} alt="stake" width={'80px'} />
             <Center height="50px">
               <Divider orientation="vertical" borderColor={'white'} />
             </Center>
             <Text fontWeight={'600'} fontSize={'4xl'} color={'white'}>
               DRAKE
             </Text>
-          </HStack>
+          </HStack> */}
+
+          <Img width={'300px'} src={stakeDrake} />
         </Stack>
         {/* {image-text} */}
         <Stack bgColor={'#1a2c38'} mt={'0 !important'}>

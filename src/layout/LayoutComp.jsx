@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Img, Select, HStack, Button, Text } from '@chakra-ui/react';
+import { Stack, Img, Select, HStack, Button, Text, Box } from '@chakra-ui/react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
@@ -7,7 +7,7 @@ import { SiGooglechat } from 'react-icons/si';
 import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import Stake from '../assets/images/stake.png';
+import stakeLogo from '../assets/images/stake.png'
 import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
@@ -33,17 +33,16 @@ const LayoutComp = ({ children }) => {
             padding: 0,
           }}
         >
-          <Stack direction={'row'} justifyContent={'space-between'}>
-            <Stack>
+          <Stack margin={'0px !important'} direction={'row'} justifyContent={'space-between'}>
+            <Stack p={'3'} pl={'8'} >
               <Img
-                src={Stake}
+                src={stakeLogo}
                 cursor={'pointer'}
+                height={'38px'}
                 alt="stake"
-                width={130}
                 onClick={() => nav('/')}
               />
             </Stack>
-
             <Stack>
               {/* <InputGroup size="sm" alignItems={'center'}>
                 <Select
@@ -135,7 +134,7 @@ const LayoutComp = ({ children }) => {
                 </Text>
               </HStack>
 
-              <Stack>
+              <Stack alignSelf={'center'} >
                 <Menu>
                   <MenuButton
                     as={Button}

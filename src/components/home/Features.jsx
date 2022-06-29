@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import {
   Button,
   Center,
@@ -7,6 +8,7 @@ import {
   Image,
   Stack,
   Text,
+  Img
 } from '@chakra-ui/react';
 import { GiBasketballBall, GiCardAceClubs } from 'react-icons/gi';
 import welcomecasino from '../../assets/images/casino.jpg';
@@ -17,7 +19,13 @@ import epay from '../../assets/images/Apple_Pay-White-Dark-Background-Logo.wine.
 import gpay from '../../assets/images/Google_Pay-Logo.wine-removebg-preview.png';
 import sampay from '../../assets/images/samsung-pay-logo-white.webp';
 import '../ui/card slider/CardSlider.css';
+import stakeDrakeHome from '../../assets/images/stakeDrakeHome.png'
+
+
 const Features = () => {
+
+  const nav = useNavigate()
+
   return (
     <Stack width={'100%'} margin={'0px !important'}>
       <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color="#b1bad3">
@@ -55,7 +63,7 @@ const Features = () => {
               games right from your browser, including your favourite Stake
               Originals.
             </Text>
-            <Button colorScheme="blue">Go to Casino</Button>
+            <Button onClick={() => nav('/casino/home')} colorScheme="blue">Go to Casino</Button>
           </Stack>
           {/* right card */}
           <Stack height={'full'} width={{ base: '100%', md: '48%' }}>
@@ -86,9 +94,10 @@ const Features = () => {
               Basketball, Soccer and more for an unbeatable sports betting
               experience.
             </Text>
-            <Button colorScheme="blue">Go to sportsBook</Button>
+            <Button onClick={() => nav('/sports/home')} colorScheme="blue">Go to sportsBook</Button>
           </Stack>
         </Stack>
+
         {/* Learn more */}
 
         <Stack bg={'#0f212e'} height={'80px'}>
@@ -99,17 +108,18 @@ const Features = () => {
             justifyContent={'space-between'}
           >
             <Center>
-              <Button bg={'#3D5564'}>Learn More</Button>
+              <Button onClick={() => nav('/drake')} bg={'#3D5564'}>Learn More</Button>
             </Center>
 
             <Center>
               <Stack direction={'row'}>
-                <Text>Stake</Text>
+                {/* <Text>Stake</Text>
                 <Center>
                   <Divider orientation="vertical" />
                 </Center>
 
-                <Text>Drake</Text>
+                <Text>Drake</Text> */}
+                <Img width={'200px'} src={stakeDrakeHome} />
               </Stack>
             </Center>
             <Stack

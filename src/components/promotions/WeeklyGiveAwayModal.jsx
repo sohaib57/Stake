@@ -9,7 +9,7 @@ const WeeklyGiveAwayModal = () => {
     return (
 
         <VStack width={'100%'}>
-            <Tabs width={'100%'} variant="soft-rounded" colorScheme="green" >
+            <Tabs defaultIndex={2} width={'100%'} variant="soft-rounded" colorScheme="green" >
 
                 <Stack width={'100%'} direction={'row'} justifyContent={'center'} >
                     <TabList
@@ -65,9 +65,7 @@ const WeeklyGiveAwayModal = () => {
                     <TabPanel color={'white'} padding={'0px !important'} >
                         <BenefitsTab />
                     </TabPanel>
-
-
-                    <TabPanel color={'white'} padding={'0px !important'} >
+                    <TabPanel  color={'white'} padding={'0px !important'} >
 
                         <VStack spacing={'5'} py={'5'}  >
                             <Text fontSize={'lg'} color={'#FFFFFF'} fontWeight={'600'}   >

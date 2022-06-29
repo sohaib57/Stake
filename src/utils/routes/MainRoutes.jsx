@@ -165,7 +165,6 @@ const MainRoutes = () => {
 
 
       {/* casino favourite */}
-      <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="/sports/home/*" element={<SportsHomeScreen />}>
         <Route path="my-bets" element={<MyBets />} />
         <Route path="favourites" element={<Favourites />} />
