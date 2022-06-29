@@ -45,8 +45,6 @@ const Header = () => {
                     </Stack>
                 </Stack>
 
-
-
                 {/* Right div with a background */}
                 <Stack display={{ base: 'none', lg: 'flex' }} mr={'12 !important'} width={'45%'} >
                     <Stack margin={'0px !important'} width={'100%'} height={'100%'} >

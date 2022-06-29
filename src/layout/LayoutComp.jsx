@@ -8,6 +8,7 @@ import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 import stakeLogo from '../assets/images/stake.png'
+import cryptoBox from '../assets/images/cryptoBox.jpg'
 import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
@@ -34,11 +35,11 @@ const LayoutComp = ({ children }) => {
           }}
         >
           <Stack margin={'0px !important'} direction={'row'} justifyContent={'space-between'}>
-            <Stack p={'3'} pl={'8'} >
+            <Stack pl={'8'} >
               <Img
-                src={stakeLogo}
+                src={cryptoBox}
                 cursor={'pointer'}
-                height={'38px'}
+                height={'59px'}
                 alt="stake"
                 onClick={() => nav('/')}
               />
