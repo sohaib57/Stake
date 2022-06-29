@@ -26,7 +26,7 @@ const Settings = () => {
             Settings
           </Text>
         </HStack>
-        <Tabs defaultIndex={1}>
+        <Tabs defaultIndex={0}>
           <Stack direction={'row'}>
             <TabList borderBottom={'0 !important'}>
               <Stack
@@ -41,7 +41,6 @@ const Settings = () => {
                 direction={'column'}
               >
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -51,7 +50,6 @@ const Settings = () => {
                   General
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -61,7 +59,6 @@ const Settings = () => {
                   Security
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -71,7 +68,6 @@ const Settings = () => {
                   Prefrences
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -81,7 +77,6 @@ const Settings = () => {
                   API
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -91,7 +86,6 @@ const Settings = () => {
                   Sessions
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -101,7 +95,6 @@ const Settings = () => {
                   Ignored Users
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -111,7 +104,6 @@ const Settings = () => {
                   Verify
                 </Tab>
                 <Tab
-                  
                   _selected={{
                     borderLeft: '3px solid #007BFF',
                     backgroundColor: '#071824',
@@ -124,8 +116,15 @@ const Settings = () => {
               </Stack>
             </TabList>
             <TabPanels>
-              <TabPanel>
-                <Text>1</Text>
+              <TabPanel p={'0 !important'}>
+                <Stack
+                  p={'4'}
+                  w={'100%'}
+                  borderRadius={'xl'}
+                  bgColor={'#0F212E'}
+                >
+                    <Stack></Stack>
+                </Stack>
               </TabPanel>
               <TabPanel></TabPanel>
               <TabPanel></TabPanel>
