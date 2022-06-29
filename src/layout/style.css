@@ -8,7 +8,7 @@
 }
 
 .ant-layout-sider {
-  background-color: #0a1924;
+  background-color: black;
 }
 
 .trigger:hover {
@@ -21,19 +21,19 @@
   background: rgba(255, 255, 255, 0.3);
 }
 .menu-bar {
-  background-color: #0a1924;
+  background-color: black;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
   border-right: none;
 }
 .ant-layout-header {
-  background: #0a1924;
+  background: black;
   height: 60px;
   border-bottom: 1px solid #0f212e;
 }
 .site-layout .site-header-layout-background {
-  background-color: #1a2c38;
+  background-color: black;
   box-shadow: #0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px;
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
@@ -58,7 +58,7 @@
   color: white;
 }
 .ant-menu-sub.ant-menu-inline {
-  background-color: #0a1924;
+  background-color: black;
   color: white;
   font-size: 13px;
   font-weight: 700;
