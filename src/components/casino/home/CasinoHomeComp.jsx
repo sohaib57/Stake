@@ -14,15 +14,21 @@ import {
   Tabs,
   Text,
 } from '@chakra-ui/react';
+import '../../ui/card slider/CardSlider.css';
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import slider1 from '../../../assets/images/slider1.jfif';
-import slider2 from '../../../assets/images/slider2.jfif';
-import slider3 from '../../../assets/images/slider3.jfif';
-import slider4 from '../../../assets/images/slider4.jfif';
-import slider5 from '../../../assets/images/slider5.jfif';
+import casinohomeslider1 from '../../../assets/images/casinohomeslider1.jfif';
+import casinohomeslider2 from '../../../assets/images/casinohomeslider2.jfif';
+import casinohomeslider3 from '../../../assets/images/casinohomeslider3.jfif';
+import casinohomeslider4 from '../../../assets/images/casinohomeslider4.jfif';
+import casinohomeslider5 from '../../../assets/images/casinohomeslider5.jfif';
+import casinohomeslider6 from '../../../assets/images/casinohomeslider6.jfif';
+import casinohomeslider7 from '../../../assets/images/casinohomeslider7.jfif';
+import casinohomeslider8 from '../../../assets/images/casinohomeslider8.jfif';
+import casinohomeslider9 from '../../../assets/images/casinohomeslider9.jfif';
+import casinohomeslider10 from '../../../assets/images/casinohomeslider10.jfif';
 import { IoIosArrowForward, IoIosRocket } from 'react-icons/io';
 import { MdArrowBackIos } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -42,73 +48,164 @@ import CasinoStats from './stats/CasinoStats';
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {
+    // dots: true,
+    infinite: true,
     nextArrow: <IoIosArrowForward color="white" />,
     prevArrow: <MdArrowBackIos color="white" />,
-    dots: true,
-    infinite: true,
     speed: 500,
-    centerMode: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
+          infinite: true,
+          // dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
   };
   return (
     <Stack py={'12'} px={{ base: '4', md: '0' }} w={'100%'} bgColor={'#1A2C38'}>
       {/* slider */}
       <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
         <Slider {...settings}>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center px={'2'} h={'30vh'} w={'100%'}>
+            <Box
+              className="home-slider"
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              borderRadius={'xl'}
+              w={'100%'}
+              h={'full'}
+              bgImage={casinohomeslider1}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={slider1}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={casinohomeslider2}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={slider2}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={casinohomeslider3}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={slider3}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={casinohomeslider4}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={slider4}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={casinohomeslider5}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={slider5}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={casinohomeslider6}
+              borderRadius={'lg'}
+              w={'100%'}
+              h={'full'}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
+            <Box
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              className="home-slider"
+              bgImage={casinohomeslider7}
+              borderRadius={'lg'}
+              w={'100%'}
+              h={'full'}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
+            <Box
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              className="home-slider"
+              bgImage={casinohomeslider8}
+              borderRadius={'lg'}
+              w={'100%'}
+              h={'full'}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
+            <Box
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              className="home-slider"
+              bgImage={casinohomeslider9}
+              borderRadius={'lg'}
+              w={'100%'}
+              h={'full'}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
+            <Box
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              className="home-slider"
+              bgImage={casinohomeslider10}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
@@ -120,7 +217,7 @@ const CasinoHomeComp = () => {
         className="searchbar"
         px={{ base: '2', md: '8', lg: '12', xl: '16' }}
         display={{ base: 'none', md: 'flex' }}
-        pt={'12'}
+        pt={'6'}
       >
         <InputGroup
           borderColor={'gray'}

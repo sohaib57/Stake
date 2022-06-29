@@ -23,7 +23,7 @@ import Roulette from '../../screens/casino/casino group/Roulette';
 import AllClaimed from '../../components/casino/challenges/allclaimed/AllClaimed';
 import MyClaimed from '../../components/casino/challenges/myclaimed/MyClaimed';
 import Active from '../../components/casino/challenges/active/Active';
-import ViewAll from '../../screens/viewall/ViewAll'
+import ViewAll from '../../screens/viewall/ViewAll';
 import Drake from '../../screens/sponsorships/Drake';
 import WatfordFC from '../../screens/sponsorships/WatfordFC';
 import KunAguero from '../../screens/sponsorships/KunAguero';
@@ -93,11 +93,12 @@ import HowtoUseVault from '../../screens/blog/HowtoUseVault';
 import StakeNewsBlogs from '../../screens/blog/StakeNewsBlogs';
 import SponsershipBLOG from '../../screens/blog/SponsershipBlog';
 import OtherBlogs from '../../screens/blog/OtherBlogs';
-import StakeRaces from '../../screens/viewall/StakeRaces'
-import Casino from '../../screens/viewall/category/Casino'
-import Sports from '../../screens/viewall/category/Sports'
+import StakeRaces from '../../screens/viewall/StakeRaces';
+import Casino from '../../screens/viewall/category/Casino';
+import Sports from '../../screens/viewall/category/Sports';
 import UfcPartnershipBlog from '../../screens/blog/UfcPartnershipBlog';
 import MlbBlog from '../../screens/blog/MlbBlog';
+import Settings from '../../components/setting/Settings';
 
 const MainRoutes = () => {
   return (
@@ -112,7 +113,9 @@ const MainRoutes = () => {
         <Route path="all-claimed" element={<AllClaimed />} />
         <Route path="my-claimed" element={<MyClaimed />} />
       </Route>
+      {/* settings */}
 
+      <Route path="/settings" element={<Settings />} />
       {/* Casino challenges screens ends here */}
 
       <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
@@ -169,41 +172,26 @@ const MainRoutes = () => {
       <Route path="/casino-favourite" element={<FavouriteScreen />} />
       <Route path="/recent" element={<Recent />} />
       {/* sports home */}
-        <Route path="/casino-favourite" element={<FavouriteScreen />} />
-      <Route
-        path="/casino/group/feature-buy-in"
-        element={<FeatureByIn />}
-      />
-      <Route
-        path="/casino/group/table-games"
-        element={<TableGamesScreen />}
-      />
-      <Route
-        path="/casino/group/blackjack"
-        element={<BlackJack />}
-      />
-      <Route
-        path="/casino/group/baccarat"
-        element={<Baccarat />}
-      />
-      <Route
-        path="/casino/group/roulette"
-        element={<Roulette />}
-      />
+      <Route path="/casino-favourite" element={<FavouriteScreen />} />
+      <Route path="/casino/group/feature-buy-in" element={<FeatureByIn />} />
+      <Route path="/casino/group/table-games" element={<TableGamesScreen />} />
+      <Route path="/casino/group/blackjack" element={<BlackJack />} />
+      <Route path="/casino/group/baccarat" element={<Baccarat />} />
+      <Route path="/casino/group/roulette" element={<Roulette />} />
 
       <Route path="/casino-favourite" element={<FavouriteScreen />} />
-      <Route path="/recent" element={<Recent />} /> 
-      <Route path="/casino-favourite" element={<FavouriteScreen />}/>
+      <Route path="/recent" element={<Recent />} />
+      <Route path="/casino-favourite" element={<FavouriteScreen />} />
 
       {/* Promotions */}
 
       <Route path="/promotions" element={<ViewAll />} />
-      <Route path='promotions/promotion/stake-races' element={<StakeRaces />} />
-      <Route path='promotions/category/casino' element={<Casino />} />
-      <Route path='/promotions/category/sports' element={<Sports />} />
+      <Route path="promotions/promotion/stake-races" element={<StakeRaces />} />
+      <Route path="/promotions/category/casino" element={<Casino />} />
+      <Route path="/promotions/category/sports" element={<Sports />} />
 
-       {/* sports home */}
-       
+      {/* sports home */}
+
       <Route path="/sports/home" element={<SportsHomeScreen />} />
       <Route path="/sports/home/*" element={<SportsHomeScreen />}>
         <Route path="my-bets" element={<MyBets />} />
@@ -233,7 +221,10 @@ const MainRoutes = () => {
       <Route path="/sports/cycling" element={<Cycling />} />
       <Route path="/sports/darts" element={<Darts />} />
       <Route path="/sports/dota-2" element={<Dota2 />} />
-      <Route path="/sports/electronic-leagues" element={<ElectronicsLeague />} />
+      <Route
+        path="/sports/electronic-leagues"
+        element={<ElectronicsLeague />}
+      />
       <Route path="/sports/fifa" element={<Fifa />} />
       <Route path="/sports/formula-1" element={<Formula1 />} />
       <Route path="/sports/futsal" element={<Futsal />} />
@@ -245,7 +236,10 @@ const MainRoutes = () => {
       <Route path="/sports/league-of-legends" element={<LeagueOfLegend />} />
       <Route path="/sports/mma" element={<MMA />} />
       <Route path="/sports/pesapallo" element={<Pesapallo />} />
-      <Route path="/sports/politics-entertainment" element={<PoliticsEntertainment />} />
+      <Route
+        path="/sports/politics-entertainment"
+        element={<PoliticsEntertainment />}
+      />
       <Route path="/sports/motorcycle-racing" element={<MotorcycleRacing />} />
       <Route path="/sports/rainbow-six" element={<RainbowSix />} />
       <Route path="/sports/rugby" element={<Rugby />} />
@@ -256,34 +250,46 @@ const MainRoutes = () => {
       <Route path="/sports/tennis" element={<Tennis />} />
       <Route path="/sports/vollyball" element={<Vollyball />} />
       <Route path="/sports/waterpolo" element={<Waterpolo />} />
-      <Route path='/sports/soccer' element={<Soccer />} />
-      <Route path='/sports/alpine-skiing' element={<AlpineSkiing />} />
-      <Route path='/sports/american-football' element={<AmericanFootball />} />
-      <Route path='/sports/aussie-rules' element={<AussieRules />} />
-      <Route path='/sports/badminton' element={<Badminton />} />
-      <Route path='/sports/baseball' element={<BaseBall />} />
-      <Route path='/sports/basketball' element={<Basketball />} />
-      <Route path='/sports/biathlon' element={<Biathlon />} />
-      <Route path='/sports/bowls' element={<Bowls />} />
-      <Route path='/sports/boxing' element={<Boxing />} />
-      <Route path='/sports/counter-strike' element={<CounterStrike />} />
-      <Route path='/sports/cricket' element={<Cricket />} />
-      <Route path='/sports/cross-country' element={<CrossCountry />} />
-      <Route path='/sports/cycling' element={<Cycling />} />
+      <Route path="/sports/soccer" element={<Soccer />} />
+      <Route path="/sports/alpine-skiing" element={<AlpineSkiing />} />
+      <Route path="/sports/american-football" element={<AmericanFootball />} />
+      <Route path="/sports/aussie-rules" element={<AussieRules />} />
+      <Route path="/sports/badminton" element={<Badminton />} />
+      <Route path="/sports/baseball" element={<BaseBall />} />
+      <Route path="/sports/basketball" element={<Basketball />} />
+      <Route path="/sports/biathlon" element={<Biathlon />} />
+      <Route path="/sports/bowls" element={<Bowls />} />
+      <Route path="/sports/boxing" element={<Boxing />} />
+      <Route path="/sports/counter-strike" element={<CounterStrike />} />
+      <Route path="/sports/cricket" element={<Cricket />} />
+      <Route path="/sports/cross-country" element={<CrossCountry />} />
+      <Route path="/sports/cycling" element={<Cycling />} />
       {/* provider */}
       <Route path="/casino/collection/provider" element={<Providers />} />
-      <Route path="/casino/group/no-limit-city" element={<ProviderGameScreen />} />
+      <Route
+        path="/casino/group/no-limit-city"
+        element={<ProviderGameScreen />}
+      />
       {/* blogs */}
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/how-to-buy-crypto" element={<BuyCrypto />} />
       <Route path="/blog/category/crypto" element={<CryptoBlogsScreen />} />
-      <Route path="/blog/category/how-to-guides" element={<HowToGuideBlogs />} />
+      <Route
+        path="/blog/category/how-to-guides"
+        element={<HowToGuideBlogs />}
+      />
       <Route path="/blog/how-to-use-our-vault" element={<HowtoUseVault />} />
       <Route path="/blog/category/stake-news" element={<StakeNewsBlogs />} />
       <Route path="/blog/stakecom-sponsors" element={<SponsershipBLOG />} />
       <Route path="/blog/category/other" element={<OtherBlogs />} />
-      <Route path="/blog/ufc-stake-partnership" element={<UfcPartnershipBlog />} />
-      <Route path="/blog/mlb-2022-weekly-preview-week-14" element={<MlbBlog />} />
+      <Route
+        path="/blog/ufc-stake-partnership"
+        element={<UfcPartnershipBlog />}
+      />
+      <Route
+        path="/blog/mlb-2022-weekly-preview-week-14"
+        element={<MlbBlog />}
+      />
       {/* no match screen */}
       <Route path="*" element={<NoMatchScreen />} />
     </Routes>

@@ -15,12 +15,12 @@ const Card = ({ img }) => {
       <Box
         bgPos={'center'}
         bgRepeat={'no-repeat'}
-        bgSize={'cover'}
-        bgImage={img}
+        bgSize={'cover'}    
         borderRadius={'xl'}
         w={'100%'}
         h={'full'}
         className="arrow"
+        bgImage={img}
       ></Box>
       <Stack className="middle">
         <FaPlay fontSize={'2rem'} color="white" className="button" />

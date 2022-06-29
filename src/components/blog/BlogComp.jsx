@@ -106,10 +106,10 @@ const BlogComp = () => {
             <Stack onClick={() => nav('/blog/category/stake-news')}>
               <BlogCard img={BCard3} name={'Stake News'} />
             </Stack>
-            <Stack onClick={() => nav('/blog/category/crypto')}>
+            <Stack onClick={() => nav('/promotions/category/sports')}>
               <BlogCard img={BCard4} name={'Sports'} />
             </Stack>
-            <Stack onClick={() => nav('/blog/category/crypto')}>
+            <Stack onClick={() => nav('/promotions/category/casino')}>
               <BlogCard img={BCard5} name={'Casino'} />
             </Stack>
             <Stack onClick={() => nav('/blog/category/other')}>

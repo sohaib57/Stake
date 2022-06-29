@@ -159,7 +159,7 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Transactions</MenuItem>
                     <MenuItem>Sport Bets</MenuItem>
                     <MenuItem>Notifications</MenuItem>
-                    <MenuItem>Settings</MenuItem>
+                    <MenuItem onClick={()=>nav('/settings')}>Settings</MenuItem>
                     <MenuItem>Live Support</MenuItem>
                     <MenuItem>Logout</MenuItem>
                   </MenuList>
