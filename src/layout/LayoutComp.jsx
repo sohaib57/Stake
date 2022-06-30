@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Img, Select, HStack, Button, Text, Box } from '@chakra-ui/react';
+import { Stack, Img, Select, HStack, Button, Text, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure } from '@chakra-ui/react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
@@ -13,10 +13,12 @@ import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
 import { useNavigate } from 'react-router-dom';
+import AuthModalContent from './AuthModalContent';
 
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const nav = useNavigate();
   return (
     <Layout
@@ -35,7 +37,7 @@ const LayoutComp = ({ children }) => {
           }}
         >
           <Stack margin={'0px !important'} direction={'row'} justifyContent={'space-between'}>
-            <Stack pl={'8'} >
+            <Stack pl={{ md: '8' }} >
               <Img
                 src={cryptoBox}
                 cursor={'pointer'}
@@ -45,12 +47,12 @@ const LayoutComp = ({ children }) => {
               />
             </Stack>
             <Stack>
-            
+
               <HStack spacing={0}>
                 <Select
                   borderLeftRadius={'5px'}
                   borderRightRadius={'none'}
-                  bgColor={'#0f212e'}
+                  bgColor={'#0C0C0C'}
                   border={'none'}
                   color={'white'}
                   _focusVisible={{
@@ -88,10 +90,10 @@ const LayoutComp = ({ children }) => {
             <Stack
               direction={'row'}
               spacing={5}
-              alignItems={'baseline'}
+              alignItems={'center'}
               pr={{ base: '2', md: '10' }}
             >
-              <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
+              {/* <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
                 <BsSearch color="white" size={15} />
                 <Text
                   color="white"
@@ -101,9 +103,17 @@ const LayoutComp = ({ children }) => {
                 >
                   Search
                 </Text>
-              </HStack>
+              </HStack> */}
+              <Stack spacing={'4'} direction={'row'}>
+                <Button onClick={()=> {
+                  onOpen()
+                }} color={'white'} fontSize={'md'} fontWeight={'700'} variant={'link'} _hover={{}}>Sign In</Button>
+                <Button onClick={()=> {
+                  onOpen()
+                }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
+              </Stack>
 
-              <Stack alignSelf={'center'} >
+              {/* <Stack alignSelf={'center'} >
                 <Menu>
                   <MenuButton
                     as={Button}
@@ -156,7 +166,7 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Bet Slip</MenuItem>
                   </MenuList>
                 </Menu>
-              </Stack>
+              </Stack> */}
             </Stack>
           </Stack>
           {/* <Stack direction={'row'} pr={10}>
@@ -173,6 +183,23 @@ const LayoutComp = ({ children }) => {
               <Button type="primary">Register</Button>
             </div>
           </Stack> */}
+          {/* Authy Modal */}
+          <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody pt={'4'} bg={'#1A2C38'}>
+            <AuthModalContent/>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant='ghost'>Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
         </Header>
         <Content className="site-layout-background">
           <Stack

@@ -108,7 +108,7 @@ const Features = () => {
             justifyContent={'space-between'}
           >
             <Center>
-              <Button onClick={() => nav('/drake')} bg={'#3D5564'}>Learn More</Button>
+              <Button onClick={() => nav('/drake')} colorScheme="blue"  >Learn More</Button>
             </Center>
 
             <Center>
@@ -158,7 +158,7 @@ const Features = () => {
           </Center>
 
           <Center py={{ base: '6', lg: '0' }}>
-            <Button _hover={{}} size={'lg'} bg={'#3D5564'} color={'white'}>
+            <Button  size={'md'} _hover={{}}  colorScheme="blue" color={'white'}>
               Buy Crypto
             </Button>
           </Center>

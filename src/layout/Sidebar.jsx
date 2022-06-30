@@ -125,7 +125,6 @@ const options = [
 const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isRevocationModalOpen,
