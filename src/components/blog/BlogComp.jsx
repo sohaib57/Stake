@@ -38,7 +38,7 @@ const BlogComp = () => {
   return (
     <>
       <LayoutComp>
-        <Stack bgColor={'#1A2C38'}>
+        <Stack>
           {/* Blog Header */}
           <Stack
             position={'relative'}
@@ -47,7 +47,7 @@ const BlogComp = () => {
             bgImage={BHeader}
             bgRepeat={'no-repeat'}
             bgPos={'right'}
-            bgColor={'#213743'}
+            bgColor={'#000000e3'}
           >
             <Heading
               position={'absolute'}
@@ -65,6 +65,7 @@ const BlogComp = () => {
             direction={{ base: 'column', lg: 'row' }}
             py={'9'}
             px={{ base: '4', md: '6', lg: '8' }}
+            bgColor={'#000000ed'}
           >
             {/* mlb Image */}
             <Stack flex={'3'} className={'arrow'}>
@@ -96,6 +97,7 @@ const BlogComp = () => {
             columns={{ base: 1, md: 2, lg: 3 }}
             spacingX="20px"
             spacingY={'40px'}
+            bgColor={'#000000ed'}
           >
             <Stack onClick={() => nav('/blog/category/crypto')}>
               <BlogCard img={BCard1} name={'Crypto'} />
@@ -124,6 +126,7 @@ const BlogComp = () => {
             columns={{ base: 1, md: 2, lg: 3 }}
             spacingX="20px"
             spacingY={'40px'}
+            bgColor={'#000000ed'}
           >
             <BlogsCategoryCard
               heading={'How to Buy Crypto'}

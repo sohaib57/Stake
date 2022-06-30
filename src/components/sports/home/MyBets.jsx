@@ -18,7 +18,7 @@ import bets from '../../../assets/images/bets.png';
 const MyBets = () => {
   const nav = useNavigate();
   return (
-    <Stack px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
+    <Stack bg={'#000000ed'} px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
       <HStack pb={'6'} spacing={'2'}>
         <BsFillBookmarkDashFill color="#b1bad3" />
         <Text fontSize={'lg'} fontWeight={'600'} color={'white'}>

@@ -33,7 +33,7 @@ const SportsLayoutComp = ({ name }) => {
       <Stack
         px={{ base: '2', md: '8', lg: '12', xl: '16' }}
         py={'4'}
-        bgColor={'#1A2C38'}
+        bgColor={'#000000ed'}
       >
         <Stack direction={'row'}>
           <Stack
@@ -89,7 +89,7 @@ const SportsLayoutComp = ({ name }) => {
               overflowX={'auto'}
               w={'fit-content'}
               borderRadius={'full'}
-              bgColor={'#0F212E'}
+              bgColor={'black'}
             >
               <Stack direction={'row'} p={'2'}>
                 <Tab
