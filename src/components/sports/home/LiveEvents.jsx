@@ -67,11 +67,11 @@ const LiveEvents = () => {
           <Select
             fontSize={'sm'}
             fontWeight={'500'}
-            _hover={{ bg: '#071824', cursor: 'pointer' }}
-            _focusVisible={{}}
-            bg={'#0F212E'}
-            variant="filled"
-            //   placeholder="Popular"
+            color={'white'}
+            borderColor={'#4C667B'}
+            _hover={{ borderColor: '#4C667B' }}
+            _active={{ borderColor: '#4C667B' }}
+            _focus={{ borderColor: '#4C667B' }}
           >
             <option style={{ color: 'black' }}>Winner</option>
             <option style={{ color: 'black' }}>Total</option>
@@ -87,7 +87,7 @@ const LiveEvents = () => {
           borderRadius={'lg'}
           py={{ base: '0', md: '1', lg: '2' }}
           px={'4'}
-          bgColor={'#0F212E'}
+          bgColor={'#000000f2'}
         >
           <Tab>
             <Stack spacing={'0.5'} alignItems={'center'}>

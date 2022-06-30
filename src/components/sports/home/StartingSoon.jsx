@@ -75,7 +75,7 @@ const StartingSoon = () => {
           borderRadius={'lg'}
           py={{ base: '0', md: '1', lg: '2' }}
           px={'4'}
-          bgColor={'#0F212E'}
+          bgColor={'#010101'}
         >
              <Tab>
             <Stack spacing={'0.5'} alignItems={'center'}>

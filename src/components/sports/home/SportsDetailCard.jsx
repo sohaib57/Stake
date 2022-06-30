@@ -17,7 +17,7 @@ import React from 'react';
 import { IoMdStats } from 'react-icons/io';
 const SportsDetailCard = () => {
   return (
-    <Stack borderRadius={'md'} bgColor={'#213743'}>
+    <Stack borderRadius={'md'} bgColor={'#000000ed'}>
       <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem borderTop={'none'} borderBottom={'none'}>
           <AccordionButton py={'4'} _hover={{}} color={'white'}>
@@ -113,7 +113,7 @@ const SportsDetailCard = () => {
                       _hover={{ cursor: 'pointer', bgColor: '#00254d' }}
                       py={'1'}
                       px={'3'}
-                      bgColor={'#071824'}
+                      bgColor={'#111111'}
                       w={{ base: '50%', md: '45%' }}
                     >
                       <Text fontSize={'sm'} fontWeight="500" color={'white'}>
@@ -129,7 +129,7 @@ const SportsDetailCard = () => {
                       _hover={{ cursor: 'pointer', bgColor: '#00254d' }}
                       py={'1'}
                       px={'3'}
-                      bgColor={'#071824'}
+                      bgColor={'#111111'}
                       w={{ base: '50%', md: '45%' }}
                     >
                       <Text fontSize={'sm'} fontWeight="500" color={'white'}>
@@ -242,7 +242,7 @@ const SportsDetailCard = () => {
                       spacing={'1.4'}
                       py={'1'}
                       px={'3'}
-                      bgColor={'#071824'}
+                      bgColor={'#111111'}
                       w={{ base: '50%', md: '45%' }}
                     >
                       <Text color={'#36444E'} fontSize={'sm'} fontWeight="600">
@@ -257,7 +257,7 @@ const SportsDetailCard = () => {
                       spacing={'1.4'}
                       py={'1'}
                       px={'3'}
-                      bgColor={'#071824'}
+                      bgColor={'#111111'}
                       w={{ base: '50%', md: '45%' }}
                     >
                       <Text color={'#36444E'} fontSize={'sm'} fontWeight="600">

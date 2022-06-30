@@ -4,7 +4,7 @@
     cursor: pointer;
     transition: color 0.3s;
     color: #d5dceb;
-    background-color: #2f4553;
+    background-color: #1a1d1d;
     margin-top: 10px;
     margin-left: 15px;
     border-radius: 50px;
@@ -12,7 +12,7 @@
 
 
   .ant-layout-sider{
-    background-color: #0f212e;
+    background-color: black;
   }
   
   .trigger:hover {
@@ -21,30 +21,30 @@
  
 
   
-  .logo {
+  /* .logo {
     height: 32px;
     margin: 16px;
     background: rgba(255, 255, 255, 0.3);
-  }
+  } */
   .menu-bar{
-    background-color: #0f212e;
+    background-color: black;
     color: #fff;
     font-size: 13px;
     font-weight: 700;
     border-right: none;
   }
   .ant-layout-header{
-    background: #1a2c38;
+    background: black;
     height: 60px;
-    border-bottom: 1px solid #0f212e;
+    border-bottom: 1px solid white;
     
   }
   .site-layout .site-header-layout-background {
-    background-color: #1a2c38;
+    background-color: black;
    
   }
   .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
-    background-color: #1a2c38;
+    background-color: black;
   }
   .ant-layout-sider-children{
     height: 100vh;
@@ -59,7 +59,7 @@
     color: white;
 }
 .ant-menu-sub.ant-menu-inline{
-    background-color: #0f212e;
+    background-color: black;
     color: white;
     font-size: 13px;
     font-weight: 700;
@@ -100,15 +100,15 @@
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   border-radius: 50px;
-  background-color: #071824;
+  background-color: black;
 }
 .ant-menu-item:active,
 .ant-menu-submenu-title:active {
   border-radius: 50px;
-  background-color: #071824;
+  background-color: black;
 }
 .ant-menu-submenu-popup > .ant-menu {
-  background-color: #0f212e;
+  background-color: black;
   color: white;
 }
 .select {

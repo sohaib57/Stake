@@ -9,7 +9,7 @@ const Home = () => {
     useDocumentTitle('Stake.com - Leading Crypto Casino')
     return (
         <LayoutComp>
-            <Stack width={'100%'} margin={'0px !important'} bg={'#1a2c38'} >
+            <Stack width={'100%'} margin={'0px !important'} >
 
                 <Header />
                 <Features />

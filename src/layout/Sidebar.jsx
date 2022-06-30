@@ -137,14 +137,13 @@ const Sidebar = () => {
 
   const btnRef = React.useRef(null);
 
-
   const [show, setShow] = useState(true);
   return (
     <Stack
       display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
       className="sider-body"
       style={{
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins',
       }}
     >
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -162,7 +161,6 @@ const Sidebar = () => {
                       <GiCardAceHearts color="white" />
                       <Text
                         color={'white'}
-                        fontFamily={'sans-serif'}
                         fontWeight={'700'}
                         fontSize={'13px'}
                         _hover={{
@@ -178,7 +176,6 @@ const Sidebar = () => {
                       <GiBasketballBall color="white" />
                       <Text
                         color={'white'}
-                        fontFamily={'sans-serif'}
                         fontWeight={'700'}
                         fontSize={'13px'}
                       >
@@ -785,7 +782,6 @@ const Sidebar = () => {
             <Menu.Item
               key="35"
               onClick={() => nav('/sports/darts')}
-              
               style={{
                 paddingLeft: 20,
               }}
@@ -994,7 +990,6 @@ const Sidebar = () => {
             <Menu.Item
               key="48"
               onClick={() => nav('/sports/motorcycle-racing')}
-             
               style={{
                 paddingLeft: 20,
               }}
@@ -1011,7 +1006,6 @@ const Sidebar = () => {
             <Menu.Item
               key="49"
               onClick={() => nav('/sports/pesapallo')}
-             
               style={{
                 paddingLeft: 20,
               }}
@@ -1028,7 +1022,6 @@ const Sidebar = () => {
             <Menu.Item
               key="50"
               onClick={() => nav('/sports/politics-entertainment')}
-             
               style={{
                 paddingLeft: 20,
               }}
@@ -1045,7 +1038,6 @@ const Sidebar = () => {
             <Menu.Item
               key="51"
               onClick={() => nav('/sports/rainbow-six')}
-           
               style={{
                 paddingLeft: 20,
               }}
@@ -1062,7 +1054,6 @@ const Sidebar = () => {
             <Menu.Item
               key="52"
               onClick={() => nav('/sports/rugby')}
-           
               style={{
                 paddingLeft: 20,
               }}
@@ -1079,7 +1070,6 @@ const Sidebar = () => {
             <Menu.Item
               key="53"
               onClick={() => nav('/sports/ski-jumping')}
-         
               style={{
                 paddingLeft: 20,
               }}
@@ -1096,7 +1086,6 @@ const Sidebar = () => {
             <Menu.Item
               key="54"
               onClick={() => nav('/sports/snooker')}
-            
               style={{
                 paddingLeft: 20,
               }}
@@ -1113,7 +1102,6 @@ const Sidebar = () => {
             <Menu.Item
               key="55"
               onClick={() => nav('/sports/soccer')}
-              
               style={{
                 paddingLeft: 20,
               }}
@@ -1130,7 +1118,6 @@ const Sidebar = () => {
             <Menu.Item
               key="56"
               onClick={() => nav('/sports/stock-car-racing')}
-            
               style={{
                 paddingLeft: 20,
               }}
@@ -1179,7 +1166,6 @@ const Sidebar = () => {
             <Menu.Item
               key="59"
               onClick={() => nav('/sports/volleyball')}
-         
               style={{
                 paddingLeft: 20,
               }}
@@ -1196,7 +1182,6 @@ const Sidebar = () => {
             <Menu.Item
               key="60"
               onClick={() => nav('/sports/waterpolo')}
-         
               style={{
                 paddingLeft: 20,
               }}
