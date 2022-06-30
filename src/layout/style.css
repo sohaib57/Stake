@@ -1,11 +1,15 @@
  .trigger {
-    padding: 0 24px;
-    font-size: 18px;
-    line-height: 64px;
+    padding: 10px 10px;
+    font-size: 15px;
     cursor: pointer;
     transition: color 0.3s;
-    color: white;
+    color: #d5dceb;
+    background-color: #2f4553;
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 50px;
   }
+
 
   .ant-layout-sider{
     background-color: #0f212e;
@@ -15,6 +19,7 @@
     color: white;
   }
  
+
   
   .logo {
     height: 32px;
@@ -83,6 +88,7 @@
 .siderbar-header{
   border-bottom: 1px solid #1a2c38 ;
   box-shadow: #0f212e;
+  height: 59px;
 }
 .ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after{
   border-right: none;
@@ -122,6 +128,9 @@ color : white;
 .animation:hover{
   right: -5px;
   cursor: pointer;
+}
+.ant-menu-submenu-selected {
+  color: white;
 }
 
 
