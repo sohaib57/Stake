@@ -33,7 +33,7 @@ const Providers = () => {
     <LayoutComp>
       {/* header */}
       <Stack
-        bgColor={'#213743'}
+        bgColor={'#000000e3'}
         justifyContent={'space-between'}
         direction={'row'}
         px={{ base: '2', md: '8', lg: '12', xl: '14' }}
@@ -49,7 +49,7 @@ const Providers = () => {
         </Stack>
       </Stack>
       {/* body */}
-      <Stack marginTop={'0 !important'} bgColor={'#1A2C38'}>
+      <Stack marginTop={'0 !important'} bgColor={'#000000ed'}>
         {/* search bar */}
         <Stack
           px={{ base: '2', md: '8', lg: '12', xl: '14' }}
@@ -73,7 +73,7 @@ const Providers = () => {
             <Input
               color={'white'}
               focusBorderColor="none"
-              bgColor={'#0F212E'}
+              bgColor={'#000000f2 '}
               borderRadius={'full'}
               placeholder="Search your game"
               size="md"
