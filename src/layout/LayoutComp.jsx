@@ -1,5 +1,5 @@
-import React from 'react';
-import { Stack, Img, Select, HStack, Button, Text, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Stack, Img, Select, HStack, Button, Text, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure, Divider } from '@chakra-ui/react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
@@ -18,6 +18,7 @@ import AuthModalContent from './AuthModalContent';
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
+  const [index, setIndex] = useState()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const nav = useNavigate();
   return (
@@ -105,11 +106,13 @@ const LayoutComp = ({ children }) => {
                 </Text>
               </HStack> */}
               <Stack spacing={'4'} direction={'row'}>
-                <Button onClick={()=> {
+                <Button onClick={() => {
                   onOpen()
+                  setIndex(1)
                 }} color={'white'} fontSize={'md'} fontWeight={'700'} variant={'link'} _hover={{}}>Sign In</Button>
-                <Button onClick={()=> {
+                <Button onClick={() => {
                   onOpen()
+                  setIndex(0)
                 }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
               </Stack>
 
@@ -184,22 +187,25 @@ const LayoutComp = ({ children }) => {
             </div>
           </Stack> */}
           {/* Authy Modal */}
-          <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalCloseButton />
-          <ModalBody pt={'4'} bg={'#1A2C38'}>
-            <AuthModalContent/>
-          </ModalBody>
+          <Modal isCentered  isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalCloseButton _hover={{}} color={'white'} />
+              <ModalBody pt={'4'} bg={'#000000ed'}>
+                <AuthModalContent i={index} />
+              </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost'>Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+              <ModalFooter bg={'#000000f2'}>
+                <Stack>
+                  <Stack px={'12'} color={'gray'} direction={'row'}>
+                    <Divider w={'45%'}/>
+                    <Text>OR</Text>
+                    {/* <Divider  w={'45%'}/> */}
+                  </Stack>
+                </Stack>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </Header>
         <Content className="site-layout-background">
           <Stack

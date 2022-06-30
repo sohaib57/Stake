@@ -1,17 +1,17 @@
 import React from 'react'
 import { RiShareBoxFill } from 'react-icons/ri'
-import { Image, chakra, Stack, VStack, TabList, Tab, Text, Tabs, TabPanel, TabPanels, PinInput, PinInputField, HStack, Center } from '@chakra-ui/react'
+import { Image, chakra, Stack, VStack, TabList, Tab, Text, Tabs, TabPanel, TabPanels, PinInput, PinInputField, HStack, Center, FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
 
-const AuthModalContent = () => {
+const AuthModalContent = ({ i }) => {
     return (
         <Stack>
-            <Tabs defaultIndex={2} width={'100%'} variant="soft-rounded" colorScheme="green" >
+            <Tabs defaultIndex={i} width={'100%'} variant="soft-rounded" colorScheme="green" >
 
                 <Stack width={'100%'} direction={'row'} justifyContent={'center'} >
                     <TabList
                         overflowX={'auto'}
                         borderRadius={'full'}
-                        bgColor={'#0F212E'}
+                        bgColor={'black'}
                         p={'1'}
                         maxW={'fit-content'}
                     >
@@ -43,11 +43,39 @@ const AuthModalContent = () => {
 
                 <TabPanels width={'100%'}  >
                     <TabPanel color={'white'} padding={'0px !important'} >
-                        
+                        <Stack px={'2'} pt={'4'}>
+
+                        </Stack>
                     </TabPanel>
 
                     <TabPanel color={'white'} padding={'0px !important'} >
-                        
+                        <Stack spacing={'4'} px={'2'} pt={'4'}>
+                            <FormControl isRequired>
+                                <FormLabel htmlFor='email'>Email or Username</FormLabel>
+                                <Input color={'white'}
+                                    focusBorderColor="none"
+                                    bgColor={'#000000ed'}
+                                    borderRadius={'sm'}
+                                    borderColor={'gray'}
+                                    size="md"
+                                    fontWeight={'500'}
+                                    fontSize={'sm'}
+                                />
+                            </FormControl>
+                            <FormControl isRequired>
+                                <FormLabel htmlFor='email'>Password</FormLabel>
+                                <Input color={'white'}
+                                    borderColor={'gray'}
+                                    focusBorderColor="none"
+                                    bgColor={'#000000ed'}
+                                    borderRadius={'sm'}
+                                    size="md"
+                                    fontWeight={'500'}
+                                    fontSize={'sm'}
+                                />
+                            </FormControl>
+                            <Button _active={{}} _focus={{}} _hover={{}} padding={'7'} borderRadius={'sm'} bgColor={'#00e701'} color={'#013e01'}>Sign In</Button>
+                        </Stack>
                     </TabPanel>
                 </TabPanels>
 
