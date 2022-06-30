@@ -20,7 +20,7 @@ import {
 } from 'react-icons/gi';
 import { CgTennis } from 'react-icons/cg';
 import { MdSportsMma, MdSportsCricket, MdSportsHandball } from 'react-icons/md';
-import {BsPlayCircleFill} from 'react-icons/bs'
+import { BsPlayCircleFill } from 'react-icons/bs';
 import { FaGripHorizontal } from 'react-icons/fa';
 import SportsDetailCard from './SportsDetailCard';
 import { useNavigate } from 'react-router-dom';
@@ -66,15 +66,15 @@ const Favourites = () => {
           <Select
             fontSize={'sm'}
             fontWeight={'500'}
-            _hover={{ bg: '#071824', cursor: 'pointer' }}
-            _focusVisible={{}}
-            bg={'#0F212E'}
-            variant="filled"
-            //   placeholder="Popular"
+            color={'white'}
+            borderColor={'#4C667B'}
+            _hover={{ borderColor: '#4C667B' }}
+            _active={{ borderColor: '#4C667B' }}
+            _focus={{ borderColor: '#4C667B' }}
           >
-            <option style={{ color: 'black' }}>Winner</option>
-            <option style={{ color: 'black' }}>Total</option>
-            <option style={{ color: 'black' }}>Handicap</option>
+            <option style={{ backgroundColor: 'black' }}>Winner</option>
+            <option style={{ backgroundColor: 'black' }}>Total</option>
+            <option style={{ backgroundColor: 'black' }}>Handicap</option>
           </Select>
         </Stack>
       </Stack>

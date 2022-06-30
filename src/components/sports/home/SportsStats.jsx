@@ -73,28 +73,19 @@ const SportsStats = () => {
             />
           </Tooltip>
           <Select
-            defaultValue={'20'}
+            defaultValue={'10'}
+            fontSize={'sm'}
+            fontWeight={'500'}
             color={'white'}
             borderColor={'#4C667B'}
             _hover={{ borderColor: '#4C667B' }}
             _active={{ borderColor: '#4C667B' }}
             _focus={{ borderColor: '#4C667B' }}
           >
-            <option value="0" style={{ backgroundColor: '#0F212E' }}>
-              0
-            </option>
-            <option value="10" style={{ backgroundColor: '#0F212E' }}>
-              10
-            </option>
-            <option value="20" style={{ backgroundColor: '#0F212E' }}>
-              20
-            </option>
-            <option value="30" style={{ backgroundColor: '#0F212E' }}>
-              30
-            </option>
-            <option value="40" style={{ backgroundColor: '#0F212E' }}>
-              40
-            </option>
+            <option style={{ backgroundColor: 'black' }}>0</option>
+            <option style={{ backgroundColor: 'black' }}>10</option>
+            <option style={{ backgroundColor: 'black' }}>20</option>
+            <option style={{ backgroundColor: 'black' }}>30</option>
           </Select>
         </Stack>
       </Stack>
