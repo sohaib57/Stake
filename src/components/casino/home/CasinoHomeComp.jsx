@@ -86,7 +86,7 @@ const CasinoHomeComp = () => {
     ],
   };
   return (
-    <Stack py={'12'} px={{ base: '4', md: '0' }} w={'100%'} bgColor={'#1A2C38'}>
+    <Stack py={'12'} px={{ base: '4', md: '0' }} w={'100%'} bgColor={'#000000ed'}>
       {/* slider */}
       <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
         <Slider {...settings}>
@@ -234,7 +234,7 @@ const CasinoHomeComp = () => {
           <Input
             color={'white'}
             focusBorderColor="none"
-            bgColor={'#0F212E'}
+            bgColor={'#000000f2'}
             borderRadius={'full'}
             placeholder="Search your game"
             size="md"
@@ -253,7 +253,7 @@ const CasinoHomeComp = () => {
             overflowX={'auto'}
             maxW={'fit-content'}
             borderRadius={'full'}
-            bgColor={'#0F212E'}
+            bgColor={'#000000f2'}
           >
             <Stack direction={'row'} p={'2'}>
               <Tab

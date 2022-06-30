@@ -30,7 +30,7 @@
 .ant-layout-header {
   background: black;
   height: 60px;
-  border-bottom: 1px solid #0f212e;
+  border-bottom: 1px solid white;
 }
 .site-layout .site-header-layout-background {
   background-color: black;
@@ -64,7 +64,7 @@
   font-weight: 700;
 }
 .ant-divider-horizontal {
-  border: 0.1px solid #2f4553;
+  border: 0.1px solid #fff;
   margin: 5px 20px 20px 20px;
   width: initial;
   min-width: initial;
@@ -84,7 +84,7 @@
 }
 .siderbar-header {
   height: 59px;
-  border-bottom: 1px solid #1a2c38;
+  border-bottom: 1px solid white;
   box-shadow: #0f212e;
 }
 .ant-menu-vertical .ant-menu-item::after,
