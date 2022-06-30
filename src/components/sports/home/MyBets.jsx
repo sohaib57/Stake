@@ -32,7 +32,7 @@ const MyBets = () => {
           overflowX={'auto'}
           maxW={'fit-content'}
           borderRadius={'full'}
-          bgColor={'#0F212E'}
+          bgColor={'#010101'}
         >
           <Stack direction={'row'} p={'2'}>
             <Tab
