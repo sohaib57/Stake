@@ -4,7 +4,7 @@ import { BsStar } from 'react-icons/bs'
 import welcometeam from '../../assets/images/top.png'
 const Header = () => {
     return (
-        <Stack margin={'0px !important'} width={'100%'} bg={'#0f212e'} textColor={'white'} >
+        <Stack margin={'0px !important'} width={'100%'} bg={'#000000e3'} textColor={'white'} >
             <Stack direction={'row'} height={'100%'} justifyContent={'space-between'} >
                 {/* Left div */}
                 <Stack width={{ base: '100%', lg: '50%' }}   >

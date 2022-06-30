@@ -28,7 +28,7 @@ const Features = () => {
 
   return (
     <Stack width={'100%'} margin={'0px !important'}>
-      <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color="#b1bad3">
+    <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color="#b1bad3"  bg='#000000ed'>
         <Stack
           direction={{ base: 'column', md: 'row' }}
           justifyContent={'space-between'}
@@ -100,7 +100,7 @@ const Features = () => {
 
         {/* Learn more */}
 
-        <Stack bg={'#0f212e'} height={'80px'}>
+        <Stack bg={'#000000f2'} height={'80px'}>
           <Stack
             px={'2'}
             direction={{ base: 'row-reverse', lg: 'row' }}
@@ -133,7 +133,7 @@ const Features = () => {
       </Stack>
 
       {/* Buy Crypto */}
-      <Stack bg={'#0f212e'} width={'100%'} px={'10'} py={'5'}>
+      <Stack bg={'#000000f2'} width={'100%'} px={'10'} py={'5'}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}
           justifyContent={'space-between'}
