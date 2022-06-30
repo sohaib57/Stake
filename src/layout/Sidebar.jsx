@@ -9,12 +9,15 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  HStack, Stack, Button,
+  HStack,
+  Stack,
+  Button,
   Select,
-  Text
-} from '@chakra-ui/react'
-import { RiContactsBook2Fill } from 'react-icons/ri'
-import { GiDigitalTrace } from 'react-icons/gi'
+  Text,
+  Link,
+} from '@chakra-ui/react';
+import { RiContactsBook2Fill } from 'react-icons/ri';
+import { GiDigitalTrace } from 'react-icons/gi';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -123,16 +126,16 @@ const Sidebar = () => {
   const nav = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isRevocationModalOpen,
     onOpen: onOpenRevocationModal,
     onClose: onCloseRevocationModal,
   } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = React.useState('inside')
-  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside')
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside');
 
-  const btnRef = React.useRef(null)
+  const btnRef = React.useRef(null);
 
 
   const [show, setShow] = useState(true);
@@ -146,40 +149,58 @@ const Sidebar = () => {
     >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="siderbar-header">
-          {React.createElement(
-            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-            {
-              className: 'trigger',
-              onClick: () => setCollapsed(!collapsed),
-            }
-          )}
+          <div className="sidebar-button">
+            <Stack direction={'row'} spacing={0} alignItems={'baseline'}>
+              <Stack
+                direction={'row'}
+                spacing={0}
+                display={collapsed ? 'none' : 'inherit'}
+              >
+                <Stack direction={'row'} gap={2} marginLeft={5}>
+                  <Link _hover={{}}>
+                    <HStack onClick={() => nav('/casino/home')}>
+                      <GiCardAceHearts color="white" />
+                      <Text
+                        color={'white'}
+                        fontFamily={'sans-serif'}
+                        fontWeight={'700'}
+                        fontSize={'13px'}
+                        _hover={{
+                          textDecoration: 'none',
+                        }}
+                      >
+                        Casino
+                      </Text>
+                    </HStack>
+                  </Link>
+                  <Link _hover={{}}>
+                    <HStack onClick={() => nav('/sports/home')}>
+                      <GiBasketballBall color="white" />
+                      <Text
+                        color={'white'}
+                        fontFamily={'sans-serif'}
+                        fontWeight={'700'}
+                        fontSize={'13px'}
+                      >
+                        Sports
+                      </Text>
+                    </HStack>
+                  </Link>
+                </Stack>
+              </Stack>
+              <Stack>
+                {React.createElement(
+                  collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                  {
+                    className: 'trigger',
+                    onClick: () => setCollapsed(!collapsed),
+                  }
+                )}
+              </Stack>
+            </Stack>
+          </div>
         </div>
-        <div className="sidebar-button">
-          <Menu
-            onClick={() => nav('/casino/home')}
-            className="menu-bar"
-            mode="inline"
-            items={[
-              {
-                key: '75',
-                icon: <GiCardAceHearts />,
-                label: 'Casino',
-              },
-            ]}
-          />
-          <Menu
-            onClick={() => nav('/sports/home')}
-            className="menu-bar"
-            mode="inline"
-            items={[
-              {
-                key: '76',
-                icon: <GiBasketballBall />,
-                label: 'Sports',
-              },
-            ]}
-          />
-        </div>
+
         <Menu
           mode="inline"
           className="menu-bar"
@@ -191,10 +212,9 @@ const Sidebar = () => {
           }}
         >
           <SubMenu
-
             key="sub1"
             title={
-              <span className='animation'>
+              <span className="animation">
                 <Icon component={GiCardAceHearts} />
                 <span>Casino</span>
               </span>
@@ -202,7 +222,7 @@ const Sidebar = () => {
           >
             <Menu.Item
               onClick={() => nav('/casino-favourite')}
-              key="1"
+              key="3"
               style={{
                 paddingLeft: 20,
               }}
@@ -218,7 +238,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/recent')}
-              key="2"
+              key="4"
               style={{
                 paddingLeft: 20,
               }}
@@ -233,7 +253,7 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
-              key="3"
+              key="5"
               style={{
                 paddingLeft: 20,
               }}
@@ -251,7 +271,7 @@ const Sidebar = () => {
             <Divider />
             <Menu.Item
               onClick={() => nav('/casino/group/stake-originals')}
-              key="4"
+              key="6"
               style={{
                 paddingLeft: 20,
               }}
@@ -267,7 +287,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/stake-exclusives')}
-              key="5"
+              key="7"
               style={{
                 paddingLeft: 20,
               }}
@@ -283,7 +303,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/slots')}
-              key="6"
+              key="8"
               style={{
                 paddingLeft: 20,
               }}
@@ -299,7 +319,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/live-casino')}
-              key="7"
+              key="9"
               style={{
                 paddingLeft: 20,
               }}
@@ -315,7 +335,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/game-shows')}
-              key="8"
+              key="10"
               style={{
                 paddingLeft: 20,
               }}
@@ -331,7 +351,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/new-releases')}
-              key="9"
+              key="11"
               style={{
                 paddingLeft: 20,
               }}
@@ -347,7 +367,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/feature-buy-in')}
-              key="10"
+              key="12"
               style={{
                 paddingLeft: 20,
               }}
@@ -363,7 +383,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/table-games')}
-              key="11"
+              key="13"
               style={{
                 paddingLeft: 20,
               }}
@@ -379,7 +399,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/blackjack')}
-              key="12"
+              key="14"
               style={{
                 paddingLeft: 20,
               }}
@@ -395,7 +415,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/baccarat')}
-              key="13"
+              key="15"
               style={{
                 paddingLeft: 20,
               }}
@@ -411,7 +431,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/casino/group/roulette')}
-              key="14"
+              key="16"
               style={{
                 paddingLeft: 20,
               }}
@@ -429,7 +449,7 @@ const Sidebar = () => {
           <SubMenu
             key="sub2"
             title={
-              <span className='animation'>
+              <span className="animation">
                 <Icon component={GiBasketballBall} />
                 <span>Sports</span>
               </span>
@@ -437,7 +457,7 @@ const Sidebar = () => {
           >
             <Menu.Item
               onClick={() => nav('/sports/my-bets')}
-              key="15"
+              key="17"
               style={{
                 paddingLeft: 20,
               }}
@@ -453,7 +473,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/live-events')}
-              key="17"
+              key="18"
               style={{
                 paddingLeft: 20,
               }}
@@ -478,7 +498,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/upcoming')}
-              key="18"
+              key="19"
               style={{
                 paddingLeft: 20,
               }}
@@ -503,7 +523,7 @@ const Sidebar = () => {
             </p>
             <Menu.Item
               onClick={() => nav('/sports/baseball/usa/mlb')}
-              key="19"
+              key="20"
               style={{
                 paddingLeft: 20,
               }}
@@ -529,7 +549,7 @@ const Sidebar = () => {
 
             <Menu.Item
               onClick={() => nav('/sports/soccer')}
-              key="9"
+              key="21"
               style={{
                 paddingLeft: 20,
                 paddingBottom: 0,
@@ -556,7 +576,7 @@ const Sidebar = () => {
             </p>
             <Menu.Item
               onClick={() => nav('/sports/alpine-skiing')}
-              key="13"
+              key="22"
               style={{
                 paddingLeft: 20,
               }}
@@ -572,7 +592,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/american-football')}
-              key="14"
+              key="23"
               style={{
                 paddingLeft: 20,
               }}
@@ -588,7 +608,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/aussie-rules')}
-              key="15"
+              key="24"
               style={{
                 paddingLeft: 20,
               }}
@@ -604,7 +624,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/badminton')}
-              key="16"
+              key="25"
               style={{
                 paddingLeft: 20,
               }}
@@ -620,7 +640,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/baseball')}
-              key="17"
+              key="26"
               style={{
                 paddingLeft: 20,
               }}
@@ -636,7 +656,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/basketball')}
-              key="18"
+              key="27"
               style={{
                 paddingLeft: 20,
               }}
@@ -652,7 +672,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/biathlon')}
-              key="19"
+              key="28"
               style={{
                 paddingLeft: 20,
               }}
@@ -668,7 +688,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/bowls')}
-              key="20"
+              key="29"
               style={{
                 paddingLeft: 20,
               }}
@@ -684,7 +704,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/boxing')}
-              key="21"
+              key="30"
               style={{
                 paddingLeft: 20,
               }}
@@ -700,7 +720,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/counter-strike')}
-              key="22"
+              key="31"
               style={{
                 paddingLeft: 20,
               }}
@@ -716,7 +736,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/cricket')}
-              key="23"
+              key="32"
               style={{
                 paddingLeft: 20,
               }}
@@ -732,7 +752,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/cross-country')}
-              key="24"
+              key="33"
               style={{
                 paddingLeft: 20,
               }}
@@ -748,7 +768,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               onClick={() => nav('/sports/cycling')}
-              key="25"
+              key="34"
               style={{
                 paddingLeft: 20,
               }}
@@ -763,8 +783,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="35"
               onClick={() => nav('/sports/darts')}
-              key="34"
+              
               style={{
                 paddingLeft: 20,
               }}
@@ -779,8 +800,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="36"
               onClick={() => nav('/sports/dota-2')}
-              key="35"
               style={{
                 paddingLeft: 20,
               }}
@@ -795,8 +816,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="37"
               onClick={() => nav('/sports/electronic-leagues')}
-              key="36"
               style={{
                 paddingLeft: 20,
               }}
@@ -811,8 +832,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="38"
               onClick={() => nav('/sports/fifa')}
-              key="37"
               style={{
                 paddingLeft: 20,
               }}
@@ -827,8 +848,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="39"
               onClick={() => nav('/sports/formula-1')}
-              key="38"
               style={{
                 paddingLeft: 20,
               }}
@@ -843,8 +864,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="40"
               onClick={() => nav('/sports/futsal')}
-              key="39"
               style={{
                 paddingLeft: 20,
               }}
@@ -859,8 +880,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="41"
               onClick={() => nav('/sports/gaelic-hurling')}
-              key="40"
               style={{
                 paddingLeft: 20,
               }}
@@ -875,8 +896,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="42"
               onClick={() => nav('/sports/golf')}
-              key="41"
               style={{
                 paddingLeft: 20,
               }}
@@ -891,8 +912,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="43"
               onClick={() => nav('/sports/handball')}
-              key="42"
               style={{
                 paddingLeft: 20,
               }}
@@ -907,8 +928,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="44"
               onClick={() => nav('/sports/ice-hockey')}
-              key="43"
               style={{
                 paddingLeft: 20,
               }}
@@ -923,8 +944,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="45"
               onClick={() => nav('/sports/indy-racing')}
-              key="44"
               style={{
                 paddingLeft: 20,
               }}
@@ -939,8 +960,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="46"
               onClick={() => nav('/sports/league-of-legends')}
-              key="45"
               style={{
                 paddingLeft: 20,
               }}
@@ -955,8 +976,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="47"
               onClick={() => nav('/sports/mma')}
-              key="46"
               style={{
                 paddingLeft: 20,
               }}
@@ -971,8 +992,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="48"
               onClick={() => nav('/sports/motorcycle-racing')}
-              key="47"
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -987,8 +1009,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="49"
               onClick={() => nav('/sports/pesapallo')}
-              key="48"
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -1003,8 +1026,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="50"
               onClick={() => nav('/sports/politics-entertainment')}
-              key="49"
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -1019,8 +1043,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="51"
               onClick={() => nav('/sports/rainbow-six')}
-              key="50"
+           
               style={{
                 paddingLeft: 20,
               }}
@@ -1035,8 +1060,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="52"
               onClick={() => nav('/sports/rugby')}
-              key="51"
+           
               style={{
                 paddingLeft: 20,
               }}
@@ -1051,8 +1077,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="53"
               onClick={() => nav('/sports/ski-jumping')}
-              key="52"
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1067,8 +1094,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="54"
               onClick={() => nav('/sports/snooker')}
-              key="53"
+            
               style={{
                 paddingLeft: 20,
               }}
@@ -1083,8 +1111,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="55"
               onClick={() => nav('/sports/soccer')}
-              key="54"
+              
               style={{
                 paddingLeft: 20,
               }}
@@ -1099,8 +1128,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="56"
               onClick={() => nav('/sports/stock-car-racing')}
-              key="55"
+            
               style={{
                 paddingLeft: 20,
               }}
@@ -1115,8 +1145,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="57"
               onClick={() => nav('/sports/table-tennis')}
-              key="56"
               style={{
                 paddingLeft: 20,
               }}
@@ -1131,8 +1161,8 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="58"
               onClick={() => nav('/sports/tennis')}
-              key="57"
               style={{
                 paddingLeft: 20,
               }}
@@ -1147,8 +1177,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="59"
               onClick={() => nav('/sports/volleyball')}
-              key="58"
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1163,8 +1194,9 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
             <Menu.Item
+              key="60"
               onClick={() => nav('/sports/waterpolo')}
-              key="59"
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1218,14 +1250,14 @@ const Sidebar = () => {
           <SubMenu
             key="sub3"
             title={
-              <span className='animation'>
+              <span className="animation">
                 <Icon component={AiOutlineGift} />
                 <span>Promotions</span>
               </span>
             }
           >
             <Menu.Item
-              key="60"
+              key="61"
               style={{
                 paddingLeft: 20,
               }}
@@ -1235,12 +1267,9 @@ const Sidebar = () => {
                 style={{
                   paddingLeft: 8,
                 }}
-
                 onClick={onOpen}
-
               >
                 $50k Weekly Giveaway
-
               </button>
             </Menu.Item>
 
@@ -1251,31 +1280,29 @@ const Sidebar = () => {
               isOpen={isOpen}
               scrollBehavior={scrollBehavior}
               size={'lg'}
-
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'} >
+              <ModalContent bg={'#1A2C38'}>
                 <ModalHeader>
-                  <Stack direction={'row'} alignItems={'center'} >
+                  <Stack direction={'row'} alignItems={'center'}>
                     <RiContactsBook2Fill color={'#B1BAD3'} />
-                    <Text color={'white'} >  VIP </Text>
+                    <Text color={'white'}> VIP </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody  >
+                <ModalBody>
                   <WeeklyGiveAwayModal />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
-                  <Text color={'white'}  >
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                  <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>
                 </ModalFooter>
               </ModalContent>
             </Modal>
 
-
             <Menu.Item
-              key="61"
+              key="62"
               style={{
                 paddingLeft: 20,
               }}
@@ -1291,7 +1318,6 @@ const Sidebar = () => {
               </button>
             </Menu.Item>
 
-
             {/* Race-Hour */}
             <Modal
               onClose={onCloseRevocationModal}
@@ -1299,22 +1325,21 @@ const Sidebar = () => {
               isOpen={isRevocationModalOpen}
               scrollBehavior={scrollBehavior2}
               size={'lg'}
-
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'} >
+              <ModalContent bg={'#1A2C38'}>
                 <ModalHeader>
-                  <Stack direction={'row'} alignItems={'center'} >
+                  <Stack direction={'row'} alignItems={'center'}>
                     <GiDigitalTrace color={'#B1BAD3'} />
-                    <Text color={'white'} >  Race </Text>
+                    <Text color={'white'}> Race </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody  >
+                <ModalBody>
                   <Race24Hour />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'} >
-                  <Text color={'white'}  >
+                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                  <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>
                 </ModalFooter>
@@ -1322,7 +1347,7 @@ const Sidebar = () => {
             </Modal>
 
             <Menu.Item
-              key="62"
+              key="63"
               style={{
                 paddingLeft: 20,
               }}
@@ -1342,7 +1367,7 @@ const Sidebar = () => {
           <SubMenu
             key="sub4"
             title={
-              <span className='animation'>
+              <span className="animation">
                 <Icon component={FaHandshake} />
                 <span>Sponsorships</span>
               </span>
@@ -1528,7 +1553,6 @@ const Sidebar = () => {
             mode="inline"
             items={[
               {
-                key: '74',
                 icon: <FaHeadset />,
                 label: 'Live Support',
               },
