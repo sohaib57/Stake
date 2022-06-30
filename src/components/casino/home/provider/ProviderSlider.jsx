@@ -69,7 +69,7 @@ const ProviderSlider = () => {
     <Stack
       // pb={'10'}
       marginTop={'0 !important'}
-      bgColor={'#1A2C38'}
+      bgColor={'inherit'}
       className="slider"
     >
       <Slider {...settings}>

@@ -29,7 +29,7 @@ const CasinoStats = () => {
           overflowX={'auto'}
           w={'fit-content'}
           borderRadius={'full'}
-          bgColor={'#0F212E'}
+          bgColor={'#000000f2'}
         >
           <Stack direction={'row'} p={'2'}>
             <Tab

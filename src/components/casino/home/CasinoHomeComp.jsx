@@ -234,7 +234,7 @@ const CasinoHomeComp = () => {
           <Input
             color={'white'}
             focusBorderColor="none"
-            bgColor={'#0F212E'}
+            bgColor={'#000000f2'}
             borderRadius={'full'}
             placeholder="Search your game"
             size="md"
@@ -253,7 +253,7 @@ const CasinoHomeComp = () => {
             overflowX={'auto'}
             maxW={'fit-content'}
             borderRadius={'full'}
-            bgColor={'#0F212E'}
+            bgColor={'#000000f2'}
           >
             <Stack direction={'row'} p={'2'}>
               <Tab
