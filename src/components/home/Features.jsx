@@ -28,7 +28,7 @@ const Features = () => {
 
   return (
     <Stack width={'100%'} margin={'0px !important'}>
-    <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color="#b1bad3"  bg='#000000ed'>
+    <Stack p={{ base: '4', lg: '10' }} spacing={'4'} color="#b1bad3"  bg='#000000f2'>
         <Stack
           direction={{ base: 'column', md: 'row' }}
           justifyContent={'space-between'}
