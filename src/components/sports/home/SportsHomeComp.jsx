@@ -84,7 +84,12 @@ const SportsHomeComp = () => {
     ],
   };
   return (
-    <Stack py={'12'} px={{ base: '4', md: '0' }} w={'100%'} bgColor={'#000000ed'}>
+    <Stack
+      py={'12'}
+      px={{ base: '4', md: '0' }}
+      w={'100%'}
+      bgColor={'#000000ed'}
+    >
       {/* slider */}
       <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
         <Slider {...settings}>
@@ -160,7 +165,6 @@ const SportsHomeComp = () => {
               h={'full'}
             ></Box>
           </Center>
-        
         </Slider>
       </Stack>
       {/* searchbar */}
@@ -311,15 +315,21 @@ const SportsHomeComp = () => {
                     <Select
                       fontSize={'sm'}
                       fontWeight={'500'}
-                      _hover={{ bg: '#071824', cursor: 'pointer' }}
-                      _focusVisible={{}}
-                      bg={'#0F212E'}
-                      variant="filled"
-                      //   placeholder="Popular"
+                      color={'white'}
+                      borderColor={'#4C667B'}
+                      _hover={{ borderColor: '#4C667B' }}
+                      _active={{ borderColor: '#4C667B' }}
+                      _focus={{ borderColor: '#4C667B' }}
                     >
-                      <option style={{ color: 'black' }}>Winner</option>
-                      <option style={{ color: 'black' }}>Total</option>
-                      <option style={{ color: 'black' }}>Handicap</option>
+                      <option style={{ backgroundColor: 'black' }}>
+                        Winner
+                      </option>
+                      <option style={{ backgroundColor: 'black' }}>
+                        Total
+                      </option>
+                      <option style={{ backgroundColor: 'black' }}>
+                        Handicap
+                      </option>
                     </Select>
                   </Stack>
                 </Stack>

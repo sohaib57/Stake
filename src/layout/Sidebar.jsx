@@ -1267,18 +1267,18 @@ const Sidebar = () => {
               size={'lg'}
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'}>
-                <ModalHeader>
+              <ModalContent>
+                <ModalHeader bg={'#000000f2'}>
                   <Stack direction={'row'} alignItems={'center'}>
                     <RiContactsBook2Fill color={'#B1BAD3'} />
                     <Text color={'white'}> VIP </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody>
+                <ModalBody bg={'#000000ed'}>
                   <WeeklyGiveAwayModal />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
                   <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>
@@ -1312,18 +1312,18 @@ const Sidebar = () => {
               size={'lg'}
             >
               <ModalOverlay />
-              <ModalContent bg={'#1A2C38'}>
-                <ModalHeader>
+              <ModalContent>
+                <ModalHeader bg={'#000000f2'}>
                   <Stack direction={'row'} alignItems={'center'}>
                     <GiDigitalTrace color={'#B1BAD3'} />
                     <Text color={'white'}> Race </Text>
                   </Stack>
                 </ModalHeader>
                 <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody>
+                <ModalBody bg={'#000000ed'}>
                   <Race24Hour />
                 </ModalBody>
-                <ModalFooter bg={'#0F212E'} justifyContent={'center'}>
+                <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
                   <Text color={'white'}>
                     Learn more about being a Stake VIP
                   </Text>

@@ -73,9 +73,9 @@ const LiveEvents = () => {
             _active={{ borderColor: '#4C667B' }}
             _focus={{ borderColor: '#4C667B' }}
           >
-            <option style={{ color: 'black' }}>Winner</option>
-            <option style={{ color: 'black' }}>Total</option>
-            <option style={{ color: 'black' }}>Handicap</option>
+            <option style={{ backgroundColor: 'black' }}>Winner</option>
+            <option style={{ backgroundColor: 'black' }}>Total</option>
+            <option style={{ backgroundColor: 'black' }}>Handicap</option>
           </Select>
         </Stack>
       </Stack>
