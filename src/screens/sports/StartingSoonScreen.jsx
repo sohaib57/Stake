@@ -6,15 +6,14 @@ import LayoutComp from '../../layout/LayoutComp';
 import useDocumentTitle from '../../utils/useDocumentTitle';
 
 const StartingSoonScreen = () => {
-
-  useDocumentTitle('Bet Upcoming Sports,Events & TimeTable')
+  useDocumentTitle('Bet Upcoming Sports,Events & TimeTable');
 
   return (
     <LayoutComp>
       <Stack
         px={{ base: '2', md: '8', lg: '12', xl: '16' }}
         py={'4'}
-        bgColor={'#1A2C38'}
+        bgColor={'#000000ed'}
       >
         <StartingSoon />
         <SportsStats />

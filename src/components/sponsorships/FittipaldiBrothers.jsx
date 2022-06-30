@@ -18,7 +18,7 @@ const FittipaldiBrothersComp = () => {
     <LayoutComp>
       <Stack width={'100%'}>
         <Stack
-          bgColor={'#071d2a'}
+          bgColor={'#000000e3'}
           justifyContent={'space-between'}
           direction={{ base: ' column', md: 'row' }}
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
@@ -39,7 +39,7 @@ const FittipaldiBrothersComp = () => {
           </Stack>
         </Stack>
         {/* {image-text} */}
-        <Stack bgColor={'#1a2c38'} mt={'0 !important'}>
+        <Stack bgColor={'#000000ed'} mt={'0 !important'}>
           {/* {1 section} */}
           <Stack
             width={'100%'}
@@ -112,7 +112,7 @@ const FittipaldiBrothersComp = () => {
           </Stack>
 
           <Stack
-            bgColor={'#0f212e'}
+            bgColor={'black'}
             direction={{ base: 'column', lg: 'row' }}
             px={{ base: '50px', lg: '200px' }}
             py={30}
