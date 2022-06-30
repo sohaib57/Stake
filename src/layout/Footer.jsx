@@ -31,10 +31,11 @@ import stake from '../assets/images/stake.png';
 const Footer = () => {
   return (
     <Stack
-      py={'12'}
+      pt={'12'}
+      pb={{base:'20',md:'12'}}
       px={{ base: '4', sm: '6', md: '8', lg: '16' }}
       w={'100%'}
-      bgColor={'#071D2A'}
+      bgColor={'#000000f2'}
       marginTop={'0 !important'}
     >
       <SimpleGrid
@@ -496,7 +497,7 @@ const Footer = () => {
         </Stack>
       </SimpleGrid>
       <Stack alignItems={'center'} className={'copyright'}>
-        <Stack w={'44'}>
+        <Stack w={'20'}>
           <Link to={'/'}>
             {' '}
             <Image h={'full'} w={'full'} src={stake} />

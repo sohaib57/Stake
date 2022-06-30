@@ -1,16 +1,16 @@
 import React from 'react'
-import {  Heading, HStack, Image, Progress, Stack, Text } from '@chakra-ui/react'
+import { Heading, HStack, Image, Progress, Stack, Text } from '@chakra-ui/react'
 import { BsStar } from 'react-icons/bs'
 import welcometeam from '../../assets/images/top.png'
 const Header = () => {
     return (
-        <Stack margin={'0px !important'} width={'100%'} bg={'#0f212e'} textColor={'white'} >
+        <Stack margin={'0px !important'} width={'100%'} bg={'#000000e3'} textColor={'white'} >
             <Stack direction={'row'} height={'100%'} justifyContent={'space-between'} >
                 {/* Left div */}
                 <Stack width={{ base: '100%', lg: '50%' }}   >
                     <Stack width={{ base: '100%', lg: '70%' }} px={'10'} py={'16'} >
-                        <Heading color={'white'} fontSize='2xl' lineHeight={'1.5'} fontWeight={'700'} >
-                            Welcome back, SohaibAshraf
+                        <Heading color={'white'} fontSize='lg' pb={'2'} lineHeight={'1.5'} fontWeight={'700'} >
+                            Welcome back, Sohaib57
                         </Heading>
                         <Stack>
                             <HStack justifyContent={'space-between'} color={'#fff'} lineHeight={'1.5'} fontWeight={'600'} >
@@ -44,8 +44,6 @@ const Header = () => {
 
                     </Stack>
                 </Stack>
-
-
 
                 {/* Right div with a background */}
                 <Stack display={{ base: 'none', lg: 'flex' }} mr={'12 !important'} width={'45%'} >

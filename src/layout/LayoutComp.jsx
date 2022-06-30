@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Img, Select, HStack, Button, Text } from '@chakra-ui/react';
+import { Stack, Img, Select, HStack, Button, Text, Box } from '@chakra-ui/react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
@@ -7,7 +7,8 @@ import { SiGooglechat } from 'react-icons/si';
 import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import Stake from '../assets/images/stake.png';
+import stakeLogo from '../assets/images/stake.png'
+import cryptoBox from '../assets/images/cryptoBox.jpg'
 import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
@@ -33,51 +34,18 @@ const LayoutComp = ({ children }) => {
             padding: 0,
           }}
         >
-          <Stack direction={'row'} justifyContent={'space-between'}>
-            <Stack>
+          <Stack margin={'0px !important'} direction={'row'} justifyContent={'space-between'}>
+            <Stack pl={'8'} >
               <Img
-                src={Stake}
+                src={cryptoBox}
                 cursor={'pointer'}
+                height={'59px'}
                 alt="stake"
-                width={130}
                 onClick={() => nav('/')}
               />
             </Stack>
-
             <Stack>
-              {/* <InputGroup size="sm" alignItems={'center'}>
-                <Select
-                  borderLeftRadius={'5px'}
-                  borderRightRadius={'none'}
-                  bgColor={'#0f212e'}
-                  border={'none'}
-                  color={'white'}
-                  _focusVisible={{
-                    boxShadow: 'none',
-                  }}
-                >
-                  <option value="option1">0.00000000</option>
-                  <option value="option2">0.00000001</option>
-                  <option value="option3">0.00000002</option>
-                </Select>
-                <InputRightAddon
-                  fontSize={'sm'}
-                  border={'none'}
-                  borderRightRadius={'5px'}
-                  borderLeftRadius={'none'}
-                  bgColor={'#007bff'}
-                  _hover={{
-                    bgColor: '#007bff',
-                  }}
-                  _active={{
-                    bgColor: '#007bff',
-                  }}
-                  color={'white'}
-                  cursor={'pointer'}
-                >
-                  Wallet
-                </InputRightAddon>
-              </InputGroup> */}
+            
               <HStack spacing={0}>
                 <Select
                   borderLeftRadius={'5px'}
@@ -135,7 +103,7 @@ const LayoutComp = ({ children }) => {
                 </Text>
               </HStack>
 
-              <Stack>
+              <Stack alignSelf={'center'} >
                 <Menu>
                   <MenuButton
                     as={Button}
@@ -160,7 +128,7 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Transactions</MenuItem>
                     <MenuItem>Sport Bets</MenuItem>
                     <MenuItem>Notifications</MenuItem>
-                    <MenuItem>Settings</MenuItem>
+                    <MenuItem onClick={()=>nav('/settings')}>Settings</MenuItem>
                     <MenuItem>Live Support</MenuItem>
                     <MenuItem>Logout</MenuItem>
                   </MenuList>

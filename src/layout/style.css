@@ -69,63 +69,75 @@
   margin: 5px 20px 20px 20px;
   width: initial;
   min-width: initial;
- 
 }
 /* .ant-select:not(.ant-select-customize-input) .ant-select-selector{
   background-color: transparent;
   border: none;
   color: #fff;
 } */
-.button-section button{
+.button-section button {
   color: white;
   font-weight: 700;
   font-size: 13px;
 }
-.button-section button:hover{
+.siderbar-header .button-section button:hover {
   color: white;
-
 }
-.siderbar-header{
-  border-bottom: 1px solid #1a2c38 ;
+.siderbar-header {
+  height: 59px;
+  border-bottom: 1px solid white;
   box-shadow: #0f212e;
   height: 59px;
 }
-.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after{
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
   border-right: none;
 }
-.ant-menu-item-selected{
-color : white;
+.ant-menu-item-selected {
+  color: white;
 }
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   border-radius: 50px;
   background-color: #071824;
 }
-.ant-menu-item:active, .ant-menu-submenu-title:active{
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
   border-radius: 50px;
   background-color: #071824;
 }
-.ant-menu-submenu-popup > .ant-menu{
+.ant-menu-submenu-popup > .ant-menu {
   background-color: #0f212e;
   color: white;
 }
-.select{
+.select {
   color: black;
 }
-.sider-body{
-  font-family: sans-serif;
-}
-.ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child){
+.ant-menu-vertical .ant-menu-item:not(:last-child),
+.ant-menu-vertical-left .ant-menu-item:not(:last-child),
+.ant-menu-vertical-right .ant-menu-item:not(:last-child),
+.ant-menu-inline .ant-menu-item:not(:last-child) {
   margin-bottom: 0px;
 }
-.animation{
+.animation {
   position: relative;
   right: 0;
+  transition: 0.3s;
 }
-.animation:hover{
+.animation:hover {
   right: -5px;
   cursor: pointer;
 }

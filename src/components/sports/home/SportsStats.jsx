@@ -13,6 +13,7 @@ import {
   Text,
   Tooltip,
   Select,
+  Circle,
 } from '@chakra-ui/react';
 const SportsStats = () => {
   return (
@@ -49,10 +50,12 @@ const SportsStats = () => {
               color={'white'}
               _selected={{ color: 'white', bg: '#2F4553' }}
               w={'max-content'}
+              minW={'max-content'}
               fontSize={{ base: 'sm', md: 'md' }}
             >
-              <HStack spacing={'2'}>
+              <HStack alignItems={'center'} spacing={'2'}>
                 <Text> Races</Text>
+                <Circle size="10px" bg="#1FFF20" color="white" />
               </HStack>
             </Tab>
           </Stack>
@@ -97,11 +100,11 @@ const SportsStats = () => {
       </Stack>
       <TabPanels>
         {/* All Bets */}
+        <TabPanel px={'0 !important'}></TabPanel>
+        <TabPanel px={'0 !important'}></TabPanel>
         <TabPanel px={'0 !important'}>
           <AnimateTable />
         </TabPanel>
-        <TabPanel px={'0 !important'}></TabPanel>
-        <TabPanel px={'0 !important'}></TabPanel>
       </TabPanels>
     </Tabs>
   );

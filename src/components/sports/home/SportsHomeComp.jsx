@@ -29,11 +29,12 @@ import {
   FaHourglassStart,
   FaGripHorizontal,
 } from 'react-icons/fa';
-import sportsslider2 from '../../../assets/images/sportsslider2.jfif';
-import sportsslider3 from '../../../assets/images/sportsslider3.jfif';
-import sportsslider4 from '../../../assets/images/sportsslider4.jfif';
-import sportsslider5 from '../../../assets/images/sportsslider5.jfif';
-import sportsslider1 from '../../../assets/images/sportsslider1.jfif';
+import sportshomeslider1 from '../../../assets/images/sportshomeslider1.jfif';
+import sportshomeslider2 from '../../../assets/images/sportshomeslider2.jfif';
+import sportshomeslider3 from '../../../assets/images/sportshomeslider3.jfif';
+import sportshomeslider4 from '../../../assets/images/sportshomeslider4.jfif';
+import sportshomeslider5 from '../../../assets/images/sportshomeslider5.jfif';
+import sportshomeslider6 from '../../../assets/images/sportshomeslider6.jfif';
 import { useNavigate } from 'react-router-dom';
 import LiveEvents from './LiveEvents';
 import SportsStats from './SportsStats';
@@ -45,77 +46,121 @@ import { HiFire } from 'react-icons/hi';
 const SportsHomeComp = () => {
   const nav = useNavigate();
   const settings = {
+    // dots: true,
+    infinite: true,
     nextArrow: <IoIosArrowForward color="white" />,
     prevArrow: <MdArrowBackIos color="white" />,
-    dots: true,
-    infinite: true,
     speed: 500,
-    centerMode: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
+          infinite: true,
+          // dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
   };
   return (
     <Stack py={'12'} px={{ base: '4', md: '0' }} w={'100%'} bgColor={'#1A2C38'}>
       {/* slider */}
       <Stack px={{ base: '8', lg: '12', xl: '16' }} className="slider">
         <Slider {...settings}>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center px={'2'} h={'30vh'} w={'100%'}>
+            <Box
+              className="home-slider"
+              bgPos={'center'}
+              bgRepeat={'no-repeat'}
+              bgSize={'cover'}
+              borderRadius={'xl'}
+              w={'100%'}
+              h={'full'}
+              bgImage={sportshomeslider1}
+            ></Box>
+          </Center>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={sportsslider1}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={sportshomeslider2}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={sportsslider2}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={sportshomeslider3}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={sportsslider3}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={sportshomeslider4}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={sportsslider4}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={sportshomeslider5}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
-          <Center h={'45vh'} w={'100%'} px={'2'}>
+          <Center h={'30vh'} w={'100%'} px={'2'}>
             <Box
               bgPos={'center'}
               bgRepeat={'no-repeat'}
               bgSize={'cover'}
-              bgImage={sportsslider5}
-              borderRadius={'3xl'}
+              className="home-slider"
+              bgImage={sportshomeslider6}
+              borderRadius={'lg'}
               w={'100%'}
               h={'full'}
             ></Box>
           </Center>
+        
         </Slider>
       </Stack>
       {/* searchbar */}
@@ -123,7 +168,7 @@ const SportsHomeComp = () => {
         className="searchbar"
         px={{ base: '2', md: '8', lg: '12', xl: '16' }}
         display={{ base: 'none', md: 'flex' }}
-        pt={'12'}
+        pt={'6'}
       >
         <InputGroup
           borderColor={'gray'}

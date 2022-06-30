@@ -27,7 +27,7 @@ const ChallengesBody = () => {
 
   return (
     <Stack width={'100%'} margin={'0px !important'} bg={'#1A2C38'} >
-      <Stack margin={'0px !important'} justifyContent={'space-between'} alignItems={'baseline'} px={{ base: '2', lg: '6' }} pt={'5'}  >
+      <Stack margin={'0px !important'} justifyContent={'center'} alignItems={'baseline'} px={{ base: '2', lg: '6' }} pt={'5'}  >
 
         <Tabs width={'100%'} variant="soft-rounded" colorScheme="green">
 

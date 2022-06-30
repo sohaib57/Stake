@@ -137,11 +137,15 @@ const Sidebar = () => {
 
   const btnRef = React.useRef(null);
 
+
   const [show, setShow] = useState(true);
   return (
     <Stack
       display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
       className="sider-body"
+      style={{
+        fontFamily: 'Poppins'
+      }}
     >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="siderbar-header">
@@ -780,6 +784,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="35"
+              onClick={() => nav('/sports/darts')}
+              
               style={{
                 paddingLeft: 20,
               }}
@@ -795,6 +801,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="36"
+              onClick={() => nav('/sports/dota-2')}
               style={{
                 paddingLeft: 20,
               }}
@@ -810,6 +817,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="37"
+              onClick={() => nav('/sports/electronic-leagues')}
               style={{
                 paddingLeft: 20,
               }}
@@ -825,6 +833,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="38"
+              onClick={() => nav('/sports/fifa')}
               style={{
                 paddingLeft: 20,
               }}
@@ -840,6 +849,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="39"
+              onClick={() => nav('/sports/formula-1')}
               style={{
                 paddingLeft: 20,
               }}
@@ -855,6 +865,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="40"
+              onClick={() => nav('/sports/futsal')}
               style={{
                 paddingLeft: 20,
               }}
@@ -870,6 +881,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="41"
+              onClick={() => nav('/sports/gaelic-hurling')}
               style={{
                 paddingLeft: 20,
               }}
@@ -885,6 +897,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="42"
+              onClick={() => nav('/sports/golf')}
               style={{
                 paddingLeft: 20,
               }}
@@ -900,6 +913,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="43"
+              onClick={() => nav('/sports/handball')}
               style={{
                 paddingLeft: 20,
               }}
@@ -915,6 +929,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="44"
+              onClick={() => nav('/sports/ice-hockey')}
               style={{
                 paddingLeft: 20,
               }}
@@ -930,6 +945,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="45"
+              onClick={() => nav('/sports/indy-racing')}
               style={{
                 paddingLeft: 20,
               }}
@@ -945,6 +961,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="46"
+              onClick={() => nav('/sports/league-of-legends')}
               style={{
                 paddingLeft: 20,
               }}
@@ -960,6 +977,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="47"
+              onClick={() => nav('/sports/mma')}
               style={{
                 paddingLeft: 20,
               }}
@@ -975,6 +993,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="48"
+              onClick={() => nav('/sports/motorcycle-racing')}
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -990,6 +1010,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="49"
+              onClick={() => nav('/sports/pesapallo')}
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -1005,6 +1027,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="50"
+              onClick={() => nav('/sports/politics-entertainment')}
+             
               style={{
                 paddingLeft: 20,
               }}
@@ -1020,6 +1044,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="51"
+              onClick={() => nav('/sports/rainbow-six')}
+           
               style={{
                 paddingLeft: 20,
               }}
@@ -1035,6 +1061,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="52"
+              onClick={() => nav('/sports/rugby')}
+           
               style={{
                 paddingLeft: 20,
               }}
@@ -1050,6 +1078,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="53"
+              onClick={() => nav('/sports/ski-jumping')}
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1065,6 +1095,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="54"
+              onClick={() => nav('/sports/snooker')}
+            
               style={{
                 paddingLeft: 20,
               }}
@@ -1075,11 +1107,13 @@ const Sidebar = () => {
                   paddingLeft: 8,
                 }}
               >
-                snooker
+                Snooker
               </button>
             </Menu.Item>
             <Menu.Item
               key="55"
+              onClick={() => nav('/sports/soccer')}
+              
               style={{
                 paddingLeft: 20,
               }}
@@ -1095,6 +1129,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="56"
+              onClick={() => nav('/sports/stock-car-racing')}
+            
               style={{
                 paddingLeft: 20,
               }}
@@ -1110,6 +1146,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="57"
+              onClick={() => nav('/sports/table-tennis')}
               style={{
                 paddingLeft: 20,
               }}
@@ -1125,6 +1162,7 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="58"
+              onClick={() => nav('/sports/tennis')}
               style={{
                 paddingLeft: 20,
               }}
@@ -1140,6 +1178,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="59"
+              onClick={() => nav('/sports/volleyball')}
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1155,6 +1195,8 @@ const Sidebar = () => {
             </Menu.Item>
             <Menu.Item
               key="60"
+              onClick={() => nav('/sports/waterpolo')}
+         
               style={{
                 paddingLeft: 20,
               }}
@@ -1495,6 +1537,7 @@ const Sidebar = () => {
             <Divider />
           </SubMenu>
           <Menu
+            onClick={() => nav('/blog')}
             className="menu-bar"
             mode="inline"
             items={[

@@ -1,12 +1,21 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Modal, ModalOverlay, ModalHeader, ModalFooter, ModalContent, ModalCloseButton, ModalBody } from '@chakra-ui/react'
 import { SiBitcoin } from 'react-icons/si'
 import { AiOutlineStar } from 'react-icons/ai'
-import { SimpleGrid, Stack, Image, Text, HStack, Tooltip, chakra, transition } from '@chakra-ui/react'
+import { RiContactsBook2Fill } from 'react-icons/ri'
+import { SimpleGrid, Stack, Image, Text, HStack, Tooltip, chakra, useDisclosure } from '@chakra-ui/react'
 import gulag from '../../../../assets/images/GULAG.jfif'
+import CreatedByModal from './CreatedByModal'
 
 const Card = () => {
 
     const [isHovering, setHovering] = useState('')
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [scrollBehavior, setScrollBehavior] = useState('inside')
+
+
+    const btnRef = useRef(null)
 
     function handleMouseEnter() {
 
@@ -78,10 +87,40 @@ const Card = () => {
                                 C
                             </chakra.span>
                         </Tooltip>
-                        <chakra.span color={'white'} fontSize={'1rem'} fontWeight={700} >
+                        <chakra.span onClick={onOpen} color={'white'} fontSize={'1rem'} fontWeight={700} >
                             Caelum
                         </chakra.span>
                     </HStack>
+
+                    {/* Caelum Modal */}
+
+                    <Modal
+                        onClose={onClose}
+                        finalFocusRef={btnRef}
+                        isOpen={isOpen}
+                        scrollBehavior={scrollBehavior}
+                        size={'lg'}
+
+                    >
+                        <ModalOverlay />
+                        <ModalContent bg={'#1A2C38'} >
+                            <ModalHeader>
+                                <Stack direction={'row'} alignItems={'center'} >
+                                    <RiContactsBook2Fill color={'#B1BAD3'} />
+                                    <Text color={'white'} >  Caelum </Text>
+                                </Stack>
+                            </ModalHeader>
+                            <ModalCloseButton bg={'white'} color={'black'} />
+                            <ModalBody  >
+                                <CreatedByModal />
+                            </ModalBody>
+
+                        </ModalContent>
+                    </Modal>
+
+
+
+
                 </Stack>
             </Stack>
         </Stack>
