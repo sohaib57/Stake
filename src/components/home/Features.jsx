@@ -34,7 +34,7 @@ const Features = () => {
           justifyContent={'space-between'}
           spacing={{ base: '6', lg: '0' }}
         >
-          {/* left card */}
+          {/* left card */} 
           <Stack height={'full'} width={{ base: '100%', md: '48%' }}>
             <HStack pb={'2'}>
               <GiCardAceClubs fontSize={'1.5rem'} />

@@ -22,7 +22,7 @@ const Header = () => {
                                 </Text>
                             </HStack>
 
-                            <Progress borderRadius="1rem" bg={'#2F4553'} />
+                            <Progress borderRadius="1rem" bg={'#fff'} />
 
                             <HStack justifyContent={'space-between'} fontWeight={'600'} >
 
