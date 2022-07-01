@@ -18,8 +18,8 @@ import bets from '../../../assets/images/bets.png';
 const MyBets = () => {
   const nav = useNavigate();
   return (
-    <Stack bg={'#000000ed'} px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
-      <HStack pb={'6'} spacing={'2'}>
+    <Stack pt={'4'} margin={'0px !important'}  px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
+      <HStack margin={'0px !important'} pb={'6'} spacing={'2'}>
         <BsFillBookmarkDashFill color="#b1bad3" />
         <Text fontSize={'lg'} fontWeight={'600'} color={'white'}>
           My Bets
@@ -32,7 +32,7 @@ const MyBets = () => {
           overflowX={'auto'}
           maxW={'fit-content'}
           borderRadius={'full'}
-          bgColor={'#010101'}
+          bgColor={'black'}
         >
           <Stack direction={'row'} p={'2'}>
             <Tab

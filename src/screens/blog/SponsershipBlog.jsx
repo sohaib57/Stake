@@ -17,7 +17,7 @@ const SponsershipBLOG = () => {
   const nav = useNavigate();
   return (
     <LayoutComp>
-      <VStack bgColor={'#1A2C38'} p={'4'}>
+      <VStack bgColor={'#000000ed'} p={'4'}>
         <Stack w={{base:'100%',md:'50%'}}>
           <Heading color={'white'} fontSize={{base:'md',md:'lg',lg:'4xl'}}>
             Stake.com to sponsor middleweight championship unification fight

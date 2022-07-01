@@ -66,6 +66,7 @@ const BlogComp = () => {
             py={'9'}
             px={{ base: '4', md: '6', lg: '8' }}
             bgColor={'#000000ed'}
+            margin={'0px !important'}
           >
             {/* mlb Image */}
             <Stack flex={'3'} className={'arrow'}>
@@ -98,6 +99,7 @@ const BlogComp = () => {
             spacingX="20px"
             spacingY={'40px'}
             bgColor={'#000000ed'}
+            margin={'0px !important'}
           >
             <Stack onClick={() => nav('/blog/category/crypto')}>
               <BlogCard img={BCard1} name={'Crypto'} />
@@ -127,6 +129,7 @@ const BlogComp = () => {
             spacingX="20px"
             spacingY={'40px'}
             bgColor={'#000000ed'}
+            margin={'0px !important'}
           >
             <BlogsCategoryCard
               heading={'How to Buy Crypto'}

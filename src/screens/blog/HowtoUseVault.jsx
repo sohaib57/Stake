@@ -17,7 +17,7 @@ const HowtoUseVault = () => {
   const nav = useNavigate();
   return (
     <LayoutComp>
-      <Stack alignItems={'center'} bgColor={'#1A2C38'} py={'4'} px={'4'}>
+      <Stack alignItems={'center'} bgColor={'#000000ed'} py={'4'} px={'4'}>
         <Stack w={{base:'100%',md:'50%'}}>
           <Heading color={'white'} fontSize={{base:'lg',md:'xl',lg:'2xl'}}>How to use our vault</Heading>
           {/* Publish Date and Social */}

@@ -44,7 +44,7 @@ const Card = () => {
                 <Image src={gulag} borderTopRadius={'lg'} >
 
                 </Image>
-                <Stack bg={'#213743'} p={'4'} margin={'0px !important'} borderBottomRadius={'lg'} >
+                <Stack bg={'black'} p={'4'} margin={'0px !important'} borderBottomRadius={'lg'} >
                     <Text fontSize={'md'} fontWeight={700} color={'#fff'} >
                         Remember Gulag
                     </Text>
@@ -103,15 +103,15 @@ const Card = () => {
 
                     >
                         <ModalOverlay />
-                        <ModalContent bg={'#1A2C38'} >
-                            <ModalHeader>
+                        <ModalContent >
+                            <ModalHeader bg={'#000000f2'}  >
                                 <Stack direction={'row'} alignItems={'center'} >
                                     <RiContactsBook2Fill color={'#B1BAD3'} />
                                     <Text color={'white'} >  Caelum </Text>
                                 </Stack>
                             </ModalHeader>
                             <ModalCloseButton bg={'white'} color={'black'} />
-                            <ModalBody  >
+                            <ModalBody bg={'#000000ed'} >
                                 <CreatedByModal />
                             </ModalBody>
 

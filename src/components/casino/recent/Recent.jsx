@@ -65,7 +65,7 @@ const RecentComp = () => {
         bgImage={FavouriteLogo}
         bgRepeat={'no-repeat'}
         bgPos={'right'}
-        bgColor={'#213743'}
+        bgColor={'#000000e3'}
       >
         <Heading
           position={'absolute'}
@@ -79,7 +79,7 @@ const RecentComp = () => {
       {/* Body Section */}
       <Stack
         w={'100%'}
-        bgColor={'#1A2C38'}
+        bgColor={'#000000ed'}
         px={'6'}
         marginTop={'0px !Important'}
       >
@@ -93,7 +93,7 @@ const RecentComp = () => {
             />
             <Input
               placeholder="Search your game"
-              bgColor={'#0F212E'}
+              bgColor={'black'}
               borderRadius={'full'}
               _hover={{ borderColor: '#557086' }}
             />
@@ -114,7 +114,7 @@ const RecentComp = () => {
                 overflowX={'auto'}
                 w={'fit-content'}
                 borderRadius={'full'}
-                bgColor={'#0F212E'}
+                bgColor={'black'}
               >
                 <Stack direction={'row'} p={'2'}>
                   <Tab

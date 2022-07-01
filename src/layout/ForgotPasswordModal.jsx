@@ -67,9 +67,9 @@ const ForgotPasswordModal = () => {
               />
             </FormControl>
             <Button
-            mt={'6'}
-            mb={'4'}
-            py={'7'}
+              mt={'6'}
+              mb={'4'}
+              py={'7'}
               w={'full'}
               _active={{}}
               _focus={{}}

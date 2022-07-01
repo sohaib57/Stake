@@ -26,7 +26,7 @@ const ChallengesBody = () => {
 
 
   return (
-    <Stack width={'100%'} margin={'0px !important'} bg={'#1A2C38'} >
+    <Stack width={'100%'} margin={'0px !important'} bg={' #000000ed'} >
       <Stack margin={'0px !important'} justifyContent={'center'} alignItems={'baseline'} px={{ base: '2', lg: '6' }} pt={'5'}  >
 
         <Tabs width={'100%'} variant="soft-rounded" colorScheme="green">
@@ -35,7 +35,7 @@ const ChallengesBody = () => {
             <TabList
               overflowX={'auto'}
               borderRadius={'full'}
-              bgColor={'#0F212E'}
+              bgColor={'black'}
               p={'1'}
             >
               <Tab
@@ -82,7 +82,7 @@ const ChallengesBody = () => {
               <Text fontSize={'md'} >
                 SortBy
               </Text>
-              <Select _hover={{ bg: '#071824' }} _focusVisible={{}} bg={'#0f212e'} variant='filled' placeholder='Created' >
+              <Select _hover={{ bg: '#071824' }} _focusVisible={{}} bg={'black'} variant='filled' placeholder='Created' >
 
                 <option style={{ color: 'black' }}  >Prize</option>
                 <option style={{ color: 'black' }}   >Bet size</option>

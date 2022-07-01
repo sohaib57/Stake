@@ -4,7 +4,7 @@ import { AiOutlineStar, AiFillEyeInvisible, AiFillWallet } from 'react-icons/ai'
 const CreatedByModal = () => {
     return (
 
-        <Stack spacing={'4'} margin={'0px !important'} alignItems={'center'} px={{ base: '2', lg: '6' }} pt={'2'}  >
+        <Stack  spacing={'4'} margin={'0px !important'} alignItems={'center'} px={{ base: '2', lg: '6' }} pt={'2'}  >
 
             <HStack>
                 <Tooltip bg={'white'} textAlign={'center'} color={'black'} placement='top' label="Bronze" aria-label='A tooltip' >
@@ -56,7 +56,7 @@ const CreatedByModal = () => {
                     <TabList
                         overflowX={'auto'}
                         borderRadius={'full'}
-                        bgColor={'#0F212E'}
+                        bgColor={'black'}
                         p={'1'}
                     >
                         <Tab
@@ -104,9 +104,9 @@ const CreatedByModal = () => {
                     </TabPanel>
                     <TabPanel>
                         <Stack alignItems={'center'} >
-                            <Select maxWidth={'fit-content'} color={'white'} bg={'#0F212E'} borderColor={'#e2e8f0'} variant='outline' >
-                                <option _hover={{}} style={{ color: 'white', backgroundColor: '#0F212E' }}>Luckiest</option>
-                                <option _hover={{}} style={{ color: 'white', backgroundColor: '#0F212E' }}  >biggest</option>
+                            <Select maxWidth={'fit-content'} color={'white'} bg={'black'} borderColor={'#e2e8f0'} variant='outline' >
+                                <option _hover={{}} style={{ color: 'white', backgroundColor: 'black' }}>Luckiest</option>
+                                <option _hover={{}} style={{ color: 'white', backgroundColor: 'black' }}  >biggest</option>
 
                             </Select>
                         </Stack>

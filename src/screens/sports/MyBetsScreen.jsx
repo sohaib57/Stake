@@ -10,9 +10,11 @@ const MyBetsScreen = () => {
 
   return (
     <LayoutComp>
-      <Stack py={'4'}>
+      <Stack>
+        <Stack  margin={'0px !important'}  bg={'#000000ed'}>
         <MyBets />
-        <Stack px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
+        </Stack>
+        <Stack margin={'0px !important'} bg={'#000000ed'} px={{ base: '2', md: '8', lg: '12', xl: '16' }}>
           <SportsStats />
         </Stack>
       </Stack>

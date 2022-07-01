@@ -11,6 +11,11 @@ import {
   ModalCloseButton,
   ModalBody,
   useDisclosure,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Text,
 } from '@chakra-ui/react';
 
 import { Layout } from 'antd';
@@ -23,6 +28,9 @@ import MobileHeader from './MobileHeader';
 import { useNavigate } from 'react-router-dom';
 import AuthModalContent from './AuthModalContent';
 import ForgotPasswordModal from './ForgotPasswordModal';
+import { FaUserAlt } from 'react-icons/fa';
+import { SiGooglechat } from 'react-icons/si';
+import { BsSearch } from 'react-icons/bs';
 
 const { Header, Content } = Layout;
 
@@ -114,7 +122,7 @@ const LayoutComp = ({ children }) => {
               alignItems={'center'}
               pr={{ base: '2', md: '10' }}
             >
-              {/* <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
+              <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
                 <BsSearch color="white" size={15} />
                 <Text
                   color="white"
@@ -124,38 +132,19 @@ const LayoutComp = ({ children }) => {
                 >
                   Search
                 </Text>
-              </HStack> */}
-              <Stack spacing={'4'} direction={'row'}>
-                <Button
-                  onClick={() => {
-                    onOpen();
-                    setIndex(1);
-                  }}
-                  color={'white'}
-                  fontSize={'md'}
-                  fontWeight={'700'}
-                  variant={'link'}
-                  _hover={{}}
-                >
-                  Sign In
-                </Button>
-                <Button
-                  onClick={() => {
-                    onOpen();
-                    setIndex(0);
-                  }}
-                  size={'md'}
-                  color={'white'}
-                  fontSize={'md'}
-                  fontWeight={'700'}
-                  colorScheme={'blue'}
-                  _hover={{}}
-                >
-                  Register
-                </Button>
-              </Stack>
+              </HStack>
+              {/* <Stack spacing={'4'} direction={'row'}>
+                <Button onClick={() => {
+                  onOpen()
+                  setIndex(1)
+                }} color={'white'} fontSize={'md'} fontWeight={'700'} variant={'link'} _hover={{}}>Sign In</Button>
+                <Button onClick={() => {
+                  onOpen()
+                  setIndex(0)
+                }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
+              </Stack> */}
 
-              {/* <Stack alignSelf={'center'} >
+              <Stack alignSelf={'center'} >
                 <Menu>
                   <MenuButton
                     as={Button}
@@ -208,7 +197,7 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Bet Slip</MenuItem>
                   </MenuList>
                 </Menu>
-              </Stack> */}
+              </Stack>
             </Stack>
           </Stack>
           {/* Auth Modal */}
