@@ -21,11 +21,11 @@ import BlogsCategoryCard from '../../components/blog/BlogsCategoryCard';
 const CryptoBlogsScreen = () => {
   return (
     <LayoutComp>
-      <Stack bgColor={'#1A2C38'}>
+      <Stack >
         {' '}
         {/* header */}
         <Stack
-          bgColor={'#213743'}
+          bgColor={'#000000e3'}
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '4', md: '8', lg: '12', xl: '14' }}
@@ -42,6 +42,8 @@ const CryptoBlogsScreen = () => {
         </Stack>
         {/* blogs */}
         <SimpleGrid
+          margin={'0px !important'}
+          bg={'#000000ed'}
           px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'6'}
           columns={{ base: 1, md: 2, lg: 3 }}
@@ -124,6 +126,8 @@ const CryptoBlogsScreen = () => {
           direction="row"
           spacing={4}
           align="center"
+          bg={'#000000ed'}
+          margin={'0px !important'}
         >
           <Button isDisabled color={'#8B95AB'} variant="link">
             Previous

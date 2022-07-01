@@ -15,11 +15,11 @@ import LayoutComp from '../../layout/LayoutComp';
 const OtherBlogs = () => {
   return (
     <LayoutComp>
-      <Stack bgColor={'#1A2C38'}>
+      <Stack >
         {' '}
         {/* header */}
         <Stack
-          bgColor={'#213743'}
+          bgColor={'#000000e3'}
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '2', md: '8', lg: '12', xl: '14' }}
@@ -41,6 +41,8 @@ const OtherBlogs = () => {
           columns={{ base: 1, md: 2, lg: 3 }}
           spacingX="20px"
           spacingY={'40px'}
+          bg={'#000000ed'}
+          margin={'0px !important'}
         >
           <BlogsCategoryCard
             heading={
@@ -71,6 +73,8 @@ const OtherBlogs = () => {
           direction="row"
           spacing={4}
           align="center"
+          bg={'#000000ed'}
+          margin={'0px !important'}
         >
           <Button isDisabled color={'#8B95AB'} variant="link">
             Previous

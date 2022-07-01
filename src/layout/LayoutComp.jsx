@@ -94,7 +94,7 @@ const LayoutComp = ({ children }) => {
               alignItems={'center'}
               pr={{ base: '2', md: '10' }}
             >
-              {/* <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
+              <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
                 <BsSearch color="white" size={15} />
                 <Text
                   color="white"
@@ -104,8 +104,8 @@ const LayoutComp = ({ children }) => {
                 >
                   Search
                 </Text>
-              </HStack> */}
-              <Stack spacing={'4'} direction={'row'}>
+              </HStack>
+              {/* <Stack spacing={'4'} direction={'row'}>
                 <Button onClick={() => {
                   onOpen()
                   setIndex(1)
@@ -114,9 +114,9 @@ const LayoutComp = ({ children }) => {
                   onOpen()
                   setIndex(0)
                 }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
-              </Stack>
+              </Stack> */}
 
-              {/* <Stack alignSelf={'center'} >
+              <Stack alignSelf={'center'} >
                 <Menu>
                   <MenuButton
                     as={Button}
@@ -169,7 +169,7 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Bet Slip</MenuItem>
                   </MenuList>
                 </Menu>
-              </Stack> */}
+              </Stack>
             </Stack>
           </Stack>
           {/* <Stack direction={'row'} pr={10}>

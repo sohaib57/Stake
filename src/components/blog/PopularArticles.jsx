@@ -10,7 +10,7 @@ const PopularArticles = () => {
       px={{ base: '4', md: '8', lg: '12', xl: '14' }}
       py={'6'}
       mt={'0 !important'}
-      bg={'#213743'}
+      bg={'#000000ed'}
     >
       <Heading
         color={'white'}

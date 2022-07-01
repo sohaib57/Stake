@@ -23,12 +23,12 @@ import { useNavigate } from 'react-router-dom';
 import CasinoStats from '../home/stats/CasinoStats';
 const CasinoGroupLayout = ({ heading, headerImg, game }) => {
   const nav = useNavigate();
-  return (
+  return (  
     <LayoutComp>
       <Stack>
         {/* header */}
         <Stack
-          bgColor={'#213743'}
+          bgColor={' #000000e3'}
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '2', md: '8', lg: '12', xl: '14' }}
@@ -44,7 +44,7 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
           </Stack>
         </Stack>
         {/* body */}
-        <Stack marginTop={'0 !important'} bgColor={'#1A2C38'}>
+        <Stack marginTop={'0 !important'} bgColor={'#000000ed'}>
           {/* search bar */}
           <Stack
             px={{ base: '2', md: '8', lg: '12', xl: '14' }}
@@ -68,7 +68,7 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               <Input
                 color={'white'}
                 focusBorderColor="none"
-                bgColor={'#0F212E'}
+                bgColor={'black'}
                 borderRadius={'full'}
                 placeholder="Search your game"
                 size="md"
@@ -104,9 +104,9 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               <Select
                 fontSize={'sm'}
                 fontWeight={'500'}
-                _hover={{ bg: '#071824' , cursor:'pointer' }}
+                _hover={{ bg: 'black' , cursor:'pointer' }}
                 _focusVisible={{}}
-                bg={'#0F212E'}
+                bg={'black'}
                 variant="filled"
                 placeholder="Providers"
               >
@@ -135,9 +135,9 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
               <Select
                 fontSize={'sm'}
                 fontWeight={'500'}
-                _hover={{ bg: '#071824' , cursor:'pointer' }}
+                _hover={{ bg: 'black' , cursor:'pointer' }}
                 _focusVisible={{}}
-                bg={'#0F212E'}
+                bg={'black'}
                 variant="filled"
                 placeholder="Popular"
               >

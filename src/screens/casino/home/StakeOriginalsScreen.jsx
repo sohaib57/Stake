@@ -30,7 +30,7 @@ const StakeOriginalsScreen = () => {
       <Stack>
         {/* header */}
         <Stack
-          bgColor={'#213743'}
+          bgColor={'#000000e3'}
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
@@ -50,7 +50,7 @@ const StakeOriginalsScreen = () => {
           pb={'6'}
           px={{ base: '2', md: '8', lg: '12', xl: '16' }}
           marginTop={'0 !important'}
-          bgColor={'#1A2C38'}
+          bgColor={'#000000ed'}
         >
           {/* search bar */}
           <Stack
@@ -58,6 +58,7 @@ const StakeOriginalsScreen = () => {
             display={{ base: 'none', md: 'flex' }}
             pt={'8'}
             pb={'6'}
+           
           >
             <InputGroup
               borderColor={'gray'}
@@ -74,7 +75,7 @@ const StakeOriginalsScreen = () => {
               <Input
                 color={'white'}
                 focusBorderColor="none"
-                bgColor={'#0F212E'}
+                bgColor={'black'}
                 borderRadius={'full'}
                 placeholder="Search your game"
                 size="md"
@@ -90,7 +91,7 @@ const StakeOriginalsScreen = () => {
               color={'white'}
               _hover={{}}
               _focus={{}}
-              bgColor={'#071824'}
+              
             >
               View All Providers
             </Button>
@@ -112,7 +113,7 @@ const StakeOriginalsScreen = () => {
                 fontWeight={'500'}
                 _hover={{ bg: '#071824' }}
                 _focusVisible={{}}
-                bg={'#0F212E'}
+                bg={'black'}
                 variant="filled"
                 placeholder="Popular"
               >

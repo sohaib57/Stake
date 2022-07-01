@@ -23,7 +23,7 @@ const BuyCryptoComp = () => {
   return (
     <>
       <LayoutComp>
-        <Stack px={'4'} alignItems={'center'} bgColor={'#1A2C38'} py={'4'}>
+        <Stack px={'4'} alignItems={'center'} bgColor={'#000000ed'} py={'4'}>
           <Stack w={{base:'100%',md:'50%'}}>
             <Heading color={'white'} pb={{base:'4',md:'2'}}>How to Buy Crypto</Heading>
             {/* Publish Date and Social */}

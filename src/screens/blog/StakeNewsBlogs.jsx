@@ -19,7 +19,7 @@ import LayoutComp from '../../layout/LayoutComp';
 const StakeNewsBlogs = () => {
   return (
     <LayoutComp>
-      <Stack bgColor={'#1A2C38'}>
+      <Stack >
         {' '}
         {/* header */}
         <Stack
@@ -28,6 +28,7 @@ const StakeNewsBlogs = () => {
           direction={'row'}
           px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'2'}
+          bg={'#000000e3'}
         >
           <Center minW={'fit-content'}>
             <Text fontSize={'2xl'} fontWeight={'600'} color={'white'}>
@@ -40,11 +41,13 @@ const StakeNewsBlogs = () => {
         </Stack>
         {/* blogs */}
         <SimpleGrid
-        px={{ base: '4', md: '8', lg: '12', xl: '14' }}
+          px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'6'}
           columns={{ base: 1, md: 2, lg: 3 }}
           spacingX="20px"
           spacingY={'40px'}
+          margin={'0px !important'}
+          bg={'#000000ed'}
         >
           <BlogsCategoryCard
             heading={
@@ -106,6 +109,8 @@ const StakeNewsBlogs = () => {
           direction="row"
           spacing={4}
           align="center"
+          bg={'#000000ed'}
+          margin={'0px !important'}
         >
           <Button isDisabled color={'#8B95AB'} variant="link">
             Previous

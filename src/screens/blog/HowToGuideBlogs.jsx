@@ -25,18 +25,18 @@ import LayoutComp from '../../layout/LayoutComp';
 const HowToGuideBlogs = () => {
   return (
     <LayoutComp>
-      <Stack bgColor={'#1A2C38'}>
+      <Stack >
         {' '}
         {/* header */}
         <Stack
-          bgColor={'#213743'}
+          bgColor={'#000000e3'}
           justifyContent={'space-between'}
           direction={'row'}
           px={{ base: '4', md: '8', lg: '12', xl: '14' }}
           py={'2'}
         >
           <Center minW={'fit-content'}>
-            <Text  fontSize={{base:'md'}} fontWeight={'600'} color={'white'}>
+            <Text fontSize={{ base: 'md' }} fontWeight={'600'} color={'white'}>
               How to Guides
             </Text>
           </Center>
@@ -51,6 +51,8 @@ const HowToGuideBlogs = () => {
           columns={{ base: 1, md: 2, lg: 3 }}
           spacingX="20px"
           spacingY={'40px'}
+          bg={'#000000ed'}
+          margin={'0px !important'}
         >
           <BlogsCategoryCard
             heading={'How to use our vault'}
@@ -156,12 +158,14 @@ const HowToGuideBlogs = () => {
         </SimpleGrid>
         {/* pagination */}
         <Stack
+          margin={'0px !important'}
           justifyContent={'center'}
           pt={'2'}
           pb={'8'}
           direction="row"
           spacing={4}
           align="center"
+          bg={'#000000ed'}
         >
           <Button isDisabled color={'#8B95AB'} variant="link">
             Previous

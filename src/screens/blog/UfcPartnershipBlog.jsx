@@ -17,7 +17,7 @@ const UfcPartnershipBlog = () => {
   const nav = useNavigate();
   return (
     <LayoutComp>
-      <VStack bgColor={'#1A2C38'} py={'4'}>
+      <VStack bgColor={'#000000ed'} py={'4'}>
         <Stack w={'50%'}>
           <Heading color={'white'}>
             UFC®, the World’s Premier Mixed Martial Arts Organization, Today

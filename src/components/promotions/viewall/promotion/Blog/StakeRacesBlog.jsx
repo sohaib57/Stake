@@ -8,7 +8,7 @@ const StakeRaces = () => {
     const nav = useNavigate('')
 
     return (
-        <Stack width={'100%'} bg={'#1A2C38'} py={'6'} >
+        <Stack width={'100%'} bg={'#000000ed'} py={'6'} >
             <Center width={'100%'} >
                 <Stack px={'3'} justifyContent={'left'} width={{ base: '100%', lg: '50%' }} color={'#b1bad3'} spacing={'3'} >
                     <Img src={dailyRaces} />
