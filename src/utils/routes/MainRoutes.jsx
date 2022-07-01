@@ -98,7 +98,7 @@ import Casino from '../../screens/viewall/category/Casino';
 import Sports from '../../screens/viewall/category/Sports';
 import UfcPartnershipBlog from '../../screens/blog/UfcPartnershipBlog';
 import MlbBlog from '../../screens/blog/MlbBlog';
-import Settings from '../../components/setting/Settings';
+import Settings from '../../components/profilemenuheader/settings/Settings';
 
 const MainRoutes = () => {
   return (

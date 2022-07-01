@@ -1,5 +1,5 @@
 import React from 'react';
-import LayoutComp from '../../layout/LayoutComp';
+import LayoutComp from '../../../layout/LayoutComp';
 import {
   Heading,
   HStack,
@@ -176,7 +176,7 @@ const Settings = () => {
                           pr={'3'}
                         >
                           <Button variant={'link'}>Resend Email</Button>
-                          <Button size={'lg'} variant={'solid'}>
+                          <Button size={'md'} variant={'solid'}>
                             {' '}
                             Save
                           </Button>
@@ -2036,7 +2036,7 @@ const Settings = () => {
                           pr={'3'}
                         >
                           <Button variant={'link'}>Verify</Button>
-                          <Button size={'lg'} variant={'solid'}>
+                          <Button size={'md'} variant={'solid'}>
                             {' '}
                             Submit
                           </Button>
