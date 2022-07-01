@@ -1,25 +1,42 @@
 import React, { useState } from 'react';
-import { Stack, Img, Select, HStack, Button, Text, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure, Divider } from '@chakra-ui/react';
-import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-import { BsSearch } from 'react-icons/bs';
-import { FaUserAlt, FaBitcoin } from 'react-icons/fa';
-import { SiGooglechat } from 'react-icons/si';
+import {
+  Stack,
+  Img,
+  Select,
+  HStack,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
+} from '@chakra-ui/react';
+
 import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import stakeLogo from '../assets/images/stake.png'
-import cryptoBox from '../assets/images/cryptoBox.jpg'
+import cryptoBox from '../assets/images/cryptoBox.jpg';
 import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
 import { useNavigate } from 'react-router-dom';
 import AuthModalContent from './AuthModalContent';
+import ForgotPasswordModal from './ForgotPasswordModal';
 
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
-  const [index, setIndex] = useState()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const styles = {
+    global: {
+      '.chakra-divider': {
+        borderColor: 'red !important',
+        opacity: 1,
+      },
+    },
+  };
+  const [index, setIndex] = useState();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const nav = useNavigate();
   return (
     <Layout
@@ -37,8 +54,12 @@ const LayoutComp = ({ children }) => {
             padding: 0,
           }}
         >
-          <Stack margin={'0px !important'} direction={'row'} justifyContent={'space-between'}>
-            <Stack pl={{ md: '8' }} >
+          <Stack
+            margin={'0px !important'}
+            direction={'row'}
+            justifyContent={'space-between'}
+          >
+            <Stack pl={{ md: '8' }}>
               <Img
                 src={cryptoBox}
                 cursor={'pointer'}
@@ -48,7 +69,6 @@ const LayoutComp = ({ children }) => {
               />
             </Stack>
             <Stack>
-
               <HStack spacing={0}>
                 <Select
                   borderLeftRadius={'5px'}
@@ -106,14 +126,33 @@ const LayoutComp = ({ children }) => {
                 </Text>
               </HStack> */}
               <Stack spacing={'4'} direction={'row'}>
-                <Button onClick={() => {
-                  onOpen()
-                  setIndex(1)
-                }} color={'white'} fontSize={'md'} fontWeight={'700'} variant={'link'} _hover={{}}>Sign In</Button>
-                <Button onClick={() => {
-                  onOpen()
-                  setIndex(0)
-                }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
+                <Button
+                  onClick={() => {
+                    onOpen();
+                    setIndex(1);
+                  }}
+                  color={'white'}
+                  fontSize={'md'}
+                  fontWeight={'700'}
+                  variant={'link'}
+                  _hover={{}}
+                >
+                  Sign In
+                </Button>
+                <Button
+                  onClick={() => {
+                    onOpen();
+                    setIndex(0);
+                  }}
+                  size={'md'}
+                  color={'white'}
+                  fontSize={'md'}
+                  fontWeight={'700'}
+                  colorScheme={'blue'}
+                  _hover={{}}
+                >
+                  Register
+                </Button>
               </Stack>
 
               {/* <Stack alignSelf={'center'} >
@@ -172,38 +211,14 @@ const LayoutComp = ({ children }) => {
               </Stack> */}
             </Stack>
           </Stack>
-          {/* <Stack direction={'row'} pr={10}>
-            <Stack>
-
-              <Img src={Stake} alt="stake" width={130} />
-
-            </Stack>
-            <Spacer />
-
-            <div className="button-section">
-              <Button type="text">Sign In</Button>
-
-              <Button type="primary">Register</Button>
-            </div>
-          </Stack> */}
-          {/* Authy Modal */}
-          <Modal isCentered  isOpen={isOpen} onClose={onClose}>
+          {/* Auth Modal */}
+          <Modal scrollBehavior='inside' size={'lg'} isCentered isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
               <ModalCloseButton _hover={{}} color={'white'} />
               <ModalBody pt={'4'} bg={'#000000ed'}>
                 <AuthModalContent i={index} />
               </ModalBody>
-
-              <ModalFooter bg={'#000000f2'}>
-                <Stack>
-                  <Stack px={'12'} color={'gray'} direction={'row'}>
-                    <Divider w={'45%'}/>
-                    <Text>OR</Text>
-                    {/* <Divider  w={'45%'}/> */}
-                  </Stack>
-                </Stack>
-              </ModalFooter>
             </ModalContent>
           </Modal>
         </Header>

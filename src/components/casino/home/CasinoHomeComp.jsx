@@ -48,7 +48,6 @@ import CasinoStats from './stats/CasinoStats';
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {
-    // dots: true,
     infinite: true,
     nextArrow: <IoIosArrowForward color="white" />,
     prevArrow: <MdArrowBackIos color="white" />,
@@ -64,7 +63,7 @@ const CasinoHomeComp = () => {
           slidesToScroll: 3,
           initialSlide: 3,
           infinite: true,
-          // dots: true,
+    
         },
       },
       {
