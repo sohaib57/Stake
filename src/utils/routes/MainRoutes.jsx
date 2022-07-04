@@ -156,7 +156,7 @@ const MainRoutes = () => {
       <Route path="/drake" element={<Drake />} />
       <Route path="/watford" element={<WatfordFC />} />
       <Route path="/kun-aguero" element={<KunAguero />} />
-      <Route path="/ufc" elemen t={<UFC />} />
+      <Route path="/ufc" element={<UFC />} />
       <Route path="/adesanya" element={<IsraelAdesanya />} />
       <Route path="/jose-aldo" element={<JoseAldo />} />
       <Route path="/alexa-grasso" element={<AlexaGrasso />} />
