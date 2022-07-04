@@ -31,18 +31,11 @@ import ForgotPasswordModal from './ForgotPasswordModal';
 import { FaUserAlt } from 'react-icons/fa';
 import { SiGooglechat } from 'react-icons/si';
 import { BsSearch } from 'react-icons/bs';
+import WalletModal from '../components/profilemenuheader/wallet/WalletModal';
 
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
-  const styles = {
-    global: {
-      '.chakra-divider': {
-        borderColor: 'red !important',
-        opacity: 1,
-      },
-    },
-  };
   const [index, setIndex] = useState();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const nav = useNavigate();
@@ -144,7 +137,7 @@ const LayoutComp = ({ children }) => {
                 }} size={'md'} color={'white'} fontSize={'md'} fontWeight={'700'} colorScheme={'blue'} _hover={{}}>Register</Button>
               </Stack> */}
 
-              <Stack alignSelf={'center'} >
+              <Stack alignSelf={'center'}>
                 <Menu>
                   <MenuButton
                     as={Button}
@@ -161,7 +154,7 @@ const LayoutComp = ({ children }) => {
                     <FaUserAlt size={15} color={'white'} />
                   </MenuButton>
                   <MenuList lineHeight={6} minW={'fit-content'}>
-                    <MenuItem>Wallet</MenuItem>
+                    <MenuItem><WalletModal/></MenuItem>
                     <MenuItem>Vault</MenuItem>
                     <MenuItem>VIP</MenuItem>
                     <MenuItem>Affiliate</MenuItem>
@@ -169,7 +162,9 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>Transactions</MenuItem>
                     <MenuItem>Sport Bets</MenuItem>
                     <MenuItem>Notifications</MenuItem>
-                    <MenuItem onClick={()=>nav('/settings')}>Settings</MenuItem>
+                    <MenuItem onClick={() => nav('/settings')}>
+                      Settings
+                    </MenuItem>
                     <MenuItem>Live Support</MenuItem>
                     <MenuItem>Logout</MenuItem>
                   </MenuList>
@@ -201,7 +196,13 @@ const LayoutComp = ({ children }) => {
             </Stack>
           </Stack>
           {/* Auth Modal */}
-          <Modal scrollBehavior='inside' size={'lg'} isCentered isOpen={isOpen} onClose={onClose}>
+          <Modal
+            scrollBehavior="inside"
+            size={'lg'}
+            isCentered
+            isOpen={isOpen}
+            onClose={onClose}
+          >
             <ModalOverlay />
             <ModalContent>
               <ModalCloseButton _hover={{}} color={'white'} />

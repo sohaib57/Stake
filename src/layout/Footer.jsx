@@ -10,7 +10,7 @@ import {
   chakra,
 } from '@chakra-ui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RiShareBoxFill } from 'react-icons/ri';
 import bitcoin from '../assets/images/bitcoin.svg';
 import bit from '../assets/images/bit.svg';
@@ -29,10 +29,11 @@ import sponser4 from '../assets/images/sponser4.png';
 import sponser5 from '../assets/images/sponser5.png';
 import stake from '../assets/images/stake.png';
 const Footer = () => {
+  const nav = useNavigate();
   return (
     <Stack
       pt={'12'}
-      pb={{base:'20',md:'12'}}
+      pb={{ base: '20', md: '12' }}
       px={{ base: '4', sm: '6', md: '8', lg: '16' }}
       w={'100%'}
       bgColor={'#000000f2'}
@@ -432,6 +433,7 @@ const Footer = () => {
         </Stack>
       </SimpleGrid>
       <Divider />
+      {/* coin market */}
       <SimpleGrid
         pr={{ base: '4', md: '0' }}
         py={'8'}
@@ -472,6 +474,7 @@ const Footer = () => {
         </Stack>
       </SimpleGrid>
       <Divider />
+      {/* sponsers */}
       <SimpleGrid
         px={'2'}
         pt={'8'}
@@ -481,19 +484,54 @@ const Footer = () => {
         spacing={'40px'}
       >
         <Stack width={'32'}>
-          <Image h={'full'} w={'full'} src={sponser3} />
+          <Image
+            h={'full'}
+            w={'full'}
+            onClick={() => window.open('https://cryptogambling.org/', '_blank')}
+            _hover={{ cursor: 'pointer' }}
+            src={sponser3}
+          />
         </Stack>
         <Stack width={'32'}>
-          <Image h={'full'} w={'full'} src={sponser4} />
+          <Image
+            h={'full'}
+            w={'full'}
+            _hover={{ cursor: 'pointer' }}
+            src={sponser4}
+            onClick={() =>
+              window.open(
+                'https://validator.antillephone.com/validate?domain=stake.com&seal_id=5d725a2a46fe23905dfffc53eb27b556f8bdf5da7901c6d845607cb59eddd12dba8183791dcade9872aa67d0b9bfba19&stamp=95fffa277fcb0a3a95ece3b25c66a400',
+                '_blank'
+              )
+            }
+          />
         </Stack>
         <Stack width={'32'}>
-          <Image h={'full'} w={'full'} src={sponser1} />
+          <Image
+          onClick={()=>nav('/ufc')}
+            h={'full'}
+            w={'full'}
+            _hover={{ cursor: 'pointer' }}
+            src={sponser1}
+          />
         </Stack>
         <Stack width={'32'}>
-          <Image h={'full'} w={'full'} src={sponser2} />
+          <Image
+          onClick={()=>nav('/watford')}
+            h={'full'}
+            w={'full'}
+            _hover={{ cursor: 'pointer' }}
+            src={sponser2}
+          />
         </Stack>
         <Stack width={'32'}>
-          <Image h={'full'} w={'full'} src={sponser5} />
+          <Image
+           onClick={()=>nav('/jose-aldo')}
+            h={'full'}
+            w={'full'}
+            _hover={{ cursor: 'pointer' }}
+            src={sponser5}
+          />
         </Stack>
       </SimpleGrid>
       <Stack alignItems={'center'} className={'copyright'}>
@@ -503,10 +541,20 @@ const Footer = () => {
             <Image h={'full'} w={'full'} src={stake} />
           </Link>
         </Stack>
-        <Text textAlign={'center'} mt={'0 !important'} color={'#b1bad3'} fontSize={{sm:'sm',md:'md'}}>
+        <Text
+          textAlign={'center'}
+          mt={'0 !important'}
+          color={'#b1bad3'}
+          fontSize={{ sm: 'sm', md: 'md' }}
+        >
           © 2022 Stake.com | All Rights Reserved.
         </Text>
-        <Text textAlign={'center'} lineHeight={'1'} color={'#b1bad3'} fontSize={{sm:'sm',md:'md'}}>
+        <Text
+          textAlign={'center'}
+          lineHeight={'1'}
+          color={'#b1bad3'}
+          fontSize={{ sm: 'sm', md: 'md' }}
+        >
           1 BTC = $20,404.00
         </Text>
       </Stack>
