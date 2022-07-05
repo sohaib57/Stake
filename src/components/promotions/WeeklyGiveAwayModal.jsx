@@ -23,7 +23,7 @@ const WeeklyGiveAwayModal = () => {
   return (
     <VStack width={'100%'}>
       <Tabs
-        defaultIndex={2}
+        defaultIndex={0}
         width={'100%'}
         variant="soft-rounded"
         colorScheme="green"

@@ -13,7 +13,7 @@ import { RiShareBoxFill } from 'react-icons/ri';
 const Withdraw = () => {
   return (
     <Stack borderRadius={'lg'} border={'1px solid #2f4553'}>
-      <Stack p={'6'}>
+      <Stack py={'6'} px={{base:'3',md:'6'}}>
         <Heading fontSize={'lg'} fontWeight={'600'} color={'white'}>
           Email
         </Heading>
@@ -41,23 +41,23 @@ const Withdraw = () => {
       <Divider />
       <Stack
         alignItems={'center'}
-        direction={'row'}
+        direction={{base:'column',md:'row'}}
         justifyContent={'space-between'}
-        px={'6'}
+        px={{base:'3',md:'6'}}
         py={'3'}
       >
         <Button
           rightIcon={<RiShareBoxFill />}
           backgroundColor={'#007bff'}
           _hover={{}}
-          fontSize={'md'}
+          fontSize={{base:'sm',md:'md'}}
         >
           Open Gmail
         </Button>
-        <Stack alignItems={'center'} direction={'row'} spacing={'6'}>
+        <Stack marginTop={{base:'6 !important',md:'0 !important'}} alignItems={'center'} direction={'row'} spacing={{base:'10',md:'6'}}>
           <Button
             color={'white'}
-            fontSize={'md'}
+            fontSize={{base:'sm',md:"md"}}
             fontWeight={'500'}
             variant={'link'}
             _hover={{}}

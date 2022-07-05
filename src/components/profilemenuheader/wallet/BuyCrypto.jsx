@@ -55,7 +55,7 @@ const BuyCrypto = () => {
             </NumberInputStepper>
           </NumberInput>
         </FormControl>
-        <Stack w={'20%'} bgColor={'blackAlpha.600'}>
+        <Stack w={{base:'40%',md:'20%'}} bgColor={'blackAlpha.600'}>
           <Select
             px="1"
             alignItems={'center'}
@@ -123,7 +123,7 @@ const BuyCrypto = () => {
             </NumberInputStepper>
           </NumberInput>
         </FormControl>
-        <Stack w={'20%'} bgColor={'blackAlpha.600'}>
+        <Stack  w={{base:'40%',md:'20%'}} bgColor={'blackAlpha.600'}>
           <Select
             px="1"
             alignItems={'center'}

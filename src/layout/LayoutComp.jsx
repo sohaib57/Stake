@@ -16,6 +16,8 @@ import {
   MenuList,
   MenuItem,
   Text,
+  ModalFooter,
+  ModalHeader,
 } from '@chakra-ui/react';
 
 import { Layout } from 'antd';
@@ -32,12 +34,20 @@ import { FaUserAlt } from 'react-icons/fa';
 import { SiGooglechat } from 'react-icons/si';
 import { BsSearch } from 'react-icons/bs';
 import WalletModal from '../components/profilemenuheader/wallet/WalletModal';
+import VaultModal from '../components/profilemenuheader/vault/VaultModal';
+import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
+import { RiContactsBook2Fill } from 'react-icons/ri';
 
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
   const [index, setIndex] = useState();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isRevocationModalOpen,
+    onOpen: onOpenRevocationModal,
+    onClose: onCloseRevocationModal,
+  } = useDisclosure();
   const nav = useNavigate();
   return (
     <Layout
@@ -154,9 +164,13 @@ const LayoutComp = ({ children }) => {
                     <FaUserAlt size={15} color={'white'} />
                   </MenuButton>
                   <MenuList lineHeight={6} minW={'fit-content'}>
-                    <MenuItem><WalletModal/></MenuItem>
-                    <MenuItem>Vault</MenuItem>
-                    <MenuItem>VIP</MenuItem>
+                    <MenuItem>
+                      <WalletModal />
+                    </MenuItem>
+                    <MenuItem>
+                      <VaultModal />
+                    </MenuItem>
+                    <MenuItem onClick={onOpenRevocationModal}>VIP</MenuItem>
                     <MenuItem>Affiliate</MenuItem>
                     <MenuItem>Statistics</MenuItem>
                     <MenuItem>Transactions</MenuItem>
@@ -211,6 +225,33 @@ const LayoutComp = ({ children }) => {
               </ModalBody>
             </ModalContent>
           </Modal>
+          {/* VIP Modal */}
+          <Modal
+              onClose={onCloseRevocationModal}
+              isOpen={isRevocationModalOpen}
+              scrollBehavior={'inside'}
+              size={'lg'}
+            >
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader bg={'#000000f2'}>
+                  <Stack direction={'row'} alignItems={'center'}>
+                    <RiContactsBook2Fill color={'#B1BAD3'} />
+                    <Text color={'white'}> VIP </Text>
+                  </Stack>
+                </ModalHeader>
+                <ModalCloseButton bg={'white'} color={'black'} />
+                <ModalBody bg={'#000000ed'}>
+                  <WeeklyGiveAwayModal />
+                </ModalBody>
+                <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
+                  <Text color={'white'}>
+                    Learn more about being a Stake VIP
+                  </Text>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
         </Header>
         <Content className="site-layout-background">
           <Stack

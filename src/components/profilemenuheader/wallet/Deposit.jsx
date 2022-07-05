@@ -19,7 +19,7 @@ import React from 'react';
 const Deposit = () => {
   return (
     <Stack borderRadius={'lg'} border={'1px solid #2f4553'}>
-      <Stack p={'6'}>
+      <Stack px={{base:'4',md:'6'}} py={'6'}>
         <Heading fontSize={'lg'} fontWeight={'600'} color={'white'}>
           Verification
         </Heading>
@@ -31,7 +31,7 @@ const Deposit = () => {
         {/* form */}
         <Stack spacing={'3'}>
           {/* username */}
-          <Stack direction={'row'}>
+          <Stack direction={{base:'column',md:'row'}}>
             <FormControl isRequired>
               <FormLabel
                 fontSize={'sm'}
@@ -78,7 +78,7 @@ const Deposit = () => {
             <FormLabel fontSize={'sm'} fontWeight={'400'} htmlFor="email">
               Date of Birth
             </FormLabel>
-            <Stack direction={'row'}>
+            <Stack direction={{base:'column',md:'row'}}>
               <NumberInput
                 borderColor={'gray'}
                 _hover={{ borderColor: 'rgb(47,69,83)' }}
@@ -218,7 +218,7 @@ const Deposit = () => {
             />
           </FormControl>
           {/* city & postal code */}
-          <Stack direction={'row'}>
+          <Stack direction={{base:'column',md:'row'}}>
             <FormControl isRequired>
               <FormLabel
                 fontSize={'sm'}
@@ -279,7 +279,7 @@ const Deposit = () => {
         </Stack>
       </Stack>
       <Divider />
-      <Stack px={'6'} py={'3'}>
+      <Stack px={{base:'4',md:'6'}} py={'3'}>
         <Stack
           alignItems={'center'}
           direction={'row'}
@@ -296,7 +296,8 @@ const Deposit = () => {
             borderRadius={'md'}
             bgColor={'#00e701'}
             color={'#013e01'}
-            p={'6'}
+            fontSize={{base:'sm',md:'md'}}
+            p={{base:'4',md:'6'}}
           >
             Continue
           </Button>

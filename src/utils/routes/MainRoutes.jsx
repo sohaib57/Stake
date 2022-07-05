@@ -99,6 +99,7 @@ import Sports from '../../screens/viewall/category/Sports';
 import UfcPartnershipBlog from '../../screens/blog/UfcPartnershipBlog';
 import MlbBlog from '../../screens/blog/MlbBlog';
 import Settings from '../../components/profilemenuheader/settings/Settings';
+import BlogComp from '../../components/blog/BlogComp';
 
 const MainRoutes = () => {
   return (
@@ -115,7 +116,10 @@ const MainRoutes = () => {
       </Route>
       {/* settings */}
 
-      <Route path="/settings" element={<Settings />} />
+      {/* <Route path="/settings" element={<Settings />} /> */}
+      <Route path="/settings/general/*" element={<Settings />}>
+      <Route index  element={<BlogComp />} />
+      </Route>
       {/* Casino challenges screens ends here */}
 
       <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
