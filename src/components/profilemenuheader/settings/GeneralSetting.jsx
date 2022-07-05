@@ -2,8 +2,6 @@ import React from 'react'
 import { Stack, HStack, Button, Divider, Text, Tag, TagLabel, Heading, Select , Input } from '@chakra-ui/react'
 
 
-
-
 const GeneralSetting = () => {
     return (
         <Stack p={'6'} w={'100%'} borderRadius={'xl'} bgColor={'black'}>
