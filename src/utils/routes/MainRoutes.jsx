@@ -99,8 +99,13 @@ import Sports from '../../screens/viewall/category/Sports';
 import UfcPartnershipBlog from '../../screens/blog/UfcPartnershipBlog';
 import MlbBlog from '../../screens/blog/MlbBlog';
 import Settings from '../../components/profilemenuheader/settings/Settings';
-import BlogComp from '../../components/blog/BlogComp';
-
+import GeneralSetting from '../../components/profilemenuheader/settings/GeneralSetting'
+import SecuritySetting from '../../components/profilemenuheader/settings/SecuritySetting'
+import PreferenceSetting from '../../components/profilemenuheader/settings/PreferenceSetting'
+import Api from '../../components/profilemenuheader/settings/Api'
+import IgnoredUsers from '../../components/profilemenuheader/settings/IgnoredUsers'
+import Verify from '../../components/profilemenuheader/settings/Verify'
+import Offers from '../../components/profilemenuheader/settings/Offers'
 const MainRoutes = () => {
   return (
     <Routes>
@@ -117,8 +122,15 @@ const MainRoutes = () => {
       {/* settings */}
 
       {/* <Route path="/settings" element={<Settings />} /> */}
-      <Route path="/settings/general/*" element={<Settings />}>
-      <Route index  element={<BlogComp />} />
+      <Route path="/settings/*" element={<Settings />}>
+      <Route index  element={<GeneralSetting />} />
+      <Route path={'security'}  element={<SecuritySetting />} />
+      <Route path={'preferences'}  element={<PreferenceSetting />} />
+      <Route path={'api'}  element={<Api />} />
+      <Route path={'ignoredusers'}  element={<IgnoredUsers />} />
+      <Route path={'ignoredusers'}  element={<IgnoredUsers />} />
+      <Route path={'verify'}  element={<Verify />} />
+      <Route path={'offers'}  element={<Offers />} />
       </Route>
       {/* Casino challenges screens ends here */}
 
