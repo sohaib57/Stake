@@ -31,12 +31,13 @@ import { useNavigate } from 'react-router-dom';
 import AuthModalContent from './AuthModalContent';
 import ForgotPasswordModal from './ForgotPasswordModal';
 import { FaUserAlt } from 'react-icons/fa';
+import { FiLogOut } from 'react-icons/fi';
 import { SiGooglechat } from 'react-icons/si';
 import { BsSearch } from 'react-icons/bs';
 import WalletModal from '../components/profilemenuheader/wallet/WalletModal';
 import VaultModal from '../components/profilemenuheader/vault/VaultModal';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
-import { RiContactsBook2Fill } from 'react-icons/ri';
+import { RiContactsBook2Fill, RiLogoutCircleRFill } from 'react-icons/ri';
 
 const { Header, Content } = Layout;
 
@@ -47,6 +48,11 @@ const LayoutComp = ({ children }) => {
     isOpen: isRevocationModalOpen,
     onOpen: onOpenRevocationModal,
     onClose: onCloseRevocationModal,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenLogout,
+    onOpen: onOpenLogout,
+    onClose: onCloseLogout,
   } = useDisclosure();
   const nav = useNavigate();
   return (
@@ -173,14 +179,18 @@ const LayoutComp = ({ children }) => {
                     <MenuItem onClick={onOpenRevocationModal}>VIP</MenuItem>
                     <MenuItem>Affiliate</MenuItem>
                     <MenuItem>Statistics</MenuItem>
-                    <MenuItem>Transactions</MenuItem>
-                    <MenuItem>Sport Bets</MenuItem>
+                    <MenuItem onClick={() => nav('/transactions')}>
+                      Transactions
+                    </MenuItem>
+                    <MenuItem onClick={() => nav('/sports/my-bets')}>
+                      Sport Bets
+                    </MenuItem>
                     <MenuItem>Notifications</MenuItem>
                     <MenuItem onClick={() => nav('/settings')}>
                       Settings
                     </MenuItem>
                     <MenuItem>Live Support</MenuItem>
-                    <MenuItem>Logout</MenuItem>
+                    <MenuItem onClick={() => onOpenLogout()}>Logout</MenuItem>
                   </MenuList>
                 </Menu>
               </Stack>
@@ -227,31 +237,76 @@ const LayoutComp = ({ children }) => {
           </Modal>
           {/* VIP Modal */}
           <Modal
-              onClose={onCloseRevocationModal}
-              isOpen={isRevocationModalOpen}
-              scrollBehavior={'inside'}
-              size={'lg'}
-            >
-              <ModalOverlay />
-              <ModalContent>
-                <ModalHeader bg={'#000000f2'}>
-                  <Stack direction={'row'} alignItems={'center'}>
-                    <RiContactsBook2Fill color={'#B1BAD3'} />
-                    <Text color={'white'}> VIP </Text>
-                  </Stack>
-                </ModalHeader>
-                <ModalCloseButton bg={'white'} color={'black'} />
-                <ModalBody bg={'#000000ed'}>
-                  <WeeklyGiveAwayModal />
-                </ModalBody>
-                <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
-                  <Text color={'white'}>
-                    Learn more about being a Stake VIP
+            onClose={onCloseRevocationModal}
+            isOpen={isRevocationModalOpen}
+            scrollBehavior={'inside'}
+            size={'lg'}
+          >
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader bg={'#000000f2'}>
+                <Stack direction={'row'} alignItems={'center'}>
+                  <RiContactsBook2Fill color={'#B1BAD3'} />
+                  <Text color={'white'}> VIP </Text>
+                </Stack>
+              </ModalHeader>
+              <ModalCloseButton bg={'white'} color={'black'} />
+              <ModalBody bg={'#000000ed'}>
+                <WeeklyGiveAwayModal />
+              </ModalBody>
+              <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
+                <Text color={'white'}>Learn more about being a Stake VIP</Text>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+          {/* logout modal */}
+          <Modal
+            isCentered
+            onClose={onCloseLogout}
+            isOpen={isOpenLogout}
+            scrollBehavior={'inside'}
+            size={'lg'}
+          >
+            <ModalOverlay />
+            <ModalContent bg={'#071824'}>
+              <ModalHeader>
+                <Stack direction={'row'} justifyContent={'space-between'}>
+                  <HStack>
+                    <FiLogOut color="#B1BAD3" fontSize={'1.1rem'} />
+                    <Text fontWeight={'500'} fontSize={'md'} color={'white'}>
+                      Logout
+                    </Text>
+                  </HStack>
+                  <ModalCloseButton _hover={{}} color={'white'} />
+                </Stack>
+              </ModalHeader>
+              <ModalBody py={'6'}>
+                <Stack>
+                  <Text textAlign={'center'} fontSize={'sm'} color={'#babad3'}>
+                    Don’t forget to check out our huge selection of casino and
+                    sports promotions before you leave!
                   </Text>
-                </ModalFooter>
-              </ModalContent>
-            </Modal>
-
+                  <Button
+                    onClick={() => {
+                      onOpen();
+                      setIndex(1);
+                      onCloseLogout();
+                    }}
+                    marginTop={'5 !important'}
+                    _active={{}}
+                    _focus={{}}
+                    _hover={{}}
+                    borderRadius={'sm'}
+                    bgColor={'#fe2247'}
+                    color={'white'}
+                    p={'5'}
+                  >
+                    Logout
+                  </Button>
+                </Stack>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
         </Header>
         <Content className="site-layout-background">
           <Stack

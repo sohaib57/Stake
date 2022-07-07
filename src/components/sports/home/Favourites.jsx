@@ -68,9 +68,7 @@ const Favourites = () => {
             fontWeight={'500'}
             color={'white'}
             borderColor={'#4C667B'}
-            _hover={{ borderColor: '#4C667B' }}
-            _active={{ borderColor: '#4C667B' }}
-            _focus={{ borderColor: '#4C667B' }}
+            _hover={{cursor:'pointer' }}
           >
             <option style={{ backgroundColor: 'black' }}>Winner</option>
             <option style={{ backgroundColor: 'black' }}>Total</option>

@@ -32,13 +32,14 @@ import {
 import { FaWallet } from 'react-icons/fa';
 import { SiBitcoinsv } from 'react-icons/si';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 const VaultModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [toggle, setToggle] = useState(false);
   const iconToggler = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
+  const nav = useNavigate();
   return (
     <>
       <Text
@@ -119,7 +120,7 @@ const VaultModal = () => {
                         Currency
                       </Text>
                       <Select
-                        w={{base:'50%',md:'25%'}}
+                        w={{ base: '50%', md: '25%' }}
                         bgColor={'black'}
                         placeholder="USD"
                         borderRadius={'sm'}
@@ -234,7 +235,7 @@ const VaultModal = () => {
                     spacing={'4'}
                     alignItems={'center'}
                     marginTop={'5 !important'}
-                    px={'12'}
+                    px={{base:'6',md:'12'}}
                     py={'6'}
                     bgColor={'black'}
                   >
@@ -242,7 +243,15 @@ const VaultModal = () => {
                       Improve your account security with Two-Factor
                       Authentication
                     </Text>
-                    <Button fontSize={'md'} w={{base:'50%',md:'25%'}} colorScheme={'blue'}>
+                    <Button
+                      onClick={() => {
+                        nav('/settings/security');
+                        onClose();
+                      }}
+                      fontSize={'md'}
+                      w={{ base: '50%', md: '25%' }}
+                      colorScheme={'blue'}
+                    >
                       Enable 2FA
                     </Button>
                   </Stack>
@@ -259,7 +268,7 @@ const VaultModal = () => {
                         Currency
                       </Text>
                       <Select
-                        w={{base:'50%',md:'25%'}}
+                        w={{ base: '50%', md: '25%' }}
                         bgColor={'black'}
                         placeholder="USD"
                         borderRadius={'sm'}
@@ -424,7 +433,15 @@ const VaultModal = () => {
                       Improve your account security with Two-Factor
                       Authentication
                     </Text>
-                    <Button fontSize={'md'} w={{base:'50%',md:'25%'}} colorScheme={'blue'}>
+                    <Button
+                      onClick={() => {
+                        nav('/settings/security');
+                        onClose();
+                      }}
+                      fontSize={'md'}
+                      w={{ base: '50%', md: '25%' }}
+                      colorScheme={'blue'}
+                    >
                       Enable 2FA
                     </Button>
                   </Stack>

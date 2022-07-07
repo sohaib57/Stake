@@ -106,6 +106,12 @@ import Api from '../../components/profilemenuheader/settings/Api'
 import IgnoredUsers from '../../components/profilemenuheader/settings/IgnoredUsers'
 import Verify from '../../components/profilemenuheader/settings/Verify'
 import Offers from '../../components/profilemenuheader/settings/Offers'
+import Transactions from '../../components/profilemenuheader/transactions/Transactions';
+import Deposits from '../../components/profilemenuheader/transactions/Deposits';
+import Withdrawals from '../../components/profilemenuheader/transactions/Withdrawals';
+import Bets from '../../components/profilemenuheader/transactions/Bets';
+import Archive from '../../components/profilemenuheader/transactions/Archive';
+import Other from '../../components/profilemenuheader/transactions/Other';
 const MainRoutes = () => {
   return (
     <Routes>
@@ -119,6 +125,15 @@ const MainRoutes = () => {
         <Route path="all-claimed" element={<AllClaimed />} />
         <Route path="my-claimed" element={<MyClaimed />} />
       </Route>
+
+      {/*  transactions*/}
+      <Route path="/transactions/*" element={<Transactions />}>
+      <Route index  element={<Deposits />} />
+      <Route path={'withdrawals'}  element={<Withdrawals />} />
+      <Route path={'bets'}  element={<Bets />} />
+      <Route path={'archive'}  element={<Archive />} />
+      <Route path={'other'}  element={<Other />} />
+        </Route>
       {/* settings */}
 
       {/* <Route path="/settings" element={<Settings />} /> */}

@@ -1,12 +1,11 @@
 import React from 'react';
 import LayoutComp from '../../../layout/LayoutComp';
 import { HStack, Stack, Text } from '@chakra-ui/react';
-import { AiFillSetting } from 'react-icons/ai';
+import { CgNotes } from 'react-icons/cg';
 import { Outlet, useNavigate } from 'react-router-dom';
-const Settings = () => {
+const Transactions = () => {
   const nav = useNavigate();
   const loc = window.location.pathname;
-  console.log('🚀 ~ file: Settings.jsx ~ line 27 ~ Settings ~ loc', loc);
   const activeStyle = {
     backgroundColor: '#00000054',
     borderLeft: '2px solid blue',
@@ -22,9 +21,9 @@ const Settings = () => {
         bg={'#000000ed'}
       >
         <HStack pb={'4'}>
-          <AiFillSetting color="#B1BAD3" fontSize={'1.5rem'} />
+          <CgNotes color="#B1BAD3" fontSize={'1.5rem'} />
           <Text fontWeight={'500'} fontSize={'lg'} color={'white'}>
-            Settings
+            Transactions
           </Text>
         </HStack>
         <Stack spacing={'6'} direction={{ base: 'column', lg: 'row' }}>
@@ -42,9 +41,8 @@ const Settings = () => {
             <Text
               borderTopRadius={{ base: 'none', lg: 'lg' }}
               borderTopLeftRadius={'lg'}
-              borderTopRightRadius={{ base: 'none', lg: 'lg' }}
-              style={loc === '/settings' ? activeStyle : nonActiveStyle}
-              onClick={() => nav('/settings')}
+              style={loc === '/transactions' ? activeStyle : nonActiveStyle}
+              onClick={() => nav('/transactions')}
               _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
               bgColor={'black'}
               marginTop={'0 !important'}
@@ -54,13 +52,13 @@ const Settings = () => {
               textAlign={{ base: 'center', lg: 'initial' }}
               marginBottom={'0 !important'}
             >
-              General
+              Deposits
             </Text>
             <Text
               style={
-                loc === '/settings/security' ? activeStyle : nonActiveStyle
+                loc === '/transactions/withdrawals' ? activeStyle : nonActiveStyle
               }
-              onClick={() => nav('/settings/security')}
+              onClick={() => nav('/transactions/withdrawals')}
               _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
               bgColor={'black'}
               marginTop={'0 !important'}
@@ -69,13 +67,13 @@ const Settings = () => {
               pl={'4'}
               pr={'14'}
             >
-              Security
+              Withdrawals
             </Text>
             <Text
               style={
-                loc === '/settings/preferences' ? activeStyle : nonActiveStyle
+                loc === '/transactions/bets' ? activeStyle : nonActiveStyle
               }
-              onClick={() => nav('/settings/preferences')}
+              onClick={() => nav('/transactions/bets')}
               _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
               bgColor={'black'}
               marginTop={'0 !important'}
@@ -84,11 +82,11 @@ const Settings = () => {
               pl={'4'}
               pr={'14'}
             >
-              Prefrences
+              Bets
             </Text>
             <Text
-              style={loc === '/settings/api' ? activeStyle : nonActiveStyle}
-              onClick={() => nav('/settings/api')}
+              style={loc === '/transactions/archive' ? activeStyle : nonActiveStyle}
+              onClick={() => nav('/transactions/archive')}
               _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
               bgColor={'black'}
               marginTop={'0 !important'}
@@ -96,56 +94,16 @@ const Settings = () => {
               textAlign={{ base: 'center', lg: 'initial' }}
               pl={'4'}
               pr={'14'}
-            >
-              API
-            </Text>
-            <Text
-              _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
-              bgColor={'black'}
-              marginTop={'0 !important'}
-              py={{ base: '3', lg: '4' }}
-              textAlign={{ base: 'center', lg: 'initial' }}
-              pl={'4'}
-              pr={'14'}
-            >
-              Sessions
-            </Text>
-            <Text
-              style={
-                loc === '/settings/ignoredusers' ? activeStyle : nonActiveStyle
-              }
-              onClick={() => nav('/settings/ignoredusers')}
-              w={'100%'}
               minW={'fit-content'}
-              pl={'4'}
-              pr={{base:'14',lg:'0'}}
-              _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
-              bgColor={'black'}
-              marginTop={'0 !important'}
-              py={{ base: '3', lg: '4' }}
-              textAlign={{ base: 'center', lg: 'initial' }}
             >
-              Ignored Users
+              Bet Archive
             </Text>
             <Text
-              style={loc === '/settings/verify' ? activeStyle : nonActiveStyle}
-              onClick={() => nav('/settings/verify')}
-              _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
-              bgColor={'black'}
-              marginTop={'0 !important'}
-              py={{ base: '3', lg: '4' }}
-              textAlign={{ base: 'center', lg: 'initial' }}
-              pl={'4'}
-              pr={'14'}
-            >
-              Verify
-            </Text>
-            <Text
-              style={loc === '/settings/offers' ? activeStyle : nonActiveStyle}
-              borderBottomRadius={{base:'none',lg:'lg'}}
+              style={loc === '/transactions/other' ? activeStyle : nonActiveStyle}
               borderBottomLeftRadius={{ base: 'none', lg: 'lg' }}
               borderRightTopRadius={{ base: 'lg', lg: 'none' }}
-              onClick={() => nav('/settings/offers')}
+              borderRightBottomRadius={'lg'}
+              onClick={() => nav('/transactions/other')}
               _hover={{ cursor: 'pointer', bgColor: '#00000054' }}
               bgColor={'black'}
               marginTop={'0 !important'}
@@ -154,7 +112,7 @@ const Settings = () => {
               pl={'4'}
               pr={'14'}
             >
-              Offers
+              Other
             </Text>
           </Stack>
           <Outlet />
@@ -164,4 +122,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default Transactions;

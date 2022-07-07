@@ -313,24 +313,16 @@ const SportsHomeComp = () => {
                   >
                     <FaGripHorizontal color="#B1BAD3" fontSize={'1rem'} />
                     <Select
-                      fontSize={'sm'}
-                      fontWeight={'500'}
-                      color={'white'}
-                      borderColor={'#4C667B'}
-                      _hover={{ borderColor: '#4C667B' }}
-                      _active={{ borderColor: '#4C667B' }}
-                      _focus={{ borderColor: '#4C667B' }}
-                    >
-                      <option style={{ backgroundColor: 'black' }}>
-                        Winner
-                      </option>
-                      <option style={{ backgroundColor: 'black' }}>
-                        Total
-                      </option>
-                      <option style={{ backgroundColor: 'black' }}>
-                        Handicap
-                      </option>
-                    </Select>
+            fontSize={'sm'}
+            fontWeight={'500'}
+            color={'white'}
+            borderColor={'#4C667B'}
+            _hover={{cursor:'pointer' }}
+          >
+            <option style={{ backgroundColor: 'black' }}>Winner</option>
+            <option style={{ backgroundColor: 'black' }}>Total</option>
+            <option style={{ backgroundColor: 'black' }}>Handicap</option>
+          </Select>
                   </Stack>
                 </Stack>
                 <SportsDetailCard />

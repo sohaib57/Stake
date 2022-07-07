@@ -31,12 +31,12 @@ const Mlb = () => {
       >
         <Stack direction={'row'}>
           <Stack
-            _hover={{ cursor: 'pointer', backgroundColor: '#0f212e' }}
+            _hover={{ cursor: 'pointer'}}
             direction={'row'}
             alignItems={'center'}
             borderRadius={'md'}
             maxW={'fit-content'}
-            bgColor={'#0F212E'}
+            bgColor={'black'}
             py={'3'}
             px={'5'}
           >
@@ -48,7 +48,7 @@ const Mlb = () => {
           </Stack>
           <Stack
             maxW={'fit-content'}
-            bgColor={'#0F212E'}
+            bgColor={'black'}
             borderRadius={'md'}
             px={'4'}
             py={'3'}
@@ -142,15 +142,15 @@ const Mlb = () => {
               <Select
                 fontSize={'sm'}
                 fontWeight={'500'}
-                _hover={{ bg: '#071824', cursor: 'pointer' }}
+                _hover={{cursor: 'pointer' }}
                 _focusVisible={{}}
-                bg={'#0F212E'}
+                bg={'black'}
                 variant="filled"
                 //   placeholder="Popular"
               >
-                <option style={{ color: 'black' }}>Winner</option>
-                <option style={{ color: 'black' }}>Total</option>
-                <option style={{ color: 'black' }}>Handicap</option>
+                <option style={{ color: 'white' , backgroundColor:'black' }}>Winner</option>
+                <option style={{ color: 'white' , backgroundColor:'black' }}>Total</option>
+                <option style={{ color: 'white' , backgroundColor:'black' }}>Handicap</option>
               </Select>
             </Stack>
           </Stack>
@@ -160,11 +160,11 @@ const Mlb = () => {
               <SportsDetailCard />
             </TabPanel>
             {/* outrights */}
-            <TabPanel>
+            <TabPanel padding={'0'} py={'4'}>
               <SportsDetailCard />
             </TabPanel>
             {/* All Badseball */}
-            <TabPanel>
+            <TabPanel padding={'0'} py={'4'}>
               <SportsDetailCard />
             </TabPanel>
           </TabPanels>
