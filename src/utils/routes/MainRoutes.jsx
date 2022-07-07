@@ -106,6 +106,14 @@ import Api from '../../components/profilemenuheader/settings/Api'
 import IgnoredUsers from '../../components/profilemenuheader/settings/IgnoredUsers'
 import Verify from '../../components/profilemenuheader/settings/Verify'
 import Offers from '../../components/profilemenuheader/settings/Offers'
+import Affiliate from '../../components/profilemenuheader/affiliate/Affiliate'
+import Overview from '../../components/profilemenuheader/affiliate/Overview'
+import Campaigns from '../../components/profilemenuheader/affiliate/Campaigns'
+import Commission from '../../components/profilemenuheader/affiliate/Commission'
+import Funds from '../../components/profilemenuheader/affiliate/Funds'
+import ReferredUsers from '../../components/profilemenuheader/affiliate/ReferredUsers'
+import RetentionProgram from '../../components/profilemenuheader/affiliate/RetentionProgram'
+
 const MainRoutes = () => {
   return (
     <Routes>
@@ -121,17 +129,36 @@ const MainRoutes = () => {
       </Route>
       {/* settings */}
 
-      {/* <Route path="/settings" element={<Settings />} /> */}
       <Route path="/settings/*" element={<Settings />}>
-      <Route index  element={<GeneralSetting />} />
-      <Route path={'security'}  element={<SecuritySetting />} />
-      <Route path={'preferences'}  element={<PreferenceSetting />} />
-      <Route path={'api'}  element={<Api />} />
-      <Route path={'ignoredusers'}  element={<IgnoredUsers />} />
-      <Route path={'ignoredusers'}  element={<IgnoredUsers />} />
-      <Route path={'verify'}  element={<Verify />} />
-      <Route path={'offers'}  element={<Offers />} />
+        <Route index element={<GeneralSetting />} />
+        <Route path={'security'} element={<SecuritySetting />} />
+        <Route path={'preferences'} element={<PreferenceSetting />} />
+        <Route path={'api'} element={<Api />} />
+        <Route path={'ignoredusers'} element={<IgnoredUsers />} />
+        <Route path={'ignoredusers'} element={<IgnoredUsers />} />
+        <Route path={'verify'} element={<Verify />} />
+        <Route path={'offers'} element={<Offers />} />
       </Route>
+
+      {/* Affiliate */}
+
+
+      <Route path="/affiliate/*" element={<Affiliate />}>
+        <Route index element={<Overview />} />
+        <Route path='campaigns' element={<Campaigns />} />
+        <Route path='commission' element={<Commission />} />
+        <Route path='funds' element={<Funds />} />
+        <Route path='referredusers' element={<ReferredUsers />} />
+        <Route path='retentionprogram' element={<RetentionProgram />} />
+
+      </Route>
+
+
+
+
+
+
+
       {/* Casino challenges screens ends here */}
 
       <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
