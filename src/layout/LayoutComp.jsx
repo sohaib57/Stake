@@ -177,7 +177,7 @@ const LayoutComp = ({ children }) => {
                       <VaultModal />
                     </MenuItem>
                     <MenuItem onClick={onOpenRevocationModal}>VIP</MenuItem>
-                    <MenuItem>Affiliate</MenuItem>
+                    <MenuItem onClick={() => nav('/affiliate')} >Affiliate</MenuItem>
                     <MenuItem>Statistics</MenuItem>
                     <MenuItem onClick={() => nav('/transactions')}>
                       Transactions

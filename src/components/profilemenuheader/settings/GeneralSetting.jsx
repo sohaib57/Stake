@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, HStack, Button, Divider, Text, Tag, TagLabel, Heading, Select , Input } from '@chakra-ui/react'
+import { Stack, HStack, Button, Divider, Text, Tag, TagLabel, Heading, Select, Input } from '@chakra-ui/react'
 
 
 const GeneralSetting = () => {
