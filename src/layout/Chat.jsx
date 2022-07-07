@@ -47,7 +47,7 @@ const Chat = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Stack bgColor={'#0f212e'}>
+          <Stack bgColor={'#000000ed'}>
             <DrawerCloseButton color={'white'} />
             <DrawerHeader
               p={1}
@@ -64,25 +64,25 @@ const Chat = () => {
                   pl={2}
                   color={'white'}
                   bg={'transparent'}
-                  className="select"
+                 
                   _focusVisible={{
                     boxShadow: 'none',
                   }}
                 >
-                  <option value="option1">English</option>
-                  <option value="option2">Deutsch</option>
-                  <option value="option3">Español</option>
-                  <option value="option3">Français</option>
-                  <option value="option3">हिन्दी</option>
-                  <option value="option3">Indonesi</option>
+                  <option value="option1"  className="select">English</option>
+                  <option value="option2"  className="select">Deutsch</option>
+                  <option value="option3"  className="select">Español</option>
+                  <option value="option3"  className="select">Français</option>
+                  <option value="option3"  className="select">हिन्दी</option>
+                  <option value="option3"  className="select">Indonesi</option>
                 </Select>
               </Stack>
             </DrawerHeader>
           </Stack>
 
-          <DrawerBody bgColor={'#0f212e'}>
+          <DrawerBody bgColor={'#000000ed'}>
             <Stack gap={2}>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -93,7 +93,7 @@ const Chat = () => {
                   </Text>
                 </HStack>
               </Stack>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -104,7 +104,7 @@ const Chat = () => {
                   </Text>
                 </HStack>
               </Stack>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -115,7 +115,7 @@ const Chat = () => {
                   </Text>
                 </HStack>
               </Stack>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -126,7 +126,7 @@ const Chat = () => {
                   </Text>
                 </HStack>
               </Stack>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -137,7 +137,7 @@ const Chat = () => {
                   </Text>
                 </HStack>
               </Stack>
-              <Stack bgColor={'#213743'} p={2} rounded={'md'}>
+              <Stack bgColor={'black'} p={2} rounded={'md'}>
                 <HStack>
                   <AiOutlineStar color={'#ffb949'} size={16} />
                   <Text color={'#b1bad3'} fontSize={'sm'} fontWeight={'600'}>
@@ -150,12 +150,12 @@ const Chat = () => {
               </Stack>
             </Stack>
           </DrawerBody>
-          <DrawerFooter bgColor={'#213743'}>
+          <DrawerFooter bgColor={'black'}>
             <Stack width={'100%'} direction={'column'}>
               <Stack width={'100%'}>
                 <Input
                   width={'100%'}
-                  bgColor={'#0f212e'}
+                  bgColor={'black'}
                   border={'1px solid #2f4553'}
                   placeholder="Type your message"
                   fontSize={'sm'}

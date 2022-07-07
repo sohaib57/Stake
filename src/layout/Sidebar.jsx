@@ -11,24 +11,15 @@ import {
   useDisclosure,
   HStack,
   Stack,
-  Button,
   Select,
   Text,
   Link,
 } from '@chakra-ui/react';
 import { RiContactsBook2Fill } from 'react-icons/ri';
 import { GiDigitalTrace } from 'react-icons/gi';
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  StarOutlined,
-  FieldTimeOutlined,
-} from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { GiCardAceHearts } from 'react-icons/gi';
-import { AiTwotoneHeart } from 'react-icons/ai';
 import 'antd/dist/antd.css';
 import './style.css';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
@@ -43,22 +34,12 @@ import {
   MdOutlineCasino,
   MdTimer,
   MdSportsCricket,
-  MdSportsBasketball,
   MdSportsHandball,
   MdLegendToggle,
 } from 'react-icons/md';
 import { AiOutlineGift } from 'react-icons/ai';
-import {
-  SiCounterstrike,
-  SiGeneralelectric,
-  SiFifa,
-  SiWattpad,
-} from 'react-icons/si';
-import {
-  BsList,
-  BsBookmarkStarFill,
-  BsEmojiHeartEyesFill,
-} from 'react-icons/bs';
+import { SiCounterstrike, SiGeneralelectric, SiFifa } from 'react-icons/si';
+import { BsBookmarkStarFill, BsEmojiHeartEyesFill } from 'react-icons/bs';
 import { AiOutlineStar, AiFillPlayCircle } from 'react-icons/ai';
 import { ImFire } from 'react-icons/im';
 import {
@@ -78,11 +59,9 @@ import {
   FaHeadSideMask,
   FaHeadset,
 } from 'react-icons/fa';
-import { BiRocket, BiFootball, BiCycling, BiTimer } from 'react-icons/bi';
+import { BiRocket, BiCycling, BiTimer } from 'react-icons/bi';
 import {
   RiNewspaperLine,
-  RiBoxingFill,
-  RiHonorOfKingsFill,
   RiBoxingLine,
   RiRainbowLine,
   RiCoupon5Line,
@@ -91,7 +70,6 @@ import {
   GiBasketballBall,
   GiBackwardTime,
   GiTargetShot,
-  GiCardJackClubs,
   GiBurningDot,
   GiPingPongBat,
   GiHockey,

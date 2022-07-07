@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './style.css';
 import {
   Drawer,
   DrawerBody,
@@ -25,6 +27,13 @@ import {
   Divider,
   Badge,
   Select,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
 } from '@chakra-ui/react';
 import { IoIosRocket, IoIosBaseball } from 'react-icons/io';
 import { IoFootballOutline } from 'react-icons/io5';
@@ -51,6 +60,7 @@ import {
 import { AiOutlineStar, AiFillPlayCircle } from 'react-icons/ai';
 import { ImFire } from 'react-icons/im';
 import {
+  FaCarSide,
   FaGg,
   FaFire,
   FaBaseballBall,
@@ -99,11 +109,28 @@ import {
   GiSoccerBall,
   GiWaterPolo,
 } from 'react-icons/gi';
+import { GiDigitalTrace } from 'react-icons/gi';
+import { RiContactsBook2Fill } from 'react-icons/ri';
 import { useDisclosure } from '@chakra-ui/react';
+import Race24Hour from '../components/promotions/Race24Hour';
+import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 
 const MenuBar = () => {
+  const nav = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const {
+    isOpen: isWeeklyGiveAwayModalOpen,
+    onOpen: onOpenWeeklyGiveAwayModal,
+    onClose: onCloseWeeklyGiveAwayModal,
+  } = useDisclosure();
+  const {
+    isOpen: isRevocationModalOpen,
+    onOpen: onOpenRevocationModal,
+    onClose: onCloseRevocationModal,
+  } = useDisclosure();
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+  const [scrollBehavior2, setScrollBehavior2] = React.useState('inside');
   return (
     <>
       <VStack justifyContent={'center'} ref={btnRef} onClick={onOpen}>
@@ -126,7 +153,7 @@ const MenuBar = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Stack bgColor={'#0f212e'}>
+          <Stack bgColor={'black'}>
             <DrawerCloseButton color={'white'} />
             <DrawerHeader
               p={2}
@@ -135,6 +162,7 @@ const MenuBar = () => {
             >
               <Stack direction={'row'} className="sidebar-button">
                 <Button
+                  onClick={() => nav('/casino/home')}
                   _hover={{
                     bgColor: '#071824',
                   }}
@@ -147,6 +175,7 @@ const MenuBar = () => {
                   Casino
                 </Button>
                 <Button
+                  onClick={() => nav('/sports/home')}
                   _hover={{
                     bgColor: 'transparent',
                   }}
@@ -161,7 +190,7 @@ const MenuBar = () => {
             </DrawerHeader>
           </Stack>
 
-          <DrawerBody bgColor={'#0f212e'}>
+          <DrawerBody bgColor={'black'}>
             <Accordion defaultIndex={[0]} allowMultiple>
               <AccordionItem border={'none'}>
                 <h2>
@@ -186,6 +215,7 @@ const MenuBar = () => {
                     direction={'column'}
                   >
                     <HStack
+                      onClick={() => nav('/casino-favourite')}
                       _active={{
                         borderRadius: '50px',
                         bgColor: '#071824',
@@ -205,6 +235,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/recent')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -223,6 +254,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/challenges')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -242,6 +274,7 @@ const MenuBar = () => {
                     </HStack>
                     <Divider border={' 0.1px solid #2f4553'} />
                     <HStack
+                      onClick={() => nav('/casino/group/stake-originals')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -260,6 +293,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/stake-exclusives')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -278,6 +312,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/slots')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -296,6 +331,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/live-casino')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -314,6 +350,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/game-shows')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -332,6 +369,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/new-releases')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -350,6 +388,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/feature-buy-in')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -368,6 +407,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/table-games')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -386,6 +426,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/blackjack')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -404,6 +445,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/baccarat')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -422,6 +464,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/casino/group/roulette')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -467,6 +510,7 @@ const MenuBar = () => {
                     direction={'column'}
                   >
                     <HStack
+                      onClick={() => nav('/sports/my-bets')}
                       _active={{
                         borderRadius: '50px',
                         bgColor: '#071824',
@@ -486,6 +530,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/live-events')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -513,6 +558,7 @@ const MenuBar = () => {
                       </Badge>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/upcoming')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -547,6 +593,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/baseball/usa/mlb')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -554,88 +601,17 @@ const MenuBar = () => {
                       }}
                     >
                       <Link>
-                        <FaBaseballBall color={'white'} size={16} />
+                        <IoIosBaseball color={'white'} size={16} />
                       </Link>
                       <Link
                         _hover={{
                           textDecoration: 'none',
                         }}
                       >
-                        ATP Eastbourne, Great Britain Men Singles
+                        MLB
                       </Link>
                     </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <FaBaseballBall color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        ATP Mallorca, Spain Men Singles
-                      </Link>
-                    </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <FaBaseballBall color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        WTA Eastbourne, Great Britain Women Singles
-                      </Link>
-                    </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <GiPingPongBat color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Liga Pro
-                      </Link>
-                    </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <BiFootball color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Chinese Super League
-                      </Link>
-                    </HStack>
+
                     <Divider border={' 0.1px solid #2f4553'} />
                     <HStack
                       p={2}
@@ -652,25 +628,9 @@ const MenuBar = () => {
                         Top Sports
                       </Link>
                     </HStack>
+
                     <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <FaBaseballBall color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Tennis
-                      </Link>
-                    </HStack>
-                    <HStack
+                      onClick={() => nav('/sports/soccer')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -688,60 +648,7 @@ const MenuBar = () => {
                         Soccer
                       </Link>
                     </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <GiHockey color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Ice Hockey
-                      </Link>
-                    </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <GiPingPongBat color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Table Tennis
-                      </Link>
-                    </HStack>
-                    <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <IoIosBaseball color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Baseball
-                      </Link>
-                    </HStack>
+
                     <Divider border={' 0.1px solid #2f4553'} />
                     <HStack
                       p={2}
@@ -759,6 +666,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/alpine-skiing')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -777,6 +685,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/american-football')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -795,6 +704,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/aussie-rules')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -813,6 +723,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/badminton')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -831,6 +742,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/baseball')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -849,6 +761,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/basketball')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -867,6 +780,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/biathlon')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -885,6 +799,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/bowls')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -903,6 +818,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/boxing')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -922,6 +838,7 @@ const MenuBar = () => {
                     </HStack>
 
                     <HStack
+                      onClick={() => nav('/sports/counter-strike')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -940,6 +857,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/cricket')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -958,6 +876,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/cross-country')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -976,6 +895,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/cycling')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -994,6 +914,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/darts')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1012,6 +933,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/dota-2')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1030,6 +952,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/electronic-leagues')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1048,6 +971,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/fifa')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1066,6 +990,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/formula-1')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1084,6 +1009,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/futsal')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1102,24 +1028,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <MdSportsBasketball color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Gaelic Football
-                      </Link>
-                    </HStack>
-                    <HStack
+                      onClick={() => nav('/sports/gaelic-hurling')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1138,6 +1047,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/golf')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1156,6 +1066,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/handball')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1174,6 +1085,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/ice-hockey')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1192,6 +1104,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/indy-racing')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1210,24 +1123,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
-                      p={2}
-                      _active={{
-                        borderRadius: '50px',
-                        bgColor: '#071824',
-                      }}
-                    >
-                      <Link>
-                        <RiHonorOfKingsFill color={'white'} size={16} />
-                      </Link>
-                      <Link
-                        _hover={{
-                          textDecoration: 'none',
-                        }}
-                      >
-                        King of Glory
-                      </Link>
-                    </HStack>
-                    <HStack
+                      onClick={() => nav('/sports/league-of-legends')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1246,6 +1142,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/mma')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1264,6 +1161,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/motorcycle-racing')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1282,6 +1180,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/pesapallo')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1300,6 +1199,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/politics-entertainment')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1318,6 +1218,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/rainbow-six')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1336,6 +1237,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/rugby')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1354,6 +1256,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/ski-jumping')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1372,6 +1275,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/snooker')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1390,6 +1294,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/soccer')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1408,6 +1313,26 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/stock-car-racing')}
+                      p={2}
+                      _active={{
+                        borderRadius: '50px',
+                        bgColor: '#071824',
+                      }}
+                    >
+                      <Link>
+                        <FaCarSide color={'white'} size={16} />
+                      </Link>
+                      <Link
+                        _hover={{
+                          textDecoration: 'none',
+                        }}
+                      >
+                        Stock Car Racing
+                      </Link>
+                    </HStack>
+                    <HStack
+                      onClick={() => nav('/sports/table-tennis')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1426,6 +1351,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/tennis')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1444,6 +1370,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/volleyball')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1462,6 +1389,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                      onClick={() => nav('/sports/waterpolo')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1490,17 +1418,28 @@ const MenuBar = () => {
                         pl={2}
                         color={'white'}
                         bg={'transparent'}
-                        className="select"
                         _focusVisible={{
                           boxShadow: 'none',
                         }}
                       >
-                        <option value="option1">Decimal</option>
-                        <option value="option2">Fractional</option>
-                        <option value="option3">American</option>
-                        <option value="option3">Hong Kong</option>
-                        <option value="option3">Indonesian</option>
-                        <option value="option3">Malaysian</option>
+                        <option value="option1" className="select">
+                          Decimal
+                        </option>
+                        <option value="option2" className="select">
+                          Fractional
+                        </option>
+                        <option value="option3" className="select">
+                          American
+                        </option>
+                        <option value="option3" className="select">
+                          Hong Kong
+                        </option>
+                        <option value="option3" className="select">
+                          Indonesian
+                        </option>
+                        <option value="option3" className="select">
+                          Malaysian
+                        </option>
                       </Select>
                     </Stack>
                     <Divider border={' 0.1px solid #2f4553'} />
@@ -1531,6 +1470,7 @@ const MenuBar = () => {
                     direction={'column'}
                   >
                     <HStack
+                      onClick={onOpenWeeklyGiveAwayModal}
                       _active={{
                         borderRadius: '50px',
                         bgColor: '#071824',
@@ -1549,7 +1489,36 @@ const MenuBar = () => {
                         $50k Weekly Giveaway
                       </Link>
                     </HStack>
+                    {/* WeeklyGiveAway */}
+                    <Modal
+                      onClose={onCloseWeeklyGiveAwayModal}
+                      finalFocusRef={btnRef}
+                      isOpen={isWeeklyGiveAwayModalOpen}
+                      scrollBehavior={scrollBehavior}
+                      size={'lg'}
+                    >
+                      <ModalOverlay />
+                      <ModalContent>
+                        <ModalHeader bg={'#000000f2'}>
+                          <Stack direction={'row'} alignItems={'center'}>
+                            <RiContactsBook2Fill color={'#B1BAD3'} />
+                            <Text color={'white'}> VIP </Text>
+                          </Stack>
+                        </ModalHeader>
+                        <ModalCloseButton bg={'white'} color={'black'} />
+                        <ModalBody bg={'#000000ed'}>
+                          <WeeklyGiveAwayModal />
+                        </ModalBody>
+                        <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
+                          <Text color={'white'}>
+                            Learn more about being a Stake VIP
+                          </Text>
+                        </ModalFooter>
+                      </ModalContent>
+                    </Modal>
+
                     <HStack
+                      onClick={onOpenRevocationModal}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1562,12 +1531,41 @@ const MenuBar = () => {
                       <Link
                         _hover={{
                           textDecoration: 'none',
+                          color: 'white',
                         }}
                       >
                         $100k Race - 24 Hours
                       </Link>
                     </HStack>
+                    {/* Race-Hour */}
+                    <Modal
+                      onClose={onCloseRevocationModal}
+                      finalFocusRef={btnRef}
+                      isOpen={isRevocationModalOpen}
+                      scrollBehavior={scrollBehavior2}
+                      size={'lg'}
+                    >
+                      <ModalOverlay />
+                      <ModalContent>
+                        <ModalHeader bg={'#000000f2'}>
+                          <Stack direction={'row'} alignItems={'center'}>
+                            <GiDigitalTrace color={'#B1BAD3'} />
+                            <Text color={'white'}> Race </Text>
+                          </Stack>
+                        </ModalHeader>
+                        <ModalCloseButton bg={'white'} color={'black'} />
+                        <ModalBody bg={'#000000ed'}>
+                          <Race24Hour />
+                        </ModalBody>
+                        <ModalFooter bg={'#000000f2'} justifyContent={'center'}>
+                          <Text color={'white'}>
+                            Learn more about being a Stake VIP
+                          </Text>
+                        </ModalFooter>
+                      </ModalContent>
+                    </Modal>
                     <HStack
+                       onClick={() => nav('/promotions')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1613,6 +1611,7 @@ const MenuBar = () => {
                     direction={'column'}
                   >
                     <HStack
+                    onClick={() => nav('/drake')}
                       _active={{
                         borderRadius: '50px',
                         bgColor: '#071824',
@@ -1632,6 +1631,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/watford')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1650,6 +1650,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/kun-aguero')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1668,6 +1669,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/ufc')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1686,6 +1688,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/adesanya')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1704,6 +1707,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/jose-aldo')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1722,6 +1726,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                    onClick={() => nav('/alexa-grasso')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1740,6 +1745,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                     onClick={() => nav('/inoue')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1758,6 +1764,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                     onClick={() => nav('/brazil-rugby-league')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1776,6 +1783,7 @@ const MenuBar = () => {
                       </Link>
                     </HStack>
                     <HStack
+                     onClick={() => nav('/fittipaldi-brothers')}
                       p={2}
                       _active={{
                         borderRadius: '50px',
@@ -1809,6 +1817,8 @@ const MenuBar = () => {
                         fontSize={'sm'}
                         color={'white'}
                         fontWeight={'700'}
+                        onClick={() => nav('/blog')}
+                        cursor={'pointer'}
                       >
                         Blog
                       </Box>
@@ -1830,17 +1840,17 @@ const MenuBar = () => {
                           pl={2}
                           color={'white'}
                           bg={'transparent'}
-                          className="select"
+                         
                           _focusVisible={{
                             boxShadow: 'none',
                           }}
                         >
-                          <option value="option1">English</option>
-                          <option value="option2">Deutsch</option>
-                          <option value="option3">Español</option>
-                          <option value="option3">Français</option>
-                          <option value="option3">हिन्दी</option>
-                          <option value="option3">Indonesi</option>
+                          <option value="option1"  className="select">English</option>
+                          <option value="option2"  className="select">Deutsch</option>
+                          <option value="option3"  className="select">Español</option>
+                          <option value="option4"  className="select">Français</option>
+                          <option value="option5"  className="select">हिन्दी</option>
+                          <option value="option6"  className="select">Indonesi</option>
                         </Select>
                       </Stack>
                     </Stack>

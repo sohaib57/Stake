@@ -21,7 +21,13 @@ const Search = () => {
   const btnRef = React.useRef();
   return (
     <>
-      <VStack justifyContent={'center'} onClick={onOpen} ref={btnRef}>
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        alignItems={'center'}
+        onClick={onOpen}
+        ref={btnRef}
+        cursor={'pointer'}
+      >
         <BsSearch color="white" size={15} />
         <Text
           color="white"
@@ -31,17 +37,17 @@ const Search = () => {
         >
           Search
         </Text>
-      </VStack>
+      </Stack>
       <Drawer
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'full'}
+        size={{base:'full' , md: 'md'}}
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Stack bgColor={'#0f212e'}>
+          <Stack bgColor={'black'}>
             <DrawerCloseButton color={'white'} />
             <DrawerHeader
               p={5}
@@ -62,10 +68,10 @@ const Search = () => {
             </DrawerHeader>
           </Stack>
 
-          <DrawerBody bgColor={'#1a2c38'}>
+          <DrawerBody bgColor={'#000000ed'}>
             <HStack spacing={0} mt={3}>
               <Input
-                bgColor={'#0f212e'}
+                bgColor={'black'}
                 border={'1px solid #2f4553'}
                 borderLeftRadius={'50px'}
                 placeholder="Search your event"
@@ -77,17 +83,17 @@ const Search = () => {
                 width={{ base: '50%', sm: '35%' }}
                 fontSize={'sm'}
                 fontWeight={'600'}
-                bgColor={'#0f212e'}
+                bgColor={'black'}
                 borderRightRadius={'50px'}
                 color={'white'}
                 bg={'transparent'}
-                className="select"
+               
                 _focusVisible={{
                   boxShadow: 'none',
                 }}
               >
-                <option value="option1">Sports</option>
-                <option value="option2">Casino</option>
+                <option value="option1"  className="select">Sports</option>
+                <option value="option2"  className="select">Casino</option>
               </Select>
             </HStack>
             <Text
