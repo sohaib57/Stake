@@ -134,6 +134,8 @@ const MainRoutes = () => {
         <Route path="my-claimed" element={<MyClaimed />} />
       </Route>
 
+      {/* Casino challenges screens ends here */}
+      
       {/*  transactions*/}
       <Route path="/transactions/*" element={<Transactions />}>
       <Route index  element={<Deposits />} />
@@ -167,14 +169,6 @@ const MainRoutes = () => {
         <Route path='retentionprogram' element={<RetentionProgram />} />
 
       </Route>
-
-
-
-
-
-
-
-      {/* Casino challenges screens ends here */}
 
       <Route path="/group/stake-originals" element={<StakeOriginalsScreen />} />
       <Route path="/casinofavourite" element={<FavouriteScreen />} />

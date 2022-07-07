@@ -40,6 +40,7 @@ import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 import { RiContactsBook2Fill, RiLogoutCircleRFill } from 'react-icons/ri';
 import SearchModel from './SearchModel';
 
+import StatisticsModal from '../components/profilemenuheader/statistics/StatisticsModal';
 
 const { Header, Content } = Layout;
 
@@ -56,6 +57,7 @@ const LayoutComp = ({ children }) => {
     onOpen: onOpenLogout,
     onClose: onCloseLogout,
   } = useDisclosure();
+  const { onOpen: onOpenStatistics } = useDisclosure();
   const nav = useNavigate();
   return (
     <Layout
@@ -171,8 +173,12 @@ const LayoutComp = ({ children }) => {
                       <VaultModal />
                     </MenuItem>
                     <MenuItem onClick={onOpenRevocationModal}>VIP</MenuItem>
-                    <MenuItem onClick={() => nav('/affiliate')} >Affiliate</MenuItem>
-                    <MenuItem>Statistics</MenuItem>
+                    <MenuItem onClick={() => nav('/affiliate')}>
+                      Affiliate
+                    </MenuItem>
+                    <MenuItem>
+                      <StatisticsModal/>
+                    </MenuItem>
                     <MenuItem onClick={() => nav('/transactions')}>
                       Transactions
                     </MenuItem>
