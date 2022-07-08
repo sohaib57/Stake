@@ -66,7 +66,6 @@ const StatisticsModal = () => {
                 Joined on June 14, 2022
               </Text>
             </Stack>
-
             <Tabs
               defaultIndex={0}
               width={'100%'}

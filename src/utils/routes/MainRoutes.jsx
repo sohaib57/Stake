@@ -139,6 +139,7 @@ const MainRoutes = () => {
       {/*  transactions*/}
       <Route path="/transactions/*" element={<Transactions />}>
       <Route index  element={<Deposits />} />
+      <Route path={'deposits'}  element={<Deposits />} />
       <Route path={'withdrawals'}  element={<Withdrawals />} />
       <Route path={'bets'}  element={<Bets />} />
       <Route path={'archive'}  element={<Archive />} />

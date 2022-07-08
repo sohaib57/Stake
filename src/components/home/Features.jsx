@@ -21,7 +21,6 @@ import sampay from '../../assets/images/samsung-pay-logo-white.webp';
 import '../ui/card slider/CardSlider.css';
 import stakeDrakeHome from '../../assets/images/stakeDrakeHome.png'
 
-
 const Features = () => {
 
   const nav = useNavigate()
@@ -35,7 +34,7 @@ const Features = () => {
           spacing={{ base: '6', lg: '0' }}
         >
           {/* left card */} 
-          <Stack height={'full'} width={{ base: '100%', md: '48%' }}>
+          <Stack onClick={() => nav('/casino/home')} _hover={{cursor:'pointer'}} height={'full'} width={{ base: '100%', md: '48%' }}>
             <HStack pb={'2'}>
               <GiCardAceClubs fontSize={'1.5rem'} />
               <Text
@@ -63,10 +62,10 @@ const Features = () => {
               games right from your browser, including your favourite Stake
               Originals.
             </Text>
-            <Button onClick={() => nav('/casino/home')} colorScheme="blue">Go to Casino</Button>
+            <Button  colorScheme="blue">Go to Casino</Button>
           </Stack>
           {/* right card */}
-          <Stack height={'full'} width={{ base: '100%', md: '48%' }}>
+          <Stack onClick={() => nav('/sports/home')} _hover={{cursor:'pointer'}} height={'full'} width={{ base: '100%', md: '48%' }}>
             <HStack pb={'2'}>
               <GiBasketballBall fontSize={'1.5rem'} />
               <Text
@@ -94,7 +93,7 @@ const Features = () => {
               Basketball, Soccer and more for an unbeatable sports betting
               experience.
             </Text>
-            <Button onClick={() => nav('/sports/home')} colorScheme="blue">Go to sportsBook</Button>
+            <Button colorScheme="blue">Go to sportsBook</Button>
           </Stack>
         </Stack>
 
