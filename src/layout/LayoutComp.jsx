@@ -33,11 +33,13 @@ import ForgotPasswordModal from './ForgotPasswordModal';
 import { FaUserAlt } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
 import { SiGooglechat } from 'react-icons/si';
-import { BsSearch } from 'react-icons/bs';
+
 import WalletModal from '../components/profilemenuheader/wallet/WalletModal';
 import VaultModal from '../components/profilemenuheader/vault/VaultModal';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 import { RiContactsBook2Fill, RiLogoutCircleRFill } from 'react-icons/ri';
+import SearchModel from './SearchModel';
+
 import StatisticsModal from '../components/profilemenuheader/statistics/StatisticsModal';
 
 const { Header, Content } = Layout;
@@ -133,17 +135,9 @@ const LayoutComp = ({ children }) => {
               alignItems={'center'}
               pr={{ base: '2', md: '10' }}
             >
-              <HStack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
-                <BsSearch color="white" size={15} />
-                <Text
-                  color="white"
-                  fontWeight={'700'}
-                  fontSize={'12px'}
-                  mt={'0 !important'}
-                >
-                  Search
-                </Text>
-              </HStack>
+              
+              <SearchModel/>
+              
               {/* <Stack spacing={'4'} direction={'row'}>
                 <Button onClick={() => {
                   onOpen()

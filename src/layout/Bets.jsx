@@ -49,7 +49,7 @@ const Bets = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Stack bgColor={'#0f212e'}>
+          <Stack bgColor={'#000000ed'}>
             <DrawerCloseButton color={'white'} />
             <DrawerHeader
               p={1}
@@ -65,19 +65,19 @@ const Bets = () => {
                   pl={2}
                   color={'white'}
                   bg={'transparent'}
-                  className="select"
+                  
                   _focusVisible={{
                     boxShadow: 'none',
                   }}
                 >
-                  <option value="option1">My Bets</option>
-                  <option value="option2">Bet Slip</option>
+                  <option value="option1" className="select">My Bets</option>
+                  <option value="option2" className="select">Bet Slip</option>
                 </Select>
               </Stack>
             </DrawerHeader>
           </Stack>
 
-          <DrawerBody bgColor={'#0f212e'}>
+          <DrawerBody bgColor={'#000000ed'}>
             <Stack pt={'8'} className="tabs">
               <Tabs variant="soft-rounded" colorScheme="green">
                 <TabList
@@ -86,7 +86,7 @@ const Bets = () => {
                   overflowX={'auto'}
                   maxW={'fit-content'}
                   borderRadius={'full'}
-                  bgColor={'#1a2c38'}
+                  bgColor={'black'}
                 >
                   <Stack direction={'row'} p={'2'}>
                     <Tab
@@ -152,16 +152,16 @@ const Bets = () => {
               </Tabs>
             </Stack>
           </DrawerBody>
-          <DrawerFooter bgColor={'#213743'}>
+          <DrawerFooter bgColor={'black'}>
             <Button
               width={'100%'}
-              bgColor={'#2f4553'}
+              bgColor={'#141f26'}
               color={'#d5dceb'}
               _active={{
-                bgColor: '#2f4553',
+                bgColor: '#141f26',
               }}
               _hover={{
-                bgColor: '#2f4553',
+                bgColor: '#141f26',
               }}
             >
               View All
