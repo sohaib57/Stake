@@ -19,7 +19,6 @@ import {
   ModalFooter,
   ModalHeader,
 } from '@chakra-ui/react';
-
 import { Layout } from 'antd';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
@@ -27,20 +26,28 @@ import cryptoBox from '../assets/images/cryptoBox.jpg';
 import 'antd/dist/antd.css';
 import './style.css';
 import MobileHeader from './MobileHeader';
-import { useNavigate } from 'react-router-dom';
 import AuthModalContent from './AuthModalContent';
-import ForgotPasswordModal from './ForgotPasswordModal';
-import { FaUserAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaUserAlt, FaHeadset } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
 import { SiGooglechat } from 'react-icons/si';
-
+import { RiContactsBook2Fill } from 'react-icons/ri';
+import { TbAffiliate, TbReceipt } from 'react-icons/tb';
+import { GiBasketballBall } from 'react-icons/gi';
+import { HiOutlineLogout } from 'react-icons/hi';
+import { MdNotifications, MdSettings } from 'react-icons/md';
+import {
+  BsCardChecklist,
+  BsChatDotsFill,
+  BsFillTrophyFill,
+} from 'react-icons/bs';
+import SearchModel from './SearchModel';
+import StatisticsModal from '../components/profilemenuheader/statistics/StatisticsModal';
 import WalletModal from '../components/profilemenuheader/wallet/WalletModal';
 import VaultModal from '../components/profilemenuheader/vault/VaultModal';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
-import { RiContactsBook2Fill, RiLogoutCircleRFill } from 'react-icons/ri';
-import SearchModel from './SearchModel';
-
-import StatisticsModal from '../components/profilemenuheader/statistics/StatisticsModal';
+import Chat from './Chat';
+import Bets from './Bets';
 
 const { Header, Content } = Layout;
 
@@ -135,9 +142,8 @@ const LayoutComp = ({ children }) => {
               alignItems={'center'}
               pr={{ base: '2', md: '10' }}
             >
-              
-              <SearchModel/>
-              
+              <SearchModel />
+
               {/* <Stack spacing={'4'} direction={'row'}>
                 <Button onClick={() => {
                   onOpen()
@@ -172,25 +178,113 @@ const LayoutComp = ({ children }) => {
                     <MenuItem>
                       <VaultModal />
                     </MenuItem>
-                    <MenuItem onClick={onOpenRevocationModal}>VIP</MenuItem>
+                    <MenuItem onClick={onOpenRevocationModal}>
+                      <HStack>
+                        <BsFillTrophyFill />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          VIP
+                        </Text>
+                      </HStack>
+                    </MenuItem>
                     <MenuItem onClick={() => nav('/affiliate')}>
-                      Affiliate
+                      <HStack>
+                        <TbAffiliate />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Affiliate
+                        </Text>
+                      </HStack>
                     </MenuItem>
                     <MenuItem>
-                      <StatisticsModal/>
+                      <StatisticsModal />
                     </MenuItem>
                     <MenuItem onClick={() => nav('/transactions')}>
-                      Transactions
+                      <HStack>
+                        <BsCardChecklist />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Transactions
+                        </Text>
+                      </HStack>
                     </MenuItem>
                     <MenuItem onClick={() => nav('/sports/my-bets')}>
-                      Sport Bets
+                      <HStack>
+                        <GiBasketballBall />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Sport Bets
+                        </Text>
+                      </HStack>
                     </MenuItem>
-                    <MenuItem>Notifications</MenuItem>
+                    <MenuItem>
+                      <HStack>
+                        <MdNotifications />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Notifications
+                        </Text>
+                      </HStack>
+                    </MenuItem>
                     <MenuItem onClick={() => nav('/settings')}>
-                      Settings
+                      <HStack>
+                        <MdSettings />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Settings
+                        </Text>
+                      </HStack>
                     </MenuItem>
-                    <MenuItem>Live Support</MenuItem>
-                    <MenuItem onClick={() => onOpenLogout()}>Logout</MenuItem>
+                    <MenuItem>
+                      <HStack>
+                        <FaHeadset />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Live Support
+                        </Text>
+                      </HStack>
+                    </MenuItem>
+                    <MenuItem onClick={() => onOpenLogout()}>
+                      <HStack>
+                        <HiOutlineLogout />
+                        <Text
+                          textAlign={'center'}
+                          fontWeight={'600'}
+                          fontSize={'sm'}
+                          color={'black'}
+                        >
+                          Logout
+                        </Text>
+                      </HStack>
+                    </MenuItem>
                   </MenuList>
                 </Menu>
               </Stack>
@@ -212,8 +306,12 @@ const LayoutComp = ({ children }) => {
                     <SiGooglechat size={15} color={'white'} />
                   </MenuButton>
                   <MenuList lineHeight={6} minW={'fit-content'}>
-                    <MenuItem>Chat</MenuItem>
-                    <MenuItem>Bet Slip</MenuItem>
+                    <MenuItem>
+                      <Chat />
+                    </MenuItem>
+                    <MenuItem>
+                      <Bets />
+                    </MenuItem>
                   </MenuList>
                 </Menu>
               </Stack>

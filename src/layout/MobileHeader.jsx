@@ -20,6 +20,7 @@ const MobileHeader = () => {
       bottom={'0'}
       direction={'row'}
       px={10}
+      alignItems={'baseline'}
       justifyContent={'space-between'}
     >
       <Menu />
@@ -35,7 +36,7 @@ const MobileHeader = () => {
         <Text
           color="white"
           fontWeight={'700'}
-          fontSize={'12px'}
+          fontSize={'xs'}
           mt={'0 !important'}
         >
           Sport

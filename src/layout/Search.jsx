@@ -32,7 +32,7 @@ const Search = () => {
         <Text
           color="white"
           fontWeight={'700'}
-          fontSize={'sm'}
+          fontSize={'xs'}
           mt={'0 !important'}
         >
           Search
