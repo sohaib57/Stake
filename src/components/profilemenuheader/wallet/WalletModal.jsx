@@ -17,6 +17,7 @@ import {
   TabList,
 } from '@chakra-ui/react';
 import { FaWallet } from 'react-icons/fa';
+import { GiWallet } from 'react-icons/gi';
 import Deposit from './Deposit';
 import Withdraw from './Withdraw';
 import BuyCrypto from './BuyCrypto';
@@ -25,16 +26,17 @@ const WalletModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Text
-        textAlign={'center'}
-        _hover={{ cursor: 'pointer' }}
-        fontWeight={'500'}
-        fontSize={'sm'}
-        color={'black'}
-        onClick={onOpen}
-      >
-        Wallet
-      </Text>
+      <HStack onClick={onOpen} _hover={{ cursor: 'pointer' }}>
+        <GiWallet />
+        <Text
+          textAlign={'center'}
+          fontWeight={'600'}
+          fontSize={'sm'}
+          color={'black'}
+        >
+          Wallet
+        </Text>
+      </HStack>
       <Modal
         size={'lg'}
         isCentered

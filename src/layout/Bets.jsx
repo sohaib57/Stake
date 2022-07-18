@@ -19,7 +19,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react';
-import { BsCardChecklist } from 'react-icons/bs';
+import { TbReceipt } from 'react-icons/tb';
 import { useDisclosure } from '@chakra-ui/react';
 import { IoTimer } from 'react-icons/io5';
 import { AiFillCheckCircle } from 'react-icons/ai';
@@ -29,23 +29,29 @@ const Bets = () => {
   const btnRef = React.useRef();
   return (
     <>
-      <VStack justifyContent={'center'} onClick={onOpen} ref={btnRef}>
-        <BsCardChecklist color="white" size={15} />
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        alignItems={'center'}
+        onClick={onOpen}
+        ref={btnRef}
+        color={{base:'white',md:'black'}}
+      >
+        <TbReceipt color={{base:'white',md:'black'}} size={15} />
         <Text
-          color="white"
+          color={{base:'white',md:'black'}}
           fontWeight={'700'}
-          fontSize={'12px'}
+          fontSize={{base:'xs',md:'sm'}}
           mt={'0 !important'}
         >
           Bets
         </Text>
-      </VStack>
+      </Stack>
       <Drawer
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'full'}
+        size={{base:'full',md:"sm"}}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -65,13 +71,16 @@ const Bets = () => {
                   pl={2}
                   color={'white'}
                   bg={'transparent'}
-                  
                   _focusVisible={{
                     boxShadow: 'none',
                   }}
                 >
-                  <option value="option1" className="select">My Bets</option>
-                  <option value="option2" className="select">Bet Slip</option>
+                  <option value="option1" className="select">
+                    My Bets
+                  </option>
+                  <option value="option2" className="select">
+                    Bet Slip
+                  </option>
                 </Select>
               </Stack>
             </DrawerHeader>

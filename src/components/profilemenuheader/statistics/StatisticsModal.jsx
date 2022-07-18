@@ -20,6 +20,7 @@ import {
   Select,
 } from '@chakra-ui/react';
 import { CgNotes } from 'react-icons/cg';
+import { ImStatsBars } from 'react-icons/im'
 import stats from '../../../assets/images/dataAnalytics.png';
 import racing from '../../../assets/images/racing.png';
 import givaway from '../../../assets/images/givaway.png';
@@ -27,16 +28,17 @@ const StatisticsModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Text
-        textAlign={'center'}
-        _hover={{ cursor: 'pointer' }}
-        fontWeight={'500'}
-        fontSize={'sm'}
-        color={'black'}
-        onClick={onOpen}
-      >
-        Statistics
-      </Text>
+      <HStack onClick={onOpen}>
+        <ImStatsBars />
+        <Text
+          textAlign={'center'}
+          fontWeight={'600'}
+          fontSize={'sm'}
+          color={'black'}
+        >
+          Statistics
+        </Text>
+      </HStack>
       <Modal
         size={'lg'}
         isCentered
@@ -59,7 +61,11 @@ const StatisticsModal = () => {
           </ModalHeader>
           <ModalBody pt={'2'} bg={'#000000e3'}>
             <Stack spacing={'1'} mb={'4 !important'} alignItems={'center'}>
-              <Text _hover={{color:'white',cursor:'pointer'}} fontSize={'md'} color={'#b1bad3'}>
+              <Text
+                _hover={{ color: 'white', cursor: 'pointer' }}
+                fontSize={'md'}
+                color={'#b1bad3'}
+              >
                 sufyan5788
               </Text>
               <Text fontSize={'xs'} color={'#b1bad3'}>

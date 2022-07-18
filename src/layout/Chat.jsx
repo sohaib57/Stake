@@ -27,23 +27,29 @@ const Chat = () => {
   const btnRef = React.useRef();
   return (
     <>
-      <VStack justifyContent={'center'} onClick={onOpen} ref={btnRef}>
-        <BsChatDotsFill color="white" size={15} />
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        alignItems={'center'}
+        onClick={onOpen}
+        ref={btnRef}
+        color={{base: 'white', md: 'black'}}
+      >
+        <BsChatDotsFill color={{base: 'white', md: 'black'}} size={15} />
         <Text
-          color="white"
+          color={{ base: 'white', md: 'black' }}
           fontWeight={'700'}
-          fontSize={'12px'}
+          fontSize={{ base: 'xs', md: 'sm' }}
           mt={'0 !important'}
         >
           Chat
         </Text>
-      </VStack>
+      </Stack>
       <Drawer
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'full'}
+        size={{base:'full',md:'sm'}}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -64,17 +70,28 @@ const Chat = () => {
                   pl={2}
                   color={'white'}
                   bg={'transparent'}
-                 
                   _focusVisible={{
                     boxShadow: 'none',
                   }}
                 >
-                  <option value="option1"  className="select">English</option>
-                  <option value="option2"  className="select">Deutsch</option>
-                  <option value="option3"  className="select">Español</option>
-                  <option value="option3"  className="select">Français</option>
-                  <option value="option3"  className="select">हिन्दी</option>
-                  <option value="option3"  className="select">Indonesi</option>
+                  <option value="option1" className="select">
+                    English
+                  </option>
+                  <option value="option2" className="select">
+                    Deutsch
+                  </option>
+                  <option value="option3" className="select">
+                    Español
+                  </option>
+                  <option value="option3" className="select">
+                    Français
+                  </option>
+                  <option value="option3" className="select">
+                    हिन्दी
+                  </option>
+                  <option value="option3" className="select">
+                    Indonesi
+                  </option>
                 </Select>
               </Stack>
             </DrawerHeader>

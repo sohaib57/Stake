@@ -31,6 +31,7 @@ import {
 } from '@chakra-ui/react';
 import { FaWallet } from 'react-icons/fa';
 import { SiBitcoinsv } from 'react-icons/si';
+import { SiVault } from 'react-icons/si'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 const VaultModal = () => {
@@ -42,16 +43,17 @@ const VaultModal = () => {
   const nav = useNavigate();
   return (
     <>
-      <Text
-        textAlign={'center'}
-        _hover={{ cursor: 'pointer' }}
-        fontWeight={'500'}
-        fontSize={'sm'}
-        color={'black'}
-        onClick={onOpen}
-      >
-        Vault
-      </Text>
+        <HStack onClick={onOpen} _hover={{ cursor: 'pointer' }}>
+        <SiVault />
+        <Text
+          textAlign={'center'}
+          fontWeight={'600'}
+          fontSize={'sm'}
+          color={'black'}
+        >
+          Vault
+        </Text>
+      </HStack>
       <Modal
         size={'lg'}
         isCentered

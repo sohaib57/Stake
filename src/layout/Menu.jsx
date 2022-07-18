@@ -138,7 +138,7 @@ const MenuBar = () => {
         <Text
           color="white"
           fontWeight={'700'}
-          fontSize={'12px'}
+          fontSize={'xs'}
           mt={'0 !important'}
         >
           Menu
