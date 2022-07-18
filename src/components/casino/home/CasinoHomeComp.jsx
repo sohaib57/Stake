@@ -75,7 +75,7 @@ const CasinoHomeComp = () => {
         },
       },
       {
-        breakpoint: 375,
+        breakpoint: 425,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

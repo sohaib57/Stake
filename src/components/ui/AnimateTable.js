@@ -213,11 +213,11 @@ const AnimateTable = params => {
     StartInterval(params.api, params.columnApi);
   };
   const rowStyle = {
-    background: '#1A2C38',
+    background: '#111111',
   };
   const getRowStyle = params => {
     if (params.node.rowIndex % 2 === 0) {
-      return { background: '#213743' };
+      return { background: '#1A1B1B' };
     }
   };
 

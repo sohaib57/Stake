@@ -58,7 +58,6 @@ const StakeOriginalsScreen = () => {
             display={{ base: 'none', md: 'flex' }}
             pt={'8'}
             pb={'6'}
-           
           >
             <InputGroup
               borderColor={'gray'}
@@ -91,7 +90,7 @@ const StakeOriginalsScreen = () => {
               color={'white'}
               _hover={{}}
               _focus={{}}
-              
+              bgColor={'black'}
             >
               View All Providers
             </Button>
