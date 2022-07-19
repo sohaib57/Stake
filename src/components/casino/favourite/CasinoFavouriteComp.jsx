@@ -123,7 +123,8 @@ const CasinoFavouriteComp = () => {
                   <Tab
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
-                    w={'max-content'}
+                    minWidth={'fit-content'}
+                   
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
                     <HStack spacing={'2'}>
@@ -134,6 +135,7 @@ const CasinoFavouriteComp = () => {
                     w={'fit-content'}
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
+                    minWidth={'fit-content'}
                     // w={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
@@ -144,6 +146,7 @@ const CasinoFavouriteComp = () => {
                   <Tab
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
+                    minWidth={'fit-content'}
                     w={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >
@@ -154,6 +157,7 @@ const CasinoFavouriteComp = () => {
                   <Tab
                     color={'white'}
                     _selected={{ color: 'white', bg: '#2F4553' }}
+                    minWidth={'fit-content'}
                     w={'max-content'}
                     fontSize={{ base: 'sm', md: 'md' }}
                   >

@@ -55,14 +55,7 @@ const ProviderSlider = () => {
           dots: false,
         },
       },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-        },
-      },
+
     ],
   };
   return (

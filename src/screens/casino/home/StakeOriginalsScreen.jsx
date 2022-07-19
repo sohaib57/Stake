@@ -58,7 +58,6 @@ const StakeOriginalsScreen = () => {
             display={{ base: 'none', md: 'flex' }}
             pt={'8'}
             pb={'6'}
-           
           >
             <InputGroup
               borderColor={'gray'}
@@ -91,7 +90,7 @@ const StakeOriginalsScreen = () => {
               color={'white'}
               _hover={{}}
               _focus={{}}
-              
+              bgColor={'black'}
             >
               View All Providers
             </Button>
@@ -102,7 +101,7 @@ const StakeOriginalsScreen = () => {
               color="white"
               alignItems={'center'}
             >
-              <HStack spacing={'1.5'}>
+              <HStack display={{base:'none',md:'inherit'}} spacing={'1.5'}>
                 <GoSettings fontSize={'1rem'} />
                 <Text fontSize={'sm'} fontWeight={'500'}>
                   SortBy

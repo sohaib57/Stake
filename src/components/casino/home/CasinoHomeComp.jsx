@@ -45,6 +45,7 @@ import FeaturedSlots from '../home/features slots/FeaturedSlots';
 import GameShows from '../home/game shows/GameShows';
 import StakeOriginalsComp from '../home/Stake Originals/StakeOriginalsComp';
 import CasinoStats from './stats/CasinoStats';
+import SelectCurrency from '../../ui/select/SelectCurrency'
 const CasinoHomeComp = () => {
   const nav = useNavigate();
   const settings = {
@@ -75,7 +76,7 @@ const CasinoHomeComp = () => {
         },
       },
       {
-        breakpoint: 375,
+        breakpoint: 425,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
