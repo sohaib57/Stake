@@ -8,10 +8,11 @@ import { IconOption, IconValue } from './IconOption';
 const customStyles = {
   control: base => ({
     ...base,
-    height: 60,
-    minHeight: 60,
+   
     minWidth: 150,
     width: 150,
+    borderRadius: 0,
+  
   }),
 };
 const options = [
@@ -19,16 +20,16 @@ const options = [
     label: 'Crypto',
     options: [
       { value: '$0.00', label: 'ETH', img: eth },
-      { value: '$0.00', label: 'SOL', img: sol },
-      { value: '$0.00', label: 'BTC', img: btc },
+      { value: '$0.01', label: 'SOL', img: sol },
+      { value: '$0.02', label: 'BTC', img: btc },
     ],
   },
   {
     label: 'Banking',
     options: [
       { value: '¥0.00', label: 'JPY', img: jpy },
-      { value: '$0.00', label: 'SOL', img: sol },
-      { value: '$0.00', label: 'BTC', img: btc },
+      { value: '$0.03', label: 'SOL', img: sol },
+      { value: '$0.04', label: 'BTC', img: btc },
     ],
   },
 ];

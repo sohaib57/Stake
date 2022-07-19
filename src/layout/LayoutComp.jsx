@@ -96,8 +96,8 @@ const LayoutComp = ({ children }) => {
                 onClick={() => nav('/')}
               />
             </Stack>
-            <Stack>
-              <HStack w={'fit-content'} spacing={0}>
+            <Stack pt={3}>
+              <HStack w={'fit-content'} spacing={0} lineHeight={1}>
                 <SelectCurrency/>
                 <Button
                   fontSize={'sm'}
