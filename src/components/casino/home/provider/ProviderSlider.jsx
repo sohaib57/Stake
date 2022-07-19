@@ -50,9 +50,9 @@ const ProviderSlider = () => {
       {
         breakpoint: 425,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows : false,
         },
       },
 
