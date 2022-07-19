@@ -101,8 +101,9 @@ const LayoutComp = ({ children }) => {
                 <SelectCurrency/>
                 <Button
                   fontSize={'sm'}
-                  borderRightRadius={'5px'}
-                  borderLeftRadius={'none'}
+                  // borderRightRadius={'5px'}
+                  // borderLeftRadius={'none'}
+                  borderRadius={'none'}
                   bgColor={'#007bff'}
                   _hover={{
                     bgColor: '#007bff',

@@ -52,7 +52,7 @@ const ProviderSlider = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          dots: false,
+          arrows : false,
         },
       },
 
