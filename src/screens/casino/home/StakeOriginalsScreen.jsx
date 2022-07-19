@@ -101,7 +101,7 @@ const StakeOriginalsScreen = () => {
               color="white"
               alignItems={'center'}
             >
-              <HStack spacing={'1.5'}>
+              <HStack display={{base:'none',md:'inherit'}} spacing={'1.5'}>
                 <GoSettings fontSize={'1rem'} />
                 <Text fontSize={'sm'} fontWeight={'500'}>
                   SortBy

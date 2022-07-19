@@ -48,7 +48,7 @@ import VaultModal from '../components/profilemenuheader/vault/VaultModal';
 import WeeklyGiveAwayModal from '../components/promotions/WeeklyGiveAwayModal';
 import Chat from './Chat';
 import Bets from './Bets';
-
+import SelectCurrency from '../components/ui/select/SelectCurrency'
 const { Header, Content } = Layout;
 
 const LayoutComp = ({ children }) => {
@@ -97,27 +97,8 @@ const LayoutComp = ({ children }) => {
               />
             </Stack>
             <Stack>
-              <HStack spacing={0}>
-                <Select
-                  borderLeftRadius={'5px'}
-                  borderRightRadius={'none'}
-                  bgColor={'#0C0C0C'}
-                  border={'none'}
-                  color={'white'}
-                  _focusVisible={{
-                    boxShadow: 'none',
-                  }}
-                >
-                  <option value="option1" className="select">
-                    0.00000000
-                  </option>
-                  <option value="option2" className="select">
-                    0.00000001
-                  </option>
-                  <option value="option3" className="select">
-                    0.00000002
-                  </option>
-                </Select>
+              <HStack w={'fit-content'} spacing={0}>
+                <SelectCurrency/>
                 <Button
                   fontSize={'sm'}
                   borderRightRadius={'5px'}
