@@ -12,7 +12,7 @@ const customStyles = {
     minWidth: 150,
     width: 150,
     borderRadius: 0,
-    backgroundColor: '#000000e3',
+    // backgroundColor: '#000000e3',
   
   }),
 };
