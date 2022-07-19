@@ -40,7 +40,7 @@ export default function App() {
   return (
     <div className="App">
       <Select
-        autoFocus={'none'}
+        // autoFocus={'none'}
         styles={customStyles}
         defaultValue={selectedOption}
         onChange={setSelectedOption}

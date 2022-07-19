@@ -392,7 +392,7 @@ const LayoutComp = ({ children }) => {
             style={{
               height: 'calc(100vh - 60px)',
             }}
-            overflowY={'auto'}
+            overflowY={'scroll'}
           >
             {children}
             <Footer />

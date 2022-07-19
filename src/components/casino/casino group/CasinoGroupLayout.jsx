@@ -180,7 +180,7 @@ const CasinoGroupLayout = ({ heading, headerImg, game }) => {
                 Providers
               </Heading>
             </HStack>
-            <ProviderSlider />
+            {/* <ProviderSlider /> */}
           </Stack>
           {/* stats */}
           <Stack pb={'12'} px={{ base: '2', md: '8', lg: '12', xl: '14' }}>
